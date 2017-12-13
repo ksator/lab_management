@@ -3,7 +3,7 @@
 
 This [repository](https://github.com/ksator/ansible-training-for-junos-automation) has many examples about junos automation using Ansible
 
-## How to install Ansible
+# How to install Ansible
 
 This repository has been tested using Ansible 2.4.2.0  
 
@@ -24,15 +24,14 @@ Verify you have the Juniper.junos role:
 ls /etc/ansible/roles/
 ```
 
-# How to use this repo:
-
-## How to get the remote content locally:
+# How to get the remote content locally
 
 ```
 git clone http://172.25.90.133/root/PoC-80.git
 cd PoC-80/
 sudo -s
 ```
+# How to use this repo:
 
 ## How to check if ssh and netconf ports are reachable on Junos devices
 ```
