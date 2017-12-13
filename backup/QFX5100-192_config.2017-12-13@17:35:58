@@ -1,0 +1,114 @@
+set version 17.3R1.10
+set groups POC_Lab system host-name QFX5100-192
+set groups POC_Lab system backup-router 172.25.90.1
+set groups POC_Lab system authentication-order radius
+set groups POC_Lab system authentication-order password
+set groups POC_Lab system root-authentication encrypted-password "$1$s8mOS0BL$IEld5fJB2XS.yGHuSeh7r1"
+set groups POC_Lab system name-server 172.29.131.60
+set groups POC_Lab system login message "\n \n System is in use for a customer POC testing \n \n *** Please do not make changes before contacting the Herndon POC admins *** \n \n"
+set groups POC_Lab system login user lab uid 2009
+set groups POC_Lab system login user lab class super-user
+set groups POC_Lab system login user lab authentication encrypted-password "$1$3kIhkQGL$5MjO3AvXcv4ex.A2VE.6x0"
+set groups POC_Lab system services ftp
+set groups POC_Lab system services ssh protocol-version v2
+set groups POC_Lab system services telnet
+set groups POC_Lab system services xnm-clear-text
+set groups POC_Lab system services netconf ssh
+set groups POC_Lab system syslog host 172.25.45.6 authorization any
+set groups POC_Lab system ntp server 66.129.255.62 prefer
+set groups POC_Lab interfaces vme unit 0 family inet address 172.25.90.192/24
+set groups POC_Lab snmp community public
+set groups POC_Lab routing-options static route 0.0.0.0/0 next-hop 172.25.90.1
+set apply-groups POC_Lab
+set system syslog host 172.25.90.135 any any
+set system syslog host 172.25.90.135 match UI_COMMIT_COMPLETED
+set system syslog host 172.25.90.135 port 516
+set chassis aggregated-devices ethernet device-count 5
+set interfaces xe-0/0/0 ether-options 802.3ad ae1
+set interfaces xe-0/0/1 ether-options 802.3ad ae1
+set interfaces xe-0/0/2 ether-options 802.3ad ae1
+set interfaces xe-0/0/3 description "ixia 2.3 - APP1"
+set interfaces xe-0/0/3 unit 0 family ethernet-switching interface-mode trunk
+set interfaces xe-0/0/3 unit 0 family ethernet-switching vlan members V2011
+set interfaces xe-0/0/3 unit 0 family ethernet-switching vlan members V2012
+set interfaces xe-0/0/3 unit 0 family ethernet-switching vlan members V2013
+set interfaces xe-0/0/3 unit 0 family ethernet-switching vlan members V2014
+set interfaces xe-0/0/3 unit 0 family ethernet-switching vlan members V2015
+set interfaces xe-0/0/3 unit 0 family ethernet-switching vlan members V2030
+set interfaces xe-0/0/4 description "ixia 2.4 - WEB"
+set interfaces xe-0/0/4 unit 0 family ethernet-switching interface-mode trunk
+set interfaces xe-0/0/4 unit 0 family ethernet-switching vlan members V2016
+set interfaces xe-0/0/4 unit 0 family ethernet-switching vlan members V2017
+set interfaces xe-0/0/4 unit 0 family ethernet-switching vlan members V2018
+set interfaces xe-0/0/4 unit 0 family ethernet-switching vlan members V2019
+set interfaces xe-0/0/4 unit 0 family ethernet-switching vlan members V2020
+set interfaces xe-0/0/6 vlan-tagging
+set interfaces xe-0/0/6 mtu 9192
+set interfaces xe-0/0/6 unit 10 vlan-id 10
+set interfaces xe-0/0/6 unit 10 family inet address 10.10.10.53/31
+set interfaces xe-0/0/6 unit 10 family iso
+set interfaces xe-0/0/6 unit 10 family inet6
+set interfaces xe-0/0/6 unit 20 vlan-id 20
+set interfaces xe-0/0/6 unit 20 family inet address 10.10.10.55/31
+set interfaces xe-0/0/6 unit 20 family iso
+set interfaces xe-0/0/6 unit 20 family inet6
+set interfaces xe-0/0/6 unit 30 vlan-id 30
+set interfaces xe-0/0/6 unit 30 family inet address 10.10.10.57/31
+set interfaces xe-0/0/6 unit 30 family iso
+set interfaces xe-0/0/6 unit 30 family inet6
+set interfaces xe-0/0/6 unit 40 vlan-id 40
+set interfaces xe-0/0/6 unit 40 family inet address 10.10.10.59/31
+set interfaces xe-0/0/6 unit 40 family iso
+set interfaces xe-0/0/6 unit 40 family inet6
+set interfaces xe-0/0/6 unit 50 vlan-id 50
+set interfaces xe-0/0/6 unit 50 family inet address 10.10.10.61/31
+set interfaces xe-0/0/6 unit 50 family iso
+set interfaces xe-0/0/6 unit 50 family inet6
+set interfaces xe-0/0/6 unit 100 vlan-id 100
+set interfaces xe-0/0/6 unit 100 family inet address 10.10.10.101/31
+set interfaces xe-0/0/6 unit 100 family iso
+set interfaces ae0 mtu 9216
+set interfaces ae1 description "ESI 24:24 to POD2 Leafs"
+set interfaces ae1 mtu 9216
+set interfaces ae1 aggregated-ether-options lacp active
+set interfaces ae1 aggregated-ether-options lacp periodic fast
+set interfaces ae1 unit 0 family ethernet-switching interface-mode trunk
+set interfaces ae1 unit 0 family ethernet-switching vlan members all
+set interfaces lo0 unit 0 description LOOPBACK
+set interfaces lo0 unit 0 family inet address 191.168.101.8/32
+set interfaces lo0 unit 0 family iso address 49.0001.1911.6800.1014.00
+set interfaces lo0 unit 0 family inet6 address fd20:2222::188/128
+set interfaces vlan unit 2011 family inet address 10.211.100.1/16
+set forwarding-options load-balance indexed-load-balance
+deactivate forwarding-options load-balance
+set routing-options forwarding-table export load-balance
+set protocols lldp interface all
+set policy-options policy-statement load-balance then load-balance per-packet
+set routing-instances SRX-VR instance-type virtual-router
+set routing-instances SRX-VR interface xe-0/0/6.10
+set routing-instances SRX-VR interface xe-0/0/6.20
+set routing-instances SRX-VR interface xe-0/0/6.30
+set routing-instances SRX-VR interface xe-0/0/6.40
+set routing-instances SRX-VR interface xe-0/0/6.50
+set routing-instances SRX-VR interface xe-0/0/6.100
+set routing-instances SRX-VR interface lo0.0
+set routing-instances SRX-VR protocols isis level 1 disable
+set routing-instances SRX-VR protocols isis level 2 wide-metrics-only
+set routing-instances SRX-VR protocols isis interface xe-0/0/6.10
+set routing-instances SRX-VR protocols isis interface xe-0/0/6.20
+set routing-instances SRX-VR protocols isis interface xe-0/0/6.30
+set routing-instances SRX-VR protocols isis interface xe-0/0/6.40
+set routing-instances SRX-VR protocols isis interface xe-0/0/6.50
+set routing-instances SRX-VR protocols isis interface xe-0/0/6.100
+set routing-instances SRX-VR protocols isis interface lo0.0
+set vlans V2011 vlan-id 2011
+set vlans V2012 vlan-id 2012
+set vlans V2013 vlan-id 2013
+set vlans V2014 vlan-id 2014
+set vlans V2015 vlan-id 2015
+set vlans V2016 vlan-id 2016
+set vlans V2017 vlan-id 2017
+set vlans V2018 vlan-id 2018
+set vlans V2019 vlan-id 2019
+set vlans V2020 vlan-id 2020
+set vlans V2030 vlan-id 2030

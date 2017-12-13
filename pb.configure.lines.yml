@@ -11,7 +11,7 @@
       update: merge
       provider: "{{ credentials }}"
       lines:
-       - delete system name-server 8.8.8.8
-       - set system login message new_banner
-      comment: configured with pb.configure.lines.yml
+       - set system login message "new banner"
+       - delete groups POC_Lab system name-server 172.29.131.60
+      comment: configured by Ansible using the playbook pb.configure.lines.yml
 

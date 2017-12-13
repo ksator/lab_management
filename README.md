@@ -71,6 +71,15 @@ ansible-playbook pb.collect.commands.output.yml
 ls command
 ```
 
+## How to configure devices with set/delete commands
+```
+vi pb.configure.lines.yml
+ansible-playbook pb.configure.lines.yml --check
+ansible-playbook pb.configure.lines.yml --check --diff --limit QFX10K2-36Q-176
+ansible-playbook pb.configure.lines.yml
+ls backup/
+```
+
 ## How to rollback a device or a network
 ```
 ansible-playbook pb.rollback.yml --extra-vars rbid=1
