@@ -27,11 +27,15 @@ ls /etc/ansible/roles/
 # How to get the remote content locally
 
 ```
+sudo -s
 git clone http://172.25.90.133/root/PoC-80.git
 cd PoC-80/
-sudo -s
 ```
 # How to use this repo:
+
+```
+sudo -s
+```
 
 ## How to check if ssh and netconf ports are reachable on Junos devices
 ```
@@ -58,6 +62,7 @@ ls backup/
 ## How to pass show commands on junos devices
 
 ```
+vi cli.yml
 ansible-playbook pb.collect.cli.output.yml
 ls cli
 ```

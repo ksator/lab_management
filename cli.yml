@@ -1,0 +1,5 @@
+---
+cli:
+    - "show chassis hardware"
+    - "show version"
+

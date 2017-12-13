@@ -17,6 +17,10 @@
     - Juniper.junos
    connection: local
    gather_facts: no
+   
+   vars_files: 
+    - "cli.yml"
+
    tasks:
 
     - name: create cli subdirectories
@@ -25,15 +29,13 @@
        state: directory
 
 
-    - name: junos cli
+    - name: pass the junos cli from the files cli.yml and save the output in the dir cli 
       junos_cli:
        host: "{{ junos_host }}"
        user: "{{ ADMUSER }}"
        passwd: "{{ ADMPASS }}"
        cli: "{{ item }}"
-#show chassis hardware"
        dest: "{{playbook_dir}}/cli/{{ inventory_hostname }}/{{ item }}.txt"
       with_items: 
-       - "show chassis hardware"
-       - "show version"
+       - "{{ cli }}"
 
