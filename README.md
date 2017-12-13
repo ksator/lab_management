@@ -52,11 +52,11 @@ ls facts/
 ansible-playbook pb.print.facts.yml
 ```
 
-## How to backup locally junos configuration
+## How to backup the junos configuration on the Ansible server
 
 ```
 ansible-playbook pb.backup.configuration.yml
-ls backup/
+ls configuration_backup/
 ```
 
 ## How to pass show commands on junos devices

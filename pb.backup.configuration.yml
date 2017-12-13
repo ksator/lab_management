@@ -1,18 +1,18 @@
 ---
-- name: create backup directories
+- name: create configuration_backup directories
   hosts: localhost
   gather_facts: no
   tasks:
 
-   - name: create backup directory
+   - name: create configuration_backup directory
      file:
-       path: "{{playbook_dir}}/backup"
+       path: "{{playbook_dir}}/configuration_backup"
        state: directory
 
 
-   - name: create backup subdirectories
+   - name: create configuration_backup subdirectories
      file:
-       path: "{{playbook_dir}}/backup/{{ item }}"
+       path: "{{playbook_dir}}/configuration_backup/{{ item }}"
        state: directory
      with_items:
        - text
@@ -20,57 +20,57 @@
        - json
        - set 
 
-- name: Collect backup from devices
+- name: Collect configuration from devices
   hosts: all
   connection: local
   gather_facts: no
   tasks:
 
-  - name: Collect backup in text format from devices
+  - name: Collect configuration in text format from devices
     junos_facts:
       gather_subset: config
       config_format: text
       provider: "{{ credentials }}"
     register: "result_text"
 
-  - name: copy backup locally
+  - name: copy collected configuration in configuration_backup/text directory
     copy: 
       content: "{{ result_text.ansible_facts.ansible_net_config }}" 
-      dest: "{{ playbook_dir }}/backup/text/{{ inventory_hostname }}.conf"
+      dest: "{{ playbook_dir }}/configuration_backup/text/{{ inventory_hostname }}.conf"
  
-  - name: Collect backup in set format from devices
+  - name: Collect configuration in set format from devices
     junos_facts:
       gather_subset: config
       config_format: set
       provider: "{{ credentials }}"
     register: "result_set"
 
-  - name: copy backup locally
+  - name: copy collected configuration in configuration_backup/set directory
     copy:
       content: "{{ result_set.ansible_facts.ansible_net_config }}"
-      dest: "{{ playbook_dir }}/backup/set/{{ inventory_hostname }}.set"
+      dest: "{{ playbook_dir }}/configuration_backup/set/{{ inventory_hostname }}.set"
  
-  - name: Collect backup in json format from devices
+  - name: Collect configuration in json format from devices
     junos_facts:
       gather_subset: config
       config_format: json
       provider: "{{ credentials }}"
     register: "result_json"
 
-  - name: copy backup locally
+  - name: copy collected configuration in configuration_backup/json directory
     copy:
       content: "{{ result_json.ansible_facts.ansible_net_config }}"
-      dest: "{{ playbook_dir }}/backup/json/{{ inventory_hostname }}.json"
+      dest: "{{ playbook_dir }}/configuration_backup/json/{{ inventory_hostname }}.json"
 
-  - name: Collect backup in xml format from devices
+  - name: Collect configuration in xml format from devices
     junos_facts:
       gather_subset: config
       config_format: xml
       provider: "{{ credentials }}"
     register: "result_xml"
 
-  - name: copy backup locally
+  - name: copy collected configuration in configuration_backup/xml directory
     copy:
       content: "{{ result_xml.ansible_facts.ansible_net_config }}"
-      dest: "{{ playbook_dir }}/backup/xml/{{ inventory_hostname }}.xml"
+      dest: "{{ playbook_dir }}/configuration_backup/xml/{{ inventory_hostname }}.xml"
 

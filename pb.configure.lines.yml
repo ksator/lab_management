@@ -1,0 +1,17 @@
+---
+ - name: pass junos set and delete commands
+   hosts: all
+   connection: local
+   gather_facts: no
+
+   tasks:
+   - name: pass junos set and delete commands  
+     junos_config:
+      backup: yes
+      update: merge
+      provider: "{{ credentials }}"
+      lines:
+       - delete system name-server 8.8.8.8
+       - set system login message new_banner
+      comment: configured with pb.configure.lines.yml
+
