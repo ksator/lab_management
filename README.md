@@ -71,4 +71,13 @@ ansible-playbook pb.collect.commands.output.yml
 ls command
 ```
 
+## How to rollback a device or a network
+```
+ansible-playbook pb.rollback.yml --extra-vars rbid=1
+ls rollback/
+```
+```
+ansible-playbook pb.rollback.yml --extra-vars rbid=3 --limit DC2
+ls rollback/
+```
 
