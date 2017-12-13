@@ -1,12 +1,12 @@
 ---
- - name: create cli directory
+ - name: create command directory
    hosts: localhost
    gather_facts: no
    tasks:
 
-   - name: create cli directory
+   - name: create command directory
      file:
-       path: "{{playbook_dir}}/cli"
+       path: "{{playbook_dir}}/command"
        state: directory
 
  - name: pass commands on Junos devices
@@ -25,10 +25,10 @@
        - show system uptime
      register: cli
 
-   - name: save on the Ansible server the output of the commands
+   - name: save the output of the commands in the command dir
      copy:
       content: "{{ cli.stdout_lines }}"
-      dest: "{{playbook_dir}}/cli/{{inventory_hostname}}.text"
+      dest: "{{playbook_dir}}/command/{{inventory_hostname}}.text"
 
 
 
