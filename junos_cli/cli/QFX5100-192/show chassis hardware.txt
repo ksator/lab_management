@@ -1,0 +1,24 @@
+
+Hardware inventory:
+Item             Version  Part number  Serial number     Description
+Chassis                                TA3713470180      QFX5100-48S-6Q
+Pseudo CB 0     
+Routing Engine 0          BUILTIN      BUILTIN           QFX Routing Engine
+FPC 0            REV 09   650-049938   TA3713470180      QFX5100-48S-6Q
+  CPU                     BUILTIN      BUILTIN           FPC CPU
+  PIC 0                   BUILTIN      BUILTIN           48x10G-6x40G
+    Xcvr 0       REV 01   740-021309   GA72009317        SFP+-10G-LR
+    Xcvr 1       REV 01   740-021309   GA72009286        SFP+-10G-LR
+    Xcvr 2       REV 01   740-021309   GA72009437        SFP+-10G-LR
+    Xcvr 3       REV 01   740-021308   AQN1CFD           SFP+-10G-SR
+    Xcvr 4       REV 01   740-021308   ALC1032           SFP+-10G-SR
+    Xcvr 6       REV 01   740-021308   13T511102915      SFP+-10G-SR
+    Xcvr 48      REV 01   740-056705   UU30G3F           QSFP+40GE-LX4
+    Xcvr 49      REV 01   740-056705   UTH05GL           QSFP+40GE-LX4
+Power Supply 0   REV 03   740-041741   1GA23280319       JPSU-650W-AC-AFO
+Power Supply 1   REV 03   740-041741   1GA23382126       JPSU-650W-AC-AFO
+Fan Tray 0                                               QFX5100 Fan Tray 0, Front to Back Airflow - AFO
+Fan Tray 1                                               QFX5100 Fan Tray 1, Front to Back Airflow - AFO
+Fan Tray 2                                               QFX5100 Fan Tray 2, Front to Back Airflow - AFO
+Fan Tray 3                                               QFX5100 Fan Tray 3, Front to Back Airflow - AFO
+Fan Tray 4                                               QFX5100 Fan Tray 4, Front to Back Airflow - AFO

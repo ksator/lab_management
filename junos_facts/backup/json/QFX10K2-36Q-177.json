@@ -1,0 +1,1062 @@
+{
+    "configuration" : {
+        "@" : {
+            "xmlns" : "http://xml.juniper.net/xnm/1.1/xnm", 
+            "junos:changed-seconds" : "1509656170", 
+            "junos:changed-localtime" : "2017-11-02 20:56:10 UTC"
+        }, 
+        "version" : "17.3R1.10", 
+        "groups" : [
+        {
+            "name" : "POC_Lab", 
+            "system" : {
+                "host-name" : "QFX10K2-177", 
+                "backup-router" : {
+                    "address" : "172.25.90.1"
+                }, 
+                "authentication-order" : ["radius", "password"],
+                "root-authentication" : {
+                    "encrypted-password" : "$1$mzUQjfuc$XjaJIv4Un5Dl6iwvWAi1u/"
+                }, 
+                "name-server" : [
+                {
+                    "name" : "172.29.131.60"
+                }
+                ], 
+                "login" : {
+                    "message" : "\\n \\n System is in use for a customer POC testing \\n \\n *** Please do not make changes before contacting the Herndon POC admins *** \\n\\n", 
+                    "user" : [
+                    {
+                        "name" : "lab", 
+                        "uid" : 2002, 
+                        "class" : "super-user", 
+                        "authentication" : {
+                            "encrypted-password" : "$1$w5XgsGVE$fS5XemjBWddcXyG7QzS1T."
+                        }
+                    }
+                    ]
+                }, 
+                "services" : {
+                    "ftp" : [null], 
+                    "ssh" : {
+                        "protocol-version" : ["v2"]
+                    }, 
+                    "telnet" : [null], 
+                    "xnm-clear-text" : [null], 
+                    "netconf" : {
+                        "ssh" : [null]
+                    }
+                }, 
+                "syslog" : {
+                    "host" : [
+                    {
+                        "name" : "172.25.45.6", 
+                        "contents" : [
+                        {
+                            "name" : "authorization", 
+                            "any" : [null]
+                        }
+                        ]
+                    }
+                    ], 
+                    "file" : [
+                    {
+                        "name" : "messages", 
+                        "contents" : [
+                        {
+                            "name" : "any", 
+                            "any" : [null]
+                        }, 
+                        {
+                            "name" : "interactive-commands", 
+                            "none" : [null]
+                        }
+                        ], 
+                        "archive" : {
+                            "size" : 10m, 
+                            "files" : 10
+                        }
+                    }
+                    ]
+                }, 
+                "ntp" : {
+                    "server" : [
+                    {
+                        "name" : "66.129.255.62", 
+                        "prefer" : [null]
+                    }
+                    ]
+                }
+            }, 
+            "interfaces" : {
+                "interface" : [
+                {
+                    "name" : "em0", 
+                    "unit" : [
+                    {
+                        "name" : 0, 
+                        "family" : {
+                            "inet" : {
+                                "address" : [
+                                {
+                                    "name" : "172.25.90.177/24"
+                                }
+                                ]
+                            }
+                        }
+                    }
+                    ]
+                }
+                ]
+            }, 
+            "snmp" : {
+                "community" : [
+                {
+                    "name" : "public"
+                }
+                ]
+            }, 
+            "routing-options" : {
+                "static" : {
+                    "route" : [
+                    {
+                        "name" : "10.255.255.0/24", 
+                        "next-hop" : ["172.25.90.1"],
+                        "retain" : [null], 
+                        "no-readvertise" : [null]
+                    }, 
+                    {
+                        "name" : "10.161.0.0/16", 
+                        "next-hop" : ["172.25.90.1"],
+                        "retain" : [null], 
+                        "no-readvertise" : [null]
+                    }, 
+                    {
+                        "name" : "172.16.0.0/12", 
+                        "next-hop" : ["172.25.90.1"],
+                        "retain" : [null], 
+                        "no-readvertise" : [null]
+                    }, 
+                    {
+                        "name" : "192.168.0.0/16", 
+                        "next-hop" : ["172.25.90.1"],
+                        "retain" : [null], 
+                        "no-readvertise" : [null]
+                    }
+                    ]
+                }
+            }
+        }
+        ], 
+        "apply-groups" : ["POC_Lab"],
+        "system" : {
+            "root-authentication" : {
+                "encrypted-password" : "$1$01pBylvB$OBEsRvmEbWAqC8wBvT6kZ."
+            }, 
+            "syslog" : {
+                "host" : [
+                {
+                    "name" : "172.25.90.135", 
+                    "contents" : [
+                    {
+                        "name" : "any", 
+                        "any" : [null]
+                    }
+                    ], 
+                    "match" : "UI_COMMIT_COMPLETED", 
+                    "port" : 516
+                }
+                ]
+            }
+        }, 
+        "interfaces" : {
+            "interface" : [
+            {
+                "name" : "et-0/0/0", 
+                "mtu" : 9216, 
+                "unit" : [
+                {
+                    "name" : 0, 
+                    "family" : {
+                        "inet" : {
+                            "filter" : {
+                                "input" : {
+                                    "filter-name" : "test-in"
+                                }, 
+                                "output" : {
+                                    "filter-name" : "test-out"
+                                }
+                            }, 
+                            "address" : [
+                            {
+                                "name" : "10.0.2.18/31"
+                            }
+                            ]
+                        }, 
+                        "iso" : [null]
+                    }
+                }
+                ]
+            }, 
+            {
+                "name" : "et-0/0/1", 
+                "mtu" : 9216, 
+                "unit" : [
+                {
+                    "name" : 0, 
+                    "family" : {
+                        "inet" : {
+                            "address" : [
+                            {
+                                "name" : "10.0.2.20/31"
+                            }
+                            ]
+                        }, 
+                        "iso" : [null]
+                    }
+                }
+                ]
+            }, 
+            {
+                "name" : "et-0/0/2", 
+                "mtu" : 9216, 
+                "unit" : [
+                {
+                    "name" : 0, 
+                    "family" : {
+                        "inet" : {
+                            "filter" : {
+                                "input" : {
+                                    "filter-name" : "test-in"
+                                }, 
+                                "output" : {
+                                    "filter-name" : "test-out"
+                                }
+                            }, 
+                            "address" : [
+                            {
+                                "name" : "10.0.2.22/31"
+                            }
+                            ]
+                        }, 
+                        "iso" : [null]
+                    }
+                }
+                ]
+            }, 
+            {
+                "name" : "et-0/0/3", 
+                "mtu" : 9216, 
+                "unit" : [
+                {
+                    "name" : 0, 
+                    "family" : {
+                        "inet" : {
+                            "filter" : {
+                                "input" : {
+                                    "filter-name" : "test-in"
+                                }, 
+                                "output" : {
+                                    "filter-name" : "test-out"
+                                }
+                            }, 
+                            "address" : [
+                            {
+                                "name" : "10.0.2.24/31"
+                            }
+                            ]
+                        }, 
+                        "iso" : [null]
+                    }
+                }
+                ]
+            }, 
+            {
+                "name" : "et-0/0/4", 
+                "mtu" : 9216, 
+                "unit" : [
+                {
+                    "name" : 0, 
+                    "family" : {
+                        "inet" : {
+                            "filter" : {
+                                "output" : {
+                                    "filter-name" : "test-out"
+                                }
+                            }, 
+                            "address" : [
+                            {
+                                "name" : "10.0.2.26/31"
+                            }
+                            ]
+                        }, 
+                        "iso" : [null]
+                    }
+                }
+                ]
+            }, 
+            {
+                "name" : "et-0/0/5", 
+                "mtu" : 9216, 
+                "unit" : [
+                {
+                    "name" : 0, 
+                    "family" : {
+                        "inet" : {
+                            "address" : [
+                            {
+                                "name" : "10.0.2.3/31"
+                            }
+                            ]
+                        }, 
+                        "iso" : [null]
+                    }
+                }
+                ]
+            }, 
+            {
+                "name" : "et-0/0/6", 
+                "mtu" : 9216, 
+                "unit" : [
+                {
+                    "name" : 0, 
+                    "family" : {
+                        "inet" : {
+                            "address" : [
+                            {
+                                "name" : "10.0.2.7/31"
+                            }
+                            ]
+                        }, 
+                        "iso" : [null]
+                    }
+                }
+                ]
+            }, 
+            {
+                "name" : "et-0/0/12", 
+                "mtu" : 9216, 
+                "unit" : [
+                {
+                    "name" : 0, 
+                    "family" : {
+                        "inet" : {
+                            "address" : [
+                            {
+                                "name" : "10.254.254.3/31"
+                            }
+                            ]
+                        }
+                    }
+                }
+                ]
+            }, 
+            {
+                "name" : "et-0/0/13", 
+                "mtu" : 9216, 
+                "unit" : [
+                {
+                    "name" : 0, 
+                    "family" : {
+                        "inet" : {
+                            "address" : [
+                            {
+                                "name" : "10.254.254.7/31"
+                            }
+                            ]
+                        }
+                    }
+                }
+                ]
+            }, 
+            {
+                "name" : "lo0", 
+                "unit" : [
+                {
+                    "name" : 0, 
+                    "family" : {
+                        "inet" : {
+                            "address" : [
+                            {
+                                "name" : "191.168.101.4/32"
+                            }
+                            ]
+                        }, 
+                        "iso" : {
+                            "address" : [
+                            {
+                                "name" : "49.0002.1911.6810.1004.00"
+                            }
+                            ]
+                        }
+                    }
+                }
+                ]
+            }
+            ]
+        }, 
+        "routing-options" : {
+            "static" : {
+                "route" : [
+                {
+                    "name" : "10.160.0.0/16", 
+                    "next-hop" : ["172.25.90.1"]
+                }
+                ]
+            }, 
+            "aggregate" : {
+                "route" : [
+                {
+                    "name" : "191.168.101.0/24"
+                }, 
+                {
+                    "name" : "191.168.102.0/24"
+                }
+                ]
+            }, 
+            "router-id" : "191.168.101.4", 
+            "autonomous-system" : {
+                "as-number" : "302"
+            }, 
+            "forwarding-table" : {
+                "export" : ["load-balance"]
+            }
+        }, 
+        "protocols" : {
+            "bgp" : {
+                "group" : [
+                {
+                    "name" : "IBGP-EVPN-Core", 
+                    "type" : "internal", 
+                    "local-address" : "191.168.101.4", 
+                    "family" : {
+                        "evpn" : {
+                            "signaling" : [null]
+                        }
+                    }, 
+                    "cluster" : "2.2.2.2", 
+                    "local-as" : {
+                        "as-number" : "65101"
+                    }, 
+                    "bfd-liveness-detection" : {
+                        "minimum-interval" : 300, 
+                        "multiplier" : 3
+                    }, 
+                    "multipath" : {
+                        "multiple-as" : [null]
+                    }, 
+                    "neighbor" : [
+                    {
+                        "name" : "191.168.101.5"
+                    }, 
+                    {
+                        "name" : "191.168.101.6"
+                    }, 
+                    {
+                        "name" : "191.168.101.7"
+                    }, 
+                    {
+                        "name" : "191.168.102.1"
+                    }, 
+                    {
+                        "name" : "191.168.102.2"
+                    }
+                    ]
+                }, 
+                {
+                    "name" : "EBGP-DCI", 
+                    "type" : "external", 
+                    "export" : ["export_lo0"],
+                    "local-as" : {
+                        "as-number" : "302"
+                    }, 
+                    "bfd-liveness-detection" : {
+                        "minimum-interval" : 300, 
+                        "multiplier" : 3
+                    }, 
+                    "multipath" : {
+                        "multiple-as" : [null]
+                    }, 
+                    "neighbor" : [
+                    {
+                        "name" : "10.254.254.2", 
+                        "peer-as" : "2201"
+                    }, 
+                    {
+                        "name" : "10.254.254.6", 
+                        "peer-as" : "2202"
+                    }
+                    ]
+                }, 
+                {
+                    "name" : "EBGP-Core", 
+                    "type" : "external", 
+                    "mtu-discovery" : [null], 
+                    "export" : ["bgp-ip-clos-out"],
+                    "local-as" : {
+                        "as-number" : "302"
+                    }, 
+                    "bfd-liveness-detection" : {
+                        "minimum-interval" : 350, 
+                        "multiplier" : 3, 
+                        "session-mode" : "automatic"
+                    }, 
+                    "multipath" : {
+                        "multiple-as" : [null]
+                    }, 
+                    "neighbor" : [
+                    {
+                        "name" : "10.0.2.23", 
+                        "local-address" : "10.0.2.22", 
+                        "peer-as" : "202"
+                    }, 
+                    {
+                        "name" : "10.0.2.25", 
+                        "local-address" : "10.0.2.24", 
+                        "peer-as" : "203"
+                    }, 
+                    {
+                        "name" : "10.0.2.19", 
+                        "local-address" : "10.0.2.18", 
+                        "peer-as" : "200"
+                    }, 
+                    {
+                        "name" : "10.0.2.21", 
+                        "local-address" : "10.0.2.20", 
+                        "peer-as" : "201"
+                    }, 
+                    {
+                        "name" : "10.0.2.27", 
+                        "local-address" : "10.0.2.26", 
+                        "peer-as" : "204"
+                    }
+                    ]
+                }, 
+                {
+                    "name" : "EBGP-DCI-EVPN", 
+                    "type" : "external", 
+                    "multihop" : {
+                        "no-nexthop-change" : [null]
+                    }, 
+                    "local-address" : "191.168.101.4", 
+                    "family" : {
+                        "evpn" : {
+                            "signaling" : [null]
+                        }
+                    }, 
+                    "local-as" : {
+                        "as-number" : "65101"
+                    }, 
+                    "bfd-liveness-detection" : {
+                        "minimum-interval" : 300, 
+                        "multiplier" : 3
+                    }, 
+                    "multipath" : {
+                        "multiple-as" : [null]
+                    }, 
+                    "neighbor" : [
+                    {
+                        "name" : "191.168.100.1", 
+                        "peer-as" : "65100"
+                    }, 
+                    {
+                        "name" : "191.168.100.2", 
+                        "peer-as" : "65100"
+                    }
+                    ]
+                }
+                ]
+            }, 
+            "pim" : {
+                "rp" : {
+                    "static" : {
+                        "address" : [
+                        {
+                            "name" : "191.168.102.1"
+                        }
+                        ]
+                    }
+                }
+            }, 
+            "l2-learning" : {
+                "global-mac-table-aging-time" : 2400
+            }, 
+            "lldp" : {
+                "interface" : [
+                {
+                    "name" : "all"
+                }
+                ]
+            }
+        }, 
+        "policy-options" : {
+            "prefix-list" : [
+            {
+                "name" : "evpn-routes", 
+                "prefix-list-item" : [
+                {
+                    "name" : "10.201.0.0/16"
+                }, 
+                {
+                    "name" : "10.202.0.0/16"
+                }, 
+                {
+                    "name" : "10.203.0.0/16"
+                }, 
+                {
+                    "name" : "10.204.0.0/16"
+                }, 
+                {
+                    "name" : "10.205.0.0/16"
+                }, 
+                {
+                    "name" : "10.206.0.0/16"
+                }, 
+                {
+                    "name" : "10.207.0.0/16"
+                }, 
+                {
+                    "name" : "10.208.0.0/16"
+                }, 
+                {
+                    "name" : "10.209.0.0/16"
+                }, 
+                {
+                    "name" : "10.210.0.0/16"
+                }, 
+                {
+                    "name" : "10.211.0.0/16"
+                }, 
+                {
+                    "name" : "10.212.0.0/16"
+                }, 
+                {
+                    "name" : "10.213.0.0/16"
+                }, 
+                {
+                    "name" : "10.214.0.0/16"
+                }, 
+                {
+                    "name" : "10.215.0.0/16"
+                }, 
+                {
+                    "name" : "10.216.0.0/16"
+                }, 
+                {
+                    "name" : "10.217.0.0/16"
+                }, 
+                {
+                    "name" : "10.218.0.0/16"
+                }, 
+                {
+                    "name" : "10.219.0.0/16"
+                }, 
+                {
+                    "name" : "10.220.0.0/16"
+                }
+                ]
+            }
+            ], 
+            "policy-statement" : [
+            {
+                "name" : "bgp-ip-clos-out", 
+                "term" : [
+                {
+                    "name" : "loopback", 
+                    "from" : {
+                        "protocol" : ["direct"]
+                    }, 
+                    "then" : {
+                        "next-hop" : {
+                            "self" : [null]
+                        }, 
+                        "accept" : [null]
+                    }
+                }, 
+                {
+                    "name" : "loopbacks", 
+                    "from" : {
+                        "route-filter" : [
+                        {
+                            "address" : "191.168.0.0/16", 
+                            "orlonger" : [null]
+                        }
+                        ]
+                    }, 
+                    "then" : {
+                        "accept" : [null]
+                    }
+                }
+                ]
+            }, 
+            {
+                "name" : "export_DC2_lo0", 
+                "from" : {
+                    "route-filter" : [
+                    {
+                        "address" : "191.168.100.0/24", 
+                        "exact" : [null]
+                    }
+                    ]
+                }, 
+                "then" : {
+                    "accept" : [null]
+                }
+            }, 
+            {
+                "name" : "export_EVPN_to_WAN", 
+                "term" : [
+                {
+                    "name" : "1", 
+                    "from" : {
+                        "protocol" : ["evpn"],
+                        "prefix-list" : [
+                        {
+                            "name" : "evpn-routes"
+                        }
+                        ]
+                    }, 
+                    "then" : {
+                        "accept" : [null]
+                    }
+                }, 
+                {
+                    "name" : "100", 
+                    "then" : {
+                        "reject" : [null]
+                    }
+                }
+                ]
+            }, 
+            {
+                "name" : "export_lo0", 
+                "term" : [
+                {
+                    "name" : "lo0", 
+                    "from" : {
+                        "protocol" : ["aggregate"],
+                        "route-filter" : [
+                        {
+                            "address" : "191.168.101.0/24", 
+                            "exact" : [null]
+                        }, 
+                        {
+                            "address" : "191.168.102.0/24", 
+                            "exact" : [null]
+                        }
+                        ]
+                    }, 
+                    "then" : {
+                        "accept" : [null]
+                    }
+                }
+                ]
+            }, 
+            {
+                "name" : "load-balance", 
+                "then" : {
+                    "load-balance" : {
+                        "per-packet" : [null]
+                    }
+                }
+            }, 
+            {
+                "name" : "vni20004-EXPORT", 
+                "term" : [
+                {
+                    "name" : "DIRECT", 
+                    "from" : {
+                        "protocol" : ["direct"],
+                        "route-filter" : [
+                        {
+                            "address" : "0.0.0.0/0", 
+                            "prefix-length-range" : "/16-/16"
+                        }
+                        ]
+                    }, 
+                    "then" : {
+                        "community" : [
+                        {
+                            "add" : [null], 
+                            "community-name" : "vni20004"
+                        }
+                        ], 
+                        "accept" : [null]
+                    }
+                }, 
+                {
+                    "name" : "DIRECT_v6", 
+                    "from" : {
+                        "family" : "inet6", 
+                        "protocol" : ["direct"],
+                        "route-filter" : [
+                        {
+                            "address" : "0::0/0", 
+                            "prefix-length-range" : "/64-/64"
+                        }
+                        ]
+                    }, 
+                    "then" : {
+                        "community" : [
+                        {
+                            "add" : [null], 
+                            "community-name" : "vni20004"
+                        }
+                        ], 
+                        "accept" : [null]
+                    }
+                }, 
+                {
+                    "name" : "EVPN", 
+                    "from" : {
+                        "rib" : "DCI-VRF.evpn.0"
+                    }, 
+                    "then" : {
+                        "community" : [
+                        {
+                            "add" : [null], 
+                            "community-name" : "vni20004"
+                        }
+                        ], 
+                        "accept" : [null]
+                    }
+                }
+                ]
+            }, 
+            {
+                "name" : "vni20100-EXPORT", 
+                "term" : [
+                {
+                    "name" : "DIRECT", 
+                    "from" : {
+                        "protocol" : ["direct"],
+                        "route-filter" : [
+                        {
+                            "address" : "0.0.0.0/0", 
+                            "prefix-length-range" : "/16-/16"
+                        }
+                        ]
+                    }, 
+                    "then" : {
+                        "community" : [
+                        {
+                            "add" : [null], 
+                            "community-name" : "vni20100"
+                        }
+                        ], 
+                        "accept" : [null]
+                    }
+                }, 
+                {
+                    "name" : "DIRECT_v6", 
+                    "from" : {
+                        "family" : "inet6", 
+                        "protocol" : ["direct"],
+                        "route-filter" : [
+                        {
+                            "address" : "0::0/0", 
+                            "prefix-length-range" : "/64-/64"
+                        }
+                        ]
+                    }, 
+                    "then" : {
+                        "community" : [
+                        {
+                            "add" : [null], 
+                            "community-name" : "vni20100"
+                        }
+                        ], 
+                        "accept" : [null]
+                    }
+                }, 
+                {
+                    "name" : "EVPN", 
+                    "from" : {
+                        "rib" : "DCI-VRF.evpn.0"
+                    }, 
+                    "then" : {
+                        "community" : [
+                        {
+                            "add" : [null], 
+                            "community-name" : "vni20100"
+                        }
+                        ], 
+                        "accept" : [null]
+                    }
+                }
+                ]
+            }
+            ], 
+            "community" : [
+            {
+                "name" : "vni20004", 
+                "members" : ["target:65100:1"]
+            }, 
+            {
+                "name" : "vni20100", 
+                "members" : ["target:65100:1"]
+            }
+            ]
+        }, 
+        "firewall" : {
+            "family" : {
+                "inet" : {
+                    "filter" : [
+                    {
+                        "name" : "test-in", 
+                        "interface-specific" : [null], 
+                        "term" : [
+                        {
+                            "name" : "1", 
+                            "from" : {
+                                "source-address" : [
+                                {
+                                    "name" : "12.12.0.0/16"
+                                }
+                                ], 
+                                "destination-address" : [
+                                {
+                                    "name" : "11.11.0.0/16"
+                                }
+                                ]
+                            }, 
+                            "then" : {
+                                "count" : "test-in", 
+                                "accept" : [null]
+                            }
+                        }, 
+                        {
+                            "name" : "2", 
+                            "then" : {
+                                "accept" : [null]
+                            }
+                        }
+                        ]
+                    }, 
+                    {
+                        "name" : "test-out", 
+                        "interface-specific" : [null], 
+                        "term" : [
+                        {
+                            "name" : "1", 
+                            "from" : {
+                                "source-address" : [
+                                {
+                                    "name" : "12.12.0.0/16"
+                                }
+                                ], 
+                                "destination-address" : [
+                                {
+                                    "name" : "11.11.0.0/16"
+                                }
+                                ]
+                            }, 
+                            "then" : {
+                                "count" : "test-out", 
+                                "accept" : [null]
+                            }
+                        }, 
+                        {
+                            "name" : "2", 
+                            "then" : {
+                                "accept" : [null]
+                            }
+                        }
+                        ]
+                    }
+                    ]
+                }
+            }
+        }, 
+        "routing-instances" : {
+            "instance" : [
+            {
+                "name" : "DCI-VRF", 
+                "instance-type" : "vrf", 
+                "route-distinguisher" : {
+                    "rd-type" : "191.168.101.4:20004"
+                }, 
+                "vrf-target" : {
+                    "community" : "target:65100:1"
+                }, 
+                "vrf-table-label" : [null], 
+                "routing-options" : {
+                    "rib" : [
+                    {
+                        "name" : "DCI-VRF.inet6.0", 
+                        "multipath" : [null]
+                    }
+                    ], 
+                    "multipath" : [null], 
+                    "auto-export" : [null]
+                }, 
+                "protocols" : {
+                    "evpn" : {
+                        "ip-prefix-routes" : {
+                            "advertise" : "direct-nexthop", 
+                            "encapsulation" : "vxlan", 
+                            "vni" : 20100
+                        }
+                    }
+                }
+            }, 
+            {
+                "name" : "INTERNET", 
+                "instance-type" : "vrf", 
+                "interface" : [
+                {
+                    "name" : "et-0/0/5.0"
+                }, 
+                {
+                    "name" : "et-0/0/6.0"
+                }
+                ], 
+                "route-distinguisher" : {
+                    "rd-type" : "191.168.101.4:1"
+                }, 
+                "vrf-target" : {
+                    "community" : "target:65101:100"
+                }, 
+                "vrf-table-label" : [null], 
+                "routing-options" : {
+                    "multipath" : [null], 
+                    "autonomous-system" : {
+                        "as-number" : "65101"
+                    }, 
+                    "auto-export" : [null]
+                }, 
+                "protocols" : {
+                    "bgp" : {
+                        "group" : [
+                        {
+                            "name" : "Internet", 
+                            "type" : "external", 
+                            "export" : ["export_EVPN_to_WAN"],
+                            "peer-as" : "65200", 
+                            "multipath" : {
+                                "multiple-as" : [null]
+                            }, 
+                            "neighbor" : [
+                            {
+                                "name" : "10.0.2.2"
+                            }, 
+                            {
+                                "name" : "10.0.2.6"
+                            }
+                            ]
+                        }
+                        ]
+                    }, 
+                    "evpn" : {
+                        "ip-prefix-routes" : {
+                            "advertise" : "direct-nexthop", 
+                            "encapsulation" : "vxlan", 
+                            "vni" : 10100
+                        }
+                    }
+                }
+            }
+            ]
+        }
+    }
+}

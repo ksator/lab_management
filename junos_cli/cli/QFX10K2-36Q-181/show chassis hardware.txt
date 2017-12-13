@@ -1,0 +1,20 @@
+
+Hardware inventory:
+Item             Version  Part number  Serial number     Description
+Chassis                                DK230             QFX10002-36Q
+CB 0            
+Routing Engine 0          BUILTIN      BUILTIN           RE-QFX10002-36Q
+FPC 0            REV 37   750-059497   ACPM5355          QFX10002-36Q
+  CPU                     BUILTIN      BUILTIN           FPC CPU
+  PIC 0                   BUILTIN      BUILTIN           36X40G
+    Xcvr 0       REV 01   740-056705   UU20A9Z           QSFP+40GE-LX4
+    Xcvr 1       REV 01   740-056705   UU307K9           QSFP+40GE-LX4
+    Xcvr 2       REV 01   740-056705   UVC1VVX           QSFP+40GE-LX4
+    Xcvr 3       REV 01   740-056705   UUH248X           QSFP+40GE-LX4
+    Xcvr 4       REV 01   740-056705   UUE106B           QSFP+40GE-LX4
+  Mezz           REV 02   711-059316   ACPN5858          QFX10002 36X40G Mezz
+Power Supply 0   REV 04   740-054405   1EDN7012692       AC AFO 1600W PSU
+Power Supply 1   REV 04   740-054405   1EDN7012816       AC AFO 1600W PSU
+Fan Tray 0                                               QFX10002 Fan Tray 0, Front to Back Airflow - AFO
+Fan Tray 1                                               QFX10002 Fan Tray 1, Front to Back Airflow - AFO
+Fan Tray 2                                               QFX10002 Fan Tray 2, Front to Back Airflow - AFO

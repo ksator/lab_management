@@ -1,0 +1,25 @@
+
+Hardware inventory:
+Item             Version  Part number  Serial number     Description
+Chassis                                DC765             QFX10002-36Q
+CB 0            
+Routing Engine 0          BUILTIN      BUILTIN           RE-QFX10002-36Q
+FPC 0            REV 26   750-059497   ACNJ5783          QFX10002-36Q
+  CPU                     BUILTIN      BUILTIN           FPC CPU
+  PIC 0                   BUILTIN      BUILTIN           36X40G
+    Xcvr 0       REV 01   740-056705   UT324H3           QSFP+40GE-LX4
+    Xcvr 1       REV 01   740-056705   UUK00M0           QSFP+40GE-LX4
+    Xcvr 2       REV 01   740-062254   1FCP2116003       QSFP+40GE-LX4
+    Xcvr 3       REV 01   740-056705   UTK19T1           QSFP+40GE-LX4
+    Xcvr 4       REV 01   740-056705   UU20LXQ           QSFP+40GE-LX4
+    Xcvr 5       REV 01   740-032986   QB450139          QSFP+-40G-SR4
+    Xcvr 6       REV 01   740-056705   UUA1TR7           QSFP+40GE-LX4
+    Xcvr 12      REV 01   740-032986   QB430495          QSFP+-40G-SR4
+    Xcvr 13      REV 01   740-046565   QE121421          QSFP+-40G-SR4
+    Xcvr 18      REV 01   740-032986   QA510515          QSFP+-40G-SR4
+  Mezz           REV 02   711-059316   ACNK5257          QFX10002 36X40G Mezz
+Power Supply 0   REV 03   740-054405   1EDN5389260       AC AFO 1600W PSU
+Power Supply 1   REV 03   740-054405   1EDN5345723       AC AFO 1600W PSU
+Fan Tray 0                                               QFX10002 Fan Tray 0, Front to Back Airflow - AFO
+Fan Tray 1                                               QFX10002 Fan Tray 1, Front to Back Airflow - AFO
+Fan Tray 2                                               QFX10002 Fan Tray 2, Front to Back Airflow - AFO

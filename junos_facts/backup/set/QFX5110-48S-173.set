@@ -1,0 +1,59 @@
+set version "17.3-20170723_17.3T.0 [dc-builder]"
+set groups POC_Lab system host-name QFX5110-173
+set groups POC_Lab system backup-router 172.25.90.1
+set groups POC_Lab system authentication-order radius
+set groups POC_Lab system authentication-order password
+set groups POC_Lab system root-authentication encrypted-password "$1$vdtgjFuJ$jsGjcpPlzUSilJMWFwwIR/"
+set groups POC_Lab system name-server 172.29.131.60
+set groups POC_Lab system login message "\n \n System is in use for a customer POC testing \n \n *** Please do not make changes before contacting the Herndon POC admins *** \n\n"
+set groups POC_Lab system login user lab uid 2000
+set groups POC_Lab system login user lab class super-user
+set groups POC_Lab system login user lab authentication encrypted-password "$1$gBLz9B0H$2W5ODU92lyXE4vS/fgWBN1"
+set groups POC_Lab system services ftp
+set groups POC_Lab system services ssh protocol-version v2
+set groups POC_Lab system services telnet
+set groups POC_Lab system services xnm-clear-text
+set groups POC_Lab system services netconf ssh
+set groups POC_Lab system syslog host 172.25.45.6 authorization any
+set groups POC_Lab system ntp server 66.129.255.62 prefer
+set groups POC_Lab interfaces em0 unit 0 family inet address 172.25.90.173/24
+set groups POC_Lab snmp community public
+set groups POC_Lab routing-options static route 0.0.0.0/0 next-hop 172.25.90.1
+set apply-groups POC_Lab
+set system root-authentication encrypted-password "$1$DBwh/7ma$FgJVx.7.uZW15cX9kM1EC/"
+set system syslog host 172.25.90.135 any any
+set system syslog host 172.25.90.135 match UI_COMMIT_COMPLETED
+set system syslog host 172.25.90.135 port 516
+set interfaces xe-0/0/1 unit 0 family ethernet-switching interface-mode trunk
+set interfaces xe-0/0/1 unit 0 family ethernet-switching vlan members all
+set interfaces et-0/0/48 mtu 9216
+set interfaces et-0/0/48 unit 0 family inet address 10.0.2.4/31
+set interfaces et-0/0/49 mtu 9216
+set interfaces et-0/0/49 unit 0 family inet address 10.0.2.6/31
+set interfaces et-0/0/50 mtu 9216
+set interfaces et-0/0/50 unit 0 family inet address 10.0.1.15/31
+set interfaces et-0/0/51 mtu 9216
+set interfaces et-0/0/51 unit 0 family inet address 10.0.1.19/31
+set interfaces irb unit 100 family inet address 30.0.0.3/16 vrrp-group 1 virtual-address 30.0.0.1
+set interfaces irb unit 100 family inet address 30.0.0.3/16 vrrp-group 1 accept-data
+set interfaces lo0 unit 0 family inet address 191.168.101.2/32
+set interfaces lo0 unit 0 family iso address 49.0001.1911.6810.1002.00
+set interfaces lo0 unit 0 family mpls
+set routing-options router-id 191.168.101.1
+set routing-options autonomous-system 65200
+set routing-options forwarding-table export load-balance
+set protocols bgp group Internet type external
+set protocols bgp group Internet export export_default_only
+set protocols bgp group Internet multipath multiple-as
+set protocols bgp group Internet neighbor 10.0.2.5 peer-as 65101
+set protocols bgp group Internet neighbor 10.0.2.7 peer-as 65101
+set protocols bgp group Internet neighbor 10.0.1.14 peer-as 65100
+set protocols bgp group Internet neighbor 10.0.1.18 peer-as 65100
+set protocols lldp interface all
+set policy-options policy-statement export_default_only term 1 from protocol static
+set policy-options policy-statement export_default_only term 1 from route-filter 0.0.0.0/0 exact
+set policy-options policy-statement export_default_only term 1 then accept
+set policy-options policy-statement export_default_only then reject
+set policy-options policy-statement load-balance then load-balance per-packet
+set vlans V100 vlan-id 100
+set vlans V100 l3-interface irb.100

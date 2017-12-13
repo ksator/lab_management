@@ -1,0 +1,23 @@
+
+Hardware inventory:
+Item             Version  Part number  Serial number     Description
+Chassis                                WS3717080029      QFX5110-48S-4C
+CB 0            
+Routing Engine 0          BUILTIN      BUILTIN           RE-QFX5110-48S-4C
+FPC 0            REV 17   650-061152   WS3717080029      QFX5110-48S-4C
+  CPU                     BUILTIN      BUILTIN           FPC CPU
+  PIC 0                   BUILTIN      BUILTIN           48x10G-4x100G
+    Xcvr 1       REV 01   740-021308   MWE0WW8           SFP+-10G-SR
+    Xcvr 2       REV 01   740-021308   9Z3152A00332      SFP+-10G-SR
+    Xcvr 3       REV 01   740-031980   233363A01607      SFP+-10G-SR
+    Xcvr 48      REV 01   740-056705   UU30G2P           QSFP+40GE-LX4
+    Xcvr 49      REV 01   740-032986   QB131408          QSFP+-40G-SR4
+    Xcvr 50      REV 01   740-032986   QB441046          QSFP+-40G-SR4
+    Xcvr 51      REV 01   740-046565   QE486340          QSFP+-40G-SR4
+Power Supply 0   REV 04   740-041741   1GA26511838       JPSU-650W-AC-AFO
+Power Supply 1   REV 04   740-041741   1GA26511815       JPSU-650W-AC-AFO
+Fan Tray 0                                               fan-ctrl-2 0, Front to Back Airflow - AFO
+Fan Tray 1                                               fan-ctrl-2 1, Front to Back Airflow - AFO
+Fan Tray 2                                               fan-ctrl-2 2, Front to Back Airflow - AFO
+Fan Tray 3                                               fan-ctrl-2 3, Front to Back Airflow - AFO
+Fan Tray 4                                               fan-ctrl-2 4, Front to Back Airflow - AFO

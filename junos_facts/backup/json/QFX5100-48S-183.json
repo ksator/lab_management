@@ -1,0 +1,465 @@
+{
+    "configuration" : {
+        "@" : {
+            "xmlns" : "http://xml.juniper.net/xnm/1.1/xnm", 
+            "junos:changed-seconds" : "1510048860", 
+            "junos:changed-localtime" : "2017-11-07 10:01:00 UTC"
+        }, 
+        "version" : "17.3R1.10", 
+        "groups" : [
+        {
+            "name" : "POC_Lab", 
+            "system" : {
+                "host-name" : "QFX5100-183", 
+                "backup-router" : {
+                    "address" : "172.25.90.1"
+                }, 
+                "authentication-order" : ["radius", "password"],
+                "root-authentication" : {
+                    "encrypted-password" : "$1$4IG2TqkF$BWRFZOwUfQNpQ5wNErZYm/"
+                }, 
+                "name-server" : [
+                {
+                    "name" : "172.29.131.60"
+                }
+                ], 
+                "login" : {
+                    "message" : "\\n \\n System is in use for a customer POC testing \\n \\n *** Please do not make changes before contacting the Herndon POC admins *** \\n\\n", 
+                    "user" : [
+                    {
+                        "name" : "lab", 
+                        "uid" : 2002, 
+                        "class" : "super-user", 
+                        "authentication" : {
+                            "encrypted-password" : "$1$EUL7Cv53$KB/VblftmUIy5gvRCFhlt0"
+                        }
+                    }
+                    ]
+                }, 
+                "services" : {
+                    "ftp" : [null], 
+                    "ssh" : {
+                        "protocol-version" : ["v2"]
+                    }, 
+                    "telnet" : [null], 
+                    "xnm-clear-text" : [null], 
+                    "netconf" : {
+                        "ssh" : [null]
+                    }
+                }, 
+                "syslog" : {
+                    "host" : [
+                    {
+                        "name" : "172.25.45.6", 
+                        "contents" : [
+                        {
+                            "name" : "authorization", 
+                            "any" : [null]
+                        }
+                        ]
+                    }
+                    ], 
+                    "file" : [
+                    {
+                        "name" : "messages", 
+                        "contents" : [
+                        {
+                            "name" : "any", 
+                            "any" : [null]
+                        }, 
+                        {
+                            "name" : "interactive-commands", 
+                            "none" : [null]
+                        }
+                        ], 
+                        "archive" : {
+                            "size" : 10m, 
+                            "files" : 10
+                        }
+                    }
+                    ]
+                }, 
+                "commit" : {
+                    "synchronize" : [null]
+                }, 
+                "ntp" : {
+                    "server" : [
+                    {
+                        "name" : "66.129.255.62", 
+                        "prefer" : [null]
+                    }
+                    ]
+                }
+            }, 
+            "interfaces" : {
+                "interface" : [
+                {
+                    "name" : "vme", 
+                    "unit" : [
+                    {
+                        "name" : 0, 
+                        "family" : {
+                            "inet" : {
+                                "address" : [
+                                {
+                                    "name" : "172.25.90.183/24"
+                                }
+                                ]
+                            }
+                        }
+                    }
+                    ]
+                }
+                ]
+            }, 
+            "snmp" : {
+                "community" : [
+                {
+                    "name" : "public"
+                }
+                ]
+            }, 
+            "routing-options" : {
+                "static" : {
+                    "route" : [
+                    {
+                        "name" : "10.255.255.0/24", 
+                        "next-hop" : ["172.25.90.1"],
+                        "retain" : [null], 
+                        "no-readvertise" : [null]
+                    }, 
+                    {
+                        "name" : "10.161.0.0/16", 
+                        "next-hop" : ["172.25.90.1"],
+                        "retain" : [null], 
+                        "no-readvertise" : [null]
+                    }, 
+                    {
+                        "name" : "172.16.0.0/12", 
+                        "next-hop" : ["172.25.90.1"],
+                        "retain" : [null], 
+                        "no-readvertise" : [null]
+                    }, 
+                    {
+                        "name" : "192.168.0.0/16", 
+                        "next-hop" : ["172.25.90.1"],
+                        "retain" : [null], 
+                        "no-readvertise" : [null]
+                    }
+                    ]
+                }
+            }
+        }
+        ], 
+        "apply-groups" : ["POC_Lab"],
+        "system" : {
+            "syslog" : {
+                "host" : [
+                {
+                    "name" : "172.25.90.135", 
+                    "contents" : [
+                    {
+                        "name" : "any", 
+                        "any" : [null]
+                    }
+                    ], 
+                    "match" : "UI_COMMIT_COMPLETED", 
+                    "port" : 516
+                }
+                ]
+            }
+        }, 
+        "chassis" : {
+            "aggregated-devices" : {
+                "ethernet" : {
+                    "device-count" : 5
+                }
+            }
+        }, 
+        "interfaces" : {
+            "interface" : [
+            {
+                "name" : "xe-0/0/0", 
+                "ether-options" : {
+                    "ieee-802.3ad" : {
+                        "bundle" : "ae0"
+                    }
+                }
+            }, 
+            {
+                "name" : "xe-0/0/1", 
+                "mtu" : 9216, 
+                "unit" : [
+                {
+                    "name" : 0, 
+                    "family" : {
+                        "ethernet-switching" : {
+                            "interface-mode" : "trunk", 
+                            "vlan" : {
+                                "members" : ["V4050", "V4051"]
+                            }
+                        }
+                    }
+                }
+                ]
+            }, 
+            {
+                "name" : "xe-0/0/2", 
+                "description" : "ixia 1.6", 
+                "unit" : [
+                {
+                    "name" : 0, 
+                    "family" : {
+                        "ethernet-switching" : {
+                            "interface-mode" : "trunk", 
+                            "vlan" : {
+                                "members" : ["3006-3010", "V2030", "V2031", "VDEV", "VPROD"]
+                            }
+                        }
+                    }
+                }
+                ]
+            }, 
+            {
+                "name" : "et-0/0/48", 
+                "ether-options" : {
+                    "ieee-802.3ad" : {
+                        "bundle" : "ae1"
+                    }
+                }
+            }, 
+            {
+                "name" : "et-0/0/49", 
+                "ether-options" : {
+                    "ieee-802.3ad" : {
+                        "bundle" : "ae1"
+                    }
+                }
+            }, 
+            {
+                "name" : "xe-1/0/0", 
+                "ether-options" : {
+                    "ieee-802.3ad" : {
+                        "bundle" : "ae0"
+                    }
+                }
+            }, 
+            {
+                "name" : "xe-1/0/1", 
+                "mtu" : 9216, 
+                "unit" : [
+                {
+                    "name" : 0, 
+                    "family" : {
+                        "ethernet-switching" : {
+                            "interface-mode" : "trunk", 
+                            "vlan" : {
+                                "members" : ["V4050", "V4051"]
+                            }
+                        }
+                    }
+                }
+                ]
+            }, 
+            {
+                "name" : "et-1/0/48", 
+                "ether-options" : {
+                    "ieee-802.3ad" : {
+                        "bundle" : "ae1"
+                    }
+                }
+            }, 
+            {
+                "name" : "et-1/0/49", 
+                "ether-options" : {
+                    "ieee-802.3ad" : {
+                        "bundle" : "ae1"
+                    }
+                }
+            }, 
+            {
+                "name" : "ae0", 
+                "description" : "LAG to 4500-191", 
+                "mtu" : 9216, 
+                "aggregated-ether-options" : {
+                    "lacp" : {
+                        "active" : [null], 
+                        "periodic" : "fast"
+                    }
+                }, 
+                "unit" : [
+                {
+                    "name" : 0, 
+                    "family" : {
+                        "ethernet-switching" : {
+                            "interface-mode" : "trunk", 
+                            "vlan" : {
+                                "members" : ["all"]
+                            }
+                        }
+                    }
+                }
+                ]
+            }, 
+            {
+                "name" : "ae1", 
+                "description" : "ESI 22:22 to POD1 Spine", 
+                "mtu" : 9216, 
+                "aggregated-ether-options" : {
+                    "lacp" : {
+                        "active" : [null], 
+                        "periodic" : "fast"
+                    }
+                }, 
+                "unit" : [
+                {
+                    "name" : 0, 
+                    "family" : {
+                        "ethernet-switching" : {
+                            "interface-mode" : "trunk", 
+                            "vlan" : {
+                                "members" : ["all"]
+                            }
+                        }
+                    }
+                }
+                ]
+            }
+            ]
+        }, 
+        "forwarding-options" : {
+            "enhanced-hash-key" : {
+                "ecmp-resilient-hash" : [null]
+            }
+        }, 
+        "routing-options" : {
+            "forwarding-table" : {
+                "export" : ["load-balance"]
+            }
+        }, 
+        "protocols" : {
+            "igmp" : {
+                "interface" : [
+                {
+                    "name" : "all"
+                }, 
+                {
+                    "name" : "xe-0/0/2.0"
+                }, 
+                {
+                    "name" : "ae1.0"
+                }
+                ]
+            }, 
+            "lldp" : {
+                "interface" : [
+                {
+                    "name" : "all"
+                }
+                ]
+            }, 
+            "igmp-snooping" : {
+                "vlan" : [
+                {
+                    "name" : "all"
+                }
+                ]
+            }
+        }, 
+        "policy-options" : {
+            "policy-statement" : [
+            {
+                "name" : "load-balance", 
+                "then" : {
+                    "load-balance" : {
+                        "per-packet" : [null]
+                    }
+                }
+            }
+            ]
+        }, 
+        "virtual-chassis" : {
+            "preprovisioned" : [null], 
+            "member" : [
+            {
+                "name" : 0, 
+                "role" : "routing-engine", 
+                "serial-number" : "TA3713470175"
+            }, 
+            {
+                "name" : 1, 
+                "role" : "routing-engine", 
+                "serial-number" : "TA3713470300"
+            }
+            ]
+        }, 
+        "vlans" : {
+            "vlan" : [
+            {
+                "name" : "V2030", 
+                "vlan-id" : 2030
+            }, 
+            {
+                "name" : "V2031", 
+                "vlan-id" : 2031
+            }, 
+            {
+                "name" : "V3001", 
+                "vlan-id" : 3001
+            }, 
+            {
+                "name" : "V3002", 
+                "vlan-id" : 3002
+            }, 
+            {
+                "name" : "V3003", 
+                "vlan-id" : 3003
+            }, 
+            {
+                "name" : "V3004", 
+                "vlan-id" : 3004
+            }, 
+            {
+                "name" : "V3005", 
+                "vlan-id" : 3005
+            }, 
+            {
+                "name" : "V3006", 
+                "vlan-id" : 3006
+            }, 
+            {
+                "name" : "V3007", 
+                "vlan-id" : 3007
+            }, 
+            {
+                "name" : "V3008", 
+                "vlan-id" : 3008
+            }, 
+            {
+                "name" : "V3009", 
+                "vlan-id" : 3009
+            }, 
+            {
+                "name" : "V3010", 
+                "vlan-id" : 3010
+            }, 
+            {
+                "name" : "V4050", 
+                "vlan-id" : 4050
+            }, 
+            {
+                "name" : "V4051", 
+                "vlan-id" : 4051
+            }, 
+            {
+                "name" : "VDEV", 
+                "vlan-id" : 2050
+            }, 
+            {
+                "name" : "VPROD", 
+                "vlan-id" : 2051
+            }
+            ]
+        }
+    }
+}

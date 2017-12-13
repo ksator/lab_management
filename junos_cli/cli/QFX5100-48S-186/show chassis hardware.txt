@@ -1,0 +1,55 @@
+
+Hardware inventory:
+Item             Version  Part number  Serial number     Description
+Chassis                                TA3713470272      Virtual Chassis
+Routing Engine 0          BUILTIN      BUILTIN           QFX Routing Engine
+Routing Engine 1          BUILTIN      BUILTIN           QFX Routing Engine
+FPC 0            REV 11   650-049938   TA3714030671      QFX5100-48S-6Q
+  CPU                     BUILTIN      BUILTIN           FPC CPU
+  PIC 0                   BUILTIN      BUILTIN           48x10G-6x40G
+    Xcvr 0       REV 01   740-021309   GA72009293        SFP+-10G-LR
+    Xcvr 1       REV 01   740-021309   GA72009429        SFP+-10G-LR
+    Xcvr 26      REV 01   740-011782   PB82A1Q           SFP-SX
+    Xcvr 48      REV 01   740-056705   UTK10JS           QSFP+40GE-LX4
+    Xcvr 49      REV 01   740-056705   UTD0VUK           QSFP+40GE-LX4
+    Xcvr 50      REV 01   740-038623   MOC15526231289    QSFP+-40G-CU1M
+    Xcvr 51      REV 01   740-038624   MOC13056240261    QSFP+-40G-CU3M
+  Power Supply 0 REV 03   740-041741   1GA23431002       JPSU-650W-AC-AFO
+  Power Supply 1 REV 03   740-041741   1GA23431003       JPSU-650W-AC-AFO
+  Fan Tray 0                                             QFX5100 Fan Tray 0, Front to Back Airflow - AFO
+  Fan Tray 1                                             QFX5100 Fan Tray 1, Front to Back Airflow - AFO
+  Fan Tray 2                                             QFX5100 Fan Tray 2, Front to Back Airflow - AFO
+  Fan Tray 3                                             QFX5100 Fan Tray 3, Front to Back Airflow - AFO
+  Fan Tray 4                                             QFX5100 Fan Tray 4, Front to Back Airflow - AFO
+FPC 1            REV 09   650-049938   TA3713470272      QFX5100-48S-6Q
+  CPU                     BUILTIN      BUILTIN           FPC CPU
+  PIC 0                   BUILTIN      BUILTIN           48x10G-6x40G
+    Xcvr 0       REV 01   740-031981   E3F2055059        SFP+-10G-LR
+    Xcvr 1       REV 01   740-021308   AQL00KE           SFP+-10G-SR
+    Xcvr 2       REV 01   740-021308   APE0G0R           SFP+-10G-SR
+    Xcvr 48      REV 01   740-056705   UVC04X9           QSFP+40GE-LX4
+    Xcvr 49      REV 01   740-056705   UUH248Q           QSFP+40GE-LX4
+    Xcvr 50      REV 01   740-038623   MOC15526231289    QSFP+-40G-CU1M
+    Xcvr 51      REV 01   740-038624   MOC13136240071    QSFP+-40G-CU3M
+  Power Supply 0 REV 03   740-041741   1GA23110841       JPSU-650W-AC-AFO
+  Fan Tray 0                                             QFX5100 Fan Tray 0, Front to Back Airflow - AFO
+  Fan Tray 1                                             QFX5100 Fan Tray 1, Front to Back Airflow - AFO
+  Fan Tray 2                                             QFX5100 Fan Tray 2, Front to Back Airflow - AFO
+  Fan Tray 3                                             QFX5100 Fan Tray 3, Front to Back Airflow - AFO
+  Fan Tray 4                                             QFX5100 Fan Tray 4, Front to Back Airflow - AFO
+FPC 2            REV 06   650-064380   TA3716170072      QFX5100-48S-6Q
+  CPU                     BUILTIN      BUILTIN           FPC CPU
+  PIC 0                   BUILTIN      BUILTIN           48x10G-6x40G
+    Xcvr 0       REV 01   740-021309   GA72009463        SFP+-10G-LR
+    Xcvr 1       REV 01   740-031981   3YT012408489      SFP+-10G-LR
+    Xcvr 48      REV 01   740-056705   UU307KX           QSFP+40GE-LX4
+    Xcvr 49      REV 01   740-056705   UV51SXK           QSFP+40GE-LX4
+    Xcvr 50      REV 01   740-038624   MOC13056240261    QSFP+-40G-CU3M
+    Xcvr 51      REV 01   740-038624   MOC13136240071    QSFP+-40G-CU3M
+  Power Supply 0 REV 04   740-041741   1GA26100446       JPSU-650W-AC-AFO
+  Power Supply 1 REV 04   740-041741   1GA26101024       JPSU-650W-AC-AFO
+  Fan Tray 0                                             QFX5100 Fan Tray 0, Front to Back Airflow - AFO
+  Fan Tray 1                                             QFX5100 Fan Tray 1, Front to Back Airflow - AFO
+  Fan Tray 2                                             QFX5100 Fan Tray 2, Front to Back Airflow - AFO
+  Fan Tray 3                                             QFX5100 Fan Tray 3, Front to Back Airflow - AFO
+  Fan Tray 4                                             QFX5100 Fan Tray 4, Front to Back Airflow - AFO

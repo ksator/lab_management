@@ -1,0 +1,19 @@
+
+Hardware inventory:
+Item             Version  Part number  Serial number     Description
+Chassis                                DA719             QFX10002-36Q
+CB 0            
+Routing Engine 0          BUILTIN      BUILTIN           RE-QFX10002-36Q
+FPC 0            REV 26   750-059497   ACNJ5643          QFX10002-36Q
+  CPU                     BUILTIN      BUILTIN           FPC CPU
+  PIC 0                   BUILTIN      BUILTIN           36X40G
+    Xcvr 0       REV 01   740-056705   UUH24AT           QSFP+40GE-LX4
+    Xcvr 1       REV 01   740-056705   UTM0JUA           QSFP+40GE-LX4
+    Xcvr 3       REV 01   740-032986   QB430399          QSFP+-40G-SR4
+    Xcvr 6       REV 01   740-032986   QB430404          QSFP+-40G-SR4
+  Mezz           REV 02   711-059316   ACNG9260          QFX10002 36X40G Mezz
+Power Supply 0   REV 03   740-054405   1EDN5345747       AC AFO 1600W PSU
+Power Supply 1   REV 03   740-054405   1EDN5243288       AC AFO 1600W PSU
+Fan Tray 0                                               QFX10002 Fan Tray 0, Front to Back Airflow - AFO
+Fan Tray 1                                               QFX10002 Fan Tray 1, Front to Back Airflow - AFO
+Fan Tray 2                                               QFX10002 Fan Tray 2, Front to Back Airflow - AFO

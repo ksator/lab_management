@@ -1,0 +1,37 @@
+
+Hardware inventory:
+Item             Version  Part number  Serial number     Description
+Chassis                                TA3713470175      Virtual Chassis
+Routing Engine 0          BUILTIN      BUILTIN           QFX Routing Engine
+Routing Engine 1          BUILTIN      BUILTIN           QFX Routing Engine
+FPC 0            REV 09   650-049938   TA3713470175      QFX5100-48S-6Q
+  CPU                     BUILTIN      BUILTIN           FPC CPU
+  PIC 0                   BUILTIN      BUILTIN           48x10G-6x40G
+    Xcvr 0       REV 01   740-031981   E2F2009884        SFP+-10G-LR
+    Xcvr 1       REV 01   740-021308   AQL028X           SFP+-10G-SR
+    Xcvr 2       REV 01   740-031980   AM91LAU           SFP+-10G-SR
+    Xcvr 48      REV 01   740-056705   UU30G4L           QSFP+40GE-LX4
+    Xcvr 49      REV 01   740-056705   UUJ01C8           QSFP+40GE-LX4
+    Xcvr 50      REV 01   740-032986   QA520144          QSFP+-40G-SR4
+  Power Supply 0 REV 03   740-041741   1GA23381957       JPSU-650W-AC-AFO
+  Power Supply 1 REV 03   740-041741   1GA23381958       JPSU-650W-AC-AFO
+  Fan Tray 0                                             QFX5100 Fan Tray 0, Front to Back Airflow - AFO
+  Fan Tray 1                                             QFX5100 Fan Tray 1, Front to Back Airflow - AFO
+  Fan Tray 2                                             QFX5100 Fan Tray 2, Front to Back Airflow - AFO
+  Fan Tray 3                                             QFX5100 Fan Tray 3, Front to Back Airflow - AFO
+  Fan Tray 4                                             QFX5100 Fan Tray 4, Front to Back Airflow - AFO
+FPC 1            REV 09   650-049938   TA3713470300      QFX5100-48S-6Q
+  CPU                     BUILTIN      BUILTIN           FPC CPU
+  PIC 0                   BUILTIN      BUILTIN           48x10G-6x40G
+    Xcvr 0       REV 01   740-031981   E3F2054660        SFP+-10G-LR
+    Xcvr 1       REV 01   740-031981   E3I2010723        SFP+-10G-LR
+    Xcvr 48      REV 01   740-056705   UUK00KC           QSFP+40GE-LX4
+    Xcvr 49      REV 01   740-056705   UVD11PE           QSFP+40GE-LX4
+    Xcvr 50      REV 01   740-032986   QB300595          QSFP+-40G-SR4
+  Power Supply 0 REV 03   740-041741   1GA23382214       JPSU-650W-AC-AFO
+  Power Supply 1 REV 03   740-041741   1GA23382216       JPSU-650W-AC-AFO
+  Fan Tray 0                                             QFX5100 Fan Tray 0, Front to Back Airflow - AFO
+  Fan Tray 1                                             QFX5100 Fan Tray 1, Front to Back Airflow - AFO
+  Fan Tray 2                                             QFX5100 Fan Tray 2, Front to Back Airflow - AFO
+  Fan Tray 3                                             QFX5100 Fan Tray 3, Front to Back Airflow - AFO
+  Fan Tray 4                                             QFX5100 Fan Tray 4, Front to Back Airflow - AFO
