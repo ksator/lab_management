@@ -17,14 +17,13 @@ ansible-galaxy install Juniper.junos
 ```
 Check the Ansible version:
 ```
-# ansible --version
+ansible --version
 ```
 Verify you have the Juniper.junos role: 
 ```
-# ls /etc/ansible/roles/
+ls /etc/ansible/roles/
 ```
 
-```
 # How to use this repo:
 
 ## How to get the remote content locally:
