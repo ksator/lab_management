@@ -1,32 +1,6 @@
 # What to find in this repository
 Automation content for data center network fabric
 
-# How to install Ansible
-
-This repository has been tested using Ansible 2.4.2.0  
-
-Run these commands on Ubuntu 16.04:
-```
-sudo -s
-apt-get update
-apt-get install -y python-dev libxml2-dev python-pip libxslt1-dev build-essential libssl-dev libffi-dev git
-pip install junos-eznc jxmlease wget jsnapy ansible==2.4.2.0 requests ipaddress cryptography==1.2.1 
-ansible-galaxy install Juniper.junos
-```
-Check the Ansible version:
-```
-ansible --version
-```
-Verify you have the Juniper.junos role: 
-```
-ls /etc/ansible/roles/
-```
-This repository has been tested using the version 1.4.3 of the Juniper.junos role available on Galaxy.  
-Use this command to see the name and version of each role installed:
-```
-ansible-galaxy list
-```
-
 # Repository structure 
 
 ## Ansible inventory file
@@ -84,6 +58,32 @@ All playbooks are named **pb.*.yml**
 
 ```
 sudo -s
+```
+
+## Install Ansible
+
+This repository has been tested using Ansible 2.4.2.0  
+
+Run these commands on Ubuntu 16.04:
+```
+sudo -s
+apt-get update
+apt-get install -y python-dev libxml2-dev python-pip libxslt1-dev build-essential libssl-dev libffi-dev git
+pip install junos-eznc jxmlease wget jsnapy ansible==2.4.2.0 requests ipaddress cryptography==1.2.1 
+ansible-galaxy install Juniper.junos
+```
+Check the Ansible version:
+```
+ansible --version
+```
+Verify you have the Juniper.junos role: 
+```
+ls /etc/ansible/roles/
+```
+This repository has been tested using the version 1.4.3 of the Juniper.junos role available on Galaxy.  
+Use this command to see the name and version of each role installed:
+```
+ansible-galaxy list
 ```
 
 ## Get locally the content of the remote repository
@@ -146,18 +146,19 @@ ansible-playbook pb.rollback.yml --extra-vars rbid=3 --limit DC2
 ls rollback/
 ```
 
-# Looking for help with Ansible
+# Looking for help 
 
-This [repository](https://github.com/ksator/ansible-training-for-junos-automation) has many examples about junos automation using Ansible
+## Looking for help with Ansible
 
-# Looking for more EVPN-VXLAN automation examples
+This [repository](https://github.com/ksator/ansible-training-for-junos-automation) has many ready to use examples about junos automation using Ansible
+
+## Looking for more EVPN-VXLAN automation examples
 
 You can refer to these projects:  
 https://github.com/JNPRAutomate/ansible-junos-evpn-vxlan  
 https://github.com/ksator/EVPN_DCI_automation  
 
-
-# Looking for more Junos automation solutions:
+## Looking for more Junos automation solutions:
 
 https://github.com/ksator?tab=repositories  
 https://gitlab.com/users/ksator/projects  
