@@ -91,7 +91,7 @@ cd PoC-80/
 ansible-playbook pb.check.connectivity.yml
 ```
 
-### How to retrieves facts from junos devices: 
+### How to retrieves and print the facts from junos devices: 
 
 ```
 ansible-playbook pb.collect.facts.yml
@@ -101,31 +101,16 @@ ls facts/
 ansible-playbook pb.print.facts.yml
 ```
 
-### How to backup the junos configuration on the Ansible server
-
+### How to overwrite the running configuration on the junos devices with the initial configuration files before the demo
 ```
-ansible-playbook pb.backup.configuration.yml
-ls configuration_backup/
-```
-
-### How to pass show commands on junos devices
-
-```
-vi cli.yml
-ansible-playbook pb.collect.cli.output.yml
-ls cli
-```
-```
-ansible-playbook pb.collect.commands.output.yml
-ls command
+ansible-playbook pb.configure.golden.yml
 ```
 
 ### How to configure devices with telemetry
 ```
-ls templates/
+ls templates
 ansible-playbook pb.configure.telemetry.yml --tag render
 ls render/telemetry/
-ansible-playbook pb.configure.telemetry.yml --check --diff
 ansible-playbook pb.configure.telemetry.yml --check --diff --limit QFX10K2-36Q-176
 ansible-playbook pb.configure.telemetry.yml
 ```
@@ -148,6 +133,34 @@ ls rollback/
 ansible-playbook pb.rollback.yml --extra-vars rbid=3 --limit DC2
 ls rollback/
 ```
+
+### How to backup the junos configuration on the Ansible server
+
+```
+ansible-playbook pb.backup.configuration.yml
+ls configuration_backup/
+```
+
+### How to collects the running configuration on the junos devices and update the initial configuration files for the next demo 
+
+```
+ansible-playbook pb.collect.golden.yml --limit QFX5110
+ansible-playbook pb.collect.golden.yml 
+```
+
+### How to pass show commands on junos devices
+
+```
+vi cli.yml
+ansible-playbook pb.collect.cli.output.yml
+ls cli
+```
+```
+ansible-playbook pb.collect.commands.output.yml
+ls command
+```
+
+
 
 # Looking for help 
 
