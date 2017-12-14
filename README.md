@@ -3,18 +3,18 @@ Automation content for data center network fabric
 
 # Repository structure 
 
-## Ansible inventory file
+### Ansible inventory file
 The ansible inventory file is [**hosts**](http://172.25.90.133/root/PoC-80/blob/master/hosts) file at the root of the repository.    
 
-## Ansible configuration file
+### Ansible configuration file
 The ansible configuration file is [**ansible.cfg**](http://172.25.90.133/root/PoC-80/blob/master/ansible.cfg) at the root of the repository.   
 
-## Variables  
+### Variables  
 The variables are yml files under [**group_vars**](http://172.25.90.133/root/PoC-80/tree/master/group_vars) and [**host_vars**](http://172.25.90.133/root/PoC-80/tree/master/host_vars) directories.   
 - host specific variables under the directory [**host_vars**](http://172.25.90.133/root/PoC-80/tree/master/host_vars).   
 - group related variables are yml files under the directory [**group_vars**](http://172.25.90.133/root/PoC-80/tree/master/group_vars)
 
-## Ansible playbooks
+### Ansible playbooks
 The ansible playbooks are at the root of the repository.  
 All playbooks are named **pb.*.yml**      
 - [**pb.collect.golden.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.golden.yml) playbook collects the running configuration on the junos devices and updates the directory [**golden**](http://172.25.90.133/root/PoC-80/tree/master/golden) with these files.
@@ -28,7 +28,7 @@ All playbooks are named **pb.*.yml**
 - [**pb.print.facts.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.print.facts.yml) playbook collects the facts on junos devices and print them on Ansible
 - [**pb.collect.facts.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.facts.yml) playbook collects the facts on junos devices and save them on Ansible 
 
-## Other directories
+### Other directories
 
 - The directory [**templates**](http://172.25.90.133/root/PoC-80/tree/master/templates) has the jinja templates
 
@@ -60,11 +60,11 @@ All playbooks are named **pb.*.yml**
 sudo -s
 ```
 
-## Install Ansible
+### Install Ansible
 
 This repository has been tested using Ansible 2.4.2.0  
 
-Run these commands on Ubuntu 16.04:
+Run these commands on Ubuntu 16.04 to install Ansible:
 ```
 sudo -s
 apt-get update
@@ -86,19 +86,19 @@ Use this command to see the name and version of each role installed:
 ansible-galaxy list
 ```
 
-## Get locally the content of the remote repository
+### Get locally the content of the remote repository
 
 ```
 git clone http://172.25.90.133/root/PoC-80.git
 cd PoC-80/
 ```
 
-## How to check if ssh and netconf ports are reachable on Junos devices
+### How to check if ssh and netconf ports are reachable on Junos devices
 ```
 ansible-playbook pb.check.connectivity.yml
 ```
 
-## How to retrieves facts from junos devices: 
+### How to retrieves facts from junos devices: 
 
 ```
 ansible-playbook pb.collect.facts.yml
@@ -108,14 +108,14 @@ ls facts/
 ansible-playbook pb.print.facts.yml
 ```
 
-## How to backup the junos configuration on the Ansible server
+### How to backup the junos configuration on the Ansible server
 
 ```
 ansible-playbook pb.backup.configuration.yml
 ls configuration_backup/
 ```
 
-## How to pass show commands on junos devices
+### How to pass show commands on junos devices
 
 ```
 vi cli.yml
@@ -127,7 +127,7 @@ ansible-playbook pb.collect.commands.output.yml
 ls command
 ```
 
-## How to configure devices with set/delete commands
+### How to configure devices with set/delete commands
 ```
 vi pb.configure.lines.yml
 ansible-playbook pb.configure.lines.yml --check
@@ -136,7 +136,7 @@ ansible-playbook pb.configure.lines.yml
 ls backup/
 ```
 
-## How to rollback a device or a network
+### How to rollback a device or a network
 ```
 ansible-playbook pb.rollback.yml --extra-vars rbid=1
 ls rollback/
@@ -148,17 +148,17 @@ ls rollback/
 
 # Looking for help 
 
-## Looking for help with Ansible
+### Looking for help with Ansible
 
 This [repository](https://github.com/ksator/ansible-training-for-junos-automation) has many ready to use examples about junos automation using Ansible
 
-## Looking for more EVPN-VXLAN automation examples
+### Looking for more EVPN-VXLAN automation examples
 
 You can refer to these projects:  
 https://github.com/JNPRAutomate/ansible-junos-evpn-vxlan  
 https://github.com/ksator/EVPN_DCI_automation  
 
-## Looking for more Junos automation solutions:
+### Looking for more Junos automation solutions:
 
 https://github.com/ksator?tab=repositories  
 https://gitlab.com/users/ksator/projects  
