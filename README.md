@@ -1,7 +1,5 @@
-
-# Looking for help with Ansible
-
-This [repository](https://github.com/ksator/ansible-training-for-junos-automation) has many examples about junos automation using Ansible
+# What to find in this repository
+Automation content for data center network fabric
 
 # How to install Ansible
 
@@ -31,6 +29,7 @@ sudo -s
 git clone http://172.25.90.133/root/PoC-80.git
 cd PoC-80/
 ```
+
 # Repository structure 
 
 - The ansible inventory file is [**hosts**](http://172.25.90.133/root/PoC-80/blob/master/hosts) file at the root of the repository.    
@@ -122,4 +121,14 @@ ls rollback/
 ansible-playbook pb.rollback.yml --extra-vars rbid=3 --limit DC2
 ls rollback/
 ```
+
+# Looking for help with Ansible
+
+This [repository](https://github.com/ksator/ansible-training-for-junos-automation) has many examples about junos automation using Ansible
+
+# Looking for more Junos automation solutions:
+
+https://github.com/ksator?tab=repositories
+https://gitlab.com/users/ksator/projects
+https://gist.github.com/ksator/
 
