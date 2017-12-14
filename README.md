@@ -141,7 +141,7 @@ ansible-playbook pb.backup.configuration.yml
 ls configuration_backup/
 ```
 
-### How to collects the running configuration on the junos devices and update the initial configuration files for the next demo 
+### How to collect the running configuration on the junos devices and update the initial configuration files that will be used at the beginning of the next demo 
 
 ```
 ansible-playbook pb.collect.golden.yml --limit QFX5110
