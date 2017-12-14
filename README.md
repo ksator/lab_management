@@ -101,7 +101,7 @@ ls facts/
 ansible-playbook pb.print.facts.yml
 ```
 
-### How to overwrite the running configuration on the junos devices with the initial configuration files before the demo
+### How to overwrite the running configuration on the junos devices with the initial configuration files at the beginning of each demo
 ```
 ansible-playbook pb.configure.golden.yml
 ```
