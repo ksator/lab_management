@@ -40,7 +40,7 @@ cd PoC-80/
   - host specific variables under the directory [**host_vars**](http://172.25.90.133/root/PoC-80/tree/master/host_vars).   
   - group related variables are yml files under the directory [**group_vars**](http://172.25.90.133/root/PoC-80/tree/master/group_vars)
 
-- The ansible playbooks are at the root of the repository. All playbooks are named pb.*.yml      
+- The ansible playbooks are at the root of the repository. All playbooks are named **pb.*.yml**      
   - [**pb.backup.configuration.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.backup.configuration.yml) playbook performs a configuration backup of the network
   - [**pb.configure.lines.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.lines.yml) playbook configures junos devices with set/delete commands
   - [**pb.rollback.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.rollback.yml) playbook performs a rollback on junos devices.
@@ -56,7 +56,7 @@ cd PoC-80/
 
 - The Junos configuration diffs from rollbacks done with ansible playbook [**pb.rollback.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.rollback.yml) are in the directory [**rollback**](http://172.25.90.133/root/PoC-80/tree/master/rollback) 
 
-- The Junos facts are saved in the directory [facts](http://172.25.90.133/root/PoC-80/tree/master/facts) by the playbook [**pb.collect.facts.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.facts.yml) 
+- The Junos facts are saved in the directory [**facts**](http://172.25.90.133/root/PoC-80/tree/master/facts) by the playbook [**pb.collect.facts.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.facts.yml) 
 
 - The Junos commands output from the playbook [**pb.collect.cli.output.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.cli.output.yml) are saved in the directory [**cli**](http://172.25.90.133/root/PoC-80/tree/master/cli)
 
@@ -128,7 +128,7 @@ This [repository](https://github.com/ksator/ansible-training-for-junos-automatio
 
 # Looking for more Junos automation solutions:
 
-https://github.com/ksator?tab=repositories
-https://gitlab.com/users/ksator/projects
-https://gist.github.com/ksator/
+https://github.com/ksator?tab=repositories  
+https://gitlab.com/users/ksator/projects  
+https://gist.github.com/ksator/  
 
