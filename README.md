@@ -27,33 +27,32 @@ Use this command to see the name and version of each role installed:
 ansible-galaxy list
 ```
 
-# How to get locally the content of the remote repository
-
-```
-sudo -s
-git clone http://172.25.90.133/root/PoC-80.git
-cd PoC-80/
-```
-
 # Repository structure 
 
-- The ansible inventory file is [**hosts**](http://172.25.90.133/root/PoC-80/blob/master/hosts) file at the root of the repository.    
+## Ansible inventory file
+The ansible inventory file is [**hosts**](http://172.25.90.133/root/PoC-80/blob/master/hosts) file at the root of the repository.    
 
-- The ansible configuration file is [**ansible.cfg**](http://172.25.90.133/root/PoC-80/blob/master/ansible.cfg) at the root of the repository.   
+## Ansible configuration file
+The ansible configuration file is [**ansible.cfg**](http://172.25.90.133/root/PoC-80/blob/master/ansible.cfg) at the root of the repository.   
 
-- variables are yml files under [**group_vars**](http://172.25.90.133/root/PoC-80/tree/master/group_vars) and [**host_vars**](http://172.25.90.133/root/PoC-80/tree/master/host_vars) directories.   
-  - host specific variables under the directory [**host_vars**](http://172.25.90.133/root/PoC-80/tree/master/host_vars).   
-  - group related variables are yml files under the directory [**group_vars**](http://172.25.90.133/root/PoC-80/tree/master/group_vars)
+## Variables  
+The variables are yml files under [**group_vars**](http://172.25.90.133/root/PoC-80/tree/master/group_vars) and [**host_vars**](http://172.25.90.133/root/PoC-80/tree/master/host_vars) directories.   
+- host specific variables under the directory [**host_vars**](http://172.25.90.133/root/PoC-80/tree/master/host_vars).   
+- group related variables are yml files under the directory [**group_vars**](http://172.25.90.133/root/PoC-80/tree/master/group_vars)
 
-- The ansible playbooks are at the root of the repository. All playbooks are named **pb.*.yml**      
-  - [**pb.backup.configuration.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.backup.configuration.yml) playbook performs a configuration backup of the network
-  - [**pb.configure.lines.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.lines.yml) playbook configures junos devices with set/delete commands
-  - [**pb.rollback.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.rollback.yml) playbook performs a rollback on junos devices.
-  - [**pb.check.connectivity.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.check.connectivity.yml) playbook checks if Ansible can connect on SSH and NETCONF ports on Junos devices
-  - [**pb.collect.cli.output.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.cli.output.yml) playbook runs junos show commands and save the output on Ansible. This playbook use the commands in the file [**cli.yml**](http://172.25.90.133/root/PoC-80/blob/master/cli.yml)
-  - [**pb.collect.commands.output.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.commands.output.yml) playbook runs junos show commands and save the output on Ansible 
-  - [**pb.print.facts.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.print.facts.yml) playbook collects the facts on junos devices and print them on Ansible
-  - [**pb.collect.facts.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.facts.yml) playbook collects the facts on junos devices and save them on Ansible 
+## Ansible playbooks
+The ansible playbooks are at the root of the repository.  
+All playbooks are named **pb.*.yml**      
+- [**pb.backup.configuration.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.backup.configuration.yml) playbook performs a configuration backup of the network
+- [**pb.configure.lines.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.lines.yml) playbook configures junos devices with set/delete commands
+- [**pb.rollback.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.rollback.yml) playbook performs a rollback on junos devices.
+- [**pb.check.connectivity.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.check.connectivity.yml) playbook checks if Ansible can connect on SSH and NETCONF ports on Junos devices
+- [**pb.collect.cli.output.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.cli.output.yml) playbook runs junos show commands and save the output on Ansible. This playbook use the commands in the file [**cli.yml**](http://172.25.90.133/root/PoC-80/blob/master/cli.yml)
+- [**pb.collect.commands.output.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.commands.output.yml) playbook runs junos show commands and save the output on Ansible 
+- [**pb.print.facts.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.print.facts.yml) playbook collects the facts on junos devices and print them on Ansible
+- [**pb.collect.facts.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.facts.yml) playbook collects the facts on junos devices and save them on Ansible 
+
+## Other directories
 
 - The junos configuration files are backed up in the directory [**configuration_backup**](http://172.25.90.133/root/PoC-80/tree/master/configuration_backup) by the playbook [**pb.backup.configuration.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.backup.configuration.yml) 
 
@@ -72,6 +71,13 @@ cd PoC-80/
 
 ```
 sudo -s
+```
+
+## Get locally the content of the remote repository
+
+```
+git clone http://172.25.90.133/root/PoC-80.git
+cd PoC-80/
 ```
 
 ## How to check if ssh and netconf ports are reachable on Junos devices
