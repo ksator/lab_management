@@ -17,16 +17,17 @@ The variables are yml files under [**group_vars**](http://172.25.90.133/root/PoC
 ### Ansible playbooks
 The ansible playbooks are at the root of the repository.  
 All playbooks are named **pb.*.yml**      
+- [**pb.backup.configuration.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.backup.configuration.yml) playbook performs a configuration backup of the network
 - [**pb.collect.golden.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.golden.yml) playbook collects the running configuration on the junos devices and updates the directory [**golden**](http://172.25.90.133/root/PoC-80/tree/master/golden) with these files.
 - [**pb.configure.golden.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.golden.yml) playbook overwrites the running configuration on the junos devices with the files in the directory [**golden**](http://172.25.90.133/root/PoC-80/tree/master/golden). 
-- [**pb.backup.configuration.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.backup.configuration.yml) playbook performs a configuration backup of the network
 - [**pb.configure.lines.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.lines.yml) playbook configures junos devices with set/delete commands
+- [**pb.configure.telemetry.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.telemetry.yml) playbook configures junos devices with telemetry
 - [**pb.rollback.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.rollback.yml) playbook performs a rollback on junos devices.
 - [**pb.check.connectivity.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.check.connectivity.yml) playbook checks if Ansible can connect on SSH and NETCONF ports on Junos devices
 - [**pb.collect.cli.output.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.cli.output.yml) playbook runs junos show commands and save the output on Ansible. This playbook use the commands in the file [**cli.yml**](http://172.25.90.133/root/PoC-80/blob/master/cli.yml)
 - [**pb.collect.commands.output.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.commands.output.yml) playbook runs junos show commands and save the output on Ansible 
-- [**pb.print.facts.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.print.facts.yml) playbook collects the facts on junos devices and print them on Ansible
 - [**pb.collect.facts.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.facts.yml) playbook collects the facts on junos devices and save them on Ansible 
+- [**pb.print.facts.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.print.facts.yml) playbook collects the facts on junos devices and print them on Ansible
 
 ### Other directories
 
