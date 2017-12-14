@@ -43,6 +43,8 @@ The variables are yml files under [**group_vars**](http://172.25.90.133/root/PoC
 ## Ansible playbooks
 The ansible playbooks are at the root of the repository.  
 All playbooks are named **pb.*.yml**      
+- [**pb.collect.golden.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.golden.yml) playbook collects the running configuration on the junos devices and updates the directory [**golden**](http://172.25.90.133/root/PoC-80/tree/master/golden) with these files.
+- [**pb.configure.golden.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.golden.yml) playbook overwrites the running configuration on the junos devices with the files in the directory [**golden**](http://172.25.90.133/root/PoC-80/tree/master/golden). 
 - [**pb.backup.configuration.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.backup.configuration.yml) playbook performs a configuration backup of the network
 - [**pb.configure.lines.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.lines.yml) playbook configures junos devices with set/delete commands
 - [**pb.rollback.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.rollback.yml) playbook performs a rollback on junos devices.
@@ -53,6 +55,10 @@ All playbooks are named **pb.*.yml**
 - [**pb.collect.facts.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.facts.yml) playbook collects the facts on junos devices and save them on Ansible 
 
 ## Other directories
+
+- The directory [**templates**](http://172.25.90.133/root/PoC-80/tree/master/templates) has the jinja templates
+
+- The directory [**render**](http://172.25.90.133/root/PoC-80/tree/master/render) has the files generated from the jinja templates
 
 - The directory [**golden**](http://172.25.90.133/root/PoC-80/tree/master/golden) has the junos configuration files we need to push on the junos devices before to start the demo: 
   - The playbook [**pb.collect.golden.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.golden.yml) collects the running configuration on the junos devices and updates this directory with these files.
