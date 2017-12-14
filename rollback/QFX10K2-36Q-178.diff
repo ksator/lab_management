@@ -1,0 +1,9 @@
+
+[edit groups POC_Lab system]
++   name-server {
++       172.29.131.60;
++   }
+[edit system]
+-   login {
+-       message "new banner";
+-   }
