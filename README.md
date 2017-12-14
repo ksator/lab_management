@@ -54,6 +54,10 @@ All playbooks are named **pb.*.yml**
 
 ## Other directories
 
+- The directory [**golden**](http://172.25.90.133/root/PoC-80/tree/master/golden) has the junos configuration files we need to push on the junos devices before to start the demo: 
+  - The playbook [**pb.collect.golden.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.golden.yml) collects the running configuration on the junos devices and updates this directory with these files.
+  - The playbook [**pb.configure.golden.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.golden.yml) overwrites the running configuration on the junos devices with the files in this directory. 
+
 - The junos configuration files are backed up in the directory [**configuration_backup**](http://172.25.90.133/root/PoC-80/tree/master/configuration_backup) by the playbook [**pb.backup.configuration.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.backup.configuration.yml) 
 
 - The junos configuration files are backed up in the directory [**backup**](http://172.25.90.133/root/PoC-80/tree/master/backup) by the playbooks: 
