@@ -21,6 +21,11 @@ Verify you have the Juniper.junos role:
 ```
 ls /etc/ansible/roles/
 ```
+This repository has been tested using Juniper.junos role 1.4.3 available on Galaxy. Check the version 
+Use this command to see the name and version of each role installed:
+```
+ansible-galaxy list
+```
 
 # How to get locally the content of the remote repository
 
