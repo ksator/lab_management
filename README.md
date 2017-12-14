@@ -56,7 +56,10 @@ All playbooks are named **pb.*.yml**
 
 - The junos configuration files are backed up in the directory [**configuration_backup**](http://172.25.90.133/root/PoC-80/tree/master/configuration_backup) by the playbook [**pb.backup.configuration.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.backup.configuration.yml) 
 
-- The junos configuration files are backed up in the directory [**backup**](http://172.25.90.133/root/PoC-80/tree/master/backup) by the playbook [**pb.configure.lines.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.lines.yml) 
+- The junos configuration files are backed up in the directory [**backup**](http://172.25.90.133/root/PoC-80/tree/master/backup) by the playbooks: 
+  - [**pb.configure.lines.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.lines.yml) 
+  - [**pb.configure.golden.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.golden.yml)
+  - [**pb.configure.telemetry.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.telemetry.yml)
 
 - The Junos configuration diffs from rollbacks done with ansible playbook [**pb.rollback.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.rollback.yml) are in the directory [**rollback**](http://172.25.90.133/root/PoC-80/tree/master/rollback) 
 
