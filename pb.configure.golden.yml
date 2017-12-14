@@ -1,0 +1,17 @@
+---
+ 
+ - name: push golden configuration on junos devices
+   hosts: JUNOS
+   connection: local
+   gather_facts: no    
+   tasks:
+
+
+   - name: push golden configuration on junos devices
+     junos_config:
+      backup: yes
+      comment: golden configuration pushed by Ansible using playbook pb.configure.golden.yml
+      provider: "{{ credentials }}"
+      src: "{{playbook_dir}}/golden/{{ inventory_hostname }}.conf"
+      update: override
+      src_format: text

@@ -1,0 +1,22 @@
+{% if grpc_port is defined %}
+system {
+    services {                          
+        replace: 
+        extension-service {
+            request-response {
+                grpc {
+                    clear-text {
+                        port {{ grpc_port }};
+                    }
+                    skip-authentication;
+                }
+            }
+            notification {
+                allow-clients {
+                    address 0.0.0.0/0;
+                }
+            }
+        }
+    }
+}
+{% endif %}

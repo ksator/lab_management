@@ -10,7 +10,7 @@
         state: directory
 
  - name: Rollback configuration on junos devices
-   hosts: all
+   hosts: JUNOS
    roles:
     - Juniper.junos
    connection: local

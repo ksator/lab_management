@@ -1,0 +1,38 @@
+---
+ - name: create directories
+   hosts: localhost
+   gather_facts: no
+   tasks:
+
+   - name: create directories
+     file: 
+       path: "{{playbook_dir}}/{{ item }}" 
+       state: directory
+     with_items: 
+      - render
+      - render/telemetry
+      - templates
+     tags: 
+      - render 
+
+ - name: create and push telemetry junos configuration
+   hosts: JUNOS
+   connection: local
+   gather_facts: no    
+   tasks:
+
+   - name: Render telemetry template for junos devices
+     template: 
+       src: "{{ playbook_dir }}/templates/telemetry.j2" 
+       dest: "{{ playbook_dir }}/render/telemetry/{{ inventory_hostname }}.conf"
+     tags: 
+       - render
+
+   - name: push telemetry configuration on junos devices
+     junos_config:
+      backup: yes
+      comment: telemetry configured with Ansible playbook pb.configure.telemetry.yml
+      provider: "{{ credentials }}"
+      src: "{{playbook_dir}}/render/telemetry/{{ inventory_hostname }}.conf"
+      update: replace
+      src_format: text

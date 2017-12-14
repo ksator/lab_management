@@ -131,6 +131,13 @@ ls rollback/
 
 This [repository](https://github.com/ksator/ansible-training-for-junos-automation) has many examples about junos automation using Ansible
 
+# Looking for more EVPN-VXLAN automation examples
+
+You can refer to these projects:  
+https://github.com/JNPRAutomate/ansible-junos-evpn-vxlan  
+https://github.com/ksator/EVPN_DCI_automation  
+
+
 # Looking for more Junos automation solutions:
 
 https://github.com/ksator?tab=repositories  

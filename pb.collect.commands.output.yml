@@ -10,7 +10,7 @@
        state: directory
 
  - name: pass commands on Junos devices
-   hosts: all
+   hosts: JUNOS
    connection: local
    gather_facts: no
 

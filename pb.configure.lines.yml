@@ -1,6 +1,6 @@
 ---
  - name: pass junos set and delete commands
-   hosts: all
+   hosts: JUNOS
    connection: local
    gather_facts: no
 

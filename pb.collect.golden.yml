@@ -1,0 +1,32 @@
+---
+ - name: create golden directory
+   hosts: localhost
+   gather_facts: no
+   tasks:
+
+   - name: create golden directory
+     file: 
+       path: "{{playbook_dir}}/{{ item }}" 
+       state: directory
+     with_items: 
+      - golden
+ 
+ - name: set and collect junos golden configuration
+   hosts: JUNOS
+   connection: local
+   gather_facts: no    
+   tasks:
+
+    - name: Collect configuration in text format from devices
+      junos_facts:
+       gather_subset: config
+       config_format: text
+       provider: "{{ credentials }}"
+      register: result_text
+
+    - name: copy collected configuration in golden directory
+      copy:
+        content: "{{ result_text.ansible_facts.ansible_net_config }}"
+        dest: "{{ playbook_dir }}/golden/{{ inventory_hostname }}.conf"
+
+

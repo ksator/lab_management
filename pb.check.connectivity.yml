@@ -1,6 +1,6 @@
 ---
  - name: check if ssh and netconf ports are reachable on Junos devices
-   hosts: all
+   hosts: JUNOS
    connection: local
    gather_facts: no
 

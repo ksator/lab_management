@@ -11,7 +11,7 @@
        state: directory
      
  - name: Get Facts from devices
-   hosts: all
+   hosts: JUNOS
    roles:       
     - Juniper.junos
    connection: local
