@@ -31,26 +31,18 @@ All playbooks are named **pb.*.yml**
 ### Other directories
 
 - The directory [**templates**](http://172.25.90.133/root/PoC-80/tree/master/templates) has the jinja templates
-
 - The directory [**render**](http://172.25.90.133/root/PoC-80/tree/master/render) has the files generated from the jinja templates
-
 - The directory [**golden**](http://172.25.90.133/root/PoC-80/tree/master/golden) has the junos configuration files we need to push on the junos devices before to start the demo: 
   - The playbook [**pb.collect.golden.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.golden.yml) collects the running configuration on the junos devices and updates this directory with these files.
   - The playbook [**pb.configure.golden.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.golden.yml) overwrites the running configuration on the junos devices with the files in this directory. 
-
 - The directory [**configuration_backup**](http://172.25.90.133/root/PoC-80/tree/master/configuration_backup) has the junos configuration files backed up by the playbook [**pb.backup.configuration.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.backup.configuration.yml) 
-
 - The directory [**backup**](http://172.25.90.133/root/PoC-80/tree/master/backup) has the junos configuration files backed up by the playbooks: 
   - [**pb.configure.lines.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.lines.yml) 
   - [**pb.configure.golden.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.golden.yml)
   - [**pb.configure.telemetry.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.telemetry.yml)
-
 - The directory [**rollback**](http://172.25.90.133/root/PoC-80/tree/master/rollback) has the Junos configuration diffs from rollbacks done with ansible playbook [**pb.rollback.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.rollback.yml) 
-
 - The directory [**facts**](http://172.25.90.133/root/PoC-80/tree/master/facts) has the Junos facts collected by the playbook [**pb.collect.facts.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.facts.yml) 
-
 - The directory [**cli**](http://172.25.90.133/root/PoC-80/tree/master/cli) has the output of the Junos show commands from the playbook [**pb.collect.cli.output.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.cli.output.yml)
-
 - The directory [**command**](http://172.25.90.133/root/PoC-80/tree/master/command) has the output of the Junos show commands from the playbook [**pb.collect.commands.output.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.commands.output.yml) 
 
 
