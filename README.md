@@ -120,6 +120,16 @@ ansible-playbook pb.collect.commands.output.yml
 ls command
 ```
 
+### How to configure devices with telemetry
+```
+ls templates/
+ansible-playbook pb.configure.telemetry.yml --tag render
+ls render/telemetry/
+ansible-playbook pb.configure.telemetry.yml --check --diff
+ansible-playbook pb.configure.telemetry.yml --check --diff --limit QFX10K2-36Q-176
+ansible-playbook pb.configure.telemetry.yml
+```
+
 ### How to configure devices with set/delete commands
 ```
 vi pb.configure.lines.yml
