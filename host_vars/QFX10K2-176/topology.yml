@@ -1,0 +1,55 @@
+---
+test: 3 
+bgp_neighbors:
+   - neighbor: 10.254.254.0
+     peer_as: 2201
+     group: EBGP-DCI
+   - neighbor: 10.254.254.4
+     peer_as: 2202
+     group: EBGP-DCI
+   - neighbor: 191.168.101.5
+     group: IBGP-EVPN-Core
+   - neighbor: 191.168.101.6
+     group: IBGP-EVPN-Core
+   - neighbor: 191.168.101.7
+     group: IBGP-EVPN-Core
+   - neighbor: 191.168.102.1
+     group: IBGP-EVPN-Core
+   - neighbor: 191.168.102.2
+     group: IBGP-EVPN-Core
+   - neighbor: 10.0.2.13 
+     peer_as: 202
+     group: EBGP-Core 
+   - neighbor: 10.0.2.15 
+     peer_as: 203 
+     group: EBGP-Core
+   - neighbor: 10.0.2.9
+     peer_as: 200
+     group: EBGP-Core
+   - neighbor: 10.0.2.11
+     peer_as: 201
+     group: EBGP-Core
+   - neighbor: 10.0.2.17
+     peer_as: 204
+     group: EBGP-Core
+   - neighbor: 191.168.100.1
+     peer_as: 65100
+     group: EBGP-DCI-EVPN
+   - neighbor: 191.168.100.2
+     peer_as: 65100
+     group: EBGP-DCI-EVPN
+
+bgp_groups:
+   - name: EBGP-DCI
+     type: external
+     local_as: 301
+   - name: IBGP-EVPN-Core
+     type: internal
+     local_as: 65101
+   - name: EBGP-Core
+     type: external
+     local_as: 301
+   - name: EBGP-DCI-EVPN
+     type: external
+     local_as: 65101
+

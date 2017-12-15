@@ -3,4 +3,5 @@
 - include: pb.print.facts.yml
 - include: pb.check.L1.yml
 - include: pb.check.L2.yml
+- include: pb.check.bgp.yml
 
