@@ -1,5 +1,5 @@
 ---
-- include: pb.check.connectivity.yml
+- include: pb.check.ports.availability.yml
 - include: pb.print.facts.yml
 - include: pb.check.L1.yml
 - include: pb.check.L2.yml

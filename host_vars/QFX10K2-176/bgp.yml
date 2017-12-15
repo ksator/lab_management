@@ -1,5 +1,4 @@
----
-test: 3 
+--- 
 bgp_neighbors:
    - neighbor: 10.254.254.0
      peer_as: 2201

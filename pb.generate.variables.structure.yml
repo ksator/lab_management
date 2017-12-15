@@ -33,6 +33,7 @@
        path: "{{ item }}"
        state: touch
      with_items: 
-       - "host_vars/{{ inventory_hostname }}/topology.yml"
+       - "host_vars/{{ inventory_hostname }}/lldp.yml"
+       - "host_vars/{{ inventory_hostname }}/bgp.yml"
 
 
