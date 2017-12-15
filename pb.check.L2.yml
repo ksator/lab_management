@@ -1,6 +1,6 @@
 ---
  - name: check if lldp neighbors are the ones we expect
-   hosts: QFX10K2-179
+   hosts: JUNOS
    connection: local
    gather_facts: no
    
@@ -18,4 +18,5 @@
       interval: 3
      with_items:
      - "{{ lldp }}"
+     when: lldp is defined
 

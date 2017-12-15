@@ -1,0 +1,7 @@
+---
+lldp:
+   - local_interface: xe-0/0/0.0
+     lldp_neighbor: QFX5110-172
+   - local_interface: xe-0/0/1.0
+     lldp_neighbor: QFX5110-173
+
