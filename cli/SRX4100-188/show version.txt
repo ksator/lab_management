@@ -1,0 +1,5 @@
+
+Hostname: SRX4100-188
+Model: srx4100
+Junos: 15.1X49-D75.5
+JUNOS Software Release [15.1X49-D75.5]

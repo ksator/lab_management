@@ -1,0 +1,48 @@
+
+Interface               Admin Link Proto    Local                 Remote
+vcp-255/2/0             up    down
+vcp-255/2/0.32768       up    down
+vcp-255/2/1             up    down
+vcp-255/2/1.32768       up    down
+vcp-255/2/2             up    down
+vcp-255/2/2.32768       up    down
+vcp-255/2/3             up    down
+vcp-255/2/3.32768       up    down
+xe-0/0/0                up    up
+xe-0/0/0.0              up    up   eth-switch
+xe-0/0/1                up    up
+xe-0/0/1.0              up    up   eth-switch
+xe-0/0/2                up    up
+xe-0/0/2.0              up    up   eth-switch
+ge-0/0/30               up    down
+ge-0/0/31               up    down
+xe-0/1/0                up    down
+xe-0/1/1                up    down
+xe-0/1/2                up    down
+xe-0/1/3                up    down
+xe-0/1/4                up    down
+xe-0/1/5                up    down
+xe-0/1/6                up    down
+xe-0/1/7                up    down
+bme0                    up    up
+bme0.32768              up    up   inet     128.0.0.1/2     
+                                            128.0.0.16/2    
+                                            128.0.0.32/2    
+                                   tnp      0x10            
+dsc                     up    up
+gre                     up    up
+ipip                    up    up
+jsrv                    up    up
+jsrv.1                  up    up   inet     128.0.0.127/2   
+lo0                     up    up
+lo0.16384               up    up   inet     127.0.0.1           --> 0/0
+lsi                     up    up
+me0                     up    up
+me0.0                   up    up   inet     172.25.90.193/24
+mtun                    up    up
+pimd                    up    up
+pime                    up    up
+tap                     up    up
+vlan                    up    up
+vlan.100                up    up   inet     30.0.100.100/16 
+vme                     up    down

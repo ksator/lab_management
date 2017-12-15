@@ -1,0 +1,16 @@
+
+Hardware inventory:
+Item             Version  Part number  Serial number     Description
+Chassis                                DJ4416AR0038      SRX4100
+Mainboard        REV 01   650-071676   16101018330       SRX4100
+Routing Engine 0          BUILTIN      BUILTIN           SRX Routing Engine
+FPC 0                     BUILTIN      BUILTIN           FEB
+  PIC 0                   BUILTIN      BUILTIN           8x10G-SFP
+    Xcvr 0       REV 01   740-021308   MWD1B32           SFP+-10G-SR
+    Xcvr 1       REV 01   740-021308   MWD1B3D           SFP+-10G-SR
+Power Supply 0   REV 04   740-041741   1GA26390075       JPSU-650W-AC-AFO
+Power Supply 1   REV 04   740-041741   1GA26390066       JPSU-650W-AC-AFO
+Fan Tray 0                                               SRX4100 0, Front to Back Airflow - AFO
+Fan Tray 1                                               SRX4100 1, Front to Back Airflow - AFO
+Fan Tray 2                                               SRX4100 2, Front to Back Airflow - AFO
+Fan Tray 3                                               SRX4100 3, Front to Back Airflow - AFO

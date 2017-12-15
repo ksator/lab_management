@@ -1,0 +1,11 @@
+
+fpc0:
+--------------------------------------------------------------------------
+Hostname: EX4550-193
+Model: ex4550-32f
+Junos: 15.1R5.5
+JUNOS EX  Software Suite [15.1R5.5]
+JUNOS FIPS mode utilities [15.1R5.5]
+JUNOS Online Documentation [15.1R5.5]
+JUNOS EX 4500 Software Suite [15.1R5.5]
+JUNOS Web Management Platform Package [15.1R5.5]

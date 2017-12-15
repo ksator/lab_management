@@ -1,0 +1,16 @@
+
+Hardware inventory:
+Item             Version  Part number  Serial number     Description
+Chassis                                LX0214196029      EX4550-32F
+Routing Engine 0 REV 20   750-039067   LX0214196029      EX4550-32F
+FPC 0            REV 20   750-039067   LX0214196029      EX4550-32F
+  CPU                     BUILTIN      BUILTIN           FPC CPU
+  PIC 0                   BUILTIN      BUILTIN           32x 1G/10G SFP/SFP+
+    Xcvr 1       REV 01   740-021309   G3H2006805        SFP+-10G-LR
+    Xcvr 2       REV 01   740-031981   E3M2045677        SFP+-10G-LR
+    Xcvr 3       REV 01   740-021308   AGC013M           SFP+-10G-SR
+  PIC 1          REV 04   711-039086   RE0214040033      2x40GE QSFP+
+    Xcvr 0                UNKNOWN                        UNKNOWN
+  PIC 2          REV 03   711-039072   LM0212360107      2x 32GE Virtual Chassis Module
+Power Supply 0   REV 03   740-041741   1GA24110135       JPSU-650W-AC-AFO
+Fan Tray                                                 Fan Module, Airflow Out (AFO)

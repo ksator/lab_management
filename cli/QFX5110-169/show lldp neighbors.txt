@@ -1,0 +1,6 @@
+
+Local Interface    Parent Interface    Chassis Id          Port info          System Name
+em0                -                   00:1f:12:34:a2:c0   ge-0/0/13.0    
+et-0/0/48          ae1                 44:aa:50:fc:76:b0   et-0/0/1           QFX10K2-182         
+xe-0/0/0           -                   84:b5:9c:8d:bb:40   xe-0/0/0.0         EX4550-190          
+xe-0/0/1           -                   vmnic2              port 19 on dvSwitch EVPN_vDS (etherswitch) HDN-ESXi-90165      

@@ -1,0 +1,5 @@
+
+Local Interface    Parent Interface    Chassis Id          Port info          System Name
+me0.0              -                   00:1f:12:34:a2:c0   ge-0/0/12.0    
+xe-0/0/1.0         ae0.0               10:0e:7e:b1:22:00   xe-0/0/0           QFX5100-183         
+xe-0/0/2.0         ae0.0               10:0e:7e:b1:22:00   xe-1/0/0           QFX5100-183         
