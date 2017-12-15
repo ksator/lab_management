@@ -1,0 +1,22 @@
+---
+ - name: check if interfaces op state is up
+   hosts: JUNOS
+   connection: local
+   gather_facts: no
+   
+   tasks:
+            
+   - name: check if interfaces op state is up
+     junos_command:
+      provider: "{{ credentials }}"
+      display: 'xml'
+      commands:
+       - "show interfaces terse {{ item.local_interface }}"
+      waitfor:
+       - "result[0]['rpc-reply']['interface-information']['physical-interface']['oper-status'] eq up"
+      retries: 3
+      interval: 3
+     with_items:
+     - "{{ lldp }}"
+     when: lldp is defined
+
