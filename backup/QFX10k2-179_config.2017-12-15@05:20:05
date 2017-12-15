@@ -36,6 +36,9 @@ set groups POC_Lab routing-options static route 192.168.0.0/16 retain
 set groups POC_Lab routing-options static route 192.168.0.0/16 no-readvertise
 set apply-groups POC_Lab
 set system root-authentication encrypted-password "$1$DBwh/7ma$FgJVx.7.uZW15cX9kM1EC/"
+set system services extension-service request-response grpc clear-text port 50051
+set system services extension-service request-response grpc skip-authentication
+set system services extension-service notification allow-clients address 0.0.0.0/0
 set system syslog user * any emergency
 set system syslog host 172.25.90.135 any any
 set system syslog host 172.25.90.135 match UI_COMMIT_COMPLETED

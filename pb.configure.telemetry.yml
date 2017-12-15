@@ -16,7 +16,7 @@
       - render 
 
  - name: create and push telemetry junos configuration
-   hosts: JUNOS
+   hosts: QFX
    connection: local
    gather_facts: no    
    tasks:

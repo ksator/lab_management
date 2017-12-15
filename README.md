@@ -111,7 +111,7 @@ ansible-playbook pb.configure.golden.yml
 ls templates
 ansible-playbook pb.configure.telemetry.yml --tag render
 ls render/telemetry/
-ansible-playbook pb.configure.telemetry.yml --check --diff --limit QFX10K2-36Q-176
+ansible-playbook pb.configure.telemetry.yml --check --diff --limit QFX10K2-176
 ansible-playbook pb.configure.telemetry.yml
 ```
 
@@ -119,7 +119,7 @@ ansible-playbook pb.configure.telemetry.yml
 ```
 vi pb.configure.lines.yml
 ansible-playbook pb.configure.lines.yml --check
-ansible-playbook pb.configure.lines.yml --check --diff --limit QFX10K2-36Q-176
+ansible-playbook pb.configure.lines.yml --check --diff --limit QFX10K2-176
 ansible-playbook pb.configure.lines.yml
 ls backup/
 ```
