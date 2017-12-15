@@ -1,0 +1,118 @@
+
+Interface               Admin Link Proto    Local                 Remote
+et-0/0/0                up    up
+et-0/0/0.0              up    up   inet     10.0.2.17/31    
+                                   iso     
+gr-0/0/0                up    up
+pfe-0/0/0               up    up
+pfe-0/0/0.16383         up    up   inet    
+                                   inet6   
+pfh-0/0/0               up    up
+pfh-0/0/0.16383         up    up   inet    
+pfh-0/0/0.16384         up    up   inet    
+sxe-0/0/0               up    up
+et-0/0/1                up    up
+et-0/0/1.0              up    up   inet     10.0.2.27/31    
+                                   iso     
+sxe-0/0/1               up    up
+sxe-0/0/2               up    up
+xe-0/0/3:0              down  down
+xe-0/0/3:1              down  down
+xe-0/0/3:2              up    down
+xe-0/0/3:3              up    down
+et-0/0/6                up    up
+et-0/0/6.10             up    up   inet     10.10.10.52/31  
+                                   iso     
+                                   inet6    fe80::82ac:ac00:a2a:9abe/64
+et-0/0/6.20             up    up   inet     10.10.10.54/31  
+                                   iso     
+                                   inet6    fe80::82ac:ac00:142a:9abe/64
+et-0/0/6.30             up    up   inet     10.10.10.56/31  
+                                   iso     
+                                   inet6    fe80::82ac:ac00:1e2a:9abe/64
+et-0/0/6.40             up    up   inet     10.10.10.58/31  
+                                   iso     
+                                   inet6    fe80::82ac:ac00:282a:9abe/64
+et-0/0/6.50             up    up   inet     10.10.10.60/31  
+                                   iso     
+                                   inet6    fe80::82ac:ac00:322a:9abe/64
+et-0/0/6.100            up    up   inet     10.10.10.100/31 
+                                   iso     
+et-0/0/6.32767          up    up  
+bme0                    up    up
+bme0.0                  up    up   inet     128.0.0.1/2     
+                                            128.0.0.4/2     
+                                            128.0.0.63/2    
+cbp0                    up    up
+dsc                     up    up
+em0                     up    up
+em0.0                   up    up   inet     172.25.90.182/24
+em1                     up    down
+em2                     up    up
+em2.32768               up    up   inet     192.168.1.2/24  
+em3                     up    up
+esi                     up    up
+gre                     up    up
+ipip                    up    up
+irb                     up    up
+lo0                     up    up
+lo0.0                   up    up   inet     191.168.101.7       --> 0/0
+                                   iso      49.0001.1911.6800.1013
+                                   inet6    fd20:2222::182  
+                                            fe80::82ac:ac0f:fc2a:9aa0
+lo0.1                   up    up   inet     10.254.7.1          --> 0/0
+                                   iso      49.0001.1911.6810.1013
+                                   inet6    fd20:2222::71   
+                                            fe80::82ac:ac0f:fc2a:9aa0
+lo0.2                   up    up   inet     10.254.7.2          --> 0/0
+                                   iso      49.0001.1911.6810.2013
+lo0.3                   up    up   inet     10.254.7.3          --> 0/0
+                                   iso      49.0001.1911.6810.3013
+                                   inet6    fd20:2222::73   
+                                            fe80::82ac:ac0f:fc2a:9aa0
+lo0.4                   up    up   inet     10.254.7.4          --> 0/0
+                                   iso      49.0001.1911.6810.4013
+                                   inet6    fd20:2222::75   
+                                            fe80::82ac:ac0f:fc2a:9aa0
+lo0.5                   up    up   inet     10.254.7.5          --> 0/0
+                                   iso      49.0001.1911.6810.5013
+                                   inet6    fd20:2222::77   
+                                            fe80::82ac:ac0f:fc2a:9aa0
+lo0.100                 up    up   inet     10.254.7.100        --> 0/0
+                                   iso      49.0001.1911.6811.0013
+                                   inet6    fd20:2222::7100 
+                                            fe80::82ac:ac0f:fc2a:9aa0
+lo0.16385               up    up   inet    
+lsi                     up    up
+lsi.0                   up    up   inet    
+                                   iso     
+                                   inet6   
+lsi.1                   up    up   inet    
+                                   iso     
+                                   inet6   
+lsi.2                   up    up   inet    
+                                   iso     
+                                   inet6   
+lsi.3                   up    up   inet    
+                                   iso     
+                                   inet6   
+lsi.4                   up    up   inet    
+                                   iso     
+                                   inet6   
+lsi.5                   up    up   inet    
+                                   iso     
+                                   inet6   
+mtun                    up    up
+pimd                    up    up
+pime                    up    up
+pip0                    up    up
+ptp0                    up    down
+tap                     up    up
+vtep                    up    up
+vtep.32768              up    up  
+vtep.32769              up    up   eth-switch
+vtep.32770              up    up   eth-switch
+vtep.32771              up    up   eth-switch
+vtep.32772              up    up   eth-switch
+vtep.32773              up    up   eth-switch
+vtep.32774              up    up   eth-switch

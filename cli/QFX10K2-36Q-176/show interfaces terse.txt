@@ -1,0 +1,78 @@
+
+Interface               Admin Link Proto    Local                 Remote
+et-0/0/0                up    up
+et-0/0/0.0              up    up   inet     10.0.2.8/31     
+                                   iso     
+gr-0/0/0                up    up
+pfe-0/0/0               up    up
+pfe-0/0/0.16383         up    up   inet    
+                                   inet6   
+pfh-0/0/0               up    up
+pfh-0/0/0.16383         up    up   inet    
+pfh-0/0/0.16384         up    up   inet    
+sxe-0/0/0               up    up
+et-0/0/1                up    up
+et-0/0/1.0              up    up   inet     10.0.2.10/31    
+                                   iso     
+sxe-0/0/1               up    up
+et-0/0/2                up    up
+et-0/0/2.0              up    up   inet     10.0.2.12/31    
+                                   iso     
+sxe-0/0/2               up    up
+et-0/0/3                up    up
+et-0/0/3.0              up    up   inet     10.0.2.14/31    
+                                   iso     
+et-0/0/4                up    up
+et-0/0/4.0              up    up   inet     10.0.2.16/31    
+                                   iso     
+et-0/0/5                up    up
+et-0/0/5.0              up    up   inet     10.0.2.1/31     
+                                   iso     
+et-0/0/6                up    up
+et-0/0/6.0              up    up   inet     10.0.2.5/31     
+                                   iso     
+et-0/0/12               up    up
+et-0/0/12.0             up    up   inet     10.254.254.1/31 
+et-0/0/13               up    up
+et-0/0/13.0             up    up   inet     10.254.254.5/31 
+xe-0/0/18:0             up    up
+xe-0/0/18:0.0           up    up   inet     20.0.2.1/31     
+xe-0/0/18:1             up    down
+xe-0/0/18:2             up    down
+xe-0/0/18:3             up    down
+bme0                    up    up
+bme0.0                  up    up   inet     128.0.0.1/2     
+                                            128.0.0.4/2     
+                                            128.0.0.63/2    
+cbp0                    up    up
+dsc                     up    up
+em0                     up    up
+em0.0                   up    up   inet     172.25.90.176/24
+em1                     up    down
+em2                     up    up
+em2.32768               up    up   inet     192.168.1.2/24  
+em3                     up    up
+esi                     up    up
+gre                     up    up
+ipip                    up    up
+irb                     up    up
+lo0                     up    up
+lo0.0                   up    up   inet     191.168.101.3       --> 0/0
+                                   iso      49.0002.1911.6810.1003
+                                   inet6    fe80::82ac:ac0f:fc7c:29dc
+lo0.16385               up    up   inet    
+lsi                     up    up
+lsi.0                   up    up   inet    
+                                   iso     
+                                   inet6   
+lsi.1                   up    up   inet    
+                                   iso     
+                                   inet6   
+mtun                    up    up
+pimd                    up    up
+pimd.32769              up    up   inet    
+pime                    up    up
+pip0                    up    up
+ptp0                    up    down
+tap                     up    up
+vtep                    up    up

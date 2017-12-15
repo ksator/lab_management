@@ -1,0 +1,43 @@
+
+Interface               Admin Link Proto    Local                 Remote
+gr-0/0/0                up    up
+pfe-0/0/0               up    up
+pfe-0/0/0.16383         up    up   inet    
+                                   inet6   
+pfh-0/0/0               up    up
+pfh-0/0/0.16383         up    up   inet    
+pfh-0/0/0.16384         up    up   inet    
+et-0/0/48               up    up
+et-0/0/48.0             up    up   inet     10.0.1.8/31     
+                                   iso     
+et-0/0/49               up    up
+et-0/0/49.0             up    up   inet     10.0.1.10/31    
+                                   iso     
+bme0                    up    up
+bme0.0                  up    up   inet     128.0.0.1/2     
+                                            128.0.0.4/2     
+                                            128.0.0.63/2    
+cbp0                    up    up
+dsc                     up    up
+em0                     up    up
+em0.0                   up    up   inet     172.25.90.171/24
+em1                     up    down
+em2                     up    up
+em2.32768               up    up   inet     192.168.1.2/24  
+em3                     up    up
+esi                     up    up
+gre                     up    up
+ipip                    up    up
+irb                     up    up
+lo0                     up    up
+lo0.0                   up    up   inet     191.168.100.5       --> 0/0
+                                   iso      49.0001.1911.6810.0005
+lo0.16385               up    up   inet    
+lsi                     up    up
+mtun                    up    up
+pimd                    up    up
+pime                    up    up
+pip0                    up    up
+tap                     up    up
+vme                     up    down
+vtep                    up    up

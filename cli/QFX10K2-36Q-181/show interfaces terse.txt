@@ -1,0 +1,147 @@
+
+Interface               Admin Link Proto    Local                 Remote
+et-0/0/0                up    up
+et-0/0/0.0              up    up   inet     10.0.2.15/31    
+                                   iso     
+gr-0/0/0                up    up
+pfe-0/0/0               up    up
+pfe-0/0/0.16383         up    up   inet    
+                                   inet6   
+pfh-0/0/0               up    up
+pfh-0/0/0.16383         up    up   inet    
+pfh-0/0/0.16384         up    up   inet    
+sxe-0/0/0               up    up
+et-0/0/1                up    up
+et-0/0/1.0              up    up   inet     10.0.2.25/31    
+                                   iso     
+sxe-0/0/1               up    up
+et-0/0/2                up    up
+et-0/0/2.0              up    up   aenet    --> ae1.0
+sxe-0/0/2               up    up
+et-0/0/3                up    up
+et-0/0/3.0              up    up   aenet    --> ae1.0
+et-0/0/4                up    up
+et-0/0/4.0              up    up   aenet    --> ae1.0
+ae1                     up    up
+ae1.0                   up    up   eth-switch
+bme0                    up    up
+bme0.0                  up    up   inet     128.0.0.1/2     
+                                            128.0.0.4/2     
+                                            128.0.0.63/2    
+cbp0                    up    up
+dsc                     up    up
+em0                     up    up
+em0.0                   up    up   inet     172.25.90.181/24
+em1                     up    down
+em2                     up    up
+em2.32768               up    up   inet     192.168.1.2/24  
+em3                     up    up
+esi                     up    up
+gre                     up    up
+ipip                    up    up
+irb                     up    up
+irb.2011                up    up   inet     10.211.0.1/16   
+                                            10.211.0.3/16   
+                                   inet6    fd20:2011::1/64 
+                                            fd20:2011::3/64 
+                                            fe80:2011::1/64 
+irb.2012                up    up   inet     10.212.0.1/16   
+                                            10.212.0.3/16   
+                                   inet6    fd20:2012::1/64 
+                                            fd20:2012::3/64 
+                                            fe80:2012::1/64 
+irb.2013                up    up   inet     10.213.0.1/16   
+                                            10.213.0.3/16   
+                                   inet6    fd20:2013::1/64 
+                                            fd20:2013::3/64 
+                                            fe80:2013::1/64 
+irb.2014                up    up   inet     10.214.0.1/16   
+                                            10.214.0.3/16   
+                                   inet6    fd20:2014::1/64 
+                                            fd20:2014::3/64 
+                                            fe80:2014::1/64 
+irb.2015                up    up   inet     10.215.0.1/16   
+                                            10.215.0.3/16   
+                                   inet6    fd20:2015::1/64 
+                                            fd20:2015::3/64 
+                                            fe80:2015::1/64 
+irb.2016                up    up   inet     10.216.0.1/16   
+                                            10.216.0.3/16   
+                                   inet6    fd20:2016::1/64 
+                                            fd20:2016::3/64 
+                                            fe80:2016::1/64 
+irb.2017                up    up   inet     10.217.0.1/16   
+                                            10.217.0.3/16   
+                                   inet6    fd20:2017::1/64 
+                                            fd20:2017::3/64 
+                                            fe80:2017::1/64 
+irb.2018                up    up   inet     10.218.0.1/16   
+                                            10.218.0.3/16   
+                                   inet6    fd20:2018::1/64 
+                                            fd20:2018::3/64 
+                                            fe80:2018::1/64 
+irb.2019                up    up   inet     10.219.0.1/16   
+                                            10.219.0.3/16   
+                                   inet6    fd20:2019::1/64 
+                                            fd20:2019::3/64 
+                                            fe80:2019::1/64 
+irb.2020                up    up   inet     10.220.0.1/16   
+                                            10.220.0.3/16   
+                                   inet6    fd20:201a::1/64 
+                                            fd20:201a::3/64 
+                                            fe80:201a::1/64 
+irb.2030                up    up   inet     10.230.0.1/16   
+                                            10.230.0.5/16   
+                                   inet6    fd20:2030::1/64 
+                                            fd20:2030::5/64 
+                                            fe80:2030::1/64 
+irb.2031                up    up   inet     10.231.0.1/16   
+                                            10.231.0.5/16   
+                                   inet6    fd20:2031::1/64 
+                                            fd20:2031::5/64 
+                                            fe80:2031::1/64 
+irb.2050                up    up   inet     10.250.0.5/16   
+irb.2051                up    up   inet     10.251.0.5/16   
+irb.4050                up    up   inet     10.50.0.1/16    
+                                            10.50.0.5/16    
+                                   inet6    fd20:4050::1/64 
+                                            fd20:4050::5/64 
+                                            fe80:4050::1/64 
+irb.4051                up    up   inet     10.51.0.1/16    
+                                            10.51.0.5/16    
+                                   inet6    fd20:4051::1/64 
+                                            fd20:4051::5/64 
+                                            fe80:4051::1/64 
+lo0                     up    up
+lo0.0                   up    up   inet     191.168.102.2       --> 0/0
+                                   iso      49.0003.1911.6810.2002
+                                   inet6    fd20:2222::181  
+                                            fe80::46aa:500f:fcfb:66b4
+lo0.1                   up    up   inet     10.254.22.1         --> 0/0
+                                   inet6    fd20:10:254:22::1
+                                            fe80::46aa:500f:fcfb:66b4
+lo0.2                   up    up   inet     10.254.22.2         --> 0/0
+                                   inet6    fd20:10:254:22::2
+                                            fe80::46aa:500f:fcfb:66b4
+lo0.16385               up    up   inet    
+lsi                     up    up
+lsi.0                   up    up   inet    
+                                   iso     
+                                   inet6   
+lsi.1                   up    up   inet    
+                                   iso     
+                                   inet6   
+mtun                    up    up
+pimd                    up    up
+pime                    up    up
+pime.32769              up    up   inet    
+pip0                    up    up
+ptp0                    up    down
+tap                     up    up
+vtep                    up    up
+vtep.32768              up    up  
+vtep.32769              up    up   eth-switch
+vtep.32770              up    up   eth-switch
+vtep.32771              up    up   eth-switch
+vtep.32772              up    up   eth-switch
+vtep.32773              up    up   eth-switch

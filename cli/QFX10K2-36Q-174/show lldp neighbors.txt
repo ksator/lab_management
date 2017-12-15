@@ -1,0 +1,8 @@
+
+Local Interface    Parent Interface    Chassis Id          Port info          System Name
+et-0/0/30          -                   44:aa:50:b2:c7:e0   et-0/0/50          QFX5110-173         
+et-0/0/24          -                   44:aa:50:b2:d1:e0   et-0/0/50          QFX5110-172         
+et-0/0/1           ae1                 44:aa:50:b2:d6:e0   et-0/0/48          QFX5110-169         
+et-0/0/2           ae2                 44:aa:50:b2:e5:e0   et-0/0/48          QFX5110-170         
+et-0/0/13          -                   54:4b:8c:d5:08:32   et-0/0/12          QFX10K2-177         
+et-0/0/12          -                   80:ac:ac:7c:29:dc   et-0/0/12          QFX10K2-176         

@@ -1,0 +1,174 @@
+
+Peer: 10.0.1.12+64141 AS 65100 Local: 10.0.1.13+179 AS 65200
+  Group: Internet              Routing-Instance: master
+  Forwarding routing-instance: master  
+  Type: External    State: Established    Flags: <Sync>
+  Last State: OpenConfirm   Last Event: RecvKeepAlive
+  Last Error: Cease
+  Export: [ export_default_only ] 
+  Options: <Preference PeerAS Multipath Refresh>
+  Options: <MultipathAs>
+  Holdtime: 90 Preference: 170
+  Number of flaps: 4
+  Last flap event: TransportError
+  Error: 'Cease' Sent: 3 Recv: 0
+  Peer ID: 10.254.31.5     Local ID: 191.168.101.1     Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 0    Peer index: 2    SNMP index: 2     
+  I/O Session Thread: bgpio-0 State: Enabled
+  BFD: disabled, down
+  Local Interface: et-0/0/50.0                      
+  NLRI for restart configured on peer: inet-unicast
+  NLRI advertised by peer: inet-unicast
+  NLRI for this session: inet-unicast
+  Peer supports Refresh capability (2)
+  Stale routes from peer are kept for: 300
+  Peer does not support Restarter functionality
+  Restart flag received from the peer: Notification
+  NLRI that restart is negotiated for: inet-unicast
+  NLRI of received end-of-rib markers: inet-unicast
+  NLRI of all end-of-rib markers sent: inet-unicast
+  Peer does not support LLGR Restarter functionality
+  Peer supports 4 byte AS extension (peer-as 65100)
+  Peer does not support Addpath
+  Table inet.0 Bit: 20000
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              5
+    Received prefixes:            5
+    Accepted prefixes:            5
+    Suppressed due to damping:    0
+    Advertised prefixes:          1
+  Last traffic (seconds): Received 4971924 Sent 3308233 Checked 4971924
+  Input messages:  Total 119976	Updates 6	Refreshes 0	Octets 2279738
+  Output messages: Total 121279	Updates 1	Refreshes 0	Octets 2304330
+  Output Queue[1]: 0            (inet.0, inet-unicast)
+
+Peer: 10.0.1.16+54699 AS 65100 Local: 10.0.1.17+179 AS 65200
+  Group: Internet              Routing-Instance: master
+  Forwarding routing-instance: master  
+  Type: External    State: Established    Flags: <Sync>
+  Last State: OpenConfirm   Last Event: RecvKeepAlive
+  Last Error: Cease
+  Export: [ export_default_only ] 
+  Options: <Preference PeerAS Multipath Refresh>
+  Options: <MultipathAs>
+  Holdtime: 90 Preference: 170
+  Number of flaps: 3
+  Last flap event: TransportError
+  Error: 'Cease' Sent: 2 Recv: 0
+  Peer ID: 10.254.31.6     Local ID: 191.168.101.1     Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 0    Peer index: 3    SNMP index: 3     
+  I/O Session Thread: bgpio-0 State: Enabled
+  BFD: disabled, down
+  Local Interface: et-0/0/51.0                      
+  NLRI for restart configured on peer: inet-unicast
+  NLRI advertised by peer: inet-unicast
+  NLRI for this session: inet-unicast
+  Peer supports Refresh capability (2)
+  Stale routes from peer are kept for: 300
+  Peer does not support Restarter functionality
+  Restart flag received from the peer: Notification
+  NLRI that restart is negotiated for: inet-unicast
+  NLRI of received end-of-rib markers: inet-unicast
+  NLRI of all end-of-rib markers sent: inet-unicast
+  Peer does not support LLGR Restarter functionality
+  Peer supports 4 byte AS extension (peer-as 65100)
+  Peer does not support Addpath
+  Table inet.0 Bit: 20000
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              5
+    Received prefixes:            5
+    Accepted prefixes:            5
+    Suppressed due to damping:    0
+    Advertised prefixes:          1
+  Last traffic (seconds): Received 4971924 Sent 3308233 Checked 4971924
+  Input messages:  Total 119976	Updates 6	Refreshes 0	Octets 2279738
+  Output messages: Total 121278	Updates 1	Refreshes 0	Octets 2304311
+  Output Queue[1]: 0            (inet.0, inet-unicast)
+
+Peer: 10.0.2.1+179 AS 65101    Local: 10.0.2.0+54501 AS 65200
+  Group: Internet              Routing-Instance: master
+  Forwarding routing-instance: master  
+  Type: External    State: Established    Flags: <Sync>
+  Last State: OpenConfirm   Last Event: RecvKeepAlive
+  Last Error: Cease
+  Export: [ export_default_only ] 
+  Options: <Preference PeerAS Multipath Refresh>
+  Options: <MultipathAs>
+  Holdtime: 90 Preference: 170
+  Number of flaps: 4
+  Last flap event: Stop
+  Error: 'Cease' Sent: 3 Recv: 1
+  Peer ID: 10.0.2.1        Local ID: 191.168.101.1     Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 0    Peer index: 0    SNMP index: 0     
+  I/O Session Thread: bgpio-0 State: Enabled
+  BFD: disabled, down
+  Local Interface: et-0/0/48.0                      
+  NLRI for restart configured on peer: inet-unicast
+  NLRI advertised by peer: inet-unicast
+  NLRI for this session: inet-unicast
+  Peer supports Refresh capability (2)
+  Stale routes from peer are kept for: 300
+  Peer does not support Restarter functionality
+  Restart flag received from the peer: Notification
+  NLRI that restart is negotiated for: inet-unicast
+  NLRI of received end-of-rib markers: inet-unicast
+  NLRI of all end-of-rib markers sent: inet-unicast
+  Peer does not support LLGR Restarter functionality
+  Peer supports 4 byte AS extension (peer-as 65101)
+  Peer does not support Addpath
+  Table inet.0 Bit: 20000
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              20
+    Received prefixes:            20
+    Accepted prefixes:            20
+    Suppressed due to damping:    0
+    Advertised prefixes:          1
+  Last traffic (seconds): Received 4971924 Sent 3243840 Checked 4971924
+  Input messages:  Total 116146	Updates 2	Refreshes 0	Octets 2206862
+  Output messages: Total 118915	Updates 1	Refreshes 0	Octets 2259414
+  Output Queue[1]: 0            (inet.0, inet-unicast)
+
+Peer: 10.0.2.3+179 AS 65101    Local: 10.0.2.2+64852 AS 65200
+  Group: Internet              Routing-Instance: master
+  Forwarding routing-instance: master  
+  Type: External    State: Established    Flags: <Sync>
+  Last State: OpenConfirm   Last Event: RecvKeepAlive
+  Last Error: None
+  Export: [ export_default_only ] 
+  Options: <Preference PeerAS Multipath Refresh>
+  Options: <MultipathAs>
+  Holdtime: 90 Preference: 170
+  Number of flaps: 0
+  Peer ID: 10.0.2.3        Local ID: 191.168.101.1     Active Holdtime: 90
+  Keepalive Interval: 30         Group index: 0    Peer index: 1    SNMP index: 1     
+  I/O Session Thread: bgpio-0 State: Enabled
+  BFD: disabled, down
+  Local Interface: et-0/0/49.0                      
+  NLRI for restart configured on peer: inet-unicast
+  NLRI advertised by peer: inet-unicast
+  NLRI for this session: inet-unicast
+  Peer supports Refresh capability (2)
+  Stale routes from peer are kept for: 300
+  Peer does not support Restarter functionality
+  Restart flag received from the peer: Notification
+  NLRI that restart is negotiated for: inet-unicast
+  NLRI of received end-of-rib markers: inet-unicast
+  NLRI of all end-of-rib markers sent: inet-unicast
+  Peer does not support LLGR Restarter functionality
+  Peer supports 4 byte AS extension (peer-as 65101)
+  Peer does not support Addpath
+  Table inet.0 Bit: 20000
+    RIB State: BGP restart is complete
+    Send state: in sync
+    Active prefixes:              20
+    Received prefixes:            20
+    Accepted prefixes:            20
+    Suppressed due to damping:    0
+    Advertised prefixes:          1
+  Last traffic (seconds): Received 4971924 Sent 4963843 Checked 4971924
+  Input messages:  Total 178581	Updates 141	Refreshes 0	Octets 3397197
+  Output messages: Total 182104	Updates 1	Refreshes 0	Octets 3460005
+  Output Queue[1]: 0            (inet.0, inet-unicast)
