@@ -2,15 +2,15 @@
     "configuration" : {
         "@" : {
             "xmlns" : "http://xml.juniper.net/xnm/1.1/xnm", 
-            "junos:changed-seconds" : "1513288214", 
-            "junos:changed-localtime" : "2017-12-14 21:50:14 UTC"
+            "junos:changed-seconds" : "1513288685", 
+            "junos:changed-localtime" : "2017-12-14 21:58:05 UTC"
         }, 
         "version" : "17.3R1-S2.1", 
         "groups" : [
         {
             "name" : "POC_Lab", 
             "system" : {
-                "host-name" : "QFX10K2-179", 
+                "host-name" : "QFX10K2-178", 
                 "backup-router" : {
                     "address" : "172.25.90.1"
                 }, 
@@ -99,7 +99,7 @@
                             "inet" : {
                                 "address" : [
                                 {
-                                    "name" : "172.25.90.179/24"
+                                    "name" : "172.25.90.178/24"
                                 }
                                 ]
                             }
@@ -304,7 +304,7 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.0.2.11/31"
+                                "name" : "10.0.2.9/31"
                             }
                             ]
                         }, 
@@ -323,7 +323,7 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.0.2.21/31"
+                                "name" : "10.0.2.19/31"
                             }
                             ]
                         }, 
@@ -392,7 +392,7 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.230.0.3/16", 
+                                "name" : "10.230.0.2/16", 
                                 "virtual-gateway-address" : "10.230.0.1"
                             }
                             ]
@@ -400,7 +400,7 @@
                         "inet6" : {
                             "address" : [
                             {
-                                "name" : "fd20:2030::3/64", 
+                                "name" : "fd20:2030::2/64", 
                                 "virtual-gateway-address" : "fd20:2030::1"
                             }, 
                             {
@@ -419,7 +419,7 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.231.0.3/16", 
+                                "name" : "10.231.0.2/16", 
                                 "virtual-gateway-address" : "10.231.0.1"
                             }
                             ]
@@ -427,7 +427,7 @@
                         "inet6" : {
                             "address" : [
                             {
-                                "name" : "fd20:2031::3/64", 
+                                "name" : "fd20:2031::2/64", 
                                 "virtual-gateway-address" : "fd20:2031::1"
                             }, 
                             {
@@ -445,7 +445,7 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.250.0.3/16", 
+                                "name" : "10.250.0.2/16", 
                                 "virtual-gateway-address" : "10.250.0.1"
                             }
                             ]
@@ -458,7 +458,7 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.251.0.3/16", 
+                                "name" : "10.251.0.2/16", 
                                 "virtual-gateway-address" : "10.251.0.1"
                             }
                             ]
@@ -472,7 +472,7 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.201.0.3/16", 
+                                "name" : "10.201.0.2/16", 
                                 "virtual-gateway-address" : "10.201.0.1"
                             }
                             ]
@@ -480,7 +480,7 @@
                         "inet6" : {
                             "address" : [
                             {
-                                "name" : "fd20:3001::3/64", 
+                                "name" : "fd20:3001::2/64", 
                                 "virtual-gateway-address" : "fd20:3001::1"
                             }, 
                             {
@@ -499,7 +499,7 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.202.0.3/16", 
+                                "name" : "10.202.0.2/16", 
                                 "virtual-gateway-address" : "10.202.0.1"
                             }
                             ]
@@ -507,7 +507,7 @@
                         "inet6" : {
                             "address" : [
                             {
-                                "name" : "fd20:3002::3/64", 
+                                "name" : "fd20:3002::2/64", 
                                 "virtual-gateway-address" : "fd20:3002::1"
                             }, 
                             {
@@ -526,7 +526,7 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.203.0.3/16", 
+                                "name" : "10.203.0.2/16", 
                                 "virtual-gateway-address" : "10.203.0.1"
                             }
                             ]
@@ -534,7 +534,7 @@
                         "inet6" : {
                             "address" : [
                             {
-                                "name" : "fd20:3003::3/64", 
+                                "name" : "fd20:3003::2/64", 
                                 "virtual-gateway-address" : "fd20:3003::1"
                             }, 
                             {
@@ -553,7 +553,7 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.204.0.3/16", 
+                                "name" : "10.204.0.2/16", 
                                 "virtual-gateway-address" : "10.204.0.1"
                             }
                             ]
@@ -561,7 +561,7 @@
                         "inet6" : {
                             "address" : [
                             {
-                                "name" : "fd20:3004::3/64", 
+                                "name" : "fd20:3004::2/64", 
                                 "virtual-gateway-address" : "fd20:3004::1"
                             }, 
                             {
@@ -580,7 +580,7 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.205.0.3/16", 
+                                "name" : "10.205.0.2/16", 
                                 "virtual-gateway-address" : "10.205.0.1"
                             }
                             ]
@@ -588,7 +588,7 @@
                         "inet6" : {
                             "address" : [
                             {
-                                "name" : "fd20:3005::3/64", 
+                                "name" : "fd20:3005::2/64", 
                                 "virtual-gateway-address" : "fd20:3005::1"
                             }, 
                             {
@@ -607,7 +607,7 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.206.0.3/16", 
+                                "name" : "10.206.0.2/16", 
                                 "virtual-gateway-address" : "10.206.0.1"
                             }
                             ]
@@ -615,7 +615,7 @@
                         "inet6" : {
                             "address" : [
                             {
-                                "name" : "fd20:3006::3/64", 
+                                "name" : "fd20:3006::2/64", 
                                 "virtual-gateway-address" : "fd20:3006::1"
                             }, 
                             {
@@ -634,7 +634,7 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.207.0.3/16", 
+                                "name" : "10.207.0.2/16", 
                                 "virtual-gateway-address" : "10.207.0.1"
                             }
                             ]
@@ -642,7 +642,7 @@
                         "inet6" : {
                             "address" : [
                             {
-                                "name" : "fd20:3007::3/64", 
+                                "name" : "fd20:3007::2/64", 
                                 "virtual-gateway-address" : "fd20:3007::1"
                             }, 
                             {
@@ -661,7 +661,7 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.208.0.3/16", 
+                                "name" : "10.208.0.2/16", 
                                 "virtual-gateway-address" : "10.208.0.1"
                             }
                             ]
@@ -669,7 +669,7 @@
                         "inet6" : {
                             "address" : [
                             {
-                                "name" : "fd20:3008::3/64", 
+                                "name" : "fd20:3008::2/64", 
                                 "virtual-gateway-address" : "fd20:3008::1"
                             }, 
                             {
@@ -688,7 +688,7 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.209.0.3/16", 
+                                "name" : "10.209.0.2/16", 
                                 "virtual-gateway-address" : "10.209.0.1"
                             }
                             ]
@@ -696,7 +696,7 @@
                         "inet6" : {
                             "address" : [
                             {
-                                "name" : "fd20:3009::3/64", 
+                                "name" : "fd20:3009::2/64", 
                                 "virtual-gateway-address" : "fd20:3009::1"
                             }, 
                             {
@@ -715,7 +715,7 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.210.0.3/16", 
+                                "name" : "10.210.0.2/16", 
                                 "virtual-gateway-address" : "10.210.0.1"
                             }
                             ]
@@ -723,7 +723,7 @@
                         "inet6" : {
                             "address" : [
                             {
-                                "name" : "fd20:2010::3/64", 
+                                "name" : "fd20:2010::2/64", 
                                 "virtual-gateway-address" : "fd20:2010::1"
                             }, 
                             {
@@ -742,7 +742,7 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.50.0.3/16", 
+                                "name" : "10.50.0.2/16", 
                                 "virtual-gateway-address" : "10.50.0.1"
                             }
                             ]
@@ -750,7 +750,7 @@
                         "inet6" : {
                             "address" : [
                             {
-                                "name" : "fd20:4050::3/64", 
+                                "name" : "fd20:4050::2/64", 
                                 "virtual-gateway-address" : "fd20:4050::1"
                             }, 
                             {
@@ -769,7 +769,7 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.51.0.3/16", 
+                                "name" : "10.51.0.2/16", 
                                 "virtual-gateway-address" : "10.51.0.1"
                             }
                             ]
@@ -777,7 +777,7 @@
                         "inet6" : {
                             "address" : [
                             {
-                                "name" : "fd20:4051::3/64", 
+                                "name" : "fd20:4051::2/64", 
                                 "virtual-gateway-address" : "fd20:4051::1"
                             }, 
                             {
@@ -800,21 +800,21 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "191.168.101.6/32"
+                                "name" : "191.168.101.5/32"
                             }
                             ]
                         }, 
                         "iso" : {
                             "address" : [
                             {
-                                "name" : "49.0002.1911.6810.1006.00"
+                                "name" : "49.0002.1911.6810.1005.00"
                             }
                             ]
                         }, 
                         "inet6" : {
                             "address" : [
                             {
-                                "name" : "fd20:2222::179/128"
+                                "name" : "fd20:2222::178/128"
                             }
                             ]
                         }
@@ -826,14 +826,14 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.254.6.1/32"
+                                "name" : "10.254.5.1/32"
                             }
                             ]
                         }, 
                         "inet6" : {
                             "address" : [
                             {
-                                "name" : "fd20:10:254:6::1/128"
+                                "name" : "fd20:10:254:5::1/128"
                             }
                             ]
                         }
@@ -845,14 +845,14 @@
                         "inet" : {
                             "address" : [
                             {
-                                "name" : "10.254.6.2/32"
+                                "name" : "10.254.5.2/32"
                             }
                             ]
                         }, 
                         "inet6" : {
                             "address" : [
                             {
-                                "name" : "fd20:10:254:6::2/128"
+                                "name" : "fd20:10:254:5::2/128"
                             }
                             ]
                         }
@@ -875,7 +875,7 @@
                 }
                 ]
             }, 
-            "router-id" : "191.168.101.6", 
+            "router-id" : "191.168.101.5", 
             "autonomous-system" : {
                 "as-number" : "65101"
             }, 
@@ -884,9 +884,6 @@
             }
         }, 
         "protocols" : {
-            "@" : {
-                "comment" : "#\n# $Id:$\n#\n# Copyright (c) 2014, Juniper Networks, Inc.\n# All rights reserved.\n#\n# Filename: default.conf\n# Platform: ELIT-LITE\n# Description: Default DST file.\n#\n#" 
-            }, 
             "igmp" : {
                 "interface" : [
                 {
@@ -906,7 +903,7 @@
                 {
                     "name" : "IBGP-EVPN-Core", 
                     "type" : "internal", 
-                    "local-address" : "191.168.101.6", 
+                    "local-address" : "191.168.101.5", 
                     "import" : ["Reject_RemoteDC"],
                     "@import" : {
                         "inactive" : true
@@ -942,7 +939,7 @@
                     "mtu-discovery" : [null], 
                     "export" : ["bgp-ip-clos-out"],
                     "local-as" : {
-                        "as-number" : "201"
+                        "as-number" : "200"
                     }, 
                     "bfd-liveness-detection" : {
                         "minimum-interval" : 350, 
@@ -954,13 +951,13 @@
                     }, 
                     "neighbor" : [
                     {
-                        "name" : "10.0.2.10", 
-                        "local-address" : "10.0.2.11", 
+                        "name" : "10.0.2.8", 
+                        "local-address" : "10.0.2.9", 
                         "peer-as" : "301"
                     }, 
                     {
-                        "name" : "10.0.2.20", 
-                        "local-address" : "10.0.2.21", 
+                        "name" : "10.0.2.18", 
+                        "local-address" : "10.0.2.19", 
                         "peer-as" : "302"
                     }
                     ]
@@ -1314,7 +1311,7 @@
                 }
                 ], 
                 "route-distinguisher" : {
-                    "rd-type" : "191.168.101.6:1"
+                    "rd-type" : "191.168.101.5:1"
                 }, 
                 "vrf-target" : {
                     "community" : "target:65101:1"
@@ -1364,7 +1361,7 @@
                 }
                 ], 
                 "route-distinguisher" : {
-                    "rd-type" : "191.168.101.6:2"
+                    "rd-type" : "191.168.101.5:2"
                 }, 
                 "vrf-target" : {
                     "community" : "target:65101:2"
@@ -1397,7 +1394,7 @@
                 "interface-name" : "lo0.0"
             }, 
             "route-distinguisher" : {
-                "rd-type" : "191.168.101.6:65101"
+                "rd-type" : "191.168.101.5:65101"
             }, 
             "vrf-target" : {
                 "community" : "target:1:100", 

@@ -20,6 +20,9 @@ set groups POC_Lab interfaces vme unit 0 family inet address 172.25.90.192/24
 set groups POC_Lab snmp community public
 set groups POC_Lab routing-options static route 0.0.0.0/0 next-hop 172.25.90.1
 set apply-groups POC_Lab
+set system services extension-service request-response grpc clear-text port 50051
+set system services extension-service request-response grpc skip-authentication
+set system services extension-service notification allow-clients address 0.0.0.0/0
 set system syslog host 172.25.90.135 any any
 set system syslog host 172.25.90.135 match UI_COMMIT_COMPLETED
 set system syslog host 172.25.90.135 port 516

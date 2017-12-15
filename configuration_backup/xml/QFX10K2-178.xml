@@ -1,9 +1,9 @@
-<configuration changed-seconds="1513288214" changed-localtime="2017-12-14 21:50:14 UTC">
+<configuration changed-seconds="1513288685" changed-localtime="2017-12-14 21:58:05 UTC">
     <version>17.3R1-S2.1</version>
     <groups>
         <name>POC_Lab</name>
         <system>
-            <host-name>QFX10K2-179</host-name>
+            <host-name>QFX10K2-178</host-name>
             <backup-router>
                 <address>172.25.90.1</address>
             </backup-router>
@@ -80,7 +80,7 @@
                     <family>
                         <inet>
                             <address>
-                                <name>172.25.90.179/24</name>
+                                <name>172.25.90.178/24</name>
                             </address>
                         </inet>
                     </family>
@@ -250,7 +250,7 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.0.2.11/31</name>
+                            <name>10.0.2.9/31</name>
                         </address>
                     </inet>
                     <iso>
@@ -266,7 +266,7 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.0.2.21/31</name>
+                            <name>10.0.2.19/31</name>
                         </address>
                     </inet>
                     <iso>
@@ -330,13 +330,13 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.230.0.3/16</name>
+                            <name>10.230.0.2/16</name>
                             <virtual-gateway-address>10.230.0.1</virtual-gateway-address>
                         </address>
                     </inet>
                     <inet6>
                         <address>
-                            <name>fd20:2030::3/64</name>
+                            <name>fd20:2030::2/64</name>
                             <virtual-gateway-address>fd20:2030::1</virtual-gateway-address>
                         </address>
                         <address>
@@ -353,13 +353,13 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.231.0.3/16</name>
+                            <name>10.231.0.2/16</name>
                             <virtual-gateway-address>10.231.0.1</virtual-gateway-address>
                         </address>
                     </inet>
                     <inet6>
                         <address>
-                            <name>fd20:2031::3/64</name>
+                            <name>fd20:2031::2/64</name>
                             <virtual-gateway-address>fd20:2031::1</virtual-gateway-address>
                         </address>
                         <address>
@@ -375,7 +375,7 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.250.0.3/16</name>
+                            <name>10.250.0.2/16</name>
                             <virtual-gateway-address>10.250.0.1</virtual-gateway-address>
                         </address>
                     </inet>
@@ -386,7 +386,7 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.251.0.3/16</name>
+                            <name>10.251.0.2/16</name>
                             <virtual-gateway-address>10.251.0.1</virtual-gateway-address>
                         </address>
                     </inet>
@@ -398,13 +398,13 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.201.0.3/16</name>
+                            <name>10.201.0.2/16</name>
                             <virtual-gateway-address>10.201.0.1</virtual-gateway-address>
                         </address>
                     </inet>
                     <inet6>
                         <address>
-                            <name>fd20:3001::3/64</name>
+                            <name>fd20:3001::2/64</name>
                             <virtual-gateway-address>fd20:3001::1</virtual-gateway-address>
                         </address>
                         <address>
@@ -421,13 +421,13 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.202.0.3/16</name>
+                            <name>10.202.0.2/16</name>
                             <virtual-gateway-address>10.202.0.1</virtual-gateway-address>
                         </address>
                     </inet>
                     <inet6>
                         <address>
-                            <name>fd20:3002::3/64</name>
+                            <name>fd20:3002::2/64</name>
                             <virtual-gateway-address>fd20:3002::1</virtual-gateway-address>
                         </address>
                         <address>
@@ -444,13 +444,13 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.203.0.3/16</name>
+                            <name>10.203.0.2/16</name>
                             <virtual-gateway-address>10.203.0.1</virtual-gateway-address>
                         </address>
                     </inet>
                     <inet6>
                         <address>
-                            <name>fd20:3003::3/64</name>
+                            <name>fd20:3003::2/64</name>
                             <virtual-gateway-address>fd20:3003::1</virtual-gateway-address>
                         </address>
                         <address>
@@ -467,13 +467,13 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.204.0.3/16</name>
+                            <name>10.204.0.2/16</name>
                             <virtual-gateway-address>10.204.0.1</virtual-gateway-address>
                         </address>
                     </inet>
                     <inet6>
                         <address>
-                            <name>fd20:3004::3/64</name>
+                            <name>fd20:3004::2/64</name>
                             <virtual-gateway-address>fd20:3004::1</virtual-gateway-address>
                         </address>
                         <address>
@@ -490,13 +490,13 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.205.0.3/16</name>
+                            <name>10.205.0.2/16</name>
                             <virtual-gateway-address>10.205.0.1</virtual-gateway-address>
                         </address>
                     </inet>
                     <inet6>
                         <address>
-                            <name>fd20:3005::3/64</name>
+                            <name>fd20:3005::2/64</name>
                             <virtual-gateway-address>fd20:3005::1</virtual-gateway-address>
                         </address>
                         <address>
@@ -513,13 +513,13 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.206.0.3/16</name>
+                            <name>10.206.0.2/16</name>
                             <virtual-gateway-address>10.206.0.1</virtual-gateway-address>
                         </address>
                     </inet>
                     <inet6>
                         <address>
-                            <name>fd20:3006::3/64</name>
+                            <name>fd20:3006::2/64</name>
                             <virtual-gateway-address>fd20:3006::1</virtual-gateway-address>
                         </address>
                         <address>
@@ -536,13 +536,13 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.207.0.3/16</name>
+                            <name>10.207.0.2/16</name>
                             <virtual-gateway-address>10.207.0.1</virtual-gateway-address>
                         </address>
                     </inet>
                     <inet6>
                         <address>
-                            <name>fd20:3007::3/64</name>
+                            <name>fd20:3007::2/64</name>
                             <virtual-gateway-address>fd20:3007::1</virtual-gateway-address>
                         </address>
                         <address>
@@ -559,13 +559,13 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.208.0.3/16</name>
+                            <name>10.208.0.2/16</name>
                             <virtual-gateway-address>10.208.0.1</virtual-gateway-address>
                         </address>
                     </inet>
                     <inet6>
                         <address>
-                            <name>fd20:3008::3/64</name>
+                            <name>fd20:3008::2/64</name>
                             <virtual-gateway-address>fd20:3008::1</virtual-gateway-address>
                         </address>
                         <address>
@@ -582,13 +582,13 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.209.0.3/16</name>
+                            <name>10.209.0.2/16</name>
                             <virtual-gateway-address>10.209.0.1</virtual-gateway-address>
                         </address>
                     </inet>
                     <inet6>
                         <address>
-                            <name>fd20:3009::3/64</name>
+                            <name>fd20:3009::2/64</name>
                             <virtual-gateway-address>fd20:3009::1</virtual-gateway-address>
                         </address>
                         <address>
@@ -605,13 +605,13 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.210.0.3/16</name>
+                            <name>10.210.0.2/16</name>
                             <virtual-gateway-address>10.210.0.1</virtual-gateway-address>
                         </address>
                     </inet>
                     <inet6>
                         <address>
-                            <name>fd20:2010::3/64</name>
+                            <name>fd20:2010::2/64</name>
                             <virtual-gateway-address>fd20:2010::1</virtual-gateway-address>
                         </address>
                         <address>
@@ -628,13 +628,13 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.50.0.3/16</name>
+                            <name>10.50.0.2/16</name>
                             <virtual-gateway-address>10.50.0.1</virtual-gateway-address>
                         </address>
                     </inet>
                     <inet6>
                         <address>
-                            <name>fd20:4050::3/64</name>
+                            <name>fd20:4050::2/64</name>
                             <virtual-gateway-address>fd20:4050::1</virtual-gateway-address>
                         </address>
                         <address>
@@ -651,13 +651,13 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.51.0.3/16</name>
+                            <name>10.51.0.2/16</name>
                             <virtual-gateway-address>10.51.0.1</virtual-gateway-address>
                         </address>
                     </inet>
                     <inet6>
                         <address>
-                            <name>fd20:4051::3/64</name>
+                            <name>fd20:4051::2/64</name>
                             <virtual-gateway-address>fd20:4051::1</virtual-gateway-address>
                         </address>
                         <address>
@@ -676,17 +676,17 @@
                 <family>
                     <inet>
                         <address>
-                            <name>191.168.101.6/32</name>
+                            <name>191.168.101.5/32</name>
                         </address>
                     </inet>
                     <iso>
                         <address>
-                            <name>49.0002.1911.6810.1006.00</name>
+                            <name>49.0002.1911.6810.1005.00</name>
                         </address>
                     </iso>
                     <inet6>
                         <address>
-                            <name>fd20:2222::179/128</name>
+                            <name>fd20:2222::178/128</name>
                         </address>
                     </inet6>
                 </family>
@@ -696,12 +696,12 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.254.6.1/32</name>
+                            <name>10.254.5.1/32</name>
                         </address>
                     </inet>
                     <inet6>
                         <address>
-                            <name>fd20:10:254:6::1/128</name>
+                            <name>fd20:10:254:5::1/128</name>
                         </address>
                     </inet6>
                 </family>
@@ -711,12 +711,12 @@
                 <family>
                     <inet>
                         <address>
-                            <name>10.254.6.2/32</name>
+                            <name>10.254.5.2/32</name>
                         </address>
                     </inet>
                     <inet6>
                         <address>
-                            <name>fd20:10:254:6::2/128</name>
+                            <name>fd20:10:254:5::2/128</name>
                         </address>
                     </inet6>
                 </family>
@@ -734,7 +734,7 @@
                 <next-hop>172.25.90.1</next-hop>
             </route>
         </static>
-        <router-id>191.168.101.6</router-id>
+        <router-id>191.168.101.5</router-id>
         <autonomous-system>
             <as-number>65101</as-number>
         </autonomous-system>
@@ -742,17 +742,6 @@
             <export>load-balance</export>
         </forwarding-table>
     </routing-options>
-    <comment>#
-# $Id:$
-#
-# Copyright (c) 2014, Juniper Networks, Inc.
-# All rights reserved.
-#
-# Filename: default.conf
-# Platform: ELIT-LITE
-# Description: Default DST file.
-#
-#</comment>
     <protocols>
         <igmp>
             <interface>
@@ -768,7 +757,7 @@
             <group>
                 <name>IBGP-EVPN-Core</name>
                 <type>internal</type>
-                <local-address>191.168.101.6</local-address>
+                <local-address>191.168.101.5</local-address>
                 <import inactive="inactive">Reject_RemoteDC</import>
                 <family>
                     <evpn>
@@ -800,7 +789,7 @@
                 <mtu-discovery/>
                 <export>bgp-ip-clos-out</export>
                 <local-as>
-                    <as-number>201</as-number>
+                    <as-number>200</as-number>
                 </local-as>
                 <bfd-liveness-detection>
                     <minimum-interval>350</minimum-interval>
@@ -811,13 +800,13 @@
                     <multiple-as/>
                 </multipath>
                 <neighbor>
-                    <name>10.0.2.10</name>
-                    <local-address>10.0.2.11</local-address>
+                    <name>10.0.2.8</name>
+                    <local-address>10.0.2.9</local-address>
                     <peer-as>301</peer-as>
                 </neighbor>
                 <neighbor>
-                    <name>10.0.2.20</name>
-                    <local-address>10.0.2.21</local-address>
+                    <name>10.0.2.18</name>
+                    <local-address>10.0.2.19</local-address>
                     <peer-as>302</peer-as>
                 </neighbor>
             </group>
@@ -1123,7 +1112,7 @@
                 <name>lo0.1</name>
             </interface>
             <route-distinguisher>
-                <rd-type>191.168.101.6:1</rd-type>
+                <rd-type>191.168.101.5:1</rd-type>
             </route-distinguisher>
             <vrf-target>
                 <community>target:65101:1</community>
@@ -1173,7 +1162,7 @@
                 <name>lo0.2</name>
             </interface>
             <route-distinguisher>
-                <rd-type>191.168.101.6:2</rd-type>
+                <rd-type>191.168.101.5:2</rd-type>
             </route-distinguisher>
             <vrf-target>
                 <community>target:65101:2</community>
@@ -1207,7 +1196,7 @@
             <interface-name>lo0.0</interface-name>
         </vtep-source-interface>
         <route-distinguisher>
-            <rd-type>191.168.101.6:65101</rd-type>
+            <rd-type>191.168.101.5:65101</rd-type>
         </route-distinguisher>
         <vrf-target>
             <community>target:1:100</community>

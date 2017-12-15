@@ -1,5 +1,5 @@
 set version 17.3R1-S2.1
-set groups POC_Lab system host-name QFX10K2-179
+set groups POC_Lab system host-name QFX10K2-178
 set groups POC_Lab system backup-router 172.25.90.1
 set groups POC_Lab system authentication-order radius
 set groups POC_Lab system authentication-order password
@@ -20,7 +20,7 @@ set groups POC_Lab system syslog file messages interactive-commands none
 set groups POC_Lab system syslog file messages archive size 10m
 set groups POC_Lab system syslog file messages archive files 10
 set groups POC_Lab system ntp server 66.129.255.62 prefer
-set groups POC_Lab interfaces em0 unit 0 family inet address 172.25.90.179/24
+set groups POC_Lab interfaces em0 unit 0 family inet address 172.25.90.178/24
 set groups POC_Lab snmp community public
 set groups POC_Lab routing-options static route 10.255.255.0/24 next-hop 172.25.90.1
 set groups POC_Lab routing-options static route 10.255.255.0/24 retain
@@ -60,10 +60,10 @@ set system ddos-protection protocols ndpv6 aggregate bandwidth 10000
 set system ddos-protection protocols ndpv6 aggregate burst 1000
 set chassis aggregated-devices ethernet device-count 5
 set interfaces et-0/0/0 mtu 9216
-set interfaces et-0/0/0 unit 0 family inet address 10.0.2.11/31
+set interfaces et-0/0/0 unit 0 family inet address 10.0.2.9/31
 set interfaces et-0/0/0 unit 0 family iso
 set interfaces et-0/0/1 mtu 9216
-set interfaces et-0/0/1 unit 0 family inet address 10.0.2.21/31
+set interfaces et-0/0/1 unit 0 family inet address 10.0.2.19/31
 set interfaces et-0/0/1 unit 0 family iso
 set interfaces et-0/0/2 ether-options 802.3ad ae1
 set interfaces et-0/0/3 ether-options 802.3ad ae1
@@ -79,107 +79,107 @@ set interfaces ae1 unit 0 family ethernet-switching interface-mode trunk
 set interfaces ae1 unit 0 family ethernet-switching vlan members all
 set interfaces irb mtu 9216
 set interfaces irb unit 2030 virtual-gateway-accept-data
-set interfaces irb unit 2030 family inet address 10.230.0.3/16 virtual-gateway-address 10.230.0.1
-set interfaces irb unit 2030 family inet6 address fd20:2030::3/64 virtual-gateway-address fd20:2030::1
+set interfaces irb unit 2030 family inet address 10.230.0.2/16 virtual-gateway-address 10.230.0.1
+set interfaces irb unit 2030 family inet6 address fd20:2030::2/64 virtual-gateway-address fd20:2030::1
 set interfaces irb unit 2030 family inet6 address fe80:2030::1/64
 set interfaces irb unit 2030 virtual-gateway-v4-mac 02:00:30:00:00:01
 set interfaces irb unit 2030 virtual-gateway-v6-mac 02:00:30:06:00:01
 set interfaces irb unit 2031 virtual-gateway-accept-data
-set interfaces irb unit 2031 family inet address 10.231.0.3/16 virtual-gateway-address 10.231.0.1
-set interfaces irb unit 2031 family inet6 address fd20:2031::3/64 virtual-gateway-address fd20:2031::1
+set interfaces irb unit 2031 family inet address 10.231.0.2/16 virtual-gateway-address 10.231.0.1
+set interfaces irb unit 2031 family inet6 address fd20:2031::2/64 virtual-gateway-address fd20:2031::1
 set interfaces irb unit 2031 family inet6 address fe80:2031::1/64
 set interfaces irb unit 2031 virtual-gateway-v4-mac 02:00:31:00:00:01
 set interfaces irb unit 2031 virtual-gateway-v6-mac 02:00:31:06:00:01
-set interfaces irb unit 2050 family inet address 10.250.0.3/16 virtual-gateway-address 10.250.0.1
-set interfaces irb unit 2051 family inet address 10.251.0.3/16 virtual-gateway-address 10.251.0.1
+set interfaces irb unit 2050 family inet address 10.250.0.2/16 virtual-gateway-address 10.250.0.1
+set interfaces irb unit 2051 family inet address 10.251.0.2/16 virtual-gateway-address 10.251.0.1
 set interfaces irb unit 3001 virtual-gateway-accept-data
-set interfaces irb unit 3001 family inet address 10.201.0.3/16 virtual-gateway-address 10.201.0.1
-set interfaces irb unit 3001 family inet6 address fd20:3001::3/64 virtual-gateway-address fd20:3001::1
+set interfaces irb unit 3001 family inet address 10.201.0.2/16 virtual-gateway-address 10.201.0.1
+set interfaces irb unit 3001 family inet6 address fd20:3001::2/64 virtual-gateway-address fd20:3001::1
 set interfaces irb unit 3001 family inet6 address fe80:3001::1/64
 set interfaces irb unit 3001 virtual-gateway-v4-mac 02:00:01:00:00:01
 set interfaces irb unit 3001 virtual-gateway-v6-mac 02:00:01:06:00:01
 set interfaces irb unit 3002 virtual-gateway-accept-data
-set interfaces irb unit 3002 family inet address 10.202.0.3/16 virtual-gateway-address 10.202.0.1
-set interfaces irb unit 3002 family inet6 address fd20:3002::3/64 virtual-gateway-address fd20:3002::1
+set interfaces irb unit 3002 family inet address 10.202.0.2/16 virtual-gateway-address 10.202.0.1
+set interfaces irb unit 3002 family inet6 address fd20:3002::2/64 virtual-gateway-address fd20:3002::1
 set interfaces irb unit 3002 family inet6 address fe80:3002::1/64
 set interfaces irb unit 3002 virtual-gateway-v4-mac 02:00:02:00:00:01
 set interfaces irb unit 3002 virtual-gateway-v6-mac 02:00:02:06:00:01
 set interfaces irb unit 3003 virtual-gateway-accept-data
-set interfaces irb unit 3003 family inet address 10.203.0.3/16 virtual-gateway-address 10.203.0.1
-set interfaces irb unit 3003 family inet6 address fd20:3003::3/64 virtual-gateway-address fd20:3003::1
+set interfaces irb unit 3003 family inet address 10.203.0.2/16 virtual-gateway-address 10.203.0.1
+set interfaces irb unit 3003 family inet6 address fd20:3003::2/64 virtual-gateway-address fd20:3003::1
 set interfaces irb unit 3003 family inet6 address fe80:3003::1/64
 set interfaces irb unit 3003 virtual-gateway-v4-mac 02:00:03:00:00:01
 set interfaces irb unit 3003 virtual-gateway-v6-mac 02:00:03:06:00:01
 set interfaces irb unit 3004 virtual-gateway-accept-data
-set interfaces irb unit 3004 family inet address 10.204.0.3/16 virtual-gateway-address 10.204.0.1
-set interfaces irb unit 3004 family inet6 address fd20:3004::3/64 virtual-gateway-address fd20:3004::1
+set interfaces irb unit 3004 family inet address 10.204.0.2/16 virtual-gateway-address 10.204.0.1
+set interfaces irb unit 3004 family inet6 address fd20:3004::2/64 virtual-gateway-address fd20:3004::1
 set interfaces irb unit 3004 family inet6 address fe80:3004::1/64
 set interfaces irb unit 3004 virtual-gateway-v4-mac 02:00:04:00:00:01
 set interfaces irb unit 3004 virtual-gateway-v6-mac 02:00:04:06:00:01
 set interfaces irb unit 3005 virtual-gateway-accept-data
-set interfaces irb unit 3005 family inet address 10.205.0.3/16 virtual-gateway-address 10.205.0.1
-set interfaces irb unit 3005 family inet6 address fd20:3005::3/64 virtual-gateway-address fd20:3005::1
+set interfaces irb unit 3005 family inet address 10.205.0.2/16 virtual-gateway-address 10.205.0.1
+set interfaces irb unit 3005 family inet6 address fd20:3005::2/64 virtual-gateway-address fd20:3005::1
 set interfaces irb unit 3005 family inet6 address fe80:3005::1/64
 set interfaces irb unit 3005 virtual-gateway-v4-mac 02:00:05:00:00:01
 set interfaces irb unit 3005 virtual-gateway-v6-mac 02:00:05:06:00:01
 set interfaces irb unit 3006 virtual-gateway-accept-data
-set interfaces irb unit 3006 family inet address 10.206.0.3/16 virtual-gateway-address 10.206.0.1
-set interfaces irb unit 3006 family inet6 address fd20:3006::3/64 virtual-gateway-address fd20:3006::1
+set interfaces irb unit 3006 family inet address 10.206.0.2/16 virtual-gateway-address 10.206.0.1
+set interfaces irb unit 3006 family inet6 address fd20:3006::2/64 virtual-gateway-address fd20:3006::1
 set interfaces irb unit 3006 family inet6 address fe80:3006::1/64
 set interfaces irb unit 3006 virtual-gateway-v4-mac 02:00:06:00:00:01
 set interfaces irb unit 3006 virtual-gateway-v6-mac 02:00:06:06:00:01
 set interfaces irb unit 3007 virtual-gateway-accept-data
-set interfaces irb unit 3007 family inet address 10.207.0.3/16 virtual-gateway-address 10.207.0.1
-set interfaces irb unit 3007 family inet6 address fd20:3007::3/64 virtual-gateway-address fd20:3007::1
+set interfaces irb unit 3007 family inet address 10.207.0.2/16 virtual-gateway-address 10.207.0.1
+set interfaces irb unit 3007 family inet6 address fd20:3007::2/64 virtual-gateway-address fd20:3007::1
 set interfaces irb unit 3007 family inet6 address fe80:3007::1/64
 set interfaces irb unit 3007 virtual-gateway-v4-mac 02:00:07:00:00:01
 set interfaces irb unit 3007 virtual-gateway-v6-mac 02:00:07:06:00:01
 set interfaces irb unit 3008 virtual-gateway-accept-data
-set interfaces irb unit 3008 family inet address 10.208.0.3/16 virtual-gateway-address 10.208.0.1
-set interfaces irb unit 3008 family inet6 address fd20:3008::3/64 virtual-gateway-address fd20:3008::1
+set interfaces irb unit 3008 family inet address 10.208.0.2/16 virtual-gateway-address 10.208.0.1
+set interfaces irb unit 3008 family inet6 address fd20:3008::2/64 virtual-gateway-address fd20:3008::1
 set interfaces irb unit 3008 family inet6 address fe80:3008::1/64
 set interfaces irb unit 3008 virtual-gateway-v4-mac 02:00:08:00:00:01
 set interfaces irb unit 3008 virtual-gateway-v6-mac 02:00:08:06:00:01
 set interfaces irb unit 3009 virtual-gateway-accept-data
-set interfaces irb unit 3009 family inet address 10.209.0.3/16 virtual-gateway-address 10.209.0.1
-set interfaces irb unit 3009 family inet6 address fd20:3009::3/64 virtual-gateway-address fd20:3009::1
+set interfaces irb unit 3009 family inet address 10.209.0.2/16 virtual-gateway-address 10.209.0.1
+set interfaces irb unit 3009 family inet6 address fd20:3009::2/64 virtual-gateway-address fd20:3009::1
 set interfaces irb unit 3009 family inet6 address fe80:3009::1/64
 set interfaces irb unit 3009 virtual-gateway-v4-mac 02:00:09:00:00:01
 set interfaces irb unit 3009 virtual-gateway-v6-mac 02:00:09:06:00:01
 set interfaces irb unit 3010 virtual-gateway-accept-data
-set interfaces irb unit 3010 family inet address 10.210.0.3/16 virtual-gateway-address 10.210.0.1
-set interfaces irb unit 3010 family inet6 address fd20:2010::3/64 virtual-gateway-address fd20:2010::1
+set interfaces irb unit 3010 family inet address 10.210.0.2/16 virtual-gateway-address 10.210.0.1
+set interfaces irb unit 3010 family inet6 address fd20:2010::2/64 virtual-gateway-address fd20:2010::1
 set interfaces irb unit 3010 family inet6 address fe80:2010::1/64
 set interfaces irb unit 3010 virtual-gateway-v4-mac 02:00:10:00:00:01
 set interfaces irb unit 3010 virtual-gateway-v6-mac 02:00:10:06:00:01
 set interfaces irb unit 4050 virtual-gateway-accept-data
-set interfaces irb unit 4050 family inet address 10.50.0.3/16 virtual-gateway-address 10.50.0.1
-set interfaces irb unit 4050 family inet6 address fd20:4050::3/64 virtual-gateway-address fd20:4050::1
+set interfaces irb unit 4050 family inet address 10.50.0.2/16 virtual-gateway-address 10.50.0.1
+set interfaces irb unit 4050 family inet6 address fd20:4050::2/64 virtual-gateway-address fd20:4050::1
 set interfaces irb unit 4050 family inet6 address fe80:4050::1/64
 set interfaces irb unit 4050 virtual-gateway-v4-mac 02:40:50:00:00:01
 set interfaces irb unit 4050 virtual-gateway-v6-mac 02:40:50:06:00:01
 set interfaces irb unit 4051 virtual-gateway-accept-data
-set interfaces irb unit 4051 family inet address 10.51.0.3/16 virtual-gateway-address 10.51.0.1
-set interfaces irb unit 4051 family inet6 address fd20:4051::3/64 virtual-gateway-address fd20:4051::1
+set interfaces irb unit 4051 family inet address 10.51.0.2/16 virtual-gateway-address 10.51.0.1
+set interfaces irb unit 4051 family inet6 address fd20:4051::2/64 virtual-gateway-address fd20:4051::1
 set interfaces irb unit 4051 family inet6 address fe80:4051::1/64
 set interfaces irb unit 4051 virtual-gateway-v4-mac 02:40:51:00:00:01
 set interfaces irb unit 4051 virtual-gateway-v6-mac 02:40:51:06:00:01
-set interfaces lo0 unit 0 family inet address 191.168.101.6/32
-set interfaces lo0 unit 0 family iso address 49.0002.1911.6810.1006.00
-set interfaces lo0 unit 0 family inet6 address fd20:2222::179/128
-set interfaces lo0 unit 1 family inet address 10.254.6.1/32
-set interfaces lo0 unit 1 family inet6 address fd20:10:254:6::1/128
-set interfaces lo0 unit 2 family inet address 10.254.6.2/32
-set interfaces lo0 unit 2 family inet6 address fd20:10:254:6::2/128
+set interfaces lo0 unit 0 family inet address 191.168.101.5/32
+set interfaces lo0 unit 0 family iso address 49.0002.1911.6810.1005.00
+set interfaces lo0 unit 0 family inet6 address fd20:2222::178/128
+set interfaces lo0 unit 1 family inet address 10.254.5.1/32
+set interfaces lo0 unit 1 family inet6 address fd20:10:254:5::1/128
+set interfaces lo0 unit 2 family inet address 10.254.5.2/32
+set interfaces lo0 unit 2 family inet6 address fd20:10:254:5::2/128
 set routing-options static route 10.160.0.0/16 next-hop 172.25.90.1
 set routing-options static route 10.163.0.0/16 next-hop 172.25.90.1
-set routing-options router-id 191.168.101.6
+set routing-options router-id 191.168.101.5
 set routing-options autonomous-system 65101
 set routing-options forwarding-table export load-balance
 set protocols igmp interface all
 set protocols router-advertisement interface all
 set protocols bgp group IBGP-EVPN-Core type internal
-set protocols bgp group IBGP-EVPN-Core local-address 191.168.101.6
+set protocols bgp group IBGP-EVPN-Core local-address 191.168.101.5
 set protocols bgp group IBGP-EVPN-Core import Reject_RemoteDC
 deactivate protocols bgp group IBGP-EVPN-Core import
 set protocols bgp group IBGP-EVPN-Core family evpn signaling
@@ -193,15 +193,15 @@ set protocols bgp group IBGP-EVPN-Core neighbor 191.168.101.4
 set protocols bgp group EBGP-Core type external
 set protocols bgp group EBGP-Core mtu-discovery
 set protocols bgp group EBGP-Core export bgp-ip-clos-out
-set protocols bgp group EBGP-Core local-as 201
+set protocols bgp group EBGP-Core local-as 200
 set protocols bgp group EBGP-Core bfd-liveness-detection minimum-interval 350
 set protocols bgp group EBGP-Core bfd-liveness-detection multiplier 3
 set protocols bgp group EBGP-Core bfd-liveness-detection session-mode automatic
 set protocols bgp group EBGP-Core multipath multiple-as
-set protocols bgp group EBGP-Core neighbor 10.0.2.10 local-address 10.0.2.11
-set protocols bgp group EBGP-Core neighbor 10.0.2.10 peer-as 301
-set protocols bgp group EBGP-Core neighbor 10.0.2.20 local-address 10.0.2.21
-set protocols bgp group EBGP-Core neighbor 10.0.2.20 peer-as 302
+set protocols bgp group EBGP-Core neighbor 10.0.2.8 local-address 10.0.2.9
+set protocols bgp group EBGP-Core neighbor 10.0.2.8 peer-as 301
+set protocols bgp group EBGP-Core neighbor 10.0.2.18 local-address 10.0.2.19
+set protocols bgp group EBGP-Core neighbor 10.0.2.18 peer-as 302
 set protocols pim rp static address 191.168.101.3
 set protocols pim interface irb.4050 distributed-dr
 set protocols pim interface irb.2030 distributed-dr
@@ -274,7 +274,7 @@ set routing-instances APP2 interface irb.3003
 set routing-instances APP2 interface irb.3004
 set routing-instances APP2 interface irb.3005
 set routing-instances APP2 interface lo0.1
-set routing-instances APP2 route-distinguisher 191.168.101.6:1
+set routing-instances APP2 route-distinguisher 191.168.101.5:1
 set routing-instances APP2 vrf-target target:65101:1
 set routing-instances APP2 vrf-table-label
 set routing-instances APP2 routing-options rib APP2.inet6.0 multipath
@@ -290,7 +290,7 @@ set routing-instances DB interface irb.3008
 set routing-instances DB interface irb.3009
 set routing-instances DB interface irb.3010
 set routing-instances DB interface lo0.2
-set routing-instances DB route-distinguisher 191.168.101.6:2
+set routing-instances DB route-distinguisher 191.168.101.5:2
 set routing-instances DB vrf-target target:65101:2
 set routing-instances DB vrf-table-label
 set routing-instances DB routing-options rib DB.inet6.0 multipath
@@ -300,7 +300,7 @@ set routing-instances DB protocols evpn ip-prefix-routes advertise direct-nextho
 set routing-instances DB protocols evpn ip-prefix-routes encapsulation vxlan
 set routing-instances DB protocols evpn ip-prefix-routes vni 10002
 set switch-options vtep-source-interface lo0.0
-set switch-options route-distinguisher 191.168.101.6:65101
+set switch-options route-distinguisher 191.168.101.5:65101
 set switch-options vrf-target target:1:100
 set switch-options vrf-target auto
 set vlans V2030 vlan-id 2030

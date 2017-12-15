@@ -1,0 +1,58 @@
+set version 15.1R5.5
+set groups POC_Lab system host-name EX4550-191
+set groups POC_Lab system backup-router 172.25.90.1
+set groups POC_Lab system authentication-order radius
+set groups POC_Lab system authentication-order password
+set groups POC_Lab system root-authentication encrypted-password "$5$fyC53d79$4VQqJGB1G/OPv2Mqh/Juy.DqK1vZwOKHvWn5xvJIYx2"
+set groups POC_Lab system name-server 172.29.131.60
+set groups POC_Lab system login message "\n \n System is in use for a customer POC testing \n \n *** Please do not make changes before contacting the Herndon POC admins *** \n \n"
+set groups POC_Lab system login user lab uid 2000
+set groups POC_Lab system login user lab class super-user
+set groups POC_Lab system login user lab authentication encrypted-password "$5$pXm.tCPB$Aqa6gHNCnn.mirvaN5ZjVQZBBN4aOD7z2cjRhNzKgv."
+set groups POC_Lab system services ftp
+set groups POC_Lab system services ssh protocol-version v2
+set groups POC_Lab system services telnet
+set groups POC_Lab system services xnm-clear-text
+set groups POC_Lab system services netconf ssh
+set groups POC_Lab system syslog host 172.25.45.6 authorization any
+set groups POC_Lab system ntp server 66.129.255.62 prefer
+set groups POC_Lab interfaces me0 unit 0 family inet address 172.25.90.191/24
+set groups POC_Lab snmp community public
+set groups POC_Lab routing-options static route 0.0.0.0/0 next-hop 172.25.90.1
+set apply-groups POC_Lab
+set system syslog host 172.25.90.135 any any
+set system syslog host 172.25.90.135 match UI_COMMIT_COMPLETED
+set system syslog host 172.25.90.135 port 516
+set chassis aggregated-devices ethernet device-count 5
+set interfaces xe-0/0/0 unit 0 family ethernet-switching
+set interfaces xe-0/0/1 ether-options 802.3ad ae0
+set interfaces xe-0/0/2 ether-options 802.3ad ae0
+set interfaces xe-0/0/3 description "ixia 2.2"
+set interfaces xe-0/0/3 unit 0 family ethernet-switching port-mode trunk
+set interfaces xe-0/0/3 unit 0 family ethernet-switching vlan members all
+set interfaces ae0 description "LAG to QFX5100-183"
+set interfaces ae0 mtu 9216
+set interfaces ae0 aggregated-ether-options lacp active
+set interfaces ae0 aggregated-ether-options lacp periodic fast
+set interfaces ae0 unit 0 family ethernet-switching port-mode trunk
+set interfaces ae0 unit 0 family ethernet-switching vlan members all
+set interfaces ae1 mtu 9216
+set routing-options forwarding-table export load-balance
+set protocols igmp interface all
+set protocols igmp interface ae0.0
+set protocols igmp interface xe-0/0/3.0
+set protocols igmp-snooping vlan all
+set protocols lldp interface all
+set policy-options policy-statement load-balance then load-balance per-packet
+set vlans V2030 vlan-id 2030
+set vlans V2031 vlan-id 2031
+set vlans V3001 vlan-id 3001
+set vlans V3002 vlan-id 3002
+set vlans V3003 vlan-id 3003
+set vlans V3004 vlan-id 3004
+set vlans V3005 vlan-id 3005
+set vlans V3006 vlan-id 3006
+set vlans V3007 vlan-id 3007
+set vlans V3008 vlan-id 3008
+set vlans V3009 vlan-id 3009
+set vlans V3010 vlan-id 3010

@@ -1,0 +1,36 @@
+set version 15.1R5.5
+set groups POC_Lab system host-name EX4550-193
+set groups POC_Lab system backup-router 172.25.90.1
+set groups POC_Lab system authentication-order radius
+set groups POC_Lab system authentication-order password
+set groups POC_Lab system root-authentication encrypted-password "$5$77104FOv$z4mDSMa/UuKhlKPN5StDS9d56sPsAZiwpzaDYdgjAS/"
+set groups POC_Lab system name-server 172.29.131.60
+set groups POC_Lab system login message "\n \n System is in use for a customer POC testing \n \n *** Please do not make changes before contacting the Herndon POC admins *** \n \n"
+set groups POC_Lab system login user lab uid 2000
+set groups POC_Lab system login user lab class super-user
+set groups POC_Lab system login user lab authentication encrypted-password "$5$M5gQBdDQ$w/R09oJGiTQYzVgV9byoauBkOqFkq2ZrBmJvW9fgcT2"
+set groups POC_Lab system services ftp
+set groups POC_Lab system services ssh protocol-version v2
+set groups POC_Lab system services telnet
+set groups POC_Lab system services xnm-clear-text
+set groups POC_Lab system services netconf ssh
+set groups POC_Lab system syslog host 172.25.45.6 authorization any
+set groups POC_Lab system ntp server 66.129.255.62 prefer
+set groups POC_Lab interfaces me0 unit 0 family inet address 172.25.90.193/24
+set groups POC_Lab snmp community public
+set groups POC_Lab routing-options static route 172.0.0.0/8 next-hop 172.25.90.1
+set groups POC_Lab routing-options static route 192.0.0.0/8 next-hop 172.25.90.1
+set apply-groups POC_Lab
+set interfaces xe-0/0/0 unit 0 family ethernet-switching port-mode trunk
+set interfaces xe-0/0/0 unit 0 family ethernet-switching vlan members all
+set interfaces xe-0/0/1 unit 0 family ethernet-switching port-mode trunk
+set interfaces xe-0/0/1 unit 0 family ethernet-switching vlan members all
+set interfaces xe-0/0/2 unit 0 family ethernet-switching port-mode trunk
+set interfaces xe-0/0/2 unit 0 family ethernet-switching vlan members all
+set interfaces vlan unit 100 family inet address 30.0.100.100/16
+set routing-options static route 0.0.0.0/0 next-hop 30.0.0.1
+set routing-options forwarding-table export load-balance
+set protocols lldp interface all
+set policy-options policy-statement load-balance then load-balance per-packet
+set vlans V100 vlan-id 100
+set vlans V100 l3-interface vlan.100
