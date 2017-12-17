@@ -1,0 +1,19 @@
+---
+- name: check from devices operationnal state if desirated vlans are presents
+  hosts: JUNOS
+  connection: local
+  gather_facts: no  
+  tasks:
+  - name: check vlans
+    junos_command:
+      provider: "{{ credentials }}"
+      display: 'xml'
+      commands:
+       - "show vlans {{ item.name }}"
+      retries: 3
+      interval: 3
+      waitfor:
+       - "result[0]['rpc-reply']['l2ng-l2ald-vlan-instance-information']['l2ng-l2ald-vlan-instance-group']['l2ng-l2rtb-vlan-name'] eq {{ item.name }}"
+    with_items: "{{ vlanlist }}"
+    when: vlanlist is defined
+

@@ -1,0 +1,14 @@
+vlanlist:
+- id: 2021
+  name: V2021
+- id: 2022
+  name: V2022
+- id: 2023
+  name: V2023
+- id: 2024
+  name: V2024
+- id: 2025
+  name: V2025
+- id: 2031
+  name: V2031
+
