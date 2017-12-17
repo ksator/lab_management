@@ -1,7 +1,8 @@
 ---
 - include: pb.check.ports.availability.yml
 - include: pb.print.facts.yml
-- include: pb.check.L1.yml
-- include: pb.check.L2.yml
+- include: pb.check.interfaces.yml
+- include: pb.check.lldp.yml
+- include: pb.check.vlans.yml
 - include: pb.check.bgp.yml
 
