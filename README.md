@@ -26,9 +26,7 @@ All playbooks are named **pb.*.yml**
 - [**pb.rollback.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.rollback.yml) playbook performs a rollback on junos devices.
 - [**pb.check.ports.availability.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.check.ports.availability.yml) playbook checks if Ansible can connect on SSH and NETCONF ports on Junos devices
 - [**pb.check.L1.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.check.L1.yml) playbook checks the status of the interfaces on Junos devices
-- [**pb.check.L@.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.check.L2.yml) playbook check the physical topology 
-
-
+- [**pb.check.L2.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.check.L2.yml) playbook check the physical topology 
 - [**pb.collect.cli.output.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.cli.output.yml) playbook runs junos show commands and save the output on Ansible. This playbook use the commands in the file [**cli.yml**](http://172.25.90.133/root/PoC-80/blob/master/cli.yml)
 - [**pb.collect.commands.output.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.commands.output.yml) playbook runs junos show commands and save the output on Ansible 
 - [**pb.collect.facts.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.facts.yml) playbook collects the facts on junos devices and save them on Ansible 
