@@ -1,0 +1,24 @@
+---
+tests_include:
+  - snapcheck_active_alarm
+  - snapcheck_major_alarm
+
+snapcheck_active_alarm:
+  - command: show chassis alarms
+  - iterate:
+      xpath: //alarm-information
+      tests:
+      - exists: alarm-summary/no-active-alarms
+        info: "No active alarm"
+        err: "there is <{{post['alarm-summary/active-alarm-count']}}> active alarms"
+
+snapcheck_major_alarm:
+  - command: show chassis alarms
+  - iterate:
+      xpath: //alarm-information/alarm-detail
+      tests:
+      - not-in: alarm-class, Major
+        info: "No major alarm"
+        err: "major alarm: <{{post['alarm-description']}}>"
+        ignore-null: True
+

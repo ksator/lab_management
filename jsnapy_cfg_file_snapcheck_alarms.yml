@@ -1,0 +1,6 @@
+hosts:
+      - include: devices.yml
+        group: EX, SRX
+tests:
+      - snapcheck_alarms.yml
+

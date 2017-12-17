@@ -1,0 +1,14 @@
+<alarm-information>
+<alarm-summary>
+<active-alarm-count>1</active-alarm-count>
+</alarm-summary>
+<alarm-detail>
+<alarm-time seconds="1496339808">
+2017-06-01 13:56:48 EDT
+</alarm-time>
+<alarm-class>Major</alarm-class>
+<alarm-description>PEM 1 Not Powered</alarm-description>
+<alarm-short-description>PEM 1 No Power</alarm-short-description>
+<alarm-type>Chassis</alarm-type>
+</alarm-detail>
+</alarm-information>
