@@ -1,5 +1,7 @@
 # What to find in this repository
-Automation content for data center network fabric
+Automation content for data center network fabric based:  
+- Junos devices
+- Ansible, PyEZ, JSNAPy
 
 # Repository structure 
 
