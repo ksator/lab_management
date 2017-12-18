@@ -3,7 +3,7 @@ python script to find where is a mac address
 it uses the ansible inventory file, login in all the device, and print where the mac address is.
 '''
 '''
-python ./locate.mac.address.py 38:4f:49:f2:5f:fc
+python ./python/locate.mac.address.py 38:4f:49:f2:5f:fc
 '''
 from jnpr.junos import Device
 from jnpr.junos.exception import *
