@@ -35,7 +35,7 @@ for dev_item in devices_list:
         print"python can not connect to the device %s" %(dev_item)
     except :
         print("")
-        print("another pyez error ...")
+        print "python faced another pyez exception trying to open a connection with the device %s" %(dev_item)
     else:
         if 'SRX' in dev.facts['model']: 
             print("")
@@ -61,7 +61,8 @@ for dev_item in devices_list:
             mac_list = result.findall('ethernet-switching-table/mac-table-entry')
             for item in mac_list: 
                 if sys.argv[1] in item.findtext('mac-address'): 
-                    interface_list.append(item.findtext('mac-interfaces-list/mac-interfaces'))
+                     if item.findtext('mac-interfaces-list/mac-interfaces') not in interface_list: 
+                         interface_list.append(item.findtext('mac-interfaces-list/mac-interfaces'))
             if len (interface_list) == 0:
                 print("")
                 print "%s is not known by %s" %(sys.argv[1], dev.facts['hostname'])
