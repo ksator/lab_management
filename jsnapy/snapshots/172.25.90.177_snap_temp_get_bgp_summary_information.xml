@@ -1,0 +1,402 @@
+<bgp-information>
+<group-count>5</group-count>
+<peer-count>16</peer-count>
+<down-peer-count>0</down-peer-count>
+<bgp-rib style="brief">
+<name>bgp.evpn.0</name>
+<total-prefix-count>2273</total-prefix-count>
+<received-prefix-count>2273</received-prefix-count>
+<accepted-prefix-count>2273</accepted-prefix-count>
+<active-prefix-count>1238</active-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+<history-prefix-count>0</history-prefix-count>
+<damped-prefix-count>0</damped-prefix-count>
+<total-external-prefix-count>282</total-external-prefix-count>
+<active-external-prefix-count>282</active-external-prefix-count>
+<accepted-external-prefix-count>282</accepted-external-prefix-count>
+<suppressed-external-prefix-count>0</suppressed-external-prefix-count>
+<total-internal-prefix-count>1991</total-internal-prefix-count>
+<active-internal-prefix-count>956</active-internal-prefix-count>
+<accepted-internal-prefix-count>1991</accepted-internal-prefix-count>
+<suppressed-internal-prefix-count>0</suppressed-internal-prefix-count>
+<pending-prefix-count>0</pending-prefix-count>
+<bgp-rib-state>BGP restart is complete</bgp-rib-state>
+<vpn-rib-state>VPN restart is complete</vpn-rib-state>
+</bgp-rib>
+<bgp-rib style="brief">
+<name>inet.0</name>
+<total-prefix-count>71</total-prefix-count>
+<received-prefix-count>71</received-prefix-count>
+<accepted-prefix-count>65</accepted-prefix-count>
+<active-prefix-count>44</active-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+<history-prefix-count>0</history-prefix-count>
+<damped-prefix-count>0</damped-prefix-count>
+<total-external-prefix-count>71</total-external-prefix-count>
+<active-external-prefix-count>44</active-external-prefix-count>
+<accepted-external-prefix-count>65</accepted-external-prefix-count>
+<suppressed-external-prefix-count>0</suppressed-external-prefix-count>
+<total-internal-prefix-count>0</total-internal-prefix-count>
+<active-internal-prefix-count>0</active-internal-prefix-count>
+<accepted-internal-prefix-count>0</accepted-internal-prefix-count>
+<suppressed-internal-prefix-count>0</suppressed-internal-prefix-count>
+<pending-prefix-count>0</pending-prefix-count>
+<bgp-rib-state>BGP restart is complete</bgp-rib-state>
+</bgp-rib>
+<bgp-peer style="terse" heading="Peer                     AS      InPkt     OutPkt    OutQ   Flaps Last Up/Dwn State|#Active/Received/Accepted/Damped...">
+<peer-address>10.0.2.2</peer-address>
+<peer-as>65200</peer-as>
+<input-messages>192757</input-messages>
+<output-messages>188970</output-messages>
+<route-queue-count>0</route-queue-count>
+<flap-count>3</flap-count>
+<elapsed-time seconds="5249119">8w4d 18:05:19</elapsed-time>
+<peer-state format="Establ">Established</peer-state>
+<bgp-rib style="terse">
+<name>INTERNET.inet.0</name>
+<active-prefix-count>1</active-prefix-count>
+<received-prefix-count>1</received-prefix-count>
+<accepted-prefix-count>1</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+</bgp-peer>
+<bgp-peer style="terse">
+<peer-address>10.0.2.6</peer-address>
+<peer-as>65200</peer-as>
+<input-messages>192570</input-messages>
+<output-messages>188976</output-messages>
+<route-queue-count>0</route-queue-count>
+<flap-count>3</flap-count>
+<elapsed-time seconds="5249115">8w4d 18:05:15</elapsed-time>
+<peer-state format="Establ">Established</peer-state>
+<bgp-rib style="terse">
+<name>INTERNET.inet.0</name>
+<active-prefix-count>1</active-prefix-count>
+<received-prefix-count>1</received-prefix-count>
+<accepted-prefix-count>1</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+</bgp-peer>
+<bgp-peer style="terse">
+<peer-address>10.0.2.19</peer-address>
+<peer-as>200</peer-as>
+<input-messages>129283</input-messages>
+<output-messages>126417</output-messages>
+<route-queue-count>0</route-queue-count>
+<flap-count>10</flap-count>
+<elapsed-time seconds="3526438">5w5d 19:33:58</elapsed-time>
+<peer-state format="Establ">Established</peer-state>
+<bgp-rib style="terse">
+<name>inet.0</name>
+<active-prefix-count>8</active-prefix-count>
+<received-prefix-count>10</received-prefix-count>
+<accepted-prefix-count>10</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+</bgp-peer>
+<bgp-peer style="terse">
+<peer-address>10.0.2.21</peer-address>
+<peer-as>201</peer-as>
+<input-messages>129240</input-messages>
+<output-messages>126365</output-messages>
+<route-queue-count>0</route-queue-count>
+<flap-count>12</flap-count>
+<elapsed-time seconds="3525378">5w5d 19:16:18</elapsed-time>
+<peer-state format="Establ">Established</peer-state>
+<bgp-rib style="terse">
+<name>inet.0</name>
+<active-prefix-count>8</active-prefix-count>
+<received-prefix-count>16</received-prefix-count>
+<accepted-prefix-count>16</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+</bgp-peer>
+<bgp-peer style="terse">
+<peer-address>10.0.2.23</peer-address>
+<peer-as>202</peer-as>
+<input-messages>129622</input-messages>
+<output-messages>127390</output-messages>
+<route-queue-count>0</route-queue-count>
+<flap-count>8</flap-count>
+<elapsed-time seconds="3551507">5w6d 2:31:47</elapsed-time>
+<peer-state format="Establ">Established</peer-state>
+<bgp-rib style="terse">
+<name>inet.0</name>
+<active-prefix-count>8</active-prefix-count>
+<received-prefix-count>10</received-prefix-count>
+<accepted-prefix-count>10</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+</bgp-peer>
+<bgp-peer style="terse">
+<peer-address>10.0.2.25</peer-address>
+<peer-as>203</peer-as>
+<input-messages>129612</input-messages>
+<output-messages>127393</output-messages>
+<route-queue-count>0</route-queue-count>
+<flap-count>8</flap-count>
+<elapsed-time seconds="3551488">5w6d 2:31:28</elapsed-time>
+<peer-state format="Establ">Established</peer-state>
+<bgp-rib style="terse">
+<name>inet.0</name>
+<active-prefix-count>8</active-prefix-count>
+<received-prefix-count>10</received-prefix-count>
+<accepted-prefix-count>10</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+</bgp-peer>
+<bgp-peer style="terse">
+<peer-address>10.0.2.27</peer-address>
+<peer-as>204</peer-as>
+<input-messages>130260</input-messages>
+<output-messages>127378</output-messages>
+<route-queue-count>0</route-queue-count>
+<flap-count>4</flap-count>
+<elapsed-time seconds="3551464">5w6d 2:31:04</elapsed-time>
+<peer-state format="Establ">Established</peer-state>
+<bgp-rib style="terse">
+<name>inet.0</name>
+<active-prefix-count>10</active-prefix-count>
+<received-prefix-count>13</received-prefix-count>
+<accepted-prefix-count>13</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+</bgp-peer>
+<bgp-peer style="terse">
+<peer-address>10.254.254.2</peer-address>
+<peer-as>2201</peer-as>
+<input-messages>130705</input-messages>
+<output-messages>129002</output-messages>
+<route-queue-count>0</route-queue-count>
+<flap-count>3</flap-count>
+<elapsed-time seconds="3595126">5w6d 14:38:46</elapsed-time>
+<peer-state format="Establ">Established</peer-state>
+<bgp-rib style="terse">
+<name>inet.0</name>
+<active-prefix-count>1</active-prefix-count>
+<received-prefix-count>6</received-prefix-count>
+<accepted-prefix-count>3</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+</bgp-peer>
+<bgp-peer style="terse">
+<peer-address>10.254.254.6</peer-address>
+<peer-as>2202</peer-as>
+<input-messages>130717</input-messages>
+<output-messages>129005</output-messages>
+<route-queue-count>0</route-queue-count>
+<flap-count>3</flap-count>
+<elapsed-time seconds="3595127">5w6d 14:38:47</elapsed-time>
+<peer-state format="Establ">Established</peer-state>
+<bgp-rib style="terse">
+<name>inet.0</name>
+<active-prefix-count>1</active-prefix-count>
+<received-prefix-count>6</received-prefix-count>
+<accepted-prefix-count>3</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+</bgp-peer>
+<bgp-peer style="terse">
+<peer-address>191.168.100.1</peer-address>
+<peer-as>65100</peer-as>
+<input-messages>130745</input-messages>
+<output-messages>3710004</output-messages>
+<route-queue-count>0</route-queue-count>
+<flap-count>5</flap-count>
+<elapsed-time seconds="3531413">5w5d 20:56:53</elapsed-time>
+<peer-state format="Establ">Established</peer-state>
+<bgp-rib style="terse">
+<name>bgp.evpn.0</name>
+<active-prefix-count>165</active-prefix-count>
+<received-prefix-count>165</received-prefix-count>
+<accepted-prefix-count>165</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+<bgp-rib style="terse">
+<name>DCI-VRF.evpn.0</name>
+<active-prefix-count>40</active-prefix-count>
+<received-prefix-count>40</received-prefix-count>
+<accepted-prefix-count>40</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+</bgp-peer>
+<bgp-peer style="terse">
+<peer-address>191.168.100.2</peer-address>
+<peer-as>65100</peer-as>
+<input-messages>137754</input-messages>
+<output-messages>3710760</output-messages>
+<route-queue-count>0</route-queue-count>
+<flap-count>5</flap-count>
+<elapsed-time seconds="3531415">5w5d 20:56:55</elapsed-time>
+<peer-state format="Establ">Established</peer-state>
+<bgp-rib style="terse">
+<name>bgp.evpn.0</name>
+<active-prefix-count>117</active-prefix-count>
+<received-prefix-count>117</received-prefix-count>
+<accepted-prefix-count>117</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+<bgp-rib style="terse">
+<name>DCI-VRF.evpn.0</name>
+<active-prefix-count>20</active-prefix-count>
+<received-prefix-count>20</received-prefix-count>
+<accepted-prefix-count>20</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+</bgp-peer>
+<bgp-peer style="terse">
+<peer-address>191.168.101.5</peer-address>
+<peer-as>65101</peer-as>
+<input-messages>3517183</input-messages>
+<output-messages>2376999</output-messages>
+<route-queue-count>0</route-queue-count>
+<flap-count>10</flap-count>
+<elapsed-time seconds="3526420">5w5d 19:33:40</elapsed-time>
+<peer-state format="Establ">Established</peer-state>
+<bgp-rib style="terse">
+<name>bgp.evpn.0</name>
+<active-prefix-count>181</active-prefix-count>
+<received-prefix-count>381</received-prefix-count>
+<accepted-prefix-count>381</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+<bgp-rib style="terse">
+<name>DCI-VRF.evpn.0</name>
+<active-prefix-count>0</active-prefix-count>
+<received-prefix-count>40</received-prefix-count>
+<accepted-prefix-count>40</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+<bgp-rib style="terse">
+<name>INTERNET.evpn.0</name>
+<active-prefix-count>3</active-prefix-count>
+<received-prefix-count>3</received-prefix-count>
+<accepted-prefix-count>3</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+</bgp-peer>
+<bgp-peer style="terse">
+<peer-address>191.168.101.6</peer-address>
+<peer-as>65101</peer-as>
+<input-messages>3516974</input-messages>
+<output-messages>3046325</output-messages>
+<route-queue-count>0</route-queue-count>
+<flap-count>12</flap-count>
+<elapsed-time seconds="3525367">5w5d 19:16:07</elapsed-time>
+<peer-state format="Establ">Established</peer-state>
+<bgp-rib style="terse">
+<name>bgp.evpn.0</name>
+<active-prefix-count>179</active-prefix-count>
+<received-prefix-count>444</received-prefix-count>
+<accepted-prefix-count>444</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+<bgp-rib style="terse">
+<name>DCI-VRF.evpn.0</name>
+<active-prefix-count>0</active-prefix-count>
+<received-prefix-count>40</received-prefix-count>
+<accepted-prefix-count>40</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+<bgp-rib style="terse">
+<name>INTERNET.evpn.0</name>
+<active-prefix-count>0</active-prefix-count>
+<received-prefix-count>3</received-prefix-count>
+<accepted-prefix-count>3</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+</bgp-peer>
+<bgp-peer style="terse">
+<peer-address>191.168.101.7</peer-address>
+<peer-as>65101</peer-as>
+<input-messages>130232</input-messages>
+<output-messages>3800362</output-messages>
+<route-queue-count>0</route-queue-count>
+<flap-count>4</flap-count>
+<elapsed-time seconds="3551449">5w6d 2:30:49</elapsed-time>
+<peer-state format="Establ">Established</peer-state>
+<bgp-rib style="terse">
+<name>bgp.evpn.0</name>
+<active-prefix-count>259</active-prefix-count>
+<received-prefix-count>259</received-prefix-count>
+<accepted-prefix-count>259</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+<bgp-rib style="terse">
+<name>DCI-VRF.evpn.0</name>
+<active-prefix-count>60</active-prefix-count>
+<received-prefix-count>60</received-prefix-count>
+<accepted-prefix-count>60</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+<bgp-rib style="terse">
+<name>INTERNET.evpn.0</name>
+<active-prefix-count>31</active-prefix-count>
+<received-prefix-count>31</received-prefix-count>
+<accepted-prefix-count>31</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+</bgp-peer>
+<bgp-peer style="terse">
+<peer-address>191.168.102.1</peer-address>
+<peer-as>65101</peer-as>
+<input-messages>3592966</input-messages>
+<output-messages>3011012</output-messages>
+<route-queue-count>0</route-queue-count>
+<flap-count>8</flap-count>
+<elapsed-time seconds="3551481">5w6d 2:31:21</elapsed-time>
+<peer-state format="Establ">Established</peer-state>
+<bgp-rib style="terse">
+<name>bgp.evpn.0</name>
+<active-prefix-count>172</active-prefix-count>
+<received-prefix-count>457</received-prefix-count>
+<accepted-prefix-count>457</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+<bgp-rib style="terse">
+<name>DCI-VRF.evpn.0</name>
+<active-prefix-count>0</active-prefix-count>
+<received-prefix-count>60</received-prefix-count>
+<accepted-prefix-count>60</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+<bgp-rib style="terse">
+<name>INTERNET.evpn.0</name>
+<active-prefix-count>0</active-prefix-count>
+<received-prefix-count>3</received-prefix-count>
+<accepted-prefix-count>3</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+</bgp-peer>
+<bgp-peer style="terse">
+<peer-address>191.168.102.2</peer-address>
+<peer-as>65101</peer-as>
+<input-messages>3601095</input-messages>
+<output-messages>2996872</output-messages>
+<route-queue-count>0</route-queue-count>
+<flap-count>8</flap-count>
+<elapsed-time seconds="3551476">5w6d 2:31:16</elapsed-time>
+<peer-state format="Establ">Established</peer-state>
+<bgp-rib style="terse">
+<name>bgp.evpn.0</name>
+<active-prefix-count>165</active-prefix-count>
+<received-prefix-count>450</received-prefix-count>
+<accepted-prefix-count>450</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+<bgp-rib style="terse">
+<name>DCI-VRF.evpn.0</name>
+<active-prefix-count>0</active-prefix-count>
+<received-prefix-count>60</received-prefix-count>
+<accepted-prefix-count>60</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+<bgp-rib style="terse">
+<name>INTERNET.evpn.0</name>
+<active-prefix-count>0</active-prefix-count>
+<received-prefix-count>3</received-prefix-count>
+<accepted-prefix-count>3</accepted-prefix-count>
+<suppressed-prefix-count>0</suppressed-prefix-count>
+</bgp-rib>
+</bgp-peer>
+</bgp-information>

@@ -1,0 +1,47 @@
+---
+tests_include:
+  - snapcheck_bgp_summary
+  - snapcheck_bgp_neighbor
+
+snapcheck_bgp_summary:
+  - rpc: get-bgp-summary-information
+  - item:
+      xpath: '/bgp-information'
+      tests:
+        - is-equal: down-peer-count, 0
+          err: "Test Failed!! down-peer-count is not equal to 0. it is equal to <{{post['down-peer-count']}}>"
+          info: "Test succeeded!! down-peer-count is equal to <{{post['down-peer-count']}}>"
+  - item:
+      xpath: '//bgp-rib'
+      tests:
+        - in-range: total-prefix-count, 1, 3000
+          err: "Test Failed!! value of total-prefix-count is not in range of 1-3000, it is equal to <{{post['total-prefix-count']}}>"
+          info: "Test succeeded!! value of total-prefix-count is in range of 1-3000, it is equal to <{{post['total-prefix-count']}}>"
+  - iterate: 
+      xpath: '//bgp-peer/bgp-rib'
+      tests:
+        - in-range: accepted-prefix-count, 1, 2000
+          err: "Test Failed!! value of accepted-prefix-count is not in range of 1-2000, it is equal to <{{post['accepted-prefix-count']}}>"
+          info: "Test succeeded!! value of total-prefix-count is in range of 1-2000, it is equal to <{{post['accepted-prefix-count']}}>"
+  - iterate:
+      xpath: //bgp-information/bgp-peer[normalize-space(peer-state)='Established']
+      tests:
+        - is-gt: elapsed-time/@seconds, 3600
+          err:  "BGP peer <{{ post['peer-address']}}> has a very small uptime of <{{ post['elapsed-time/@seconds']}}>"
+          info: "BGP peer <{{ post['peer-address']}}> state is <{{ post['peer-state']}}> and has an uptime of <{{ post['elapsed-time/@seconds'] }}>"
+
+snapcheck_bgp_neighbor:
+  - command: show bgp neighbor
+  - iterate:
+      xpath: '//bgp-peer'
+      tests:
+        - is-equal: peer-state, Established
+          err: "Test Failed!! peer <{{post['peer-address']}}> state is not established, it is <{{post['peer-states']}}>"
+          info: "Test succeeded!! peer <{{post['peer-address']}}> state is <{{post['peer-state']}}>"
+
+        - in-range: peer-as, 200,66000
+          err: "Test Failed!! peer-as for peer <{{post['peer-address']}}> is not in range of 200-66000, it is: <{{post['peer-as']}}>"
+          info: "Test succeeded!! peer-as for peer <{{post['peer-address']}}> is in range of 200-66000, it is now <{{post['peer-as']}}>"
+
+
+

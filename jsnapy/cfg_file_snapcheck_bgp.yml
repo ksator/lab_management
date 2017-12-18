@@ -1,0 +1,10 @@
+---
+# jsnapy --snapcheck -f jsnapy/cfg_file_snapcheck_bgp.yml --folder jsnapy
+hosts:
+   - include: devices.yml
+     group: QFX10K2
+tests:
+   - test_file_snapcheck_bgp.yml
+
+
+

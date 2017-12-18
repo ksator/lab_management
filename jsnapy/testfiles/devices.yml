@@ -14,6 +14,17 @@ EX:
      username: lab
      passwd: jnpr123
 
-
-
+QFX10K2: 
+  - 172.25.90.176: 
+     username: lab
+     passwd: jnpr123
+  - 172.25.90.177:
+     username: lab
+     passwd: jnpr123
+  - 172.25.90.178:
+     username: lab
+     passwd: jnpr123
+  - 172.25.90.179:
+     username: lab
+     passwd: jnpr123
 
