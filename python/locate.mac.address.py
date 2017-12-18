@@ -3,6 +3,9 @@ python script to find where is a mac address
 it uses the ansible inventory file, login in all the device, and print where the mac address is.
 '''
 '''
+works wit QFX 5100 and 5110 and 10K. works with EX4550. doesnt yet work with SRX. 
+'''
+'''
 python ./python/locate.mac.address.py 38:4f:49:f2:5f:fc
 '''
 from jnpr.junos import Device
