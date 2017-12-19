@@ -1,0 +1,94 @@
+set version 15.1X49-D75.5
+set groups POC_Lab system host-name SRX4100-188
+set groups POC_Lab system backup-router 172.25.90.1
+set groups POC_Lab system time-zone America/New_York
+set groups POC_Lab system authentication-order radius
+set groups POC_Lab system authentication-order password
+set groups POC_Lab system root-authentication encrypted-password "$5$i5wtjtFy$gck4Nh962acX03uQf4GrNqr4HCvJvfW1/cHENyhiWy4"
+set groups POC_Lab system name-server 172.29.131.60
+set groups POC_Lab system login message "\n \n System is in use for a customer POC testing \n \n *** Please do not make changes before contacting the Herndon POC admins ***\n \n"
+set groups POC_Lab system login user lab uid 2002
+set groups POC_Lab system login user lab class super-user
+set groups POC_Lab system login user lab authentication encrypted-password "$5$Y5MlyBsK$vbOceMpYQ8xInckcQG..oXYVvTpOBzVl6Sns8WG8mrA"
+set groups POC_Lab system services ftp
+set groups POC_Lab system services ssh protocol-version v2
+set groups POC_Lab system services telnet
+set groups POC_Lab system services xnm-clear-text
+set groups POC_Lab system services netconf ssh
+set groups POC_Lab system syslog host 172.25.45.6 authorization any
+set groups POC_Lab system syslog file messages any any
+set groups POC_Lab system syslog file messages interactive-commands none
+set groups POC_Lab system syslog file messages archive size 10m
+set groups POC_Lab system syslog file messages archive files 10
+set groups POC_Lab system ntp server 66.129.255.62 prefer
+set groups POC_Lab interfaces fxp0 unit 0 family inet address 172.25.90.188/24
+set groups POC_Lab snmp community public
+set groups POC_Lab routing-options static route 10.161.0.0/16 next-hop 172.25.90.1
+set groups POC_Lab routing-options static route 10.161.0.0/16 retain
+set groups POC_Lab routing-options static route 10.161.0.0/16 no-readvertise
+set groups POC_Lab routing-options static route 172.16.0.0/12 next-hop 172.25.90.1
+set groups POC_Lab routing-options static route 172.16.0.0/12 retain
+set groups POC_Lab routing-options static route 172.16.0.0/12 no-readvertise
+set groups POC_Lab routing-options static route 192.168.0.0/16 next-hop 172.25.90.1
+set groups POC_Lab routing-options static route 192.168.0.0/16 retain
+set groups POC_Lab routing-options static route 192.168.0.0/16 no-readvertise
+set apply-groups POC_Lab
+set system syslog host 172.25.90.135 any any
+set system syslog host 172.25.90.135 match UI_COMMIT_COMPLETED
+set system syslog host 172.25.90.135 port 516
+set security flow tcp-session no-syn-check
+set security policies from-zone ZERO-TRUST to-zone ZERO-TRUST policy ZERO-TRUST-POLICY match source-address any
+set security policies from-zone ZERO-TRUST to-zone ZERO-TRUST policy ZERO-TRUST-POLICY match destination-address any
+set security policies from-zone ZERO-TRUST to-zone ZERO-TRUST policy ZERO-TRUST-POLICY match application any
+set security policies from-zone ZERO-TRUST to-zone ZERO-TRUST policy ZERO-TRUST-POLICY then permit
+set security policies default-policy permit-all
+set security zones security-zone ZERO-TRUST host-inbound-traffic system-services all
+set security zones security-zone ZERO-TRUST host-inbound-traffic protocols all
+set security zones security-zone ZERO-TRUST interfaces xe-0/0/0.10
+set security zones security-zone ZERO-TRUST interfaces xe-0/0/0.100
+set security zones security-zone ZERO-TRUST interfaces lo0.0
+set security zones security-zone ZERO-TRUST interfaces xe-0/0/1.10
+set security zones security-zone ZERO-TRUST interfaces xe-0/0/1.100
+set security zones security-zone ZERO-TRUST interfaces xe-0/0/0.30
+set security zones security-zone ZERO-TRUST interfaces xe-0/0/1.30
+set interfaces xe-0/0/0 description QFX10K2-182-xe-0/0/3:0
+set interfaces xe-0/0/0 vlan-tagging
+set interfaces xe-0/0/0 mtu 9192
+set interfaces xe-0/0/0 unit 10 vlan-id 10
+set interfaces xe-0/0/0 unit 10 family inet address 10.10.20.0/31
+set interfaces xe-0/0/0 unit 10 family iso
+set interfaces xe-0/0/0 unit 10 family inet6
+set interfaces xe-0/0/0 unit 30 vlan-id 30
+set interfaces xe-0/0/0 unit 30 family inet address 10.10.20.2/31
+set interfaces xe-0/0/0 unit 30 family iso
+set interfaces xe-0/0/0 unit 100 vlan-id 100
+set interfaces xe-0/0/0 unit 100 family inet address 10.10.20.100/31
+set interfaces xe-0/0/0 unit 100 family iso
+set interfaces xe-0/0/1 description QFX10K2-182-xe-0/0/3:0
+set interfaces xe-0/0/1 vlan-tagging
+set interfaces xe-0/0/1 mtu 9192
+set interfaces xe-0/0/1 unit 10 vlan-id 10
+set interfaces xe-0/0/1 unit 10 family inet address 10.10.20.50/31
+set interfaces xe-0/0/1 unit 10 family iso
+set interfaces xe-0/0/1 unit 10 family inet6
+set interfaces xe-0/0/1 unit 30 vlan-id 30
+set interfaces xe-0/0/1 unit 30 family inet address 10.10.20.52/31
+set interfaces xe-0/0/1 unit 30 family iso
+set interfaces xe-0/0/1 unit 100 vlan-id 100
+set interfaces xe-0/0/1 unit 100 family inet address 10.10.20.102/31
+set interfaces xe-0/0/1 unit 100 family iso
+set interfaces lo0 unit 0 description LOOPBACK
+set interfaces lo0 unit 0 family inet address 191.168.100.6/32
+set interfaces lo0 unit 0 family iso address 49.0001.1911.6810.0006.00
+set interfaces lo0 unit 0 family inet6 address fd20:2222::188/128
+set routing-options forwarding-table export load-balance
+set protocols isis level 1 disable
+set protocols isis level 2 wide-metrics-only
+set protocols isis interface xe-0/0/0.10
+set protocols isis interface xe-0/0/0.30
+set protocols isis interface xe-0/0/0.100
+set protocols isis interface xe-0/0/1.10
+set protocols isis interface xe-0/0/1.30
+set protocols isis interface xe-0/0/1.100
+set protocols isis interface lo0.0
+set policy-options policy-statement load-balance then load-balance per-packet

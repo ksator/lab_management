@@ -9,8 +9,9 @@
        path: "{{playbook_dir}}/{{ item }}" 
        state: directory
      with_items: 
-      - golden
- 
+      - golden_configuration
+      - golden_configuration/ebgp_underlay_evpn_vxlan_overlay
+
  - name: set and collect junos golden configuration
    hosts: JUNOS
    connection: local
@@ -27,6 +28,6 @@
     - name: copy collected configuration in golden directory
       copy:
         content: "{{ result_text.ansible_facts.ansible_net_config }}"
-        dest: "{{ playbook_dir }}/golden/{{ inventory_hostname }}.conf"
+        dest: "{{ playbook_dir }}/golden_configuration/ebgp_underlay_evpn_vxlan_overlay/{{ inventory_hostname }}.conf"
 
 

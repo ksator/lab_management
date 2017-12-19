@@ -1,0 +1,353 @@
+set version 17.3R1-S2.1
+set groups POC_Lab system host-name QFX10K2-179
+set groups POC_Lab system backup-router 172.25.90.1
+set groups POC_Lab system authentication-order radius
+set groups POC_Lab system authentication-order password
+set groups POC_Lab system root-authentication encrypted-password "$1$mzUQjfuc$XjaJIv4Un5Dl6iwvWAi1u/"
+set groups POC_Lab system name-server 172.29.131.60
+set groups POC_Lab system login message "\n \n System is in use for a customer POC testing \n \n *** Please do not make changes before contacting the Herndon POC admins *** \n\n"
+set groups POC_Lab system login user lab uid 2002
+set groups POC_Lab system login user lab class super-user
+set groups POC_Lab system login user lab authentication encrypted-password "$1$w5XgsGVE$fS5XemjBWddcXyG7QzS1T."
+set groups POC_Lab system services ftp
+set groups POC_Lab system services ssh protocol-version v2
+set groups POC_Lab system services telnet
+set groups POC_Lab system services xnm-clear-text
+set groups POC_Lab system services netconf ssh
+set groups POC_Lab system syslog host 172.25.45.6 authorization any
+set groups POC_Lab system syslog file messages any any
+set groups POC_Lab system syslog file messages interactive-commands none
+set groups POC_Lab system syslog file messages archive size 10m
+set groups POC_Lab system syslog file messages archive files 10
+set groups POC_Lab system ntp server 66.129.255.62 prefer
+set groups POC_Lab interfaces em0 unit 0 family inet address 172.25.90.179/24
+set groups POC_Lab snmp community public
+set groups POC_Lab routing-options static route 10.255.255.0/24 next-hop 172.25.90.1
+set groups POC_Lab routing-options static route 10.255.255.0/24 retain
+set groups POC_Lab routing-options static route 10.255.255.0/24 no-readvertise
+set groups POC_Lab routing-options static route 10.161.0.0/16 next-hop 172.25.90.1
+set groups POC_Lab routing-options static route 10.161.0.0/16 retain
+set groups POC_Lab routing-options static route 10.161.0.0/16 no-readvertise
+set groups POC_Lab routing-options static route 172.16.0.0/12 next-hop 172.25.90.1
+set groups POC_Lab routing-options static route 172.16.0.0/12 retain
+set groups POC_Lab routing-options static route 172.16.0.0/12 no-readvertise
+set groups POC_Lab routing-options static route 192.168.0.0/16 next-hop 172.25.90.1
+set groups POC_Lab routing-options static route 192.168.0.0/16 retain
+set groups POC_Lab routing-options static route 192.168.0.0/16 no-readvertise
+set apply-groups POC_Lab
+set system root-authentication encrypted-password "$1$DBwh/7ma$FgJVx.7.uZW15cX9kM1EC/"
+set system services extension-service request-response grpc clear-text port 50051
+set system services extension-service request-response grpc skip-authentication
+set system services extension-service notification allow-clients address 0.0.0.0/0
+set system syslog user * any emergency
+set system syslog host 172.25.90.135 any any
+set system syslog host 172.25.90.135 match UI_COMMIT_COMPLETED
+set system syslog host 172.25.90.135 port 516
+set system syslog file messages any notice
+set system syslog file messages authorization info
+set system syslog file interactive-commands interactive-commands any
+set system extensions providers juniper license-type juniper deployment-scope commercial
+set system extensions providers chef license-type juniper deployment-scope commercial
+set system processes dhcp-service traceoptions file dhcp_logfile
+set system processes dhcp-service traceoptions file size 10m
+set system processes dhcp-service traceoptions level all
+set system processes dhcp-service traceoptions flag all
+set system processes app-engine-virtual-machine-management-service traceoptions level notice
+set system processes app-engine-virtual-machine-management-service traceoptions flag all
+set system ddos-protection protocols arp aggregate bandwidth 10000
+set system ddos-protection protocols arp aggregate burst 1000
+set system ddos-protection protocols ndpv6 aggregate bandwidth 10000
+set system ddos-protection protocols ndpv6 aggregate burst 1000
+set chassis aggregated-devices ethernet device-count 5
+set interfaces et-0/0/0 mtu 9216
+set interfaces et-0/0/0 unit 0 family inet address 10.0.2.11/31
+set interfaces et-0/0/0 unit 0 family iso
+set interfaces et-0/0/1 mtu 9216
+set interfaces et-0/0/1 unit 0 family inet address 10.0.2.21/31
+set interfaces et-0/0/1 unit 0 family iso
+set interfaces et-0/0/2 ether-options 802.3ad ae1
+set interfaces et-0/0/3 ether-options 802.3ad ae1
+set interfaces ae0 mtu 9216
+set interfaces ae1 description "ESI 22:22 to 5100-183"
+set interfaces ae1 mtu 9216
+set interfaces ae1 esi 00:22:22:22:22:22:22:22:22:22
+set interfaces ae1 esi all-active
+set interfaces ae1 aggregated-ether-options lacp active
+set interfaces ae1 aggregated-ether-options lacp periodic fast
+set interfaces ae1 aggregated-ether-options lacp system-id 02:02:02:02:02:02
+set interfaces ae1 unit 0 family ethernet-switching interface-mode trunk
+set interfaces ae1 unit 0 family ethernet-switching vlan members all
+set interfaces irb mtu 9216
+set interfaces irb unit 2030 virtual-gateway-accept-data
+set interfaces irb unit 2030 family inet address 10.230.0.3/16 virtual-gateway-address 10.230.0.1
+set interfaces irb unit 2030 family inet6 address fd20:2030::3/64 virtual-gateway-address fd20:2030::1
+set interfaces irb unit 2030 family inet6 address fe80:2030::1/64
+set interfaces irb unit 2030 virtual-gateway-v4-mac 02:00:30:00:00:01
+set interfaces irb unit 2030 virtual-gateway-v6-mac 02:00:30:06:00:01
+set interfaces irb unit 2031 virtual-gateway-accept-data
+set interfaces irb unit 2031 family inet address 10.231.0.3/16 virtual-gateway-address 10.231.0.1
+set interfaces irb unit 2031 family inet6 address fd20:2031::3/64 virtual-gateway-address fd20:2031::1
+set interfaces irb unit 2031 family inet6 address fe80:2031::1/64
+set interfaces irb unit 2031 virtual-gateway-v4-mac 02:00:31:00:00:01
+set interfaces irb unit 2031 virtual-gateway-v6-mac 02:00:31:06:00:01
+set interfaces irb unit 2050 family inet address 10.250.0.3/16 virtual-gateway-address 10.250.0.1
+set interfaces irb unit 2051 family inet address 10.251.0.3/16 virtual-gateway-address 10.251.0.1
+set interfaces irb unit 3001 virtual-gateway-accept-data
+set interfaces irb unit 3001 family inet address 10.201.0.3/16 virtual-gateway-address 10.201.0.1
+set interfaces irb unit 3001 family inet6 address fd20:3001::3/64 virtual-gateway-address fd20:3001::1
+set interfaces irb unit 3001 family inet6 address fe80:3001::1/64
+set interfaces irb unit 3001 virtual-gateway-v4-mac 02:00:01:00:00:01
+set interfaces irb unit 3001 virtual-gateway-v6-mac 02:00:01:06:00:01
+set interfaces irb unit 3002 virtual-gateway-accept-data
+set interfaces irb unit 3002 family inet address 10.202.0.3/16 virtual-gateway-address 10.202.0.1
+set interfaces irb unit 3002 family inet6 address fd20:3002::3/64 virtual-gateway-address fd20:3002::1
+set interfaces irb unit 3002 family inet6 address fe80:3002::1/64
+set interfaces irb unit 3002 virtual-gateway-v4-mac 02:00:02:00:00:01
+set interfaces irb unit 3002 virtual-gateway-v6-mac 02:00:02:06:00:01
+set interfaces irb unit 3003 virtual-gateway-accept-data
+set interfaces irb unit 3003 family inet address 10.203.0.3/16 virtual-gateway-address 10.203.0.1
+set interfaces irb unit 3003 family inet6 address fd20:3003::3/64 virtual-gateway-address fd20:3003::1
+set interfaces irb unit 3003 family inet6 address fe80:3003::1/64
+set interfaces irb unit 3003 virtual-gateway-v4-mac 02:00:03:00:00:01
+set interfaces irb unit 3003 virtual-gateway-v6-mac 02:00:03:06:00:01
+set interfaces irb unit 3004 virtual-gateway-accept-data
+set interfaces irb unit 3004 family inet address 10.204.0.3/16 virtual-gateway-address 10.204.0.1
+set interfaces irb unit 3004 family inet6 address fd20:3004::3/64 virtual-gateway-address fd20:3004::1
+set interfaces irb unit 3004 family inet6 address fe80:3004::1/64
+set interfaces irb unit 3004 virtual-gateway-v4-mac 02:00:04:00:00:01
+set interfaces irb unit 3004 virtual-gateway-v6-mac 02:00:04:06:00:01
+set interfaces irb unit 3005 virtual-gateway-accept-data
+set interfaces irb unit 3005 family inet address 10.205.0.3/16 virtual-gateway-address 10.205.0.1
+set interfaces irb unit 3005 family inet6 address fd20:3005::3/64 virtual-gateway-address fd20:3005::1
+set interfaces irb unit 3005 family inet6 address fe80:3005::1/64
+set interfaces irb unit 3005 virtual-gateway-v4-mac 02:00:05:00:00:01
+set interfaces irb unit 3005 virtual-gateway-v6-mac 02:00:05:06:00:01
+set interfaces irb unit 3006 virtual-gateway-accept-data
+set interfaces irb unit 3006 family inet address 10.206.0.3/16 virtual-gateway-address 10.206.0.1
+set interfaces irb unit 3006 family inet6 address fd20:3006::3/64 virtual-gateway-address fd20:3006::1
+set interfaces irb unit 3006 family inet6 address fe80:3006::1/64
+set interfaces irb unit 3006 virtual-gateway-v4-mac 02:00:06:00:00:01
+set interfaces irb unit 3006 virtual-gateway-v6-mac 02:00:06:06:00:01
+set interfaces irb unit 3007 virtual-gateway-accept-data
+set interfaces irb unit 3007 family inet address 10.207.0.3/16 virtual-gateway-address 10.207.0.1
+set interfaces irb unit 3007 family inet6 address fd20:3007::3/64 virtual-gateway-address fd20:3007::1
+set interfaces irb unit 3007 family inet6 address fe80:3007::1/64
+set interfaces irb unit 3007 virtual-gateway-v4-mac 02:00:07:00:00:01
+set interfaces irb unit 3007 virtual-gateway-v6-mac 02:00:07:06:00:01
+set interfaces irb unit 3008 virtual-gateway-accept-data
+set interfaces irb unit 3008 family inet address 10.208.0.3/16 virtual-gateway-address 10.208.0.1
+set interfaces irb unit 3008 family inet6 address fd20:3008::3/64 virtual-gateway-address fd20:3008::1
+set interfaces irb unit 3008 family inet6 address fe80:3008::1/64
+set interfaces irb unit 3008 virtual-gateway-v4-mac 02:00:08:00:00:01
+set interfaces irb unit 3008 virtual-gateway-v6-mac 02:00:08:06:00:01
+set interfaces irb unit 3009 virtual-gateway-accept-data
+set interfaces irb unit 3009 family inet address 10.209.0.3/16 virtual-gateway-address 10.209.0.1
+set interfaces irb unit 3009 family inet6 address fd20:3009::3/64 virtual-gateway-address fd20:3009::1
+set interfaces irb unit 3009 family inet6 address fe80:3009::1/64
+set interfaces irb unit 3009 virtual-gateway-v4-mac 02:00:09:00:00:01
+set interfaces irb unit 3009 virtual-gateway-v6-mac 02:00:09:06:00:01
+set interfaces irb unit 3010 virtual-gateway-accept-data
+set interfaces irb unit 3010 family inet address 10.210.0.3/16 virtual-gateway-address 10.210.0.1
+set interfaces irb unit 3010 family inet6 address fd20:2010::3/64 virtual-gateway-address fd20:2010::1
+set interfaces irb unit 3010 family inet6 address fe80:2010::1/64
+set interfaces irb unit 3010 virtual-gateway-v4-mac 02:00:10:00:00:01
+set interfaces irb unit 3010 virtual-gateway-v6-mac 02:00:10:06:00:01
+set interfaces irb unit 4050 virtual-gateway-accept-data
+set interfaces irb unit 4050 family inet address 10.50.0.3/16 virtual-gateway-address 10.50.0.1
+set interfaces irb unit 4050 family inet6 address fd20:4050::3/64 virtual-gateway-address fd20:4050::1
+set interfaces irb unit 4050 family inet6 address fe80:4050::1/64
+set interfaces irb unit 4050 virtual-gateway-v4-mac 02:40:50:00:00:01
+set interfaces irb unit 4050 virtual-gateway-v6-mac 02:40:50:06:00:01
+set interfaces irb unit 4051 virtual-gateway-accept-data
+set interfaces irb unit 4051 family inet address 10.51.0.3/16 virtual-gateway-address 10.51.0.1
+set interfaces irb unit 4051 family inet6 address fd20:4051::3/64 virtual-gateway-address fd20:4051::1
+set interfaces irb unit 4051 family inet6 address fe80:4051::1/64
+set interfaces irb unit 4051 virtual-gateway-v4-mac 02:40:51:00:00:01
+set interfaces irb unit 4051 virtual-gateway-v6-mac 02:40:51:06:00:01
+set interfaces lo0 unit 0 family inet address 191.168.101.6/32
+set interfaces lo0 unit 0 family iso address 49.0002.1911.6810.1006.00
+set interfaces lo0 unit 0 family inet6 address fd20:2222::179/128
+set interfaces lo0 unit 1 family inet address 10.254.6.1/32
+set interfaces lo0 unit 1 family inet6 address fd20:10:254:6::1/128
+set interfaces lo0 unit 2 family inet address 10.254.6.2/32
+set interfaces lo0 unit 2 family inet6 address fd20:10:254:6::2/128
+set routing-options static route 10.160.0.0/16 next-hop 172.25.90.1
+set routing-options static route 10.163.0.0/16 next-hop 172.25.90.1
+set routing-options router-id 191.168.101.6
+set routing-options autonomous-system 65101
+set routing-options forwarding-table export load-balance
+set protocols igmp interface all
+set protocols router-advertisement interface all
+set protocols bgp group IBGP-EVPN-Core type internal
+set protocols bgp group IBGP-EVPN-Core local-address 191.168.101.6
+set protocols bgp group IBGP-EVPN-Core import Reject_RemoteDC
+deactivate protocols bgp group IBGP-EVPN-Core import
+set protocols bgp group IBGP-EVPN-Core family evpn signaling
+set protocols bgp group IBGP-EVPN-Core cluster 5.5.5.5
+set protocols bgp group IBGP-EVPN-Core local-as 65101
+set protocols bgp group IBGP-EVPN-Core bfd-liveness-detection minimum-interval 300
+set protocols bgp group IBGP-EVPN-Core bfd-liveness-detection multiplier 3
+set protocols bgp group IBGP-EVPN-Core multipath multiple-as
+set protocols bgp group IBGP-EVPN-Core neighbor 191.168.101.3
+set protocols bgp group IBGP-EVPN-Core neighbor 191.168.101.4
+set protocols bgp group EBGP-Core type external
+set protocols bgp group EBGP-Core mtu-discovery
+set protocols bgp group EBGP-Core export bgp-ip-clos-out
+set protocols bgp group EBGP-Core local-as 201
+set protocols bgp group EBGP-Core bfd-liveness-detection minimum-interval 350
+set protocols bgp group EBGP-Core bfd-liveness-detection multiplier 3
+set protocols bgp group EBGP-Core bfd-liveness-detection session-mode automatic
+set protocols bgp group EBGP-Core multipath multiple-as
+set protocols bgp group EBGP-Core neighbor 10.0.2.10 local-address 10.0.2.11
+set protocols bgp group EBGP-Core neighbor 10.0.2.10 peer-as 301
+set protocols bgp group EBGP-Core neighbor 10.0.2.20 local-address 10.0.2.21
+set protocols bgp group EBGP-Core neighbor 10.0.2.20 peer-as 302
+set protocols pim rp static address 191.168.101.3
+set protocols pim interface irb.4050 distributed-dr
+set protocols pim interface irb.2030 distributed-dr
+set protocols pim interface irb.2031 distributed-dr
+set protocols pim interface all
+set protocols pim interface irb.2050 distributed-dr
+set protocols pim interface irb.2051 distributed-dr
+set protocols pim interface irb.4051 distributed-dr
+set protocols evpn traceoptions file evpn.log
+set protocols evpn traceoptions flag all
+deactivate protocols evpn traceoptions
+set protocols evpn encapsulation vxlan
+set protocols evpn default-gateway no-gateway-community
+set protocols evpn extended-vni-list all
+set protocols l2-learning global-mac-table-aging-time 2400
+set protocols lldp interface all
+set protocols igmp-snooping vlan V4050 proxy
+set protocols igmp-snooping vlan all
+set protocols igmp-snooping vlan V2030 proxy
+set protocols igmp-snooping vlan V2031 proxy
+set protocols igmp-snooping vlan V2050 proxy
+set protocols igmp-snooping vlan V2051 proxy
+set protocols igmp-snooping vlan V4051 proxy
+set policy-options policy-statement EVPN-T5-EXPORT term DIRECT from protocol direct
+set policy-options policy-statement EVPN-T5-EXPORT term DIRECT from route-filter 0.0.0.0/0 prefix-length-range /16-/16
+set policy-options policy-statement EVPN-T5-EXPORT term DIRECT then accept
+set policy-options policy-statement EVPN-T5-EXPORT term DIRECT_v6 from family inet6
+set policy-options policy-statement EVPN-T5-EXPORT term DIRECT_v6 from protocol direct
+set policy-options policy-statement EVPN-T5-EXPORT term DIRECT_v6 from route-filter 0::0/0 prefix-length-range /64-/64
+set policy-options policy-statement EVPN-T5-EXPORT term DIRECT_v6 then accept
+set policy-options policy-statement Reject_RemoteDC term reject-remote-dc-gwy from family evpn
+set policy-options policy-statement Reject_RemoteDC term reject-remote-dc-gwy from next-hop 191.168.102.1
+set policy-options policy-statement Reject_RemoteDC term reject-remote-dc-gwy from next-hop 191.168.102.2
+set policy-options policy-statement Reject_RemoteDC term reject-remote-dc-gwy from nlri-route-type 1
+set policy-options policy-statement Reject_RemoteDC term reject-remote-dc-gwy from nlri-route-type 2
+set policy-options policy-statement Reject_RemoteDC term reject-remote-dc-gwy then reject
+set policy-options policy-statement Reject_RemoteDC term accept-all then accept
+set policy-options policy-statement bgp-ip-clos-out term loopback from protocol direct
+set policy-options policy-statement bgp-ip-clos-out term loopback from route-filter 191.168.0.0/16 orlonger
+set policy-options policy-statement bgp-ip-clos-out term loopback then next-hop self
+set policy-options policy-statement bgp-ip-clos-out term loopback then accept
+set policy-options policy-statement load-balance then load-balance per-packet
+set policy-options policy-statement vni10001-EXPORT term DIRECT from protocol direct
+set policy-options policy-statement vni10001-EXPORT term DIRECT from route-filter 0.0.0.0/0 prefix-length-range /16-/16
+set policy-options policy-statement vni10001-EXPORT term DIRECT then community add vni10001
+set policy-options policy-statement vni10001-EXPORT term DIRECT then accept
+set policy-options policy-statement vni10001-EXPORT term DIRECT_v6 from family inet6
+set policy-options policy-statement vni10001-EXPORT term DIRECT_v6 from protocol direct
+set policy-options policy-statement vni10001-EXPORT term DIRECT_v6 from route-filter 0::0/0 prefix-length-range /64-/64
+set policy-options policy-statement vni10001-EXPORT term DIRECT_v6 then community add vni10001
+set policy-options policy-statement vni10001-EXPORT term DIRECT_v6 then accept
+set policy-options policy-statement vni10001-EXPORT term EVPN from rib APP2.evpn.0
+set policy-options policy-statement vni10001-EXPORT term EVPN then community add vni10001
+set policy-options policy-statement vni10001-EXPORT term EVPN then accept
+set policy-options policy-statement vni10001-IMPORT term evpn from community vni10001
+set policy-options policy-statement vni10001-IMPORT term evpn then accept
+set policy-options policy-statement vni10002-EXPORT term DIRECT from protocol direct
+set policy-options policy-statement vni10002-EXPORT term DIRECT from route-filter 0.0.0.0/0 prefix-length-range /16-/16
+set policy-options policy-statement vni10002-EXPORT term DIRECT then community add vni10002
+set policy-options policy-statement vni10002-EXPORT term DIRECT then accept
+set policy-options policy-statement vni10002-EXPORT term EVPN from rib DB.evpn.0
+set policy-options policy-statement vni10002-EXPORT term EVPN then community add vni10002
+set policy-options policy-statement vni10002-EXPORT term EVPN then accept
+set policy-options community vni10001 members target:65101:1
+set policy-options community vni10002 members target:65101:2
+set routing-instances APP2 instance-type vrf
+set routing-instances APP2 interface irb.3001
+set routing-instances APP2 interface irb.3002
+set routing-instances APP2 interface irb.3003
+set routing-instances APP2 interface irb.3004
+set routing-instances APP2 interface irb.3005
+set routing-instances APP2 interface lo0.1
+set routing-instances APP2 route-distinguisher 191.168.101.6:1
+set routing-instances APP2 vrf-target target:65101:1
+set routing-instances APP2 vrf-table-label
+set routing-instances APP2 routing-options rib APP2.inet6.0 multipath
+set routing-instances APP2 routing-options multipath
+set routing-instances APP2 routing-options auto-export
+set routing-instances APP2 protocols evpn ip-prefix-routes advertise direct-nexthop
+set routing-instances APP2 protocols evpn ip-prefix-routes encapsulation vxlan
+set routing-instances APP2 protocols evpn ip-prefix-routes vni 10001
+set routing-instances DB instance-type vrf
+set routing-instances DB interface irb.3006
+set routing-instances DB interface irb.3007
+set routing-instances DB interface irb.3008
+set routing-instances DB interface irb.3009
+set routing-instances DB interface irb.3010
+set routing-instances DB interface lo0.2
+set routing-instances DB route-distinguisher 191.168.101.6:2
+set routing-instances DB vrf-target target:65101:2
+set routing-instances DB vrf-table-label
+set routing-instances DB routing-options rib DB.inet6.0 multipath
+set routing-instances DB routing-options multipath
+set routing-instances DB routing-options auto-export
+set routing-instances DB protocols evpn ip-prefix-routes advertise direct-nexthop
+set routing-instances DB protocols evpn ip-prefix-routes encapsulation vxlan
+set routing-instances DB protocols evpn ip-prefix-routes vni 10002
+set switch-options vtep-source-interface lo0.0
+set switch-options route-distinguisher 191.168.101.6:65101
+set switch-options vrf-target target:1:100
+set switch-options vrf-target auto
+set vlans V2030 vlan-id 2030
+set vlans V2030 l3-interface irb.2030
+set vlans V2030 vxlan vni 22030
+set vlans V2031 vlan-id 2031
+set vlans V2031 l3-interface irb.2031
+set vlans V2031 vxlan vni 22031
+set vlans V3001 vlan-id 3001
+set vlans V3001 l3-interface irb.3001
+set vlans V3001 vxlan vni 23001
+set vlans V3002 vlan-id 3002
+set vlans V3002 l3-interface irb.3002
+set vlans V3002 vxlan vni 23002
+set vlans V3003 vlan-id 3003
+set vlans V3003 l3-interface irb.3003
+set vlans V3003 vxlan vni 23003
+set vlans V3004 vlan-id 3004
+set vlans V3004 l3-interface irb.3004
+set vlans V3004 vxlan vni 23004
+set vlans V3005 vlan-id 3005
+set vlans V3005 l3-interface irb.3005
+set vlans V3005 vxlan vni 23005
+set vlans V3006 vlan-id 3006
+set vlans V3006 l3-interface irb.3006
+set vlans V3006 vxlan vni 23006
+set vlans V3007 vlan-id 3007
+set vlans V3007 l3-interface irb.3007
+set vlans V3007 vxlan vni 23007
+set vlans V3008 vlan-id 3008
+set vlans V3008 l3-interface irb.3008
+set vlans V3008 vxlan vni 23008
+set vlans V3009 vlan-id 3009
+set vlans V3009 l3-interface irb.3009
+set vlans V3009 vxlan vni 23009
+set vlans V3010 vlan-id 3010
+set vlans V3010 l3-interface irb.3010
+set vlans V3010 vxlan vni 23010
+set vlans V4050 vlan-id 4050
+set vlans V4050 l3-interface irb.4050
+set vlans V4050 vxlan vni 24050
+set vlans V4051 vlan-id 4051
+set vlans V4051 l3-interface irb.4051
+set vlans V4051 vxlan vni 24051
+set vlans VDEV vlan-id 2050
+set vlans VDEV l3-interface irb.2050
+set vlans VDEV vxlan vni 22050
+set vlans VPROD vlan-id 2051
+set vlans VPROD l3-interface irb.2051
+set vlans VPROD vxlan vni 22051
