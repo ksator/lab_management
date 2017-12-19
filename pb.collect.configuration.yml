@@ -4,15 +4,15 @@
   gather_facts: no
   tasks:
 
-   - name: create configuration_backup directory
+   - name: create configuration directory
      file:
-       path: "{{playbook_dir}}/configuration_backup"
+       path: "{{playbook_dir}}/configuration"
        state: directory
 
 
-   - name: create configuration_backup subdirectories
+   - name: create configuration subdirectories
      file:
-       path: "{{playbook_dir}}/configuration_backup/{{ item }}"
+       path: "{{playbook_dir}}/configuration/{{ item }}"
        state: directory
      with_items:
        - text
@@ -33,10 +33,10 @@
       provider: "{{ credentials }}"
     register: "result_text"
 
-  - name: copy collected configuration in configuration_backup/text directory
+  - name: copy collected configuration in configuration/text directory
     copy: 
       content: "{{ result_text.ansible_facts.ansible_net_config }}" 
-      dest: "{{ playbook_dir }}/configuration_backup/text/{{ inventory_hostname }}.conf"
+      dest: "{{ playbook_dir }}/configuration/text/{{ inventory_hostname }}.conf"
  
   - name: Collect configuration in set format from devices
     junos_facts:
@@ -45,10 +45,10 @@
       provider: "{{ credentials }}"
     register: "result_set"
 
-  - name: copy collected configuration in configuration_backup/set directory
+  - name: copy collected configuration in configuration/set directory
     copy:
       content: "{{ result_set.ansible_facts.ansible_net_config }}"
-      dest: "{{ playbook_dir }}/configuration_backup/set/{{ inventory_hostname }}.set"
+      dest: "{{ playbook_dir }}/configuration/set/{{ inventory_hostname }}.set"
  
   - name: Collect configuration in json format from devices
     junos_facts:
@@ -57,10 +57,10 @@
       provider: "{{ credentials }}"
     register: "result_json"
 
-  - name: copy collected configuration in configuration_backup/json directory
+  - name: copy collected configuration in configuration/json directory
     copy:
       content: "{{ result_json.ansible_facts.ansible_net_config }}"
-      dest: "{{ playbook_dir }}/configuration_backup/json/{{ inventory_hostname }}.json"
+      dest: "{{ playbook_dir }}/configuration/json/{{ inventory_hostname }}.json"
 
   - name: Collect configuration in xml format from devices
     junos_facts:
@@ -69,8 +69,8 @@
       provider: "{{ credentials }}"
     register: "result_xml"
 
-  - name: copy collected configuration in configuration_backup/xml directory
+  - name: copy collected configuration in configuration/xml directory
     copy:
       content: "{{ result_xml.ansible_facts.ansible_net_config }}"
-      dest: "{{ playbook_dir }}/configuration_backup/xml/{{ inventory_hostname }}.xml"
+      dest: "{{ playbook_dir }}/configuration/xml/{{ inventory_hostname }}.xml"
 
