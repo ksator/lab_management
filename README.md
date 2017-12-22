@@ -158,6 +158,10 @@ ls command
 ##### How to collect the junos configuration file from junos devices 
 
 ```
+ansible-playbook pb.collect.configuration.yml --limit DC1
+ls configuration/
+```
+```
 ansible-playbook pb.collect.configuration.yml
 ls configuration/
 ```
@@ -166,7 +170,11 @@ ls configuration/
 
 ```
 ansible-playbook pb.collect.golden.yml --limit QFX5110
+ls golden_configuration
+```
+```
 ansible-playbook pb.collect.golden.yml 
+ls golden_configuration
 ```
 
 ### How to audit the network
