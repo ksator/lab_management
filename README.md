@@ -19,7 +19,7 @@ host specific variables under the directory [**host_vars**](host_vars).
 
 ## group_vars directory 
 The variables are yml files under [**group_vars**](group_vars) and [**host_vars**](host_vars) directories.  
-group related variables are yml files under the directory [**group_vars**](group_vars)### Ansible inventory file
+group related variables are yml files under the directory [**group_vars**](group_vars)
 
 ## templates directory
 The directory [**templates**](templates) has the jinja templates
