@@ -1,4 +1,5 @@
 # What to find in this repository
+
 Automation content for data center network fabric.  
 Based on:    
 - Junos devices
@@ -6,51 +7,79 @@ Based on:
 
 # Repository structure 
 
-### Ansible inventory file
-The ansible inventory file is [**hosts**](http://172.25.90.133/root/PoC-80/blob/master/hosts) file at the root of the repository.    
+## Ansible inventory file
+The ansible inventory file is [**hosts**](hosts) file at the root of the repository.    
 
-### Ansible configuration file
-The ansible configuration file is [**ansible.cfg**](http://172.25.90.133/root/PoC-80/blob/master/ansible.cfg) at the root of the repository.   
+## Ansible configuration file
+The ansible configuration file is [**ansible.cfg**](ansible.cfg) at the root of the repository.   
 
-### Variables  
-The variables are yml files under [**group_vars**](http://172.25.90.133/root/PoC-80/tree/master/group_vars) and [**host_vars**](http://172.25.90.133/root/PoC-80/tree/master/host_vars) directories.   
-- host specific variables under the directory [**host_vars**](http://172.25.90.133/root/PoC-80/tree/master/host_vars).   
-- group related variables are yml files under the directory [**group_vars**](http://172.25.90.133/root/PoC-80/tree/master/group_vars)
+## host_vars directory 
+The variables are yml files under [**group_vars**](group_vars) and [**host_vars**](host_vars) directories.
+host specific variables under the directory [**host_vars**](host_vars).   
 
-### Ansible playbooks
+## group_vars directory 
+The variables are yml files under [**group_vars**](group_vars) and [**host_vars**](host_vars) directories.
+group related variables are yml files under the directory [**group_vars**](group_vars)### Ansible inventory file
+
+## templates directory
+The directory [**templates**](templates) has the jinja templates
+
+## render directory
+The directory [**render**](render) has the files generated from the jinja templates and variables
+
+## Ansible Playbooks
 The ansible playbooks are at the root of the repository.  
 All playbooks are named **pb.*.yml**      
-- [**pb.generate.variables.structure.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.generate.variables.structure.yml) playbook was used at the beginning of the project to create some of the directories and files used to define yaml variables. 
-- [**pb.backup.configuration.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.backup.configuration.yml) playbook performs a configuration backup of the network
-- [**pb.collect.golden.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.golden.yml) playbook collects the running configuration on the junos devices and updates the directory [**golden**](http://172.25.90.133/root/PoC-80/tree/master/golden) with these files.
-- [**pb.configure.golden.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.golden.yml) playbook overwrites the running configuration on the junos devices with the files in the directory [**golden**](http://172.25.90.133/root/PoC-80/tree/master/golden). 
-- [**pb.configure.lines.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.lines.yml) playbook configures junos devices with set/delete commands
-- [**pb.configure.telemetry.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.telemetry.yml) playbook configures junos devices with telemetry
-- [**pb.rollback.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.rollback.yml) playbook performs a rollback on junos devices.
-- [**pb.check.ports.availability.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.check.ports.availability.yml) playbook checks if Ansible can connect on SSH and NETCONF ports on Junos devices
-- [**pb.check.L1.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.check.L1.yml) playbook checks the status of the interfaces on Junos devices
-- [**pb.check.L2.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.check.L2.yml) playbook check the physical topology 
-- [**pb.collect.cli.output.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.cli.output.yml) playbook runs junos show commands and save the output on Ansible. This playbook use the commands in the file [**cli.yml**](http://172.25.90.133/root/PoC-80/blob/master/cli.yml)
-- [**pb.collect.commands.output.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.commands.output.yml) playbook runs junos show commands and save the output on Ansible 
-- [**pb.collect.facts.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.facts.yml) playbook collects the facts on junos devices and save them on Ansible 
-- [**pb.print.facts.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.print.facts.yml) playbook collects the facts on junos devices and print them on Ansible
+- [**pb.generate.variables.structure.yml**](pb.generate.variables.structure.yml) playbook was used at the beginning of the project to create some of the directories and files used to define yaml variables. 
+- [**pb.backup.configuration.yml**](pb.backup.configuration.yml) playbook performs a configuration backup of the network
+- [**pb.collect.golden.yml**](pb.collect.golden.yml) playbook collects the running configuration on the junos devices and updates the directory [**golden**](golden) with these files.
+- [**pb.configure.golden.yml**](pb.configure.golden.yml) playbook overwrites the running configuration on the junos devices with the files in the directory [**golden**](golden). 
+- [**pb.configure.lines.yml**](pb.configure.lines.yml) playbook configures junos devices with set/delete commands
+- [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml) playbook configures junos devices with telemetry
+- [**pb.rollback.yml**](pb.rollback.yml) playbook performs a rollback on junos devices.
+- [**pb.check.ports.availability.yml**](pb.check.ports.availability.yml) playbook checks if Ansible can connect on SSH and NETCONF ports on Junos devices
+- [**pb.check.L1.yml**](pb.check.L1.yml) playbook checks the status of the interfaces on Junos devices
+- [**pb.check.L2.yml**](pb.check.L2.yml) playbook check the physical topology 
+- [**pb.collect.cli.output.yml**](pb.collect.cli.output.yml) playbook runs junos show commands and save the output on Ansible. This playbook use the commands in the file [**cli.yml**](cli.yml)
+- [**pb.collect.commands.output.yml**](pb.collect.commands.output.yml) playbook runs junos show commands and save the output on Ansible 
+- [**pb.collect.facts.yml**](pb.collect.facts.yml) playbook collects the facts on junos devices and save them on Ansible 
+- [**pb.print.facts.yml**](pb.print.facts.yml) playbook collects the facts on junos devices and print them on Ansible
 
-### Other directories
+## cli directory 
+The directory [**cli**](cli) has the output of the Junos show commands from the playbook [**pb.collect.cli.output.yml**](pb.collect.cli.output.yml)
 
-- The directory [**templates**](http://172.25.90.133/root/PoC-80/tree/master/templates) has the jinja templates
-- The directory [**render**](http://172.25.90.133/root/PoC-80/tree/master/render) has the files generated from the jinja templates
-- The directory [**golden**](http://172.25.90.133/root/PoC-80/tree/master/golden) has the junos configuration files we need to push on the junos devices before to start the demo: 
-  - The playbook [**pb.collect.golden.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.golden.yml) collects the running configuration on the junos devices and updates this directory with these files.
-  - The playbook [**pb.configure.golden.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.golden.yml) overwrites the running configuration on the junos devices with the files in this directory. 
-- The directory [**configuration_backup**](http://172.25.90.133/root/PoC-80/tree/master/configuration_backup) has the junos configuration files backed up by the playbook [**pb.backup.configuration.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.backup.configuration.yml) 
-- The directory [**backup**](http://172.25.90.133/root/PoC-80/tree/master/backup) has the junos configuration files backed up by the playbooks: 
-  - [**pb.configure.lines.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.lines.yml) 
-  - [**pb.configure.golden.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.golden.yml)
-  - [**pb.configure.telemetry.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.configure.telemetry.yml)
-- The directory [**rollback**](http://172.25.90.133/root/PoC-80/tree/master/rollback) has the Junos configuration diffs from rollbacks done with ansible playbook [**pb.rollback.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.rollback.yml) 
-- The directory [**facts**](http://172.25.90.133/root/PoC-80/tree/master/facts) has the Junos facts collected by the playbook [**pb.collect.facts.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.facts.yml) 
-- The directory [**cli**](http://172.25.90.133/root/PoC-80/tree/master/cli) has the output of the Junos show commands from the playbook [**pb.collect.cli.output.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.cli.output.yml)
-- The directory [**command**](http://172.25.90.133/root/PoC-80/tree/master/command) has the output of the Junos show commands from the playbook [**pb.collect.commands.output.yml**](http://172.25.90.133/root/PoC-80/blob/master/pb.collect.commands.output.yml) 
+## command directory 
+The directory [**command**](command) has the output of the Junos show commands from the playbook [**pb.collect.commands.output.yml**](pb.collect.commands.output.yml) 
+
+## facts directory
+The directory [**facts**](facts) has the Junos facts collected by the playbook [**pb.collect.facts.yml**](pb.collect.facts.yml) 
+
+## rollback directory
+The directory [**rollback**](rollback) has the Junos configuration diffs from rollbacks done with ansible playbook [**pb.rollback.yml**](pb.rollback.yml) 
+
+## backup directory
+The directory [**backup**](backup) has the junos configuration files automatically backed up by the playbooks: 
+  - [**pb.configure.lines.yml**](pb.configure.lines.yml) 
+  - [**pb.configure.golden.yml**](pb.configure.golden.yml)
+  - [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml)
+
+## configuration directory
+The directory [**configuration**](configuration) has the junos configuration files backed up when we ran the playbook [**pb.collect.configuration.yml**](pb.collect.configuration.yml) 
+
+## golden directory
+The directory [**golden**](golden) has the junos configuration files we need to push on the junos devices before to start the demo. 
+- The playbook [**pb.collect.golden.configuration.yml**](pb.collect.golden.configuration.yml) collects the running configuration on the junos devices and updates the directory /golden_configuration/ebgp_underlay_evpn_vxlan_overlay/ with these files.
+- The playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) overwrites the running configuration on the junos devices with the files in the directory /golden_configuration/ebgp_underlay_evpn_vxlan_overlay/
+
+## python directory
+The directory [**python**](python) has the python scripts
+- The file [**python/inventory.py**](python/inventory.py) create a python list of devices ip address based on the ansible inventory file [**hosts**](hosts)
+- The file [**python/locate.mac.address.py**](python/locate.mac.address.py) indicates where is locate a given mac address in the network.
+
+## jsnapy directory
+The directory [**jsnapy**](jsnapy) has the jsnapy content
+- The directory [**jsnapy/snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy
+- The directory [**jsnapy/testfiles**](jsnapy/testfiles) has the testfiles taken by jsnapy
 
 
 # How to use this repo
