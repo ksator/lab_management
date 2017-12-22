@@ -127,23 +127,23 @@ git clone http://172.25.90.133/root/PoC-80.git
 ls PoC-80/
 ```
 
-# How to use this repo
+### Move to the local copy of the remote repo
 
 ```
-sudo -s
 cd PoC-80/
+sudo -s
 ```
 
-### How to collect data from the network 
+# How to collect data from the network 
 
-##### How to collect the facts from junos devices
+### How to collect the facts from junos devices
 
 ```
 ansible-playbook pb.collect.facts.yml
 ls facts/
 ```
 
-##### How to pass show commands on junos devices and collect the output
+### How to pass show commands on junos devices and collect the output
 Edit the show commands you want to use
 ```
 vi cli.yml
@@ -156,7 +156,7 @@ The commands output are available in the cli directory
 ```
 ls cli
 ```
-##### How to pass show commands on junos devices and collect the output (alternative automation content)
+### How to pass show commands on junos devices and collect the output (alternative automation content)
 Edit the show commands you want to use
 ```
 vi pb.collect.commands.output.yml
@@ -170,7 +170,7 @@ The commands output are available in the command directory
 ls command
 ```
 
-##### How to collect the junos configuration file from junos devices 
+### How to collect the junos configuration file from junos devices 
 
 ```
 ansible-playbook pb.collect.configuration.yml --limit DC1
@@ -181,7 +181,7 @@ ansible-playbook pb.collect.configuration.yml
 ls configuration/
 ```
 
-##### How to collect the running configuration on the junos devices and update the golden configuration files (the initial configuration files that will be used at the beginning of the next demo) 
+### How to collect the running configuration on the junos devices and update the golden configuration files (the initial configuration files that will be used at the beginning of the next demo) 
 
 ```
 ansible-playbook pb.collect.golden.yml --limit QFX5110
@@ -193,9 +193,9 @@ ls golden_configuration
 ```
 
 
-### How to configure the newtwork
+# How to configure the newtwork
 
-##### How to overwrite the running configuration on junos devices with their golden confiiguration (i.e how to restore the initial configuration files at the beginning of each demo)
+### How to overwrite the running configuration on junos devices with their golden confiiguration (i.e how to restore the initial configuration files at the beginning of each demo)
 How to execute this playbook for one device/group
 ```
 ansible-playbook pb.configure.golden.yml --limit QFX10K2-176
@@ -205,7 +205,7 @@ How to execute this playbook
 ansible-playbook pb.configure.golden.yml
 ```
 
-##### How to configure devices with telemetry
+### How to configure devices with telemetry
 How to read the telemetry template
 ```
 more templates/telemetry.j2
@@ -232,7 +232,7 @@ How to execute this playbook
 ansible-playbook pb.configure.telemetry.yml
 ```
 
-##### How to configure devices with set/delete commands
+### How to configure devices with set/delete commands
 How to edit the set/delete commands you want to use
 ```
 vi pb.configure.lines.yml
@@ -255,7 +255,7 @@ ansible-playbook pb.configure.lines.yml
 ls backup/
 ```
 
-##### How to rollback the running configuration to a previous state
+### How to rollback the running configuration to a previous state
 
 a device or a network
 ```
@@ -267,44 +267,44 @@ ansible-playbook pb.rollback.yml --extra-vars rbid=3 --limit DC2
 ls rollback/
 ```
 
-### How to audit the network
+# How to audit the network
 
-##### How to check if some services (netconf, ssh, ftp, telnet ports) are reachable on Junos devices
+### How to check if some services (netconf, ssh, ftp, telnet ports) are reachable on Junos devices
 ```
 ansible-playbook pb.check.ports.availability.yml
 ```
 
-##### How to check the status of interfaces on Junos devices
+### How to check the status of interfaces on Junos devices
 ```
 ansible-playbook pb.check.interfaces.yml
 ```
 
-##### How to check the physical topology 
+### How to check the physical topology 
 ```
 ansible-playbook pb.check.lldp.yml
 ```
 
-##### How to check the BGP states 
+### How to check the BGP states 
 ```
 ansible-playbook pb.check.bgp.yml
 ```
 
-##### How to check from devices operationnal state if desirated vlans are presents
+### How to check from devices operationnal state if desirated vlans are presents
 ```
 ansible-playbook pb.check.vlans.yml
 ```
 
-##### How to collects the facts on junos devices and print them on Ansible
+### How to collects the facts on junos devices and print them on Ansible
 ```
 ansible-playbook pb.print.facts.yml
 ```
 
-##### How to run all the above tests in one single command
+### How to run all the above tests in one single command
 ```
 ansible-playbook pb.check.all.yml
 ```
 
-### python
+# python
 
 # Looking for help 
 
