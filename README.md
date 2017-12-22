@@ -180,20 +180,22 @@ ls golden_configuration
 
 ### How to configure the newtwork
 
-##### How to overwrite the running configuration on junos devices with their golden confiiguration 
-i.e how to restore the initial configuration files at the beginning of each demo
+##### How to overwrite the running configuration on junos devices with their golden confiiguration (i.e how to restore the initial configuration files at the beginning of each demo)
+How to execute this playbook for one device/group
 ```
 ansible-playbook pb.configure.golden.yml --limit QFX10K2-176
 ```
+How to execute this playbook
 ```
 ansible-playbook pb.configure.golden.yml
 ```
 
 ##### How to configure devices with telemetry
+How to read the telemetry template
 ```
-ls templates
+more templates/telemetry.j2
 ```
-How to render the template locally (i.e without connecting to junos devices)
+How to render the telemetry template locally (i.e without connecting to junos devices)
 ```
 ansible-playbook pb.configure.telemetry.yml --tag render
 ls render/telemetry/
