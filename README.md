@@ -134,6 +134,41 @@ sudo -s
 cd PoC-80/
 ```
 
+### How to collect data from the network 
+
+##### How to collect the facts from junos devices
+
+```
+ansible-playbook pb.collect.facts.yml
+ls facts/
+```
+
+##### How to pass show commands on junos devices and collect the output
+
+```
+vi cli.yml
+ansible-playbook pb.collect.cli.output.yml
+ls cli
+```
+```
+ansible-playbook pb.collect.commands.output.yml
+ls command
+```
+
+##### How to collect the junos configuration file from junos devices 
+
+```
+ansible-playbook pb.collect.configuration.yml
+ls configuration/
+```
+
+##### How to collect the running configuration on the junos devices and update the golden configuration files (the initial configuration files that will be used at the beginning of the next demo) 
+
+```
+ansible-playbook pb.collect.golden.yml --limit QFX5110
+ansible-playbook pb.collect.golden.yml 
+```
+
 ### How to audit the network
 
 ##### How to check if some services (netconf, ssh, ftp, telnet ports) are reachable on Junos devices
