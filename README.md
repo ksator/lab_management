@@ -91,11 +91,7 @@ The directory [**jsnapy**](jsnapy) has the jsnapy content
 - The directory [**jsnapy/testfiles**](jsnapy/testfiles) has the testfiles taken by jsnapy
 
 
-# How to use this repo
-
-```
-sudo -s
-```
+# Requirements to use this repository
 
 ### Install PyEZ, Ansible, JSNAPy
 
@@ -126,8 +122,15 @@ ansible-galaxy list
 ### Get locally the content of the remote repository
 
 ```
+sudo -s
 git clone http://172.25.90.133/root/PoC-80.git
 cd PoC-80/
+```
+
+# How to use this repo
+
+```
+sudo -s
 ```
 
 ### How to check if some services (netconf, ssh, ftp, telnet ports) are reachable on Junos devices
