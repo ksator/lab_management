@@ -215,17 +215,9 @@ ansible-playbook pb.check.all.yml
 ```
 
 
-### How to retrieves and print the facts from junos devices: 
+### How to configure the newtwork
 
-```
-ansible-playbook pb.collect.facts.yml
-ls facts/
-```
-```
-ansible-playbook pb.print.facts.yml
-```
-
-### How to overwrite the running configuration on the junos devices with the initial configuration files at the beginning of each demo
+##### How to overwrite the running configuration on the junos devices with the initial configuration files at the beginning of each demo
 ```
 ansible-playbook pb.configure.golden.yml
 ```
@@ -258,49 +250,17 @@ ansible-playbook pb.rollback.yml --extra-vars rbid=3 --limit DC2
 ls rollback/
 ```
 
-### How to backup the junos configuration on the Ansible server
-
-```
-ansible-playbook pb.backup.configuration.yml
-ls configuration_backup/
-```
-
-### How to collect the running configuration on the junos devices and update the initial configuration files that will be used at the beginning of the next demo 
-
-```
-ansible-playbook pb.collect.golden.yml --limit QFX5110
-ansible-playbook pb.collect.golden.yml 
-```
-
-### How to pass show commands on junos devices
-
-```
-vi cli.yml
-ansible-playbook pb.collect.cli.output.yml
-ls cli
-```
-```
-ansible-playbook pb.collect.commands.output.yml
-ls command
-```
-
-
 
 # Looking for help 
 
-### Looking for help with Ansible
+### Looking for help with Junos automation:
 
-This [repository](https://github.com/ksator/ansible-training-for-junos-automation) has many ready to use examples about junos automation using Ansible
+https://github.com/ksator?tab=repositories  
+https://gitlab.com/users/ksator/projects  
+https://gist.github.com/ksator/  
 
 ### Looking for more EVPN-VXLAN automation examples
 
 You can refer to these projects:  
 https://github.com/JNPRAutomate/ansible-junos-evpn-vxlan  
 https://github.com/ksator/EVPN_DCI_automation  
-
-### Looking for more Junos automation solutions:
-
-https://github.com/ksator?tab=repositories  
-https://gitlab.com/users/ksator/projects  
-https://gist.github.com/ksator/  
-
