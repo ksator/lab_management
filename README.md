@@ -193,35 +193,47 @@ ansible-playbook pb.configure.golden.yml
 ```
 ls templates
 ```
-###### How to render the template locally 
-i.e without connecting to junos devices 
+How to render the template locally (i.e without connecting to junos devices)
 ```
 ansible-playbook pb.configure.telemetry.yml --tag render
 ls render/telemetry/
 ```
-###### How to execute this playbook in dry run mode
-i.e without commiting the junos configuration
+How to execute this playbook in dry run mode (i.e without commiting the junos configuration)
 ```
 ansible-playbook pb.configure.telemetry.yml --check
 ```
-###### How to execute this playbook in dry run mode and also print the diff between the desired state and the actual state 
+How to execute this playbook in dry run mode and also print the diff between the desired state and the actual state 
 ```
 ansible-playbook pb.configure.telemetry.yml --check --diff --limit QFX10K2-176
 ```
-###### How to execute this playbook for one device/group
+How to execute this playbook for one device/group
 ```
 ansible-playbook pb.configure.telemetry.yml --limit QFX10K2-176
 ```
-###### How to execute this playbook
+How to execute this playbook
 ```
 ansible-playbook pb.configure.telemetry.yml
 ```
 
 ##### How to configure devices with set/delete commands
+How to edit the set/delete commands you want to use
 ```
 vi pb.configure.lines.yml
+```
+How to execute this playbook in dry run mode (i.e without commiting the junos configuration)
+```
 ansible-playbook pb.configure.lines.yml --check
+```
+How to execute this playbook in dry run mode and also print the diff between the desired state and the actual state 
+```
 ansible-playbook pb.configure.lines.yml --check --diff --limit QFX10K2-176
+```
+How to execute this playbook for one device/group
+```
+ansible-playbook pb.configure.lines.yml --limit DC2
+```
+How to execute this playbook
+```
 ansible-playbook pb.configure.lines.yml
 ls backup/
 ```
