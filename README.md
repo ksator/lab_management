@@ -85,9 +85,6 @@ The directory [**jsnapy**](jsnapy) has the jsnapy content
 - The directory [**jsnapy/testfiles**](jsnapy/testfiles) has the testfiles taken by jsnapy
 
 
-
-## Ansible Playbooks
-
 # How to use this repo
 
 ```
