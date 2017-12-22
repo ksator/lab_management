@@ -14,11 +14,11 @@ The ansible inventory file is [**hosts**](hosts) file at the root of the reposit
 The ansible configuration file is [**ansible.cfg**](ansible.cfg) at the root of the repository.   
 
 ## host_vars directory 
-The variables are yml files under [**group_vars**](group_vars) and [**host_vars**](host_vars) directories.
+The variables are yml files under [**group_vars**](group_vars) and [**host_vars**](host_vars) directories.  
 host specific variables under the directory [**host_vars**](host_vars).   
 
 ## group_vars directory 
-The variables are yml files under [**group_vars**](group_vars) and [**host_vars**](host_vars) directories.
+The variables are yml files under [**group_vars**](group_vars) and [**host_vars**](host_vars) directories.  
 group related variables are yml files under the directory [**group_vars**](group_vars)### Ansible inventory file
 
 ## templates directory
