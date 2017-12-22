@@ -130,7 +130,7 @@ git clone http://172.25.90.133/root/PoC-80.git
 cd PoC-80/
 ```
 
-### How to check if ssh and netconf ports are reachable on Junos devices
+### How to check if some services (netconf, ssh, ftp, telnet ports) are reachable on Junos devices
 ```
 ansible-playbook pb.check.ports.availability.yml
 ```
