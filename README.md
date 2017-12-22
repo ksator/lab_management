@@ -31,19 +31,22 @@ The directory [**render**](render) has the files generated from the jinja templa
 The ansible playbooks are at the root of the repository.  
 All playbooks are named **pb.*.yml**      
 - [**pb.generate.variables.structure.yml**](pb.generate.variables.structure.yml) playbook was used at the beginning of the project to create some of the directories and files used to define yaml variables. 
-- [**pb.backup.configuration.yml**](pb.backup.configuration.yml) playbook performs a configuration backup of the network
-- [**pb.collect.golden.yml**](pb.collect.golden.yml) playbook collects the running configuration on the junos devices and updates the directory [**golden**](golden) with these files.
 - [**pb.configure.golden.yml**](pb.configure.golden.yml) playbook overwrites the running configuration on the junos devices with the files in the directory [**golden**](golden). 
 - [**pb.configure.lines.yml**](pb.configure.lines.yml) playbook configures junos devices with set/delete commands
 - [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml) playbook configures junos devices with telemetry
 - [**pb.rollback.yml**](pb.rollback.yml) playbook performs a rollback on junos devices.
-- [**pb.check.ports.availability.yml**](pb.check.ports.availability.yml) playbook checks if Ansible can connect on SSH and NETCONF ports on Junos devices
-- [**pb.check.L1.yml**](pb.check.L1.yml) playbook checks the status of the interfaces on Junos devices
-- [**pb.check.L2.yml**](pb.check.L2.yml) playbook check the physical topology 
-- [**pb.collect.cli.output.yml**](pb.collect.cli.output.yml) playbook runs junos show commands and save the output on Ansible. This playbook use the commands in the file [**cli.yml**](cli.yml)
+- [**pb.collect.configuration.yml**](pb.collect.configuration.yml) playbook performs a configuration backup of the network and save the configuration files in the directory [**configuration**](configuration)
+- [**pb.collect.golden.yml**](pb.collect.golden.yml) playbook collects the running configuration on the junos devices and updates the directory [**golden**](golden) with these files.
 - [**pb.collect.commands.output.yml**](pb.collect.commands.output.yml) playbook runs junos show commands and save the output on Ansible 
-- [**pb.collect.facts.yml**](pb.collect.facts.yml) playbook collects the facts on junos devices and save them on Ansible 
-- [**pb.print.facts.yml**](pb.print.facts.yml) playbook collects the facts on junos devices and print them on Ansible
+- [**pb.collect.cli.output.yml**](pb.collect.cli.output.yml) playbook runs junos show commands and save the output on Ansible. This playbook use the show commands in the file [**cli.yml**](cli.yml)
+- [**pb.collect.facts.yml**](pb.collect.facts.yml) playbook collects the facts on junos devices and save them on Ansible in the directory [**facts**](facts)
+- [**pb.check.all.yml**](pb.check.all) playbook include these playbooks:
+ - [**pb.check.ports.availability.yml**](pb.check.ports.availability.yml) playbook checks if Ansible can connect on SSH and NETCONF ports on Junos devices
+ - [**pb.check.interfaces.yml**](pb.check.interfaces.yml) playbook checks the status of the interfaces on Junos devices
+ - [**pb.check.lldp.yml**](pb.check.lldp.yml) playbook check the physical topology 
+ - [**pb.check.bgp.yml**](pb.check.bgp.yml) playbook check the BGP states 
+ - [**pb.check.vlans.yml**](pb.check.vlans.yml) playbook check from devices operationnal state if desirated vlans are presents
+ - [**pb.print.facts.yml**](pb.print.facts.yml) playbook collects the facts on junos devices and print them on Ansible
 
 ## cli directory 
 The directory [**cli**](cli) has the output of the Junos show commands from the playbook [**pb.collect.cli.output.yml**](pb.collect.cli.output.yml)
