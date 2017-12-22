@@ -31,7 +31,7 @@ The directory [**render**](render) has the files generated from the jinja templa
 The ansible playbooks are at the root of the repository.  
 All playbooks are named **pb.*.yml**      
 - [**pb.generate.variables.structure.yml**](pb.generate.variables.structure.yml) playbook was used at the beginning of the project to create some of the directories and files used to define yaml variables. 
-- [**pb.configure.golden.yml**](pb.configure.golden.yml) playbook overwrites the running configuration on the junos devices with the files in the directory [**golden**](golden). 
+- [**pb.configure.golden.yml**](pb.configure.golden.yml) playbook overwrites the running configuration on the junos devices with the files in the directory [**golden_configuration**](golden). 
 - [**pb.configure.lines.yml**](pb.configure.lines.yml) playbook configures junos devices with set/delete commands
 - [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml) playbook configures junos devices with telemetry
 - [**pb.rollback.yml**](pb.rollback.yml) playbook performs a rollback on junos devices.
