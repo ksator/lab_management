@@ -156,7 +156,7 @@ Run this command
 ```
 ansible-playbook pb.collect.cli.output.yml
 ```
-The commands output are available in the cli directory
+The commands output is available in the cli directory
 ```
 ls cli
 ```
@@ -169,7 +169,7 @@ Run this command
 ```
 ansible-playbook pb.collect.commands.output.yml
 ```
-The commands output are available in the command directory
+The commands output is available in the command directory
 ```
 ls command
 ```
@@ -207,9 +207,15 @@ Run this command to do it for a device/group
 ```
 ansible-playbook pb.configure.golden.yml --limit QFX10K2-176
 ```
+```
+ls backup/
+```
 Run this command to do it for the whole network
 ```
 ansible-playbook pb.configure.golden.yml
+```
+```
+ls backup/
 ```
 
 ### How to configure devices with telemetry
@@ -234,11 +240,16 @@ How to execute this playbook for one device/group
 ```
 ansible-playbook pb.configure.telemetry.yml --limit QFX10K2-176
 ```
+```
+ls backup/
+```
 How to execute this playbook
 ```
 ansible-playbook pb.configure.telemetry.yml
 ```
-
+```
+ls backup/
+```
 ### How to configure devices with set/delete commands
 How to edit the set/delete commands you want to use
 ```
@@ -256,23 +267,35 @@ How to execute this playbook for one device/group
 ```
 ansible-playbook pb.configure.lines.yml --limit DC2
 ```
+```
+ls backup/
+```
 How to execute this playbook
 ```
 ansible-playbook pb.configure.lines.yml
+```
+```
 ls backup/
 ```
 
+
 ### How to rollback the running configuration to a previous state
 
-a device or a network
+Run this command to rollback 1 the whole network 
 ```
 ansible-playbook pb.rollback.yml --extra-vars rbid=1
+```
+```
 ls rollback/
 ```
+Run this command to rollback 3 the group DC2 
 ```
 ansible-playbook pb.rollback.yml --extra-vars rbid=3 --limit DC2
+```
+```
 ls rollback/
 ```
+
 
 # How to audit the network
 
