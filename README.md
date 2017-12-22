@@ -177,6 +177,65 @@ ansible-playbook pb.collect.golden.yml
 ls golden_configuration
 ```
 
+
+### How to configure the newtwork
+
+##### How to overwrite the running configuration on junos devices with their golden confiiguration 
+i.e how to restore the initial configuration files at the beginning of each demo
+```
+ansible-playbook pb.configure.golden.yml --limit QFX10K2-176
+```
+```
+ansible-playbook pb.configure.golden.yml
+```
+
+##### How to configure devices with telemetry
+```
+ls templates
+```
+###### How to render the template locally 
+i.e without connecting to junos devices 
+```
+ansible-playbook pb.configure.telemetry.yml --tag render
+ls render/telemetry/
+```
+###### How to execute this playbook in dry run mode
+i.e without commiting the junos configuration
+```
+ansible-playbook pb.configure.telemetry.yml --check
+```
+###### How to execute this playbook in dry run mode and also print the diff between the desired state and the actual state 
+```
+ansible-playbook pb.configure.telemetry.yml --check --diff --limit QFX10K2-176
+```
+###### How to execute this playbook for one device/group
+```
+ansible-playbook pb.configure.telemetry.yml --limit QFX10K2-176
+```
+###### How to execute this playbook
+```
+ansible-playbook pb.configure.telemetry.yml
+```
+
+##### How to configure devices with set/delete commands
+```
+vi pb.configure.lines.yml
+ansible-playbook pb.configure.lines.yml --check
+ansible-playbook pb.configure.lines.yml --check --diff --limit QFX10K2-176
+ansible-playbook pb.configure.lines.yml
+ls backup/
+```
+
+##### How to rollback a device or a network
+```
+ansible-playbook pb.rollback.yml --extra-vars rbid=1
+ls rollback/
+```
+```
+ansible-playbook pb.rollback.yml --extra-vars rbid=3 --limit DC2
+ls rollback/
+```
+
 ### How to audit the network
 
 ##### How to check if some services (netconf, ssh, ftp, telnet ports) are reachable on Junos devices
@@ -214,41 +273,6 @@ ansible-playbook pb.print.facts.yml
 ansible-playbook pb.check.all.yml
 ```
 
-
-### How to configure the newtwork
-
-##### How to overwrite the running configuration on the junos devices with the initial configuration files at the beginning of each demo
-```
-ansible-playbook pb.configure.golden.yml
-```
-
-### How to configure devices with telemetry
-```
-ls templates
-ansible-playbook pb.configure.telemetry.yml --tag render
-ls render/telemetry/
-ansible-playbook pb.configure.telemetry.yml --check --diff --limit QFX10K2-176
-ansible-playbook pb.configure.telemetry.yml
-```
-
-### How to configure devices with set/delete commands
-```
-vi pb.configure.lines.yml
-ansible-playbook pb.configure.lines.yml --check
-ansible-playbook pb.configure.lines.yml --check --diff --limit QFX10K2-176
-ansible-playbook pb.configure.lines.yml
-ls backup/
-```
-
-### How to rollback a device or a network
-```
-ansible-playbook pb.rollback.yml --extra-vars rbid=1
-ls rollback/
-```
-```
-ansible-playbook pb.rollback.yml --extra-vars rbid=3 --limit DC2
-ls rollback/
-```
 
 
 # Looking for help 
