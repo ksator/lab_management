@@ -135,17 +135,13 @@ cd PoC-80/
 sudo -s
 ```
 
-# How to collect data from the network 
+# How to locate a mac address in the network
+Execute this python script
+```
+python ./python/locate.mac.address.py 38:4f:49:f2:5f:fc
+```
 
-### How to collect the facts from junos devices
-Run this command to collect the facts
-```
-ansible-playbook pb.collect.facts.yml
-```
-The facts are available in the facts directory
-```
-ls facts/
-```
+# How to collect data from the network 
 
 ### How to pass show commands on junos devices and collect the output
 Edit the show commands you want to use
@@ -199,6 +195,15 @@ ansible-playbook pb.collect.golden.yml
 ls golden_configuration
 ```
 
+### How to collect the facts from junos devices
+Run this command to collect the facts
+```
+ansible-playbook pb.collect.facts.yml
+```
+The facts are available in the facts directory
+```
+ls facts/
+```
 
 # How to configure the newtwork
 
@@ -213,6 +218,34 @@ ls backup/
 Run this command to do it for the whole network
 ```
 ansible-playbook pb.configure.golden.yml
+```
+```
+ls backup/
+```
+
+### How to configure devices with set/delete commands
+How to edit the set/delete commands you want to use
+```
+vi pb.configure.lines.yml
+```
+How to execute this playbook in dry run mode (i.e without commiting the junos configuration)
+```
+ansible-playbook pb.configure.lines.yml --check
+```
+How to execute this playbook in dry run mode and also print the diff between the desired state and the actual state 
+```
+ansible-playbook pb.configure.lines.yml --check --diff --limit QFX10K2-176
+```
+How to execute this playbook for one device/group
+```
+ansible-playbook pb.configure.lines.yml --limit DC2
+```
+```
+ls backup/
+```
+How to execute this playbook
+```
+ansible-playbook pb.configure.lines.yml
 ```
 ```
 ls backup/
@@ -246,33 +279,6 @@ ls backup/
 How to execute this playbook
 ```
 ansible-playbook pb.configure.telemetry.yml
-```
-```
-ls backup/
-```
-### How to configure devices with set/delete commands
-How to edit the set/delete commands you want to use
-```
-vi pb.configure.lines.yml
-```
-How to execute this playbook in dry run mode (i.e without commiting the junos configuration)
-```
-ansible-playbook pb.configure.lines.yml --check
-```
-How to execute this playbook in dry run mode and also print the diff between the desired state and the actual state 
-```
-ansible-playbook pb.configure.lines.yml --check --diff --limit QFX10K2-176
-```
-How to execute this playbook for one device/group
-```
-ansible-playbook pb.configure.lines.yml --limit DC2
-```
-```
-ls backup/
-```
-How to execute this playbook
-```
-ansible-playbook pb.configure.lines.yml
 ```
 ```
 ls backup/
@@ -332,6 +338,25 @@ ansible-playbook pb.print.facts.yml
 ### How to run all the above tests in one single command
 ```
 ansible-playbook pb.check.all.yml
+```
+
+### How to check which devices are not running their golden configuration
+Run this command to do it for a device/group
+```
+ansible-playbook pb.configure.golden.yml --check --limit QFX10K2-176
+```
+Run this command to do it for the whole network 
+```
+ansible-playbook pb.configure.golden.yml --check
+```
+### How to get the diff between theconfiguration running on devices and their golden configuration
+Run this command to do it for a device/group
+```
+ansible-playbook pb.configure.golden.yml --check --diff --limit QFX10K2-176
+```
+Run this command to do it for the whole network 
+```
+ansible-playbook pb.configure.golden.yml --check --diff 
 ```
 
 # python
