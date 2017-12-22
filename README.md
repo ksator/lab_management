@@ -85,17 +85,20 @@ The directory [**jsnapy**](jsnapy) has the jsnapy content
 - The directory [**jsnapy/testfiles**](jsnapy/testfiles) has the testfiles taken by jsnapy
 
 
+
+## Ansible Playbooks
+
 # How to use this repo
 
 ```
 sudo -s
 ```
 
-### Install Ansible
+## Install PyEZ, Ansible, JSNAPy
 
 This repository has been tested using Ansible 2.4.2.0  
 
-Run these commands on Ubuntu 16.04 to install Ansible:
+Run these commands on Ubuntu 16.04 to install these tools:
 ```
 sudo -s
 apt-get update
