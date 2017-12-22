@@ -152,7 +152,7 @@ ansible-playbook pb.check.lldp.yml
 
 ##### How to check the BGP states 
 ```
-ansible-playbook pb.check.lldp.yml
+ansible-playbook pb.check.bgp.yml
 ```
 
 ##### How to check from devices operationnal state if desirated vlans are presents
@@ -162,12 +162,12 @@ ansible-playbook pb.check.vlans.yml
 
 ##### How to collects the facts on junos devices and print them on Ansible
 ```
-ansible-playbook pb.print.facts.yml playbook 
+ansible-playbook pb.print.facts.yml
 ```
 
 ##### How to run all the above tests in one single command
 ```
-ansible-playbook pb.check.vlans.yml
+ansible-playbook pb.check.all.yml
 ```
 
 
