@@ -47,7 +47,7 @@ All playbooks are named **pb.*.yml**
 
 ##### Ansible Playbooks to audit the network
 - [**pb.check.all.yml**](pb.check.all) playbook include these playbooks:
- - [**pb.check.ports.availability.yml**](pb.check.ports.availability.yml) playbook checks if Ansible can connect on SSH and NETCONF ports on Junos devices
+ - [**pb.check.ports.availability.yml**](pb.check.ports.availability.yml) playbook checks if Ansible can connect on some ports on Junos devices (ssh, telnet, ftp, netconf)
  - [**pb.check.interfaces.yml**](pb.check.interfaces.yml) playbook checks the status of the interfaces on Junos devices
  - [**pb.check.lldp.yml**](pb.check.lldp.yml) playbook check the physical topology 
  - [**pb.check.bgp.yml**](pb.check.bgp.yml) playbook check the BGP states 
