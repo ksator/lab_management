@@ -1,33 +1,33 @@
 # What to find in this repository
 
-Automation content for data center network fabric.  
+Junos automation content for data center network fabric.  
 Based on:    
 - Junos devices
 - Ansible, PyEZ, JSNAPy
 
 # Repository structure 
 
-## Ansible inventory file
+### Ansible inventory file
 The ansible inventory file is [**hosts**](hosts) file at the root of the repository.    
 
-## Ansible configuration file
+### Ansible configuration file
 The ansible configuration file is [**ansible.cfg**](ansible.cfg) at the root of the repository.   
 
-## host_vars directory 
+### host_vars directory 
 The variables are yml files under [**group_vars**](group_vars) and [**host_vars**](host_vars) directories.  
 host specific variables under the directory [**host_vars**](host_vars).   
 
-## group_vars directory 
+### group_vars directory 
 The variables are yml files under [**group_vars**](group_vars) and [**host_vars**](host_vars) directories.  
 group related variables are yml files under the directory [**group_vars**](group_vars)
 
-## templates directory
+### templates directory
 The directory [**templates**](templates) has the jinja templates
 
-## render directory
+### render directory
 The directory [**render**](render) has the files generated from the jinja templates and variables
 
-## Ansible Playbooks
+### Ansible Playbooks
 The ansible playbooks are at the root of the repository.  
 All playbooks are named **pb.*.yml**      
 - [**pb.generate.variables.structure.yml**](pb.generate.variables.structure.yml) playbook was used at the beginning of the project to create some of the directories and files used to define yaml variables. 
@@ -48,38 +48,38 @@ All playbooks are named **pb.*.yml**
  - [**pb.check.vlans.yml**](pb.check.vlans.yml) playbook check from devices operationnal state if desirated vlans are presents
  - [**pb.print.facts.yml**](pb.print.facts.yml) playbook collects the facts on junos devices and print them on Ansible
 
-## cli directory 
+### cli directory 
 The directory [**cli**](cli) has the output of the Junos show commands from the playbook [**pb.collect.cli.output.yml**](pb.collect.cli.output.yml)
 
-## command directory 
+### command directory 
 The directory [**command**](command) has the output of the Junos show commands from the playbook [**pb.collect.commands.output.yml**](pb.collect.commands.output.yml) 
 
-## facts directory
+### facts directory
 The directory [**facts**](facts) has the Junos facts collected by the playbook [**pb.collect.facts.yml**](pb.collect.facts.yml) 
 
-## rollback directory
+### rollback directory
 The directory [**rollback**](rollback) has the Junos configuration diffs from rollbacks done with ansible playbook [**pb.rollback.yml**](pb.rollback.yml) 
 
-## backup directory
+### backup directory
 The directory [**backup**](backup) has the junos configuration files automatically backed up by the playbooks: 
   - [**pb.configure.lines.yml**](pb.configure.lines.yml) 
   - [**pb.configure.golden.yml**](pb.configure.golden.yml)
   - [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml)
 
-## configuration directory
+### configuration directory
 The directory [**configuration**](configuration) has the junos configuration files backed up when we ran the playbook [**pb.collect.configuration.yml**](pb.collect.configuration.yml) 
 
-## golden directory
+### golden directory
 The directory [**golden_configuration**](golden_configuration) has the junos configuration files we need to push on the junos devices before to start the demo. 
 - The playbook [**pb.collect.golden.configuration.yml**](pb.collect.golden.configuration.yml) collects the running configuration on the junos devices and updates the directory [**/golden_configuration/ebgp_underlay_evpn_vxlan_overlay/**](/golden_configuration/ebgp_underlay_evpn_vxlan_overlay/) with these files.
 - The playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) overwrites the running configuration on the junos devices with the files in the directory [**/golden_configuration/ebgp_underlay_evpn_vxlan_overlay/**](/golden_configuration/ebgp_underlay_evpn_vxlan_overlay/)
 
-## python directory
+### python directory
 The directory [**python**](python) has the python scripts
 - The file [**python/inventory.py**](python/inventory.py) create a python list of devices ip address based on the ansible inventory file [**hosts**](hosts)
 - The file [**python/locate.mac.address.py**](python/locate.mac.address.py) indicates where is locate a given mac address in the network.
 
-## jsnapy directory
+### jsnapy directory
 The directory [**jsnapy**](jsnapy) has the jsnapy content
 - The directory [**jsnapy/snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy
 - The directory [**jsnapy/testfiles**](jsnapy/testfiles) has the testfiles taken by jsnapy
@@ -91,7 +91,7 @@ The directory [**jsnapy**](jsnapy) has the jsnapy content
 sudo -s
 ```
 
-## Install PyEZ, Ansible, JSNAPy
+### Install PyEZ, Ansible, JSNAPy
 
 This repository has been tested using Ansible 2.4.2.0  
 
