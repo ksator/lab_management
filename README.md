@@ -157,10 +157,11 @@ The commands output are available in the cli directory
 ls cli
 ```
 ##### How to pass show commands on junos devices and collect the output (alternative automation content)
-Execute this playbook
+Edit the show commands you want to use
 ```
-ansible-playbook pb.collect.commands.output.yml
-```Execute this playbook
+vi pb.collect.commands.output.yml
+```
+Execute this playbook
 ```
 ansible-playbook pb.collect.commands.output.yml
 ```
