@@ -141,34 +141,34 @@ ansible-playbook pb.check.ports.availability.yml
 ```
 
 ##### How to check the status of interfaces on Junos devices
-'''
+```
 ansible-playbook pb.check.interfaces.yml
-'''
+```
 
 ##### How to check the physical topology 
-'''
+```
 ansible-playbook pb.check.lldp.yml
-'''
+```
 
 ##### How to check the BGP states 
-'''
+```
 ansible-playbook pb.check.lldp.yml
-'''
+```
 
 ##### How to check from devices operationnal state if desirated vlans are presents
-'''
+```
 ansible-playbook pb.check.vlans.yml
-'''
+```
 
 ##### How to collects the facts on junos devices and print them on Ansible
-'''
+```
 ansible-playbook pb.print.facts.yml playbook 
-'''
+```
 
 ##### How to run all the above tests in one single command
-'''
+```
 ansible-playbook pb.check.vlans.yml
-'''
+```
 
 
 ### How to retrieves and print the facts from junos devices: 
