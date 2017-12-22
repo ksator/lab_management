@@ -240,7 +240,9 @@ ansible-playbook pb.configure.lines.yml
 ls backup/
 ```
 
-##### How to rollback a device or a network
+##### How to rollback the running configuration to a previous state
+
+a device or a network
 ```
 ansible-playbook pb.rollback.yml --extra-vars rbid=1
 ls rollback/
@@ -287,7 +289,7 @@ ansible-playbook pb.print.facts.yml
 ansible-playbook pb.check.all.yml
 ```
 
-
+### python
 
 # Looking for help 
 
