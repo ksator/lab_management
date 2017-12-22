@@ -137,9 +137,12 @@ sudo -s
 # How to collect data from the network 
 
 ### How to collect the facts from junos devices
-
+Run this command to collect the facts
 ```
 ansible-playbook pb.collect.facts.yml
+```
+The facts are available in the facts directory
+```
 ls facts/
 ```
 
@@ -148,7 +151,7 @@ Edit the show commands you want to use
 ```
 vi cli.yml
 ```
-Execute this playbook
+Run this command
 ```
 ansible-playbook pb.collect.cli.output.yml
 ```
@@ -161,7 +164,7 @@ Edit the show commands you want to use
 ```
 vi pb.collect.commands.output.yml
 ```
-Execute this playbook
+Run this command
 ```
 ansible-playbook pb.collect.commands.output.yml
 ```
@@ -171,11 +174,12 @@ ls command
 ```
 
 ### How to collect the junos configuration file from junos devices 
-
+Run this command to collect the junos configuration file for a device/group
 ```
 ansible-playbook pb.collect.configuration.yml --limit DC1
 ls configuration/
 ```
+Run this command to collect the junos configuration file for the whole network
 ```
 ansible-playbook pb.collect.configuration.yml
 ls configuration/
@@ -183,10 +187,12 @@ ls configuration/
 
 ### How to collect the running configuration on the junos devices and update the golden configuration files (the initial configuration files that will be used at the beginning of the next demo) 
 
+Run this command to do it for a device/group
 ```
 ansible-playbook pb.collect.golden.yml --limit QFX5110
 ls golden_configuration
 ```
+Run this command to do it for the whole network
 ```
 ansible-playbook pb.collect.golden.yml 
 ls golden_configuration
@@ -196,11 +202,11 @@ ls golden_configuration
 # How to configure the newtwork
 
 ### How to overwrite the running configuration on junos devices with their golden confiiguration (i.e how to restore the initial configuration files at the beginning of each demo)
-How to execute this playbook for one device/group
+Run this command to do it for a device/group
 ```
 ansible-playbook pb.configure.golden.yml --limit QFX10K2-176
 ```
-How to execute this playbook
+Run this command to do it for the whole network
 ```
 ansible-playbook pb.configure.golden.yml
 ```
