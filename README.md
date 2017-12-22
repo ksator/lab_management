@@ -124,13 +124,14 @@ ansible-galaxy list
 ```
 sudo -s
 git clone http://172.25.90.133/root/PoC-80.git
-cd PoC-80/
+ls PoC-80/
 ```
 
 # How to use this repo
 
 ```
 sudo -s
+cd PoC-80/
 ```
 
 ### How to audit the network
