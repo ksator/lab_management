@@ -1,7 +1,8 @@
 # What to find in this repository
 
 Junos automation content for data center network fabric.  
-Based on:    
+It is used to manage a lab.  
+It is based on:    
 - Junos devices
 - Ansible, PyEZ, JSNAPy
 
