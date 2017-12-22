@@ -144,14 +144,28 @@ ls facts/
 ```
 
 ##### How to pass show commands on junos devices and collect the output
-
+Edit the show commands you want to use
 ```
 vi cli.yml
+```
+Execute this playbook
+```
 ansible-playbook pb.collect.cli.output.yml
+```
+The commands output are available in the cli directory
+```
 ls cli
 ```
+##### How to pass show commands on junos devices and collect the output (alternative automation content)
+Execute this playbook
 ```
 ansible-playbook pb.collect.commands.output.yml
+```Execute this playbook
+```
+ansible-playbook pb.collect.commands.output.yml
+```
+The commands output are available in the command directory
+```
 ls command
 ```
 
