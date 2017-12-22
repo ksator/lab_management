@@ -135,6 +135,8 @@ cd PoC-80/
 sudo -s
 ```
 
+You can now use the local copy of this remote repository.
+
 # How to locate a mac address in the network
 Execute this python script
 ```
@@ -359,7 +361,35 @@ Run this command to do it for the whole network
 ansible-playbook pb.configure.golden.yml --check --diff 
 ```
 
-# python
+# How to use JSNAPy content
+
+### How to validate there is no active alarms on the devices
+run this command to do it
+```
+jsnapy --snapcheck -f jsnapy/cfg_file_snapcheck_alarms.yml --folder jsnapy
+```
+if you want to read the snapshots, run this command:
+```
+ls jsnapy/snapshots
+```
+### How to see if there are interfaces errors
+run this command to do it
+```
+jsnapy --snapcheck -f jsnapy/cfg_file_snapcheck_interfaces.yml --folder jsnapy
+```
+if you want to read the snapshots, run this command:
+```
+ls jsnapy/snapshots
+```
+### How to validate some BGP details
+run this command to do it
+```
+jsnapy --snapcheck -f jsnapy/cfg_file_snapcheck_bgp.yml --folder jsnapy
+```
+if you want to read the snapshots, run this command:
+```
+ls jsnapy/snapshots
+```
 
 # Looking for help 
 
