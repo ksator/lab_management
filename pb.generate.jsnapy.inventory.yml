@@ -1,0 +1,102 @@
+---
+ - name: create fragments directories 
+   hosts: localhost
+   gather_facts: no
+   
+   tasks:
+    
+   - name: create fragments directories
+     file: 
+      path: "{{playbook_dir}}/{{ item }}" 
+      state: directory
+     with_items: 
+      - fragments
+      - fragments/EX
+      - fragments/QFX
+      - fragments/SRX
+      - fragments/JUNOS
+      - fragments/DC1
+      - fragments/DC2
+      - fragments/QFX5100
+      - fragments/QFX10K2
+      - fragments/QFX5110
+   
+
+ - name: render jsnapy inventory for EX
+   hosts: EX
+   connection: local
+   gather_facts: no
+
+   tasks:
+
+    - name: Render JSNAPy inventory for EX
+      template: 
+        src: templates/jsnapy_inventory.j2 
+        dest: "{{ playbook_dir }}/fragments/EX/{{ inventory_hostname }}.yml"
+
+ - name: render jsnapy inventory for SRX
+   hosts: SRX
+   connection: local
+   gather_facts: no
+
+   tasks:
+
+    - name: Render JSNAPy inventory for SRX
+      template:
+        src: templates/jsnapy_inventory.j2
+        dest: "{{ playbook_dir }}/fragments/SRX/{{ inventory_hostname }}.yml"
+
+ - name: render jsnapy inventory for QFX
+   hosts: QFX
+   connection: local
+   gather_facts: no
+
+   tasks:
+
+    - name: Render JSNAPy inventory for QFX
+      template:
+        src: templates/jsnapy_inventory.j2
+        dest: "{{ playbook_dir }}/fragments/QFX/{{ inventory_hostname }}.yml"
+
+
+ - name: render jsnapy inventory for QFX5100
+   hosts: QFX5100
+   connection: local
+   gather_facts: no
+
+   tasks:
+
+    - name: Render JSNAPy inventory for QFX5100
+      template:
+        src: templates/jsnapy_inventory.j2
+        dest: "{{ playbook_dir }}/fragments/QFX5100/{{ inventory_hostname }}.yml"
+
+
+
+ - name: assemble fragments 
+   hosts: localhost
+   gather_facts: no
+
+
+   tasks:
+
+    - name: Assembling fragments
+      assemble: 
+        src: "{{ playbook_dir }}/fragments/{{ item }}" 
+        dest: "{{ playbook_dir }}/fragments/jsnapy_{{ item }}_devices.yml"
+      with_items: 
+        - EX
+        - SRX
+        - QFX
+        - QFX5100
+        - DC1
+        - DC2 
+        - JUNOS
+
+    - name: add groups in JSNAPy inventory files
+      lineinfile:
+        state: present
+        insertbefore: BOF
+        path: "{{ playbook_dir }}/fragments/jsnapy_QFX5100_devices.yml"
+        line: "QFX5100:"
+ 

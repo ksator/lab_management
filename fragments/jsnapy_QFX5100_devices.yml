@@ -1,0 +1,10 @@
+QFX5100:
+  - 172.25.90.183:
+     username: lab 
+     passwd: jnpr123
+  - 172.25.90.186:
+     username: lab 
+     passwd: jnpr123
+  - 172.25.90.192:
+     username: lab 
+     passwd: jnpr123

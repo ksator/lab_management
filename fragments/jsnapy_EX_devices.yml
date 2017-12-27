@@ -1,0 +1,9 @@
+  - 172.25.90.190:
+     username: lab 
+     passwd: jnpr123
+  - 172.25.90.191:
+     username: lab 
+     passwd: jnpr123
+  - 172.25.90.193:
+     username: lab 
+     passwd: jnpr123
