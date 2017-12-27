@@ -18,8 +18,13 @@ import sys
 from inventory import ansible_inventory_to_python_list
 devices_list=ansible_inventory_to_python_list('hosts')
 
+from  credentials import ansible_credentials_to_python_credentials
+user = ansible_credentials_to_python_credentials()['user']
+password = ansible_credentials_to_python_credentials()['password']
+
+
 for dev_item in devices_list:
-    dev=Device(host=dev_item, user="lab", password="jnpr123")
+    dev=Device(host=dev_item, user=user, password=password)
     try:
         dev.open()
     except ConnectRefusedError:
