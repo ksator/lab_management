@@ -92,11 +92,30 @@
         - DC1
         - DC2 
         - JUNOS
+        - QFX5110
+        - QFX10K2
 
     - name: add groups in JSNAPy inventory files
       lineinfile:
         state: present
         insertbefore: BOF
-        path: "{{ playbook_dir }}/fragments/jsnapy_QFX5100_devices.yml"
-        line: "QFX5100:"
+        path: "{{ playbook_dir }}/fragments/jsnapy_{{ item }}_devices.yml"
+        line: "{{ item }}:"
+      with_items: 
+        - EX
+        - QFX
+        - SRX
+        - JUNOS
+        - DC1
+        - DC2
+        - QFX5100
+        - QFX10K2
+        - QFX5110
+
+
+    - name: Assembling fragments
+      assemble:
+        regexp: jsnapy* 
+        src: "{{ playbook_dir }}/fragments/"
+        dest: "{{ playbook_dir }}/jsnapy/testfiles/devices.yml"
  

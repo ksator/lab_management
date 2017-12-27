@@ -1,0 +1,23 @@
+<alarm-information>
+<alarm-summary>
+<active-alarm-count>2</active-alarm-count>
+</alarm-summary>
+<alarm-detail>
+<alarm-time seconds="1505269417">
+2017-09-13 02:23:37
+</alarm-time>
+<alarm-class>Minor</alarm-class>
+<alarm-description>FPC 0 PEM 0 is not powered</alarm-description>
+<alarm-short-description>FPC 0 PEM 0 No Powe</alarm-short-description>
+<alarm-type>Chassis</alarm-type>
+</alarm-detail>
+<alarm-detail>
+<alarm-time seconds="1505269415">
+2017-09-13 02:23:35
+</alarm-time>
+<alarm-class>Minor</alarm-class>
+<alarm-description>FPC 2 PEM 1 is not powered</alarm-description>
+<alarm-short-description>FPC 2 PEM 1 No Powe</alarm-short-description>
+<alarm-type>Chassis</alarm-type>
+</alarm-detail>
+</alarm-information>

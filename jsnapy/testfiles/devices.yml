@@ -1,30 +1,81 @@
-SRX: 
-  - 172.25.90.188:
-     username: lab
-     passwd: jnpr123
-
-EX: 
+DC1:
+DC2:
+EX:
   - 172.25.90.190:
-     username: lab
+     username: lab 
      passwd: jnpr123
   - 172.25.90.191:
-     username: lab
+     username: lab 
      passwd: jnpr123
   - 172.25.90.193:
-     username: lab
+     username: lab 
      passwd: jnpr123
-
-QFX10K2: 
-  - 172.25.90.176: 
-     username: lab
+JUNOS:
+QFX10K2:
+QFX5100:
+  - 172.25.90.183:
+     username: lab 
+     passwd: jnpr123
+  - 172.25.90.186:
+     username: lab 
+     passwd: jnpr123
+  - 172.25.90.192:
+     username: lab 
+     passwd: jnpr123
+QFX5110:
+QFX:
+  - 172.25.90.174:
+     username: lab 
+     passwd: jnpr123
+  - 172.25.90.175:
+     username: lab 
+     passwd: jnpr123
+  - 172.25.90.176:
+     username: lab 
      passwd: jnpr123
   - 172.25.90.177:
-     username: lab
+     username: lab 
      passwd: jnpr123
   - 172.25.90.178:
-     username: lab
+     username: lab 
      passwd: jnpr123
   - 172.25.90.179:
-     username: lab
+     username: lab 
      passwd: jnpr123
-
+  - 172.25.90.180:
+     username: lab 
+     passwd: jnpr123
+  - 172.25.90.181:
+     username: lab 
+     passwd: jnpr123
+  - 172.25.90.182:
+     username: lab 
+     passwd: jnpr123
+  - 172.25.90.183:
+     username: lab 
+     passwd: jnpr123
+  - 172.25.90.186:
+     username: lab 
+     passwd: jnpr123
+  - 172.25.90.192:
+     username: lab 
+     passwd: jnpr123
+  - 172.25.90.169:
+     username: lab 
+     passwd: jnpr123
+  - 172.25.90.170:
+     username: lab 
+     passwd: jnpr123
+  - 172.25.90.171:
+     username: lab 
+     passwd: jnpr123
+  - 172.25.90.172:
+     username: lab 
+     passwd: jnpr123
+  - 172.25.90.173:
+     username: lab 
+     passwd: jnpr123
+SRX:
+  - 172.25.90.188:
+     username: lab 
+     passwd: jnpr123

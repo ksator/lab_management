@@ -1,3 +1,4 @@
+SRX:
   - 172.25.90.188:
      username: lab 
      passwd: jnpr123

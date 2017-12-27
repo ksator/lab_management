@@ -1,7 +1,7 @@
 # jsnapy --snapcheck -f jsnapy/cfg_file_snapcheck_alarms.yml --folder jsnapy
 hosts:
       - include: devices.yml
-        group: EX, SRX
+        group: EX, SRX, QFX
 tests:
       - test_file_snapcheck_alarms.yml
 

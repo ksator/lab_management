@@ -1,0 +1,23 @@
+<alarm-information>
+<alarm-summary>
+<active-alarm-count>2</active-alarm-count>
+</alarm-summary>
+<alarm-detail>
+<alarm-time seconds="1508355214">
+2017-10-18 19:33:34 UTC
+</alarm-time>
+<alarm-class>Major</alarm-class>
+<alarm-description>FPC Management1 Ethernet Link Down</alarm-description>
+<alarm-short-description>FPC MGMT1 Link Down</alarm-short-description>
+<alarm-type>Chassis</alarm-type>
+</alarm-detail>
+<alarm-detail>
+<alarm-time seconds="1508355192">
+2017-10-18 19:33:12 UTC
+</alarm-time>
+<alarm-class>Major</alarm-class>
+<alarm-description>FPC0: PEM 1 Not Powered</alarm-description>
+<alarm-short-description>PEM 1 No Power</alarm-short-description>
+<alarm-type>Chassis</alarm-type>
+</alarm-detail>
+</alarm-information>
