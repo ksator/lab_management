@@ -6,6 +6,10 @@ It is based on:
 - Junos devices
 - Ansible, PyEZ, JSNAPy
 
+Ansible is the source of truth, so: 
+- JSNAPy inventory file [**jsnapy/testfiles/devices.yml**](devices.yml) is created automatically based on the Ansible inventory file [**hosts**](hosts) and on Ansible variables file for devices credentials  [**/group_vars/JUNOS/credentials.yml**](/group_vars/JUNOS/credentials.yml)
+- Devices list for PyEZ is created automatically based on the Ansible inventory file [**hosts**](hosts) and on the Ansible variables file for devices credentials  [**/group_vars/JUNOS/credentials.yml**](/group_vars/JUNOS/credentials.yml)
+
 # Repository structure 
 
 ### Ansible inventory file
@@ -32,6 +36,9 @@ The directory [**render**](render) has the files generated from the jinja templa
 The ansible playbooks are at the root of the repository.  
 All playbooks are named **pb.*.yml**      
 - [**pb.generate.variables.structure.yml**](pb.generate.variables.structure.yml) playbook was used at the beginning of the project to create some of the directories and files used to define yaml variables. 
+- [**pb.generate.jsnapy.inventory.yml**](pb.generate.jsnapy.inventory.yml) playbook creates the JSNAPy inventory file [**jsnapy/testfiles/devices.yml**](devices.yml) based on the Ansible inventory file [**hosts**](hosts)
+
+
 
 ##### Ansible Playbooks to configure the network
 - [**pb.configure.golden.yml**](pb.configure.golden.yml) playbook overwrites the running configuration on the junos devices with the files in the directory [**golden_configuration**](golden_configuration). 
