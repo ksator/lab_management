@@ -1,0 +1,39 @@
+lldp_neighbor:
+  - command: show lldp neighbors
+  - iterate:
+      xpath: '//lldp-neighbor-information'
+      id: './lldp-local-interface'
+      tests:
+        - no-diff: lldp-remote-system-name
+          err: "Test Failed!! lldp-remote-system-name changed for <{{pre['lldp-local-interface']}}>! was <{{pre['lldp-remote-system-name']}}>, it is now <{{post['lldp-remote-system-name']}}> "
+          info: "Test succeeded!! lldp-remote-system-name is the same for <{{pre['lldp-local-interface']}}>. it is <{{pre['lldp-remote-system-name']}}>"
+          ignore-null: True
+        - list-not-less: lldp-remote-system-name
+          err: "Test Failed!! neighbor <{{pre['lldp-remote-system-name']}}> is missing in post snapshot"
+          info: "Test succeeded!! neighbor <{{pre['lldp-remote-system-name']}}> is still present in post snapshot"
+          ignore-null: True
+        - list-not-more: lldp-remote-system-name
+          err: "Test Failed!! neighbor <{{post['lldp-remote-system-name']}}> has been added in post snapshot"
+          info: "Test succeeded!! neighbor <{{post['lldp-remote-system-name']}}> was already present in pre snapshot"
+          ignore-null: True
+
+device_hostname: 
+ - command: show configuration groups POC_Lab system host-name | display xml 
+ - iterate:
+      xpath: '//configuration/groups'
+      id: 'name'
+      tests:
+        - no-diff: 'system/host-name'
+          err: "Test Failed!! host-name changed! was <{{pre['system/host-name']}}>, is now <{{post['system/host-name']}}>"
+          info: "Test succeeded!! host-name did not change. it is <{{post['system/host-name']}}>."
+
+device_SN: 
+ - command: show chassis hardware
+ - iterate:
+      xpath: '//chassis-inventory/chassis'
+      id: './serial-number'
+      tests:
+        - no-diff: serial-number
+          err: "Test Failed!! serial-number changed! was <{{pre['serial-number']}}>, it is now <{{post['serial-number']}}> "
+          info: "Test succeeded!! serial-number is the same. it is <{{pre['serial-number']}}>"
+

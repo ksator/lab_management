@@ -1,0 +1,352 @@
+<chassis-inventory>
+<chassis style="inventory">
+<name>Chassis</name>
+<serial-number>TA3713470272</serial-number>
+<description>Virtual Chassis</description>
+<chassis-module>
+<name>Routing Engine 0</name>
+<part-number>BUILTIN</part-number>
+<serial-number>BUILTIN</serial-number>
+<description>QFX Routing Engine</description>
+<clei-code>CMMNV10BRA</clei-code>
+<model-number>QFX5100-48S-AFO</model-number>
+</chassis-module>
+<chassis-module>
+<name>Routing Engine 1</name>
+<part-number>BUILTIN</part-number>
+<serial-number>BUILTIN</serial-number>
+<description>QFX Routing Engine</description>
+<clei-code>CMMNV10BRA</clei-code>
+<model-number>QFX5100-48S-AFO</model-number>
+</chassis-module>
+<chassis-module>
+<name>FPC 0</name>
+<version>REV 11</version>
+<part-number>650-049938</part-number>
+<serial-number>TA3714030671</serial-number>
+<description>QFX5100-48S-6Q</description>
+<clei-code>CMMNV10BRA</clei-code>
+<model-number>QFX5100-48S-AFO</model-number>
+<chassis-sub-module>
+<name>CPU</name>
+<part-number>BUILTIN</part-number>
+<serial-number>BUILTIN</serial-number>
+<description>FPC CPU</description>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>PIC 0</name>
+<part-number>BUILTIN</part-number>
+<serial-number>BUILTIN</serial-number>
+<description>48x10G-6x40G</description>
+<clei-code>CMMNV10BRA</clei-code>
+<model-number>QFX5100-48S-AFO</model-number>
+<chassis-sub-sub-module>
+<name>Xcvr 0</name>
+<version>REV 01</version>
+<part-number>740-021309</part-number>
+<serial-number>GA72009293</serial-number>
+<description>SFP+-10G-LR</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 1</name>
+<version>REV 01</version>
+<part-number>740-021309</part-number>
+<serial-number>GA72009429</serial-number>
+<description>SFP+-10G-LR</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 26</name>
+<version>REV 01</version>
+<part-number>740-011782</part-number>
+<serial-number>PB82A1Q</serial-number>
+<description>SFP-SX</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 48</name>
+<version>REV 01</version>
+<part-number>740-056705</part-number>
+<serial-number>UTK10JS</serial-number>
+<description>QSFP+40GE-LX4</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 49</name>
+<version>REV 01</version>
+<part-number>740-056705</part-number>
+<serial-number>UTD0VUK</serial-number>
+<description>QSFP+40GE-LX4</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 50</name>
+<version>REV 01</version>
+<part-number>740-038623</part-number>
+<serial-number>MOC15526231289</serial-number>
+<description>QSFP+-40G-CU1M</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 51</name>
+<version>REV 01</version>
+<part-number>740-038624</part-number>
+<serial-number>MOC13056240261</serial-number>
+<description>QSFP+-40G-CU3M</description>
+</chassis-sub-sub-module>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Power Supply 0</name>
+<version>REV 03</version>
+<part-number>740-041741</part-number>
+<serial-number>1GA23431002</serial-number>
+<description>JPSU-650W-AC-AFO</description>
+<clei-code>CMUPABHBAA</clei-code>
+<model-number>JPSU-650W-AC-AFO</model-number>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Power Supply 1</name>
+<version>REV 03</version>
+<part-number>740-041741</part-number>
+<serial-number>1GA23431003</serial-number>
+<description>JPSU-650W-AC-AFO</description>
+<clei-code>CMUPABHBAA</clei-code>
+<model-number>JPSU-650W-AC-AFO</model-number>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Fan Tray 0</name>
+<description>QFX5100 Fan Tray 0, Front to Back Airflow - AFO</description>
+<model-number>QFX5100-FANAFO</model-number>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Fan Tray 1</name>
+<description>QFX5100 Fan Tray 1, Front to Back Airflow - AFO</description>
+<model-number>QFX5100-FANAFO</model-number>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Fan Tray 2</name>
+<description>QFX5100 Fan Tray 2, Front to Back Airflow - AFO</description>
+<model-number>QFX5100-FANAFO</model-number>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Fan Tray 3</name>
+<description>QFX5100 Fan Tray 3, Front to Back Airflow - AFO</description>
+<model-number>QFX5100-FANAFO</model-number>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Fan Tray 4</name>
+<description>QFX5100 Fan Tray 4, Front to Back Airflow - AFO</description>
+<model-number>QFX5100-FANAFO</model-number>
+</chassis-sub-module>
+</chassis-module>
+<chassis-module>
+<name>FPC 1</name>
+<version>REV 09</version>
+<part-number>650-049938</part-number>
+<serial-number>TA3713470272</serial-number>
+<description>QFX5100-48S-6Q</description>
+<clei-code>CMMNV10BRA</clei-code>
+<model-number>QFX5100-48S-AFO</model-number>
+<chassis-sub-module>
+<name>CPU</name>
+<part-number>BUILTIN</part-number>
+<serial-number>BUILTIN</serial-number>
+<description>FPC CPU</description>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>PIC 0</name>
+<part-number>BUILTIN</part-number>
+<serial-number>BUILTIN</serial-number>
+<description>48x10G-6x40G</description>
+<clei-code>CMMNV10BRA</clei-code>
+<model-number>QFX5100-48S-AFO</model-number>
+<chassis-sub-sub-module>
+<name>Xcvr 0</name>
+<version>REV 01</version>
+<part-number>740-031981</part-number>
+<serial-number>E3F2055059</serial-number>
+<description>SFP+-10G-LR</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 1</name>
+<version>REV 01</version>
+<part-number>740-021308</part-number>
+<serial-number>AQL00KE</serial-number>
+<description>SFP+-10G-SR</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 2</name>
+<version>REV 01</version>
+<part-number>740-021308</part-number>
+<serial-number>APE0G0R</serial-number>
+<description>SFP+-10G-SR</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 48</name>
+<version>REV 01</version>
+<part-number>740-056705</part-number>
+<serial-number>UVC04X9</serial-number>
+<description>QSFP+40GE-LX4</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 49</name>
+<version>REV 01</version>
+<part-number>740-056705</part-number>
+<serial-number>UUH248Q</serial-number>
+<description>QSFP+40GE-LX4</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 50</name>
+<version>REV 01</version>
+<part-number>740-038623</part-number>
+<serial-number>MOC15526231289</serial-number>
+<description>QSFP+-40G-CU1M</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 51</name>
+<version>REV 01</version>
+<part-number>740-038624</part-number>
+<serial-number>MOC13136240071</serial-number>
+<description>QSFP+-40G-CU3M</description>
+</chassis-sub-sub-module>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Power Supply 0</name>
+<version>REV 03</version>
+<part-number>740-041741</part-number>
+<serial-number>1GA23110841</serial-number>
+<description>JPSU-650W-AC-AFO</description>
+<clei-code>CMUPABHBAA</clei-code>
+<model-number>JPSU-650W-AC-AFO</model-number>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Fan Tray 0</name>
+<description>QFX5100 Fan Tray 0, Front to Back Airflow - AFO</description>
+<model-number>QFX5100-FANAFO</model-number>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Fan Tray 1</name>
+<description>QFX5100 Fan Tray 1, Front to Back Airflow - AFO</description>
+<model-number>QFX5100-FANAFO</model-number>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Fan Tray 2</name>
+<description>QFX5100 Fan Tray 2, Front to Back Airflow - AFO</description>
+<model-number>QFX5100-FANAFO</model-number>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Fan Tray 3</name>
+<description>QFX5100 Fan Tray 3, Front to Back Airflow - AFO</description>
+<model-number>QFX5100-FANAFO</model-number>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Fan Tray 4</name>
+<description>QFX5100 Fan Tray 4, Front to Back Airflow - AFO</description>
+<model-number>QFX5100-FANAFO</model-number>
+</chassis-sub-module>
+</chassis-module>
+<chassis-module>
+<name>FPC 2</name>
+<version>REV 06</version>
+<part-number>650-064380</part-number>
+<serial-number>TA3716170072</serial-number>
+<description>QFX5100-48S-6Q</description>
+<clei-code>CMMTZ00ARB</clei-code>
+<model-number>QFX5100-48S-AFO</model-number>
+<chassis-sub-module>
+<name>CPU</name>
+<part-number>BUILTIN</part-number>
+<serial-number>BUILTIN</serial-number>
+<description>FPC CPU</description>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>PIC 0</name>
+<part-number>BUILTIN</part-number>
+<serial-number>BUILTIN</serial-number>
+<description>48x10G-6x40G</description>
+<clei-code>CMMTZ00ARB</clei-code>
+<model-number>QFX5100-48S-AFO</model-number>
+<chassis-sub-sub-module>
+<name>Xcvr 0</name>
+<version>REV 01</version>
+<part-number>740-021309</part-number>
+<serial-number>GA72009463</serial-number>
+<description>SFP+-10G-LR</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 1</name>
+<version>REV 01</version>
+<part-number>740-031981</part-number>
+<serial-number>3YT012408489</serial-number>
+<description>SFP+-10G-LR</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 48</name>
+<version>REV 01</version>
+<part-number>740-056705</part-number>
+<serial-number>UU307KX</serial-number>
+<description>QSFP+40GE-LX4</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 49</name>
+<version>REV 01</version>
+<part-number>740-056705</part-number>
+<serial-number>UV51SXK</serial-number>
+<description>QSFP+40GE-LX4</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 50</name>
+<version>REV 01</version>
+<part-number>740-038624</part-number>
+<serial-number>MOC13056240261</serial-number>
+<description>QSFP+-40G-CU3M</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 51</name>
+<version>REV 01</version>
+<part-number>740-038624</part-number>
+<serial-number>MOC13136240071</serial-number>
+<description>QSFP+-40G-CU3M</description>
+</chassis-sub-sub-module>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Power Supply 0</name>
+<version>REV 04</version>
+<part-number>740-041741</part-number>
+<serial-number>1GA26100446</serial-number>
+<description>JPSU-650W-AC-AFO</description>
+<clei-code>CMUPABHBAB</clei-code>
+<model-number>JPSU-650W-AC-AFO</model-number>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Power Supply 1</name>
+<version>REV 04</version>
+<part-number>740-041741</part-number>
+<serial-number>1GA26101024</serial-number>
+<description>JPSU-650W-AC-AFO</description>
+<clei-code>CMUPABHBAB</clei-code>
+<model-number>JPSU-650W-AC-AFO</model-number>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Fan Tray 0</name>
+<description>QFX5100 Fan Tray 0, Front to Back Airflow - AFO</description>
+<model-number>QFX5100-FANAFO</model-number>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Fan Tray 1</name>
+<description>QFX5100 Fan Tray 1, Front to Back Airflow - AFO</description>
+<model-number>QFX5100-FANAFO</model-number>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Fan Tray 2</name>
+<description>QFX5100 Fan Tray 2, Front to Back Airflow - AFO</description>
+<model-number>QFX5100-FANAFO</model-number>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Fan Tray 3</name>
+<description>QFX5100 Fan Tray 3, Front to Back Airflow - AFO</description>
+<model-number>QFX5100-FANAFO</model-number>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Fan Tray 4</name>
+<description>QFX5100 Fan Tray 4, Front to Back Airflow - AFO</description>
+<model-number>QFX5100-FANAFO</model-number>
+</chassis-sub-module>
+</chassis-module>
+</chassis>
+</chassis-inventory>

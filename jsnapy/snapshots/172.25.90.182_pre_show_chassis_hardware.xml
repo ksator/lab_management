@@ -1,0 +1,109 @@
+<chassis-inventory>
+<chassis style="inventory">
+<name>Chassis</name>
+<serial-number>DA719</serial-number>
+<description>QFX10002-36Q</description>
+<chassis-module>
+<name>CB 0</name>
+</chassis-module>
+<chassis-module>
+<name>Routing Engine 0</name>
+<part-number>BUILTIN</part-number>
+<serial-number>BUILTIN</serial-number>
+<description>RE-QFX10002-36Q</description>
+<clei-code>CMMTM00ARA</clei-code>
+<model-number>QFX10002-36Q-CHAS</model-number>
+</chassis-module>
+<chassis-module>
+<name>FPC 0</name>
+<version>REV 26</version>
+<part-number>750-059497</part-number>
+<serial-number>ACNJ5643</serial-number>
+<description>QFX10002-36Q</description>
+<clei-code>CMMTM00ARA</clei-code>
+<model-number>QFX10002-36Q-CHAS</model-number>
+<chassis-sub-module>
+<name>CPU</name>
+<part-number>BUILTIN</part-number>
+<serial-number>BUILTIN</serial-number>
+<description>FPC CPU</description>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>PIC 0</name>
+<part-number>BUILTIN</part-number>
+<serial-number>BUILTIN</serial-number>
+<description>36X40G</description>
+<clei-code>CMMTM00ARA</clei-code>
+<model-number>QFX10002-36Q-CHAS</model-number>
+<chassis-sub-sub-module>
+<name>Xcvr 0</name>
+<version>REV 01</version>
+<part-number>740-056705</part-number>
+<serial-number>UUH24AT</serial-number>
+<description>QSFP+40GE-LX4</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 1</name>
+<version>REV 01</version>
+<part-number>740-056705</part-number>
+<serial-number>UTM0JUA</serial-number>
+<description>QSFP+40GE-LX4</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 3</name>
+<version>REV 01</version>
+<part-number>740-032986</part-number>
+<serial-number>QB430399</serial-number>
+<description>QSFP+-40G-SR4</description>
+</chassis-sub-sub-module>
+<chassis-sub-sub-module>
+<name>Xcvr 6</name>
+<version>REV 01</version>
+<part-number>740-032986</part-number>
+<serial-number>QB430404</serial-number>
+<description>QSFP+-40G-SR4</description>
+</chassis-sub-sub-module>
+</chassis-sub-module>
+<chassis-sub-module>
+<name>Mezz</name>
+<version>REV 02</version>
+<part-number>711-059316</part-number>
+<serial-number>ACNG9260</serial-number>
+<description>QFX10002 36X40G Mezz</description>
+</chassis-sub-module>
+</chassis-module>
+<chassis-module>
+<name>Power Supply 0</name>
+<version>REV 03</version>
+<part-number>740-054405</part-number>
+<serial-number>1EDN5345747</serial-number>
+<description>AC AFO 1600W PSU</description>
+<clei-code>CMUPADHBAA</clei-code>
+<model-number>JPSU-1600W-AC-AFO</model-number>
+</chassis-module>
+<chassis-module>
+<name>Power Supply 1</name>
+<version>REV 03</version>
+<part-number>740-054405</part-number>
+<serial-number>1EDN5243288</serial-number>
+<description>AC AFO 1600W PSU</description>
+<clei-code>CMUPADHBAA</clei-code>
+<model-number>JPSU-1600W-AC-AFO</model-number>
+</chassis-module>
+<chassis-module>
+<name>Fan Tray 0</name>
+<description>QFX10002 Fan Tray 0, Front to Back Airflow - AFO</description>
+<model-number>QFX10002, Assy,Sub,80mm Fan Tray,AFO-AFO</model-number>
+</chassis-module>
+<chassis-module>
+<name>Fan Tray 1</name>
+<description>QFX10002 Fan Tray 1, Front to Back Airflow - AFO</description>
+<model-number>QFX10002, Assy,Sub,80mm Fan Tray,AFO-AFO</model-number>
+</chassis-module>
+<chassis-module>
+<name>Fan Tray 2</name>
+<description>QFX10002 Fan Tray 2, Front to Back Airflow - AFO</description>
+<model-number>QFX10002, Assy,Sub,80mm Fan Tray,AFO-AFO</model-number>
+</chassis-module>
+</chassis>
+</chassis-inventory>

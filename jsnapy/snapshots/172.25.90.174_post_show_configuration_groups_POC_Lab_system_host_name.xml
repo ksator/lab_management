@@ -1,0 +1,8 @@
+<configuration commit-seconds="1514459663" commit-localtime="2017-12-28 11:14:23 UTC" commit-user="lab">
+    <groups>
+        <name>POC_Lab</name>
+        <system>
+            <host-name>QFX10K2-174</host-name>
+        </system>
+    </groups>
+</configuration>

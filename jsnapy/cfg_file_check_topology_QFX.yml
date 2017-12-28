@@ -1,0 +1,17 @@
+'''
+jsnapy --snap pre -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy
+ls jsnapy/snapshots/
+
+jsnapy --snap post -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy
+ls jsnapy/snapshots/
+
+jsnapy --check pre post -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy
+
+jsnapy --check pre post -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy -v -t  172.25.90.174
+'''
+hosts:
+      - include: devices.yml
+        group: QFX
+tests:
+      - test_file_check_topology_QFX.yml
+

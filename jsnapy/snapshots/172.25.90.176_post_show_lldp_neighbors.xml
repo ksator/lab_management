@@ -1,0 +1,74 @@
+<lldp-neighbors-information style="brief">
+<lldp-neighbor-information>
+<lldp-local-port-id>et-0/0/6</lldp-local-port-id>
+<lldp-local-parent-interface-name>-</lldp-local-parent-interface-name>
+<lldp-remote-chassis-id-subtype>Mac address</lldp-remote-chassis-id-subtype>
+<lldp-remote-chassis-id>44:aa:50:b2:c7:e0</lldp-remote-chassis-id>
+<lldp-remote-port-description>et-0/0/48</lldp-remote-port-description>
+<lldp-remote-system-name>QFX5110-173</lldp-remote-system-name>
+</lldp-neighbor-information>
+<lldp-neighbor-information>
+<lldp-local-port-id>et-0/0/5</lldp-local-port-id>
+<lldp-local-parent-interface-name>-</lldp-local-parent-interface-name>
+<lldp-remote-chassis-id-subtype>Mac address</lldp-remote-chassis-id-subtype>
+<lldp-remote-chassis-id>44:aa:50:b2:d1:e0</lldp-remote-chassis-id>
+<lldp-remote-port-description>et-0/0/48</lldp-remote-port-description>
+<lldp-remote-system-name>QFX5110-172</lldp-remote-system-name>
+</lldp-neighbor-information>
+<lldp-neighbor-information>
+<lldp-local-port-id>et-0/0/2</lldp-local-port-id>
+<lldp-local-parent-interface-name>-</lldp-local-parent-interface-name>
+<lldp-remote-chassis-id-subtype>Mac address</lldp-remote-chassis-id-subtype>
+<lldp-remote-chassis-id>44:aa:50:f9:1c:78</lldp-remote-chassis-id>
+<lldp-remote-port-description>et-0/0/0</lldp-remote-port-description>
+<lldp-remote-system-name>QFX10K2-180</lldp-remote-system-name>
+</lldp-neighbor-information>
+<lldp-neighbor-information>
+<lldp-local-port-id>et-0/0/0</lldp-local-port-id>
+<lldp-local-parent-interface-name>-</lldp-local-parent-interface-name>
+<lldp-remote-chassis-id-subtype>Mac address</lldp-remote-chassis-id-subtype>
+<lldp-remote-chassis-id>44:aa:50:f9:2c:78</lldp-remote-chassis-id>
+<lldp-remote-port-description>et-0/0/0</lldp-remote-port-description>
+<lldp-remote-system-name>QFX10K2-178</lldp-remote-system-name>
+</lldp-neighbor-information>
+<lldp-neighbor-information>
+<lldp-local-port-id>et-0/0/13</lldp-local-port-id>
+<lldp-local-parent-interface-name>-</lldp-local-parent-interface-name>
+<lldp-remote-chassis-id-subtype>Mac address</lldp-remote-chassis-id-subtype>
+<lldp-remote-chassis-id>44:aa:50:f9:7c:78</lldp-remote-chassis-id>
+<lldp-remote-port-description>et-0/0/12</lldp-remote-port-description>
+<lldp-remote-system-name>QFX10K2-175</lldp-remote-system-name>
+</lldp-neighbor-information>
+<lldp-neighbor-information>
+<lldp-local-port-id>et-0/0/3</lldp-local-port-id>
+<lldp-local-parent-interface-name>-</lldp-local-parent-interface-name>
+<lldp-remote-chassis-id-subtype>Mac address</lldp-remote-chassis-id-subtype>
+<lldp-remote-chassis-id>44:aa:50:fb:66:b4</lldp-remote-chassis-id>
+<lldp-remote-port-description>et-0/0/0</lldp-remote-port-description>
+<lldp-remote-system-name>QFX10K2-181</lldp-remote-system-name>
+</lldp-neighbor-information>
+<lldp-neighbor-information>
+<lldp-local-port-id>et-0/0/12</lldp-local-port-id>
+<lldp-local-parent-interface-name>-</lldp-local-parent-interface-name>
+<lldp-remote-chassis-id-subtype>Mac address</lldp-remote-chassis-id-subtype>
+<lldp-remote-chassis-id>44:aa:50:fc:76:b0</lldp-remote-chassis-id>
+<lldp-remote-port-description>et-0/0/12</lldp-remote-port-description>
+<lldp-remote-system-name>QFX10K2-174</lldp-remote-system-name>
+</lldp-neighbor-information>
+<lldp-neighbor-information>
+<lldp-local-port-id>et-0/0/4</lldp-local-port-id>
+<lldp-local-parent-interface-name>-</lldp-local-parent-interface-name>
+<lldp-remote-chassis-id-subtype>Mac address</lldp-remote-chassis-id-subtype>
+<lldp-remote-chassis-id>80:ac:ac:2a:9a:a0</lldp-remote-chassis-id>
+<lldp-remote-port-description>et-0/0/0</lldp-remote-port-description>
+<lldp-remote-system-name>QFX10K2-182</lldp-remote-system-name>
+</lldp-neighbor-information>
+<lldp-neighbor-information>
+<lldp-local-port-id>et-0/0/1</lldp-local-port-id>
+<lldp-local-parent-interface-name>-</lldp-local-parent-interface-name>
+<lldp-remote-chassis-id-subtype>Mac address</lldp-remote-chassis-id-subtype>
+<lldp-remote-chassis-id>80:ac:ac:77:c5:3c</lldp-remote-chassis-id>
+<lldp-remote-port-description>et-0/0/0</lldp-remote-port-description>
+<lldp-remote-system-name>QFX10K2-179</lldp-remote-system-name>
+</lldp-neighbor-information>
+</lldp-neighbors-information>
