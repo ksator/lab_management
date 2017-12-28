@@ -5,4 +5,5 @@ cli:
     - "show lldp neighbors"
     - "show bgp neighbor"
     - "show interfaces terse"
+    - "show vlans"
     - "show configuration"
