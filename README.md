@@ -100,10 +100,11 @@ The directory [**python**](python) has the python scripts
 - The file [**locate.mac.address.py**](python/locate.mac.address.py) indicates where is locate a given mac address in the network.
 
 ### jsnapy directory
-The directory [**jsnapy**](jsnapy) has the jsnapy content
+The directory [**jsnapy**](jsnapy) has the jsnapy content:
+- The directory [**jsnapy**](jsnapy) has the JSNAPy configuration files. They are named cfg_file_xxx.yml.
 - The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy
 - The directory [**testfiles**](jsnapy/testfiles) has: 
-    - the testfiles used by jsnapy
+    - the testfiles used by jsnapy. They are named test_file_xxx.yml.  
     - the JSNAPy inventory file [**devices.yml**](jsnapy/testfiles/devices.yml). It is created with the playbook [**pb.generate.jsnapy.inventory.yml**](pb.generate.jsnapy.inventory.yml), based on the Ansible inventory file [**hosts**](hosts) and on Ansible variables file for devices credentials  [**credentials.yml**](/group_vars/JUNOS/credentials.yml)
 
 
