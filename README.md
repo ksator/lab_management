@@ -91,9 +91,9 @@ The directory [**golden_configuration**](golden_configuration) has the junos con
 
 ### python directory
 The directory [**python**](python) has the python scripts
-- The file [**python/inventory.py**](python/inventory.py) creates a python list of devices ip address based on the ansible inventory file [**hosts**](hosts)
-- The file [**python/credentials.py**](python/credentials.py) get the devices username and password from the ansible variables file  [**credentials.yml**](/group_vars/JUNOS/credentials.yml)
-- The file [**python/locate.mac.address.py**](python/locate.mac.address.py) indicates where is locate a given mac address in the network.
+- The file [**inventory.py**](python/inventory.py) creates a python list of devices ip address based on the ansible inventory file [**hosts**](hosts)
+- The file [**credentials.py**](python/credentials.py) get the devices username and password from the ansible variables file  [**credentials.yml**](/group_vars/JUNOS/credentials.yml)
+- The file [**locate.mac.address.py**](python/locate.mac.address.py) indicates where is locate a given mac address in the network.
 
 ### jsnapy directory
 The directory [**jsnapy**](jsnapy) has the jsnapy content
