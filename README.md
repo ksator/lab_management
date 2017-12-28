@@ -1,13 +1,13 @@
 # Repository documentation structure
 
 - [**What to find in this repository**](README.md#what-to-find-in-this-repository)
-- [**Repository structure**](README.md#Repository-structure) 
-- [**How to locate a mac address in the network**](README.md#How-to-locate-a-mac-address-in-the-network)
-- [**How to collect data from the network**](README.md#How-to-collect-data-from-the-network) 
-- [**How to configure the network**](README.md#How-to-configure-the-network)
-- [**How to audit the network with Ansible**](README.md#How-to-audit-the-network-with-Ansible)
-- [**How to audit the network using JSNAPy**](README.md#How-to-audit-the-network-using-JSNAPy)
-- [**Looking for help**](README.md#Looking-for-help)
+- [**Repository structure**](README.md#repository-structure) 
+- [**How to locate a mac address in the network**](README.md#how-to-locate-a-mac-address-in-the-network)
+- [**How to collect data from the network**](README.md#how-to-collect-data-from-the-network) 
+- [**How to configure the network**](README.md#how-to-configure-the-network)
+- [**How to audit the network with Ansible**](README.md#how-to-audit-the-network-with-Ansible)
+- [**How to audit the network using JSNAPy**](README.md#how-to-audit-the-network-using-JSNAPy)
+- [**Looking for help**](README.md#looking-for-help)
 
 
 # What to find in this repository
