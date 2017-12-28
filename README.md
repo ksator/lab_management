@@ -103,6 +103,12 @@ The directory [**python**](python) has the python scripts
 The directory [**jsnapy**](jsnapy) has the jsnapy content
 - The directory [**jsnapy/snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy
 - The directory [**jsnapy/testfiles**](jsnapy/testfiles) has the testfiles taken by jsnapy
+- The directory [**jsnapy/testfiles**](jsnapy/testfiles)  has also the JSNAPy inventory file [**devices.yml**](jsnapy/testfiles/devices.yml).
+- The JSNAPy inventory file [**devices.yml**](jsnapy/testfiles/devices.yml) is created with 
+- 
+- - [**pb.generate.jsnapy.inventory.yml**](pb.generate.jsnapy.inventory.yml) playbook creates the JSNAPy inventory file [**devices.yml**](devices.yml) based on the Ansible inventory file [**hosts**](hosts)based on the Ansible inventory file [**hosts**](hosts) and on Ansible variables file for devices credentials  [**credentials.yml**](/group_vars/JUNOS/credentials.yml)
+
+
 
 
 # Requirements to use this repository
