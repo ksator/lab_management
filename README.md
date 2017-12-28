@@ -441,6 +441,7 @@ you can also limit this action to one device, and use the verbose mode:
 ```
 jsnapy --check pre post -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy -v -t  172.25.90.174
 ```
+Note: as xml output of "show lldp neighbors" is different on QFX and EX, it requires an different parsing. So for EX, use the file cfg_file_check_topology_EX.yml
 
 # Looking for help 
 
