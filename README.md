@@ -90,7 +90,7 @@ The directory [**golden_configuration**](golden_configuration) has the junos con
 - The playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) overwrites the running configuration on the junos devices with the files in the directory [**ebgp_underlay_evpn_vxlan_overlay**](/golden_configuration/ebgp_underlay_evpn_vxlan_overlay/)
 
 ### fragments directory
-The directory [**fragments**](fragments) is used by the playbook [**pb.generate.jsnapy.inventory.yml**](pb.generate.jsnapy.inventory.yml) to create the JSNAPy inventory file [**devices.yml**](devices.yml) based on the Ansible inventory file [**hosts**](hosts).
+The directory [**fragments**](fragments) is used by the playbook [**pb.generate.jsnapy.inventory.yml**](pb.generate.jsnapy.inventory.yml) to create the JSNAPy inventory file [**devices.yml**](devices.yml) based on the Ansible inventory file [**hosts**](hosts).  
 The directory [**fragments**](fragments)  doesnt contains the JSNAPy inventory file [**devices.yml**](devices.yml) itself.
 
 ### python directory
