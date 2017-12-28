@@ -4,7 +4,7 @@
 - [**Repository structure**](README.md#repository-structure) 
 - [**How to locate a mac address in the network**](README.md#how-to-locate-a-mac-address-in-the-network)
 - [**How to collect data from the network**](README.md#how-to-collect-data-from-the-network) 
-- [**How to configure the network**](README.md#how-to-configure-the-network)
+- [**How to configure the network**](README.md#how-to-configure-the-newtwork)
 - [**How to audit the network with Ansible**](README.md#how-to-audit-the-network-with-Ansible)
 - [**How to audit the network using JSNAPy**](README.md#how-to-audit-the-network-using-JSNAPy)
 - [**Looking for help**](README.md#looking-for-help)
