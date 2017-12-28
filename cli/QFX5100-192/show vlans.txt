@@ -1,0 +1,38 @@
+
+
+Routing instance        VLAN name             Tag          Interfaces
+default-switch          V2011                 2011     
+                                                           ae1.0*
+                                                           xe-0/0/3.0*
+default-switch          V2012                 2012     
+                                                           ae1.0*
+                                                           xe-0/0/3.0*
+default-switch          V2013                 2013     
+                                                           ae1.0*
+                                                           xe-0/0/3.0*
+default-switch          V2014                 2014     
+                                                           ae1.0*
+                                                           xe-0/0/3.0*
+default-switch          V2015                 2015     
+                                                           ae1.0*
+                                                           xe-0/0/3.0*
+default-switch          V2016                 2016     
+                                                           ae1.0*
+                                                           xe-0/0/4.0*
+default-switch          V2017                 2017     
+                                                           ae1.0*
+                                                           xe-0/0/4.0*
+default-switch          V2018                 2018     
+                                                           ae1.0*
+                                                           xe-0/0/4.0*
+default-switch          V2019                 2019     
+                                                           ae1.0*
+                                                           xe-0/0/4.0*
+default-switch          V2020                 2020     
+                                                           ae1.0*
+                                                           xe-0/0/4.0*
+default-switch          V2030                 2030     
+                                                           ae1.0*
+                                                           xe-0/0/3.0*
+default-switch          default               1        
+                                                           ae1.0*

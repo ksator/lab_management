@@ -1,0 +1,14 @@
+
+
+Routing instance        VLAN name             Tag          Interfaces
+default-switch          V2021                 2021     
+                                                           ae1.0*
+                                                           xe-0/0/0.0*
+default-switch          V2022                 2022     
+                                                           ae1.0*
+                                                           xe-0/0/0.0*
+default-switch          V2023                 2023     
+                                                           ae1.0*
+                                                           xe-0/0/0.0*
+default-switch          default               1        
+                                                            

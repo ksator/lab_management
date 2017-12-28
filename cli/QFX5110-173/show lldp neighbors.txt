@@ -1,7 +1,7 @@
 
 Local Interface    Parent Interface    Chassis Id          Port info          System Name
 et-0/0/51          -                   44:aa:50:f9:7c:78   et-0/0/30          QFX10K2-175         
-et-0/0/50          -                   44:aa:50:fc:76:b0   et-0/0/30          QFX10K2-182         
+et-0/0/50          -                   44:aa:50:fc:76:b0   et-0/0/30          QFX10K2-174         
 et-0/0/49          -                   54:4b:8c:d5:08:32   et-0/0/6           QFX10K2-177         
 xe-0/0/1           -                   54:e0:32:9d:6e:c0   xe-0/0/1.0         EX4550-193          
 et-0/0/48          -                   80:ac:ac:7c:29:dc   et-0/0/6           QFX10K2-176         

@@ -1,0 +1,17 @@
+
+
+Routing instance        VLAN name             Tag          Interfaces
+default-switch          V2024                 2024     
+                                                           ae2.0*
+                                                           xe-0/0/0.0
+                                                           xe-0/0/4.0*
+default-switch          V2025                 2025     
+                                                           ae2.0*
+                                                           xe-0/0/0.0
+                                                           xe-0/0/4.0*
+default-switch          V2031                 2031     
+                                                           ae2.0*
+                                                           xe-0/0/0.0
+                                                           xe-0/0/4.0*
+default-switch          default               1        
+                                                           xe-0/0/4.0*

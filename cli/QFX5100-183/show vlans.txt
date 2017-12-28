@@ -1,0 +1,67 @@
+
+
+Routing instance        VLAN name             Tag          Interfaces
+default-switch          V2030                 2030     
+                                                           ae0.0*
+                                                           ae1.0*
+                                                           xe-0/0/2.0*
+default-switch          V2031                 2031     
+                                                           ae0.0*
+                                                           ae1.0*
+                                                           xe-0/0/2.0*
+default-switch          V3001                 3001     
+                                                           ae0.0*
+                                                           ae1.0*
+default-switch          V3002                 3002     
+                                                           ae0.0*
+                                                           ae1.0*
+default-switch          V3003                 3003     
+                                                           ae0.0*
+                                                           ae1.0*
+default-switch          V3004                 3004     
+                                                           ae0.0*
+                                                           ae1.0*
+default-switch          V3005                 3005     
+                                                           ae0.0*
+                                                           ae1.0*
+default-switch          V3006                 3006     
+                                                           ae0.0*
+                                                           ae1.0*
+                                                           xe-0/0/2.0*
+default-switch          V3007                 3007     
+                                                           ae0.0*
+                                                           ae1.0*
+                                                           xe-0/0/2.0*
+default-switch          V3008                 3008     
+                                                           ae0.0*
+                                                           ae1.0*
+                                                           xe-0/0/2.0*
+default-switch          V3009                 3009     
+                                                           ae0.0*
+                                                           ae1.0*
+                                                           xe-0/0/2.0*
+default-switch          V3010                 3010     
+                                                           ae0.0*
+                                                           ae1.0*
+                                                           xe-0/0/2.0*
+default-switch          V4050                 4050     
+                                                           ae0.0*
+                                                           ae1.0*
+                                                           xe-0/0/1.0*
+                                                           xe-1/0/1.0*
+default-switch          V4051                 4051     
+                                                           ae0.0*
+                                                           ae1.0*
+                                                           xe-0/0/1.0*
+                                                           xe-1/0/1.0*
+default-switch          VDEV                  2050     
+                                                           ae0.0*
+                                                           ae1.0*
+                                                           xe-0/0/2.0*
+default-switch          VPROD                 2051     
+                                                           ae0.0*
+                                                           ae1.0*
+                                                           xe-0/0/2.0*
+default-switch          default               1        
+                                                           ae0.0*
+                                                           ae1.0*

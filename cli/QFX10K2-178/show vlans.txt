@@ -1,0 +1,88 @@
+
+
+Routing instance        VLAN name             Tag          Interfaces
+default-switch          V2030                 2030     
+                                                           ae1.0*
+                                                           esi.15081*
+                                                           esi.2088*
+                                                           esi.2093*
+                                                           vtep.32770*
+                                                           vtep.32771*
+                                                           vtep.32773*
+default-switch          V2031                 2031     
+                                                           ae1.0*
+                                                           esi.2091*
+                                                           vtep.32771*
+default-switch          V3001                 3001     
+                                                           ae1.0*
+                                                           esi.15081*
+                                                           esi.18495*
+                                                           vtep.32771*
+default-switch          V3002                 3002     
+                                                           ae1.0*
+                                                           esi.15081*
+                                                           esi.19709*
+                                                           vtep.32771*
+default-switch          V3003                 3003     
+                                                           ae1.0*
+                                                           esi.15229*
+                                                           vtep.32771*
+default-switch          V3004                 3004     
+                                                           ae1.0*
+                                                           esi.23945*
+                                                           vtep.32771*
+default-switch          V3005                 3005     
+                                                           ae1.0*
+                                                           esi.15228*
+                                                           vtep.32771*
+default-switch          V3006                 3006     
+                                                           ae1.0*
+                                                           esi.15081*
+                                                           esi.23936*
+                                                           vtep.32771*
+default-switch          V3007                 3007     
+                                                           ae1.0*
+                                                           esi.15081*
+                                                           esi.8776*
+                                                           vtep.32771*
+default-switch          V3008                 3008     
+                                                           ae1.0*
+                                                           esi.23838*
+                                                           vtep.32771*
+default-switch          V3009                 3009     
+                                                           ae1.0*
+                                                           esi.15215*
+                                                           vtep.32771*
+default-switch          V3010                 3010     
+                                                           ae1.0*
+                                                           esi.19710*
+                                                           vtep.32771*
+default-switch          V4050                 4050     
+                                                           ae1.0*
+                                                           esi.15081*
+                                                           esi.2088*
+                                                           esi.2089*
+                                                           vtep.32770*
+                                                           vtep.32771*
+                                                           vtep.32773*
+default-switch          V4051                 4051     
+                                                           ae1.0*
+                                                           esi.2087*
+                                                           esi.2088*
+                                                           vtep.32770*
+                                                           vtep.32771*
+                                                           vtep.32773*
+default-switch          VDEV                  2050     
+                                                           ae1.0*
+                                                           esi.2092*
+                                                           vtep.32770*
+                                                           vtep.32771*
+                                                           vtep.32773*
+default-switch          VPROD                 2051     
+                                                           ae1.0*
+                                                           esi.2090*
+                                                           vtep.32770*
+                                                           vtep.32771*
+                                                           vtep.32773*
+default-switch          default               1        
+                                                           ae1.0*

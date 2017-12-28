@@ -11,4 +11,3 @@ et-1/0/49          ae1                 44:aa:50:fb:66:b4   et-0/0/2           QF
 et-0/0/49          ae1                 44:aa:50:fb:66:b4   et-0/0/3           QFX10K2-181         
 et-2/0/49          ae1                 44:aa:50:fb:66:b4   et-0/0/4           QFX10K2-181         
 xe-1/0/1           -                   vmnic2              port 22 on dvSwitch EVPN_vDS (etherswitch) HDN-ESXi-90168      
-xe-2/0/1           -                   vmnic3              port 9 on dvSwitch EVPN_vDS (etherswitch) HDN-ESXi-90167      

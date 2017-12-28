@@ -39,9 +39,9 @@ Peer: 10.0.2.2+64852 AS 65200  Local: 10.0.2.3+179 AS 65101
     Accepted prefixes:            1
     Suppressed due to damping:    0
     Advertised prefixes:          20
-  Last traffic (seconds): Received 4977584 Sent 3270932 Checked 4977584
-  Input messages:  Total 182460	Updates 2	Refreshes 0	Octets 3466813
-  Output messages: Total 178918	Updates 140	Refreshes 0	Octets 3403771
+  Last traffic (seconds): Received 6130594 Sent 4423942 Checked 6130594
+  Input messages:  Total 224770	Updates 2	Refreshes 0	Octets 4270703
+  Output messages: Total 220243	Updates 140	Refreshes 0	Octets 4188946
   Output Queue[3]: 0            (INTERNET.inet.0, inet-unicast)
 
 Peer: 10.0.2.6+61282 AS 65200  Local: 10.0.2.7+179 AS 65101
@@ -84,9 +84,9 @@ Peer: 10.0.2.6+61282 AS 65200  Local: 10.0.2.7+179 AS 65101
     Accepted prefixes:            1
     Suppressed due to damping:    0
     Advertised prefixes:          20
-  Last traffic (seconds): Received 4977584 Sent 3270932 Checked 4977584
-  Input messages:  Total 182283	Updates 2	Refreshes 0	Octets 3463450
-  Output messages: Total 178923	Updates 140	Refreshes 0	Octets 3403752
+  Last traffic (seconds): Received 6130594 Sent 4423942 Checked 6130594
+  Input messages:  Total 224551	Updates 2	Refreshes 0	Octets 4266542
+  Output messages: Total 220249	Updates 140	Refreshes 0	Octets 4188946
   Output Queue[3]: 0            (INTERNET.inet.0, inet-unicast)
 
 Peer: 10.0.2.19+179 AS 200     Local: 10.0.2.18+56659 AS 302  
@@ -129,9 +129,9 @@ Peer: 10.0.2.19+179 AS 200     Local: 10.0.2.18+56659 AS 302
     Accepted prefixes:            10
     Suppressed due to damping:    0
     Advertised prefixes:          26
-  Last traffic (seconds): Received 4977584 Sent 289821 Checked 4977584
-  Input messages:  Total 118996	Updates 18	Refreshes 0	Octets 2261445
-  Output messages: Total 116365	Updates 30	Refreshes 0	Octets 2212012
+  Last traffic (seconds): Received 6130594 Sent 1442831 Checked 6130594
+  Input messages:  Total 161279	Updates 18	Refreshes 0	Octets 3064822
+  Output messages: Total 157689	Updates 30	Refreshes 0	Octets 2997168
   Output Queue[2]: 0            (inet.0, inet-unicast)
 
 Peer: 10.0.2.21+179 AS 201     Local: 10.0.2.20+55727 AS 302  
@@ -174,9 +174,9 @@ Peer: 10.0.2.21+179 AS 201     Local: 10.0.2.20+55727 AS 302
     Accepted prefixes:            16
     Suppressed due to damping:    0
     Advertised prefixes:          26
-  Last traffic (seconds): Received 4977584 Sent 289821 Checked 4977584
-  Input messages:  Total 118952	Updates 16	Refreshes 0	Octets 2260709
-  Output messages: Total 116312	Updates 16	Refreshes 0	Octets 2210575
+  Last traffic (seconds): Received 6130594 Sent 1442831 Checked 6130594
+  Input messages:  Total 161234	Updates 16	Refreshes 0	Octets 3064067
+  Output messages: Total 157637	Updates 16	Refreshes 0	Octets 2995750
   Output Queue[2]: 0            (inet.0, inet-unicast)
 
 Peer: 10.0.2.23+179 AS 202     Local: 10.0.2.22+64844 AS 302  
@@ -219,9 +219,9 @@ Peer: 10.0.2.23+179 AS 202     Local: 10.0.2.22+64844 AS 302
     Accepted prefixes:            10
     Suppressed due to damping:    0
     Advertised prefixes:          25
-  Last traffic (seconds): Received 4977584 Sent 2383312 Checked 4977584
-  Input messages:  Total 119389	Updates 122	Refreshes 0	Octets 2272746
-  Output messages: Total 117337	Updates 105	Refreshes 0	Octets 2232987
+  Last traffic (seconds): Received 6130594 Sent 3536322 Checked 6130594
+  Input messages:  Total 161444	Updates 122	Refreshes 0	Octets 3071791
+  Output messages: Total 158662	Updates 105	Refreshes 0	Octets 3018162
   Output Queue[2]: 0            (inet.0, inet-unicast)
 
 Peer: 10.0.2.25+179 AS 203     Local: 10.0.2.24+54451 AS 302  
@@ -264,9 +264,9 @@ Peer: 10.0.2.25+179 AS 203     Local: 10.0.2.24+54451 AS 302
     Accepted prefixes:            10
     Suppressed due to damping:    0
     Advertised prefixes:          26
-  Last traffic (seconds): Received 4977584 Sent 289821 Checked 4977584
-  Input messages:  Total 119380	Updates 114	Refreshes 0	Octets 2272300
-  Output messages: Total 117341	Updates 109	Refreshes 0	Octets 2233173
+  Last traffic (seconds): Received 6130594 Sent 1442831 Checked 6130594
+  Input messages:  Total 161435	Updates 114	Refreshes 0	Octets 3071345
+  Output messages: Total 158665	Updates 109	Refreshes 0	Octets 3018329
   Output Queue[2]: 0            (inet.0, inet-unicast)
 
 Peer: 10.0.2.27+179 AS 204     Local: 10.0.2.26+50650 AS 302  
@@ -309,9 +309,9 @@ Peer: 10.0.2.27+179 AS 204     Local: 10.0.2.26+50650 AS 302
     Accepted prefixes:            13
     Suppressed due to damping:    0
     Advertised prefixes:          18
-  Last traffic (seconds): Received 4977584 Sent 289821 Checked 4977584
-  Input messages:  Total 119970	Updates 75	Refreshes 0	Octets 2281832
-  Output messages: Total 117325	Updates 94	Refreshes 0	Octets 2232319
+  Last traffic (seconds): Received 6130594 Sent 1442831 Checked 6130594
+  Input messages:  Total 162253	Updates 75	Refreshes 0	Octets 3085209
+  Output messages: Total 158649	Updates 94	Refreshes 0	Octets 3017475
   Output Queue[2]: 0            (inet.0, inet-unicast)
 
 Peer: 10.254.254.2+61578 AS 2201 Local: 10.254.254.3+179 AS 302  
@@ -353,9 +353,9 @@ Peer: 10.254.254.2+61578 AS 2201 Local: 10.254.254.3+179 AS 302
     Accepted prefixes:            3
     Suppressed due to damping:    0
     Advertised prefixes:          17
-  Last traffic (seconds): Received 4977584 Sent 289821 Checked 4977584
-  Input messages:  Total 120522	Updates 202	Refreshes 0	Octets 2297222
-  Output messages: Total 118949	Updates 152	Refreshes 0	Octets 2265293
+  Last traffic (seconds): Received 6130594 Sent 1442831 Checked 6130594
+  Input messages:  Total 162376	Updates 202	Refreshes 0	Octets 3092448
+  Output messages: Total 160274	Updates 152	Refreshes 0	Octets 3050468
   Output Queue[2]: 0            (inet.0, inet-unicast)
 
 Peer: 10.254.254.6+56783 AS 2202 Local: 10.254.254.7+179 AS 302  
@@ -397,9 +397,9 @@ Peer: 10.254.254.6+56783 AS 2202 Local: 10.254.254.7+179 AS 302
     Accepted prefixes:            3
     Suppressed due to damping:    0
     Advertised prefixes:          17
-  Last traffic (seconds): Received 4977584 Sent 289821 Checked 4977584
-  Input messages:  Total 120534	Updates 214	Refreshes 0	Octets 2298169
-  Output messages: Total 118952	Updates 154	Refreshes 0	Octets 2265567
+  Last traffic (seconds): Received 6130594 Sent 1442831 Checked 6130594
+  Input messages:  Total 162389	Updates 214	Refreshes 0	Octets 3093414
+  Output messages: Total 160277	Updates 154	Refreshes 0	Octets 3050742
   Output Queue[2]: 0            (inet.0, inet-unicast)
 
 Peer: 191.168.100.1+65292 AS 65100 Local: 191.168.101.4+179 AS 65101
@@ -440,7 +440,7 @@ Peer: 191.168.100.1+65292 AS 65100 Local: 191.168.101.4+179 AS 65101
     Received prefixes:            165
     Accepted prefixes:            165
     Suppressed due to damping:    0
-    Advertised prefixes:          959
+    Advertised prefixes:          953
   Table DCI-VRF.evpn.0
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
@@ -457,9 +457,9 @@ Peer: 191.168.100.1+65292 AS 65100 Local: 191.168.101.4+179 AS 65101
     Received prefixes:            0
     Accepted prefixes:            0
     Suppressed due to damping:    0
-  Last traffic (seconds): Received 4977584 Sent 214217 Checked 4977584
-  Input messages:  Total 120563	Updates 2554	Refreshes 0	Octets 2839553
-  Output messages: Total 3699952	Updates 3584196	Refreshes 0	Octets 482858545
+  Last traffic (seconds): Received 6130594 Sent 699457 Checked 6130594
+  Input messages:  Total 162416	Updates 2554	Refreshes 0	Octets 3634760
+  Output messages: Total 3741282	Updates 3584202	Refreshes 0	Octets 483644091
   Output Queue[1]: 0            (bgp.evpn.0, evpn)
 
 Peer: 191.168.100.2+179 AS 65100 Local: 191.168.101.4+52439 AS 65101
@@ -496,11 +496,11 @@ Peer: 191.168.100.2+179 AS 65100 Local: 191.168.101.4+52439 AS 65101
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
     Send state: in sync
-    Active prefixes:              117
-    Received prefixes:            117
-    Accepted prefixes:            117
+    Active prefixes:              118
+    Received prefixes:            118
+    Accepted prefixes:            118
     Suppressed due to damping:    0
-    Advertised prefixes:          959
+    Advertised prefixes:          953
   Table DCI-VRF.evpn.0
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
@@ -517,9 +517,9 @@ Peer: 191.168.100.2+179 AS 65100 Local: 191.168.101.4+52439 AS 65101
     Received prefixes:            0
     Accepted prefixes:            0
     Suppressed due to damping:    0
-  Last traffic (seconds): Received 4977584 Sent 214217 Checked 4977584
-  Input messages:  Total 126905	Updates 8897	Refreshes 0	Octets 3256748
-  Output messages: Total 3700707	Updates 3584238	Refreshes 0	Octets 482862174
+  Last traffic (seconds): Received 6130594 Sent 699457 Checked 6130594
+  Input messages:  Total 171514	Updates 11652	Refreshes 0	Octets 4297192
+  Output messages: Total 3742038	Updates 3584244	Refreshes 0	Octets 483647739
   Output Queue[1]: 0            (bgp.evpn.0, evpn)
 
 Peer: 191.168.101.5+59948 AS 65101 Local: 191.168.101.4+179 AS 65101
@@ -557,18 +557,18 @@ Peer: 191.168.101.5+59948 AS 65101 Local: 191.168.101.4+179 AS 65101
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
     Send state: in sync
-    Active prefixes:              181
-    Received prefixes:            381
-    Accepted prefixes:            381
+    Active prefixes:              179
+    Received prefixes:            462
+    Accepted prefixes:            462
     Suppressed due to damping:    0
-    Advertised prefixes:          1060
+    Advertised prefixes:          1057
   Table DCI-VRF.evpn.0
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
     Send state: not advertising
     Active prefixes:              0
-    Received prefixes:            40
-    Accepted prefixes:            40
+    Received prefixes:            60
+    Accepted prefixes:            60
     Suppressed due to damping:    0
   Table INTERNET.evpn.0
     RIB State: BGP restart is complete
@@ -578,9 +578,9 @@ Peer: 191.168.101.5+59948 AS 65101 Local: 191.168.101.4+179 AS 65101
     Received prefixes:            3
     Accepted prefixes:            3
     Suppressed due to damping:    0
-  Last traffic (seconds): Received 4977584 Sent 27 Checked 4977584
-  Input messages:  Total 3506230	Updates 3387257	Refreshes 0	Octets 491149948
-  Output messages: Total 2365702	Updates 2249473	Refreshes 0	Octets 296703818
+  Last traffic (seconds): Received 6130594 Sent 310 Checked 6130594
+  Input messages:  Total 3551279	Updates 3390023	Refreshes 0	Octets 492231371
+  Output messages: Total 2412164	Updates 2254610	Refreshes 0	Octets 297997696
   Output Queue[1]: 0            (bgp.evpn.0, evpn)
 
 Peer: 191.168.101.6+60665 AS 65101 Local: 191.168.101.4+179 AS 65101
@@ -618,18 +618,18 @@ Peer: 191.168.101.6+60665 AS 65101 Local: 191.168.101.4+179 AS 65101
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
     Send state: in sync
-    Active prefixes:              179
-    Received prefixes:            444
-    Accepted prefixes:            444
+    Active prefixes:              177
+    Received prefixes:            463
+    Accepted prefixes:            463
     Suppressed due to damping:    0
-    Advertised prefixes:          1062
+    Advertised prefixes:          1059
   Table DCI-VRF.evpn.0
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
     Send state: not advertising
     Active prefixes:              0
-    Received prefixes:            40
-    Accepted prefixes:            40
+    Received prefixes:            60
+    Accepted prefixes:            60
     Suppressed due to damping:    0
   Table INTERNET.evpn.0
     RIB State: BGP restart is complete
@@ -639,9 +639,9 @@ Peer: 191.168.101.6+60665 AS 65101 Local: 191.168.101.4+179 AS 65101
     Received prefixes:            3
     Accepted prefixes:            3
     Suppressed due to damping:    0
-  Last traffic (seconds): Received 4977584 Sent 27 Checked 4977584
-  Input messages:  Total 3506021	Updates 3387094	Refreshes 0	Octets 495610770
-  Output messages: Total 3035022	Updates 2918764	Refreshes 0	Octets 421452522
+  Last traffic (seconds): Received 6130594 Sent 310 Checked 6130594
+  Input messages:  Total 3551064	Updates 3389856	Refreshes 0	Octets 496689496
+  Output messages: Total 3081535	Updates 2923953	Refreshes 0	Octets 422801217
   Output Queue[1]: 0            (bgp.evpn.0, evpn)
 
 Peer: 191.168.101.7+55093 AS 65101 Local: 191.168.101.4+179 AS 65101
@@ -683,7 +683,7 @@ Peer: 191.168.101.7+55093 AS 65101 Local: 191.168.101.4+179 AS 65101
     Received prefixes:            259
     Accepted prefixes:            259
     Suppressed due to damping:    0
-    Advertised prefixes:          982
+    Advertised prefixes:          977
   Table DCI-VRF.evpn.0
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
@@ -700,9 +700,9 @@ Peer: 191.168.101.7+55093 AS 65101 Local: 191.168.101.4+179 AS 65101
     Received prefixes:            31
     Accepted prefixes:            31
     Suppressed due to damping:    0
-  Last traffic (seconds): Received 4977584 Sent 27 Checked 4977584
-  Input messages:  Total 119942	Updates 47	Refreshes 0	Octets 2294386
-  Output messages: Total 3789138	Updates 3672046	Refreshes 0	Octets 534246134
+  Last traffic (seconds): Received 6130594 Sent 310 Checked 6130594
+  Input messages:  Total 162229	Updates 47	Refreshes 4	Octets 3097855
+  Output messages: Total 3836200	Updates 3677783	Refreshes 0	Octets 535842460
   Output Queue[1]: 0            (bgp.evpn.0, evpn)
 
 Peer: 191.168.102.1+50025 AS 65101 Local: 191.168.101.4+179 AS 65101
@@ -740,11 +740,11 @@ Peer: 191.168.102.1+50025 AS 65101 Local: 191.168.101.4+179 AS 65101
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
     Send state: in sync
-    Active prefixes:              172
+    Active prefixes:              171
     Received prefixes:            457
     Accepted prefixes:            457
     Suppressed due to damping:    0
-    Advertised prefixes:          1228
+    Advertised prefixes:          1224
   Table DCI-VRF.evpn.0
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
@@ -761,9 +761,9 @@ Peer: 191.168.102.1+50025 AS 65101 Local: 191.168.101.4+179 AS 65101
     Received prefixes:            3
     Accepted prefixes:            3
     Suppressed due to damping:    0
-  Last traffic (seconds): Received 4977584 Sent 27 Checked 4977584
-  Input messages:  Total 3582068	Updates 3462807	Refreshes 0	Octets 539659752
-  Output messages: Total 2999841	Updates 2882796	Refreshes 0	Octets 426113755
+  Last traffic (seconds): Received 6130594 Sent 310 Checked 6130594
+  Input messages:  Total 3626884	Updates 3465568	Refreshes 0	Octets 540733343
+  Output messages: Total 3045766	Updates 2887396	Refreshes 0	Octets 427397750
   Output Queue[1]: 0            (bgp.evpn.0, evpn)
 
 Peer: 191.168.102.2+61162 AS 65101 Local: 191.168.101.4+179 AS 65101
@@ -801,11 +801,11 @@ Peer: 191.168.102.2+61162 AS 65101 Local: 191.168.101.4+179 AS 65101
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
     Send state: in sync
-    Active prefixes:              165
+    Active prefixes:              164
     Received prefixes:            450
     Accepted prefixes:            450
     Suppressed due to damping:    0
-    Advertised prefixes:          1076
+    Advertised prefixes:          1072
   Table DCI-VRF.evpn.0
     RIB State: BGP restart is complete
     RIB State: VPN restart is complete
@@ -822,7 +822,7 @@ Peer: 191.168.102.2+61162 AS 65101 Local: 191.168.101.4+179 AS 65101
     Received prefixes:            3
     Accepted prefixes:            3
     Suppressed due to damping:    0
-  Last traffic (seconds): Received 4977584 Sent 27 Checked 4977584
-  Input messages:  Total 3590197	Updates 3470935	Refreshes 0	Octets 539933628
-  Output messages: Total 2985712	Updates 2868648	Refreshes 0	Octets 425118550
+  Last traffic (seconds): Received 6130594 Sent 310 Checked 6130594
+  Input messages:  Total 3635012	Updates 3473696	Refreshes 0	Octets 541007200
+  Output messages: Total 3031657	Updates 2873268	Refreshes 0	Octets 426413663
   Output Queue[1]: 0            (bgp.evpn.0, evpn)
