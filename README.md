@@ -86,8 +86,8 @@ The directory [**configuration**](configuration) has the junos configuration fil
 
 ### golden directory
 The directory [**golden_configuration**](golden_configuration) has the junos configuration files we need to push on the junos devices before to start the demo. 
-- The playbook [**pb.collect.golden.configuration.yml**](pb.collect.golden.configuration.yml) collects the running configuration on the junos devices and updates the directory [**/golden_configuration/ebgp_underlay_evpn_vxlan_overlay/**](/golden_configuration/ebgp_underlay_evpn_vxlan_overlay/) with these files.
-- The playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) overwrites the running configuration on the junos devices with the files in the directory [**/golden_configuration/ebgp_underlay_evpn_vxlan_overlay/**](/golden_configuration/ebgp_underlay_evpn_vxlan_overlay/)
+- The playbook [**pb.collect.golden.configuration.yml**](pb.collect.golden.configuration.yml) collects the running configuration on the junos devices and updates the directory [**ebgp_underlay_evpn_vxlan_overlay/**](/golden_configuration/ebgp_underlay_evpn_vxlan_overlay/) with these files.
+- The playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) overwrites the running configuration on the junos devices with the files in the directory [**ebgp_underlay_evpn_vxlan_overlay/**](/golden_configuration/ebgp_underlay_evpn_vxlan_overlay/)
 
 ### python directory
 The directory [**python**](python) has the python scripts
