@@ -6,7 +6,7 @@
 - [**How to collect data from the network**](README.md#how-to-collect-data-from-the-network) 
 - [**How to configure the network**](README.md#how-to-configure-the-newtwork)
 - [**How to audit the network with Ansible**](README.md#how-to-audit-the-network-with-ansible)
-- [**How to audit the network using JSNAPy**](README.md#how-to-audit-the-network-using-JSNAPy)
+- [**How to audit the network using JSNAPy**](README.md#how-to-audit-the-network-using-jsnapy)
 - [**Looking for help**](README.md#looking-for-help)
 
 
