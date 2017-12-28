@@ -102,11 +102,11 @@ The directory [**python**](python) has the python scripts
 ### jsnapy directory
 The directory [**jsnapy**](jsnapy) has the jsnapy content:
 - The directory [**jsnapy**](jsnapy) has the JSNAPy configuration files. They are named **cfg_file_*.yml**.
-    - [**cfg_file_check_topology_EX.yml**](jsnapy/cfg_file_check_topology_EX.yml)
-    - [**cfg_file_check_topology_QFX.yml**](jsnapy/cfg_file_check_topology_QFX.ym)
-    - [**cfg_file_snapcheck_alarms.yml**](jsnapy/cfg_file_snapcheck_alarms.yml)
-    - [**cfg_file_snapcheck_bgp.yml**](jsnapy/cfg_file_snapcheck_bgp.yml)
-    - [**cfg_file_snapcheck_interfaces.yml**](jsnapy/cfg_file_snapcheck_interfaces.yml)
+    - [**cfg_file_check_topology_EX.yml**](jsnapy/cfg_file_check_topology_EX.yml) jsnapy file checks if the topology changed between 2 snapshots
+    - [**cfg_file_check_topology_QFX.yml**](jsnapy/cfg_file_check_topology_QFX.ym) jsnapy file checks if the topology changed between 2 snapshots 
+    - [**cfg_file_snapcheck_alarms.yml**](jsnapy/cfg_file_snapcheck_alarms.yml) jsnapy file checks if they are active alarms
+    - [**cfg_file_snapcheck_bgp.yml**](jsnapy/cfg_file_snapcheck_bgp.yml) jsnapy file checks some BGP details
+    - [**cfg_file_snapcheck_interfaces.yml**](jsnapy/cfg_file_snapcheck_interfaces.yml) jsnapy file checks if there are interfaces errors  
 - The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy
 - The directory [**testfiles**](jsnapy/testfiles) has the JSNAPy inventory file [**devices.yml**](jsnapy/testfiles/devices.yml). It is created with the playbook [**pb.generate.jsnapy.inventory.yml**](pb.generate.jsnapy.inventory.yml), based on the Ansible inventory file [**hosts**](hosts) and on Ansible variables file for devices credentials  [**credentials.yml**](/group_vars/JUNOS/credentials.yml)
 - The directory [**testfiles**](jsnapy/testfiles) has also the testfiles used by jsnapy. They are named **test_file_*.yml**. 
