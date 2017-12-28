@@ -35,10 +35,6 @@ The directory [**render**](render) has the files generated from the jinja templa
 ### Ansible Playbooks
 The ansible playbooks are at the root of the repository.  
 All playbooks are named **pb.*.yml**      
-- [**pb.generate.variables.structure.yml**](pb.generate.variables.structure.yml) playbook was used at the beginning of the project to create some of the directories and files used to define yaml variables. 
-- [**pb.generate.jsnapy.inventory.yml**](pb.generate.jsnapy.inventory.yml) playbook creates the JSNAPy inventory file [**jsnapy/testfiles/devices.yml**](devices.yml) based on the Ansible inventory file [**hosts**](hosts)
-
-
 
 ##### Ansible Playbooks to configure the network
 - [**pb.configure.golden.yml**](pb.configure.golden.yml) playbook overwrites the running configuration on the junos devices with the files in the directory [**golden_configuration**](golden_configuration). 
@@ -61,6 +57,11 @@ All playbooks are named **pb.*.yml**
  - [**pb.check.bgp.yml**](pb.check.bgp.yml) playbook check the BGP states 
  - [**pb.check.vlans.yml**](pb.check.vlans.yml) playbook check from devices operationnal state if desirated vlans are presents
  - [**pb.print.facts.yml**](pb.print.facts.yml) playbook collects the facts on junos devices and print them on Ansible
+
+##### Other Ansible Playbooks
+- [**pb.generate.variables.structure.yml**](pb.generate.variables.structure.yml) playbook was used at the beginning of the project to create some of the directories and files used to define yaml variables. 
+- [**pb.generate.jsnapy.inventory.yml**](pb.generate.jsnapy.inventory.yml) playbook creates the JSNAPy inventory file [**devices.yml**](devices.yml) based on the Ansible inventory file [**hosts**](hosts)
+
 
 ### cli directory 
 The directory [**cli**](cli) has the output of the Junos show commands from the playbook [**pb.collect.cli.output.yml**](pb.collect.cli.output.yml)
