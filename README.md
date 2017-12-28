@@ -389,6 +389,11 @@ ansible-playbook pb.configure.golden.yml --check --diff
 
 # How to use JSNAPy content
 
+JSNAPy is a tool to take snapshots, store snapshots, compare snapshots.  
+There are 2 JSNAPy workflows:
+- take snapshots and compare them against pre defined criteria
+- take pre snapshots before any modification and then take post snapshots after modification and then compare them based on test cases
+
 ### How to validate there is no active alarms on the devices
 run this command to do it
 ```
@@ -415,6 +420,26 @@ jsnapy --snapcheck -f jsnapy/cfg_file_snapcheck_bgp.yml --folder jsnapy
 if you want to read the snapshots, run this command:
 ```
 ls jsnapy/snapshots
+```
+
+### Check if the topology changed
+take a first snapshot. it will be the source of Truth 
+```
+jsnapy --snap pre -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy
+ls jsnapy/snapshots/
+```
+later on, if you want to check if the topology changed, take a second snapshot:
+```
+jsnapy --snap post -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy
+ls jsnapy/snapshots/
+```
+and compare the snapshots:
+```
+jsnapy --check pre post -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy
+```
+you can also limit this action to one device, and use the verbose mode:  
+```
+jsnapy --check pre post -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy -v -t  172.25.90.174
 ```
 
 # Looking for help 
