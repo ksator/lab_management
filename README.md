@@ -428,7 +428,7 @@ take a first snapshot. it will be the source of Truth
 jsnapy --snap pre -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy
 ls jsnapy/snapshots/
 ```
-later on, if you want to check if the topology changed, take a second snapshot:
+later on, if you want to check if the topology changed, take a new snapshot:
 ```
 jsnapy --snap post -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy
 ls jsnapy/snapshots/
