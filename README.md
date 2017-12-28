@@ -2,7 +2,8 @@
 
 - [**What to find in this repository**](README.md#what-to-find-in-this-repository)
 - [**source of truth**](README.md#source-of-truth) 
-- [**Repository structure**](README.md#repository-structure) 
+- [**Repository structure**](README.md#repository-structure)
+- [**Requirements to use this repository**](README.md#requirements-to-use-this-repository)
 - [**How to locate a mac address in the network**](README.md#how-to-locate-a-mac-address-in-the-network)
 - [**How to collect data from the network**](README.md#how-to-collect-data-from-the-network) 
 - [**How to configure the network**](README.md#how-to-configure-the-newtwork)
