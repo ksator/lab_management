@@ -331,7 +331,7 @@ ls rollback/
 ```
 
 
-# How to audit the network
+# How to audit the network with Ansible
 
 ### How to check if some services (netconf, ssh, ftp, telnet ports) are reachable on Junos devices
 ```
@@ -387,7 +387,7 @@ Run this command to do it for the whole network
 ansible-playbook pb.configure.golden.yml --check --diff 
 ```
 
-# How to use JSNAPy content
+# How to audit the network using JSNAPy
 
 JSNAPy is a tool to take snapshots, store snapshots, compare snapshots.  
 There are 2 JSNAPy workflows:
