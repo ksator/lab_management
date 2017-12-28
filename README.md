@@ -18,6 +18,8 @@ It is based on:
 - Junos devices
 - Ansible, PyEZ, JSNAPy
 
+# source of truth
+
 Ansible is the source of truth, so: 
 - JSNAPy inventory file [**devices.yml**](jsnapy/testfiles/devices.yml) is created automatically based on the Ansible inventory file [**hosts**](hosts) and on Ansible variables file for devices credentials  [**credentials.yml**](/group_vars/JUNOS/credentials.yml)
 - Devices list for PyEZ is created automatically based on the Ansible inventory file [**hosts**](hosts). PyEZ uses the Ansible variables file for devices credentials  [**credentials.yml**](/group_vars/JUNOS/credentials.yml)
