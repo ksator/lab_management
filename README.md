@@ -83,33 +83,33 @@ python ./python/locate.mac.address.py 38:4f:49:f2:5f:fc
 # How to collect data from the network 
 
 ### How to pass show commands on junos devices and collect the commands output
-Edit the [**cli file**](cli.yml) to indicate the list of junos show commands you want to use
+Edit the [**cli**](cli.yml) file to indicate the list of junos show commands you want to use
 ```
 vi cli.yml
 ```
 
-Run this command to execute the [**pb.collect.cli.output.yml playbook**](pb.collect.cli.output.yml). It runs the junos show commands from the [**cli file**](cli.yml) and save the output on the Ansible server in the [**cli directory**](cli). 
+Run this command to execute the [**pb.collect.cli.output.yml**](pb.collect.cli.output.yml) playbook. It runs the junos show commands from the [**cli**](cli.yml) file and save the output on the Ansible server in the [**cli**](cli) directory. 
 ```
 ansible-playbook pb.collect.cli.output.yml
 ```
 
-The junos show commands output is available in the [**cli directory**](cli) 
+The junos show commands output is available in the [**cli**](cli) directory 
 ```
 ls cli
 ```
 
 ### How to pass show commands on junos devices and collect the output (alternative automation content)
-Edit the [**pb.collect.commands.output.yml file**](pb.collect.commands.output.yml) to indicate the list of junos show commands you want to use
+Edit the [**pb.collect.commands.output.yml**](pb.collect.commands.output.yml) file to indicate the list of junos show commands you want to use
 ```
 vi pb.collect.commands.output.yml
 ```
 
-Run this command to execute the [**pb.collect.commands.output.yml playbook**](pb.collect.commands.output.yml). It runs the junos show commands and save the output on the Ansible server in the [**command directory**](command). 
+Run this command to execute the [**pb.collect.commands.output.yml**](pb.collect.commands.output.yml) playbook. It runs the junos show commands and save the output on the Ansible server in the [**command**](command) directory. 
 ```
 ansible-playbook pb.collect.commands.output.yml
 ```
 
-The commands output is available in the [**command directory**](command). 
+The commands output is available in the [**command**](command) directory. 
 ```
 ls command
 ```
