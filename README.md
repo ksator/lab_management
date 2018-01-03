@@ -114,46 +114,68 @@ The commands output is available in the [**command directory**](command).
 ls command
 ```
 
+### How to collect the facts from junos devices
+
+The playbook [**pb.collect.facts.yml**](pb.collect.facts.yml) collects the facts on junos devices and save them on Ansible in the directory [**facts**](facts)
+
+Run this command to collect the facts from the junos devices
+```
+ansible-playbook pb.collect.facts.yml
+```
+
+The facts are available in the directory [**facts**](facts)
+```
+ls facts/
+```
+
+
 ### How to collect the junos configuration file from junos devices 
 
-Run this command to collect the junos configuration file for a device/group.  
-The playbook [**pb.collect.configuration.yml**](pb.collect.configuration.yml) collects the Junos configuration in set, xml, json and text formats, and save the configuration files in the [**directory configuration**](configuration)
+The playbook [**pb.collect.configuration.yml**](pb.collect.configuration.yml) collects the Junos configuration in set, xml, json and text formats, and save the configuration files in the [**directory configuration**](configuration)  
+
+Run this command to collect the junos configuration files for a device/group.  
 ```
 ansible-playbook pb.collect.configuration.yml --limit DC1
 ```
-```
-ls configuration/
-```
-Run this command to collect the junos configuration file for the whole network
-```
-ansible-playbook pb.collect.configuration.yml
-```
+The configuration files are available in the directory [**configuration**](configuration)
 ```
 ls configuration/
 ```
 
-### How to collect the running configuration on the junos devices and update the golden configuration files (i.e the initial configuration files that will be used at the beginning of the next demo) 
+Run this command to collect the junos configuration files for the whole network
+```
+ansible-playbook pb.collect.configuration.yml
+```
+
+The configuration files are available in the directory [**configuration**](configuration)
+```
+ls configuration/
+```
+
+### How to collect the running configuration on the junos devices and update the golden configuration files
+
+The golden configuration files are the configuration files that will be loaded at the beginning of each demo. 
+
+The playbook [**pb.collect.golden.yml**](pb.collect.golden.yml) collects the running configuration on the junos devices and updates the directory [**golden_configuration**](golden_configuration) with these files.
 
 Run this command to do it for a device/group
 ```
 ansible-playbook pb.collect.golden.yml --limit QFX5110
-ls golden_configuration
 ```
-Run this command to do it for the whole network
+The golden configuration files are available in the directory [**golden_configuration**](golden_configuration)
 ```
-ansible-playbook pb.collect.golden.yml 
 ls golden_configuration
 ```
 
-### How to collect the facts from junos devices
-Run this command to collect the facts
+Run this command to do it for the whole network
 ```
-ansible-playbook pb.collect.facts.yml
+ansible-playbook pb.collect.golden.yml 
 ```
-The facts are available in the facts directory
+The golden configuration files are available in the directory [**golden_configuration**](golden_configuration)
 ```
-ls facts/
+ls golden_configuration
 ```
+
 
 # How to configure the network
 
