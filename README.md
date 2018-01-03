@@ -93,7 +93,7 @@ Run this command to execute this [**playbook**](pb.collect.cli.output.yml). It r
 ansible-playbook pb.collect.cli.output.yml
 ```
 
-The junos show commands output is available in [**this directory**](cli) 
+The junos show commands output is available in the [**this directory**](cli) 
 ```
 ls cli
 ```
@@ -104,12 +104,12 @@ Edit this [**file**](pb.collect.commands.output.yml) to indicate the list of sho
 vi pb.collect.commands.output.yml
 ```
 
-Run this command to execute this [**playbook**](pb.collect.commands.output.yml). It runs the junos show commands and save the output on the Ansible server in [**this directory**](command). 
+Run this command to execute this [**playbook**](pb.collect.commands.output.yml). It runs the junos show commands and save the output on the Ansible server in [**command directory**](command). 
 ```
 ansible-playbook pb.collect.commands.output.yml
 ```
 
-The commands output is available in the command directory
+The commands output is available in the [**command directory**](command). 
 ```
 ls command
 ```
