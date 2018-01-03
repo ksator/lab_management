@@ -177,7 +177,7 @@ cd PoC-80/
 sudo -s
 ```
 
-You can now use the local copy of this remote repository.
+You can now use the local copy of this remote repository.  
 You need to run the below commands within the root of the project tree.
 
 
