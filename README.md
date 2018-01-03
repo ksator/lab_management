@@ -110,7 +110,8 @@ ls command
 ```
 
 ### How to collect the junos configuration file from junos devices 
-Run this command to collect the junos configuration file for a device/group
+Run this command to collect the junos configuration file for a device/group.  
+This playbook collects the Junos configuration in set, xml, json and text formats.  
 ```
 ansible-playbook pb.collect.configuration.yml --limit DC1
 ls configuration/
@@ -121,7 +122,7 @@ ansible-playbook pb.collect.configuration.yml
 ls configuration/
 ```
 
-### How to collect the running configuration on the junos devices and update the golden configuration files (the initial configuration files that will be used at the beginning of the next demo) 
+### How to collect the running configuration on the junos devices and update the golden configuration files (i.e the initial configuration files that will be used at the beginning of the next demo) 
 
 Run this command to do it for a device/group
 ```
