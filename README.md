@@ -192,7 +192,7 @@ The playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) backups in t
 ls backup/
 ```
 
-### How to configure devices with set/delete commands
+### How to configure junos devices with set/delete commands
 
 The playbook [**pb.configure.lines.yml**](pb.configure.lines.yml) configures the junos devices with set/delete commands. 
 
@@ -201,31 +201,31 @@ Edit the playbook [**pb.configure.lines.yml**](pb.configure.lines.yml) to indica
 vi pb.configure.lines.yml
 ```
 
-In order to execute the playbook [**pb.configure.lines.yml**](pb.configure.lines.yml) in dry run mode (i.e without commiting the junos configuration)
+In order to know which junos devices would have a configuration change if you execute the playbook [**pb.configure.lines.yml**](pb.configure.lines.yml), execute it in dry run mode.  
+This wont commit the junos configuration.  
 ```
 ansible-playbook pb.configure.lines.yml --check
 ```
-How to execute this playbook in dry run mode and also print the diff between the desired state and the actual state 
+
+In order to know which junos devices would have a configuration change if you execute the playbook [**pb.configure.lines.yml**](pb.configure.lines.yml), and also to know the diff between the desired state and the actual state, run this command. 
+This wont commit the junos configuration.  
 ```
 ansible-playbook pb.configure.lines.yml --check --diff --limit QFX10K2-176
 ```
-How to execute this playbook for one device/group
+
+Run this command to execute the playbook [**pb.configure.lines.yml**](pb.configure.lines.yml) for one device/group.  
+This will configure the device/group with the list of set/delete commands. 
 ```
 ansible-playbook pb.configure.lines.yml --limit DC2
 ```
+Run this command to execute the playbook [**pb.configure.lines.yml**](pb.configure.lines.yml).  
+This will configure the whole network with the list of set/delete commands. 
 
-The playbook [**pb.configure.lines.yml**](pb.configure.lines.yml) backups in the directory [**backup**](backup) the current running configuration from the remote devices before to applying the configuration change. 
-```
-ls backup/
-```
-
-```
-ls backup/
-```
-How to execute this playbook
 ```
 ansible-playbook pb.configure.lines.yml
 ```
+
+The playbook [**pb.configure.lines.yml**](pb.configure.lines.yml) backups in the directory [**backup**](backup) the current running configuration from the remote devices before to applying the configuration change. 
 ```
 ls backup/
 ```
