@@ -23,8 +23,8 @@ It is based on:
 # source of truth
 
 Ansible is the source of truth, so: 
-- JSNAPy inventory file [**devices.yml**](jsnapy/testfiles/devices.yml) is created automatically based on the Ansible inventory file [**hosts**](hosts) and on Ansible variables file for devices credentials  [**credentials.yml**](/group_vars/JUNOS/credentials.yml)
-- Devices list for PyEZ is created automatically based on the Ansible inventory file [**hosts**](hosts). PyEZ uses the Ansible variables file for devices credentials  [**credentials.yml**](/group_vars/JUNOS/credentials.yml)
+- JSNAPy inventory file [**devices.yml**](jsnapy/testfiles/devices.yml) is created automatically (using this [**playbook**](pb.generate.jsnapy.inventory.yml)), based on the Ansible inventory file [**hosts**](hosts) and on Ansible variables file for devices credentials  [**credentials.yml**](/group_vars/JUNOS/credentials.yml)
+- Devices list for PyEZ is created automatically based on the Ansible inventory file [**hosts**](hosts), using this [**script**](/python/inventory.py). Using this [**script**](/python/credentials.py), PyEZ uses the Ansible variables file for devices credentials [**credentials.yml**](/group_vars/JUNOS/credentials.yml).
 
 # Repository structure 
 
@@ -178,6 +178,8 @@ sudo -s
 ```
 
 You can now use the local copy of this remote repository.
+You need to run the below commands within the root of the project tree.
+
 
 # How to locate a mac address in the network
 Execute this python script
