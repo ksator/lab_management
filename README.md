@@ -207,7 +207,7 @@ This wont commit the junos configuration.
 ansible-playbook pb.configure.lines.yml --check
 ```
 
-In order to know if a junos device would have a configuration change if you execute the playbook [**pb.configure.lines.yml**](pb.configure.lines.yml), and also to know the diff between the desired state described in the playbook [**pb.configure.lines.yml**] and the device actual state, run this command.  
+In order to know if a junos device would have a configuration change if you execute the playbook [**pb.configure.lines.yml**](pb.configure.lines.yml), and also to know the diff between the desired state described in the playbook [**pb.configure.lines.yml**](pb.configure.lines.yml) and the device actual state, run this command.  
 This wont commit the junos configuration.  
 ```
 ansible-playbook pb.configure.lines.yml --check --diff --limit QFX10K2-176
