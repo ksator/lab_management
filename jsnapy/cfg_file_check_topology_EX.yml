@@ -1,14 +1,12 @@
-'''
-jsnapy --snap pre -f jsnapy/cfg_file_check_topology_EX.yml --folder jsnapy
-ls jsnapy/snapshots/
+#jsnapy --snap pre -f jsnapy/cfg_file_check_topology_EX.yml --folder jsnapy
+#ls jsnapy/snapshots/
 
-jsnapy --snap post -f jsnapy/cfg_file_check_topology_EX.yml --folder jsnapy
-ls jsnapy/snapshots/
+#jsnapy --snap post -f jsnapy/cfg_file_check_topology_EX.yml --folder jsnapy
+#ls jsnapy/snapshots/
 
-jsnapy --check pre post -f jsnapy/cfg_file_check_topology_EX.yml --folder jsnapy
+#jsnapy --check pre post -f jsnapy/cfg_file_check_topology_EX.yml --folder jsnapy
 
-jsnapy --check pre post -f jsnapy/cfg_file_check_topology_EX.yml --folder jsnapy -v -t  172.25.90.191
-'''
+#jsnapy --check pre post -f jsnapy/cfg_file_check_topology_EX.yml --folder jsnapy -v -t  172.25.90.191
 
 hosts:
       - include: devices.yml
