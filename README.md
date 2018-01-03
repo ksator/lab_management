@@ -2,13 +2,13 @@
 
 - [**What to find in this repository**](README.md#what-to-find-in-this-repository)
 - [**source of truth**](README.md#source-of-truth) 
-- [**Repository structure**](README.md#repository-structure)
 - [**Requirements to use this repository**](README.md#requirements-to-use-this-repository)
 - [**How to locate a mac address in the network**](README.md#how-to-locate-a-mac-address-in-the-network)
 - [**How to collect data from the network**](README.md#how-to-collect-data-from-the-network) 
-- [**How to configure the network**](README.md#how-to-configure-the-newtwork)
+- [**How to configure the network**](README.md#how-to-configure-the-network)
 - [**How to audit the network with Ansible**](README.md#how-to-audit-the-network-with-ansible)
 - [**How to audit the network using JSNAPy**](README.md#how-to-audit-the-network-using-jsnapy)
+- [**Repository structure**](README.md#repository-structure)
 - [**Looking for help**](README.md#looking-for-help)
 
 
@@ -25,114 +25,6 @@ It is based on:
 Ansible is the source of truth, so: 
 - JSNAPy inventory file [**devices.yml**](jsnapy/testfiles/devices.yml) is created automatically (using this [**playbook**](pb.generate.jsnapy.inventory.yml)), based on the Ansible inventory file [**hosts**](hosts) and on Ansible variables file for devices credentials  [**credentials.yml**](/group_vars/JUNOS/credentials.yml)
 - Devices list for PyEZ is created automatically based on the Ansible inventory file [**hosts**](hosts), using this [**script**](/python/inventory.py). Using this [**script**](/python/credentials.py), PyEZ uses the Ansible variables file for devices credentials [**credentials.yml**](/group_vars/JUNOS/credentials.yml).
-
-# Repository structure 
-
-### Ansible inventory file
-The ansible inventory file is [**hosts**](hosts) file at the root of the repository.    
-
-### Ansible configuration file
-The ansible configuration file is [**ansible.cfg**](ansible.cfg) at the root of the repository.   
-
-### host_vars directory 
-The variables are yml files under [**group_vars**](group_vars) and [**host_vars**](host_vars) directories.  
-host specific variables under the directory [**host_vars**](host_vars).   
-
-### group_vars directory 
-The variables are yml files under [**group_vars**](group_vars) and [**host_vars**](host_vars) directories.  
-group related variables are yml files under the directory [**group_vars**](group_vars)
-
-### templates directory
-The directory [**templates**](templates) has the jinja templates
-
-### render directory
-The directory [**render**](render) has the files generated from the jinja templates and variables
-
-### Ansible Playbooks
-The ansible playbooks are at the root of the repository.  
-All playbooks are named **pb.*.yml**      
-
-##### Ansible Playbooks to configure the network
-- [**pb.configure.golden.yml**](pb.configure.golden.yml) playbook overwrites the running configuration on the junos devices with the files in the directory [**golden_configuration**](golden_configuration). 
-- [**pb.configure.lines.yml**](pb.configure.lines.yml) playbook configures junos devices with set/delete commands
-- [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml) playbook configures junos devices with telemetry
-- [**pb.rollback.yml**](pb.rollback.yml) playbook performs a rollback on junos devices.
-
-##### Ansible Playbooks to collect data from the network
-- [**pb.collect.configuration.yml**](pb.collect.configuration.yml) playbook performs a configuration backup of the network and save the configuration files in the directory [**configuration**](configuration)
-- [**pb.collect.golden.yml**](pb.collect.golden.yml) playbook collects the running configuration on the junos devices and updates the directory [**golden_configuration**](golden_configuration) with these files.
-- [**pb.collect.commands.output.yml**](pb.collect.commands.output.yml) playbook runs junos show commands and save the output on Ansible 
-- [**pb.collect.cli.output.yml**](pb.collect.cli.output.yml) playbook runs junos show commands and save the output on Ansible. This playbook use the show commands in the file [**cli.yml**](cli.yml)
-- [**pb.collect.facts.yml**](pb.collect.facts.yml) playbook collects the facts on junos devices and save them on Ansible in the directory [**facts**](facts)
-
-##### Ansible Playbooks to audit the network
-- [**pb.check.all.yml**](pb.check.all) playbook include these playbooks:
- - [**pb.check.ports.availability.yml**](pb.check.ports.availability.yml) playbook checks if Ansible can connect on some ports on Junos devices (ssh, telnet, ftp, netconf)
- - [**pb.check.interfaces.yml**](pb.check.interfaces.yml) playbook checks the status of the interfaces on Junos devices
- - [**pb.check.lldp.yml**](pb.check.lldp.yml) playbook check the physical topology 
- - [**pb.check.bgp.yml**](pb.check.bgp.yml) playbook check the BGP states 
- - [**pb.check.vlans.yml**](pb.check.vlans.yml) playbook check from devices operationnal state if desirated vlans are presents
- - [**pb.print.facts.yml**](pb.print.facts.yml) playbook collects the facts on junos devices and print them on Ansible
-
-##### Other Ansible Playbooks
-- [**pb.generate.variables.structure.yml**](pb.generate.variables.structure.yml) playbook was used at the beginning of the project to create some of the directories and files used to define yaml variables. 
-- [**pb.generate.jsnapy.inventory.yml**](pb.generate.jsnapy.inventory.yml) playbook creates the JSNAPy inventory file [**devices.yml**](devices.yml) based on the Ansible inventory file [**hosts**](hosts)
-
-
-### cli directory 
-The directory [**cli**](cli) has the output of the Junos show commands from the playbook [**pb.collect.cli.output.yml**](pb.collect.cli.output.yml)
-
-### command directory 
-The directory [**command**](command) has the output of the Junos show commands from the playbook [**pb.collect.commands.output.yml**](pb.collect.commands.output.yml) 
-
-### facts directory
-The directory [**facts**](facts) has the Junos facts collected by the playbook [**pb.collect.facts.yml**](pb.collect.facts.yml) 
-
-### rollback directory
-The directory [**rollback**](rollback) has the Junos configuration diffs from rollbacks done with ansible playbook [**pb.rollback.yml**](pb.rollback.yml) 
-
-### backup directory
-The directory [**backup**](backup) has the junos configuration files automatically backed up by the playbooks: 
-  - [**pb.configure.lines.yml**](pb.configure.lines.yml) 
-  - [**pb.configure.golden.yml**](pb.configure.golden.yml)
-  - [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml)
-
-### configuration directory
-The directory [**configuration**](configuration) has the junos configuration files backed up when we ran the playbook [**pb.collect.configuration.yml**](pb.collect.configuration.yml) 
-
-### golden directory
-The directory [**golden_configuration**](golden_configuration) has the junos configuration files we need to push on the junos devices before to start the demo. 
-- The playbook [**pb.collect.golden.configuration.yml**](pb.collect.golden.configuration.yml) collects the running configuration on the junos devices and updates the directory [**ebgp_underlay_evpn_vxlan_overlay**](/golden_configuration/ebgp_underlay_evpn_vxlan_overlay/) with these files.
-- The playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) overwrites the running configuration on the junos devices with the files in the directory [**ebgp_underlay_evpn_vxlan_overlay**](/golden_configuration/ebgp_underlay_evpn_vxlan_overlay/)
-
-### fragments directory
-The directory [**fragments**](fragments) is used by the playbook [**pb.generate.jsnapy.inventory.yml**](pb.generate.jsnapy.inventory.yml) to create the JSNAPy inventory file [**devices.yml**](devices.yml) based on the Ansible inventory file [**hosts**](hosts).  
-The directory [**fragments**](fragments)  doesnt contains the JSNAPy inventory file [**devices.yml**](devices.yml) itself.
-
-### python directory
-The directory [**python**](python) has the python scripts
-- The file [**inventory.py**](python/inventory.py) creates a python list of devices ip address based on the ansible inventory file [**hosts**](hosts)
-- The file [**credentials.py**](python/credentials.py) get the devices username and password from the ansible variables file  [**credentials.yml**](/group_vars/JUNOS/credentials.yml)
-- The file [**locate.mac.address.py**](python/locate.mac.address.py) indicates where is locate a given mac address in the network.
-
-### jsnapy directory
-The directory [**jsnapy**](jsnapy) has the jsnapy content:
-- The directory [**jsnapy**](jsnapy) has the JSNAPy configuration files. They are named **cfg_file_*.yml**.
-    - [**cfg_file_check_topology_EX.yml**](jsnapy/cfg_file_check_topology_EX.yml) jsnapy file checks if the topology changed between 2 snapshots
-    - [**cfg_file_check_topology_QFX.yml**](jsnapy/cfg_file_check_topology_QFX.ym) jsnapy file checks if the topology changed between 2 snapshots 
-    - [**cfg_file_snapcheck_alarms.yml**](jsnapy/cfg_file_snapcheck_alarms.yml) jsnapy file checks if they are active alarms
-    - [**cfg_file_snapcheck_bgp.yml**](jsnapy/cfg_file_snapcheck_bgp.yml) jsnapy file checks some BGP details
-    - [**cfg_file_snapcheck_interfaces.yml**](jsnapy/cfg_file_snapcheck_interfaces.yml) jsnapy file checks if there are interfaces errors  
-- The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy
-- The directory [**testfiles**](jsnapy/testfiles) has the JSNAPy inventory file [**devices.yml**](jsnapy/testfiles/devices.yml). It is created with the playbook [**pb.generate.jsnapy.inventory.yml**](pb.generate.jsnapy.inventory.yml), based on the Ansible inventory file [**hosts**](hosts) and on Ansible variables file for devices credentials  [**credentials.yml**](/group_vars/JUNOS/credentials.yml)
-- The directory [**testfiles**](jsnapy/testfiles) has also the testfiles used by jsnapy. They are named **test_file_*.yml**. 
-    - [**test_file_check_topology_EX.yml**](jsnapy/testfiles/test_file_check_topology_EX.yml)
-    - [**test_file_check_topology_QFX.yml**](jsnapy/testfiles/test_file_check_topology_QFX.yml)
-    - [**test_file_snapcheck_alarms.yml**](jsnapy/testfiles/test_file_snapcheck_alarms.yml)
-    - [**test_file_snapcheck_bgp.yml**](jsnapy/testfiles/test_file_snapcheck_bgp.yml)
-    - [**test_file_snapcheck_interfaces.yml**](jsnapy/testfiles/test_file_snapcheck_interfaces.yml)
-    
-
 
 # Requirements to use this repository
 
@@ -251,7 +143,7 @@ The facts are available in the facts directory
 ls facts/
 ```
 
-# How to configure the newtwork
+# How to configure the network
 
 ### How to overwrite the running configuration on junos devices with their golden confiiguration (i.e how to restore the initial configuration files at the beginning of each demo)
 Run this command to do it for a device/group
@@ -460,6 +352,114 @@ you can also limit this action to one device, and use the verbose mode:
 jsnapy --check pre post -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy -v -t  172.25.90.174
 ```
 Note: as xml output of "show lldp neighbors" is different on QFX and EX, it requires an different parsing. So for EX, use the file cfg_file_check_topology_EX.yml
+
+# Repository structure 
+
+### Ansible inventory file
+The ansible inventory file is [**hosts**](hosts) file at the root of the repository.    
+
+### Ansible configuration file
+The ansible configuration file is [**ansible.cfg**](ansible.cfg) at the root of the repository.   
+
+### host_vars directory 
+The variables are yml files under [**group_vars**](group_vars) and [**host_vars**](host_vars) directories.  
+host specific variables under the directory [**host_vars**](host_vars).   
+
+### group_vars directory 
+The variables are yml files under [**group_vars**](group_vars) and [**host_vars**](host_vars) directories.  
+group related variables are yml files under the directory [**group_vars**](group_vars)
+
+### templates directory
+The directory [**templates**](templates) has the jinja templates
+
+### render directory
+The directory [**render**](render) has the files generated from the jinja templates and variables
+
+### Ansible Playbooks
+The ansible playbooks are at the root of the repository.  
+All playbooks are named **pb.*.yml**      
+
+##### Ansible Playbooks to configure the network
+- [**pb.configure.golden.yml**](pb.configure.golden.yml) playbook overwrites the running configuration on the junos devices with the files in the directory [**golden_configuration**](golden_configuration). 
+- [**pb.configure.lines.yml**](pb.configure.lines.yml) playbook configures junos devices with set/delete commands
+- [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml) playbook configures junos devices with telemetry
+- [**pb.rollback.yml**](pb.rollback.yml) playbook performs a rollback on junos devices.
+
+##### Ansible Playbooks to collect data from the network
+- [**pb.collect.configuration.yml**](pb.collect.configuration.yml) playbook performs a configuration backup of the network and save the configuration files in the directory [**configuration**](configuration)
+- [**pb.collect.golden.yml**](pb.collect.golden.yml) playbook collects the running configuration on the junos devices and updates the directory [**golden_configuration**](golden_configuration) with these files.
+- [**pb.collect.commands.output.yml**](pb.collect.commands.output.yml) playbook runs junos show commands and save the output on Ansible 
+- [**pb.collect.cli.output.yml**](pb.collect.cli.output.yml) playbook runs junos show commands and save the output on Ansible. This playbook use the show commands in the file [**cli.yml**](cli.yml)
+- [**pb.collect.facts.yml**](pb.collect.facts.yml) playbook collects the facts on junos devices and save them on Ansible in the directory [**facts**](facts)
+
+##### Ansible Playbooks to audit the network
+- [**pb.check.all.yml**](pb.check.all) playbook include these playbooks:
+ - [**pb.check.ports.availability.yml**](pb.check.ports.availability.yml) playbook checks if Ansible can connect on some ports on Junos devices (ssh, telnet, ftp, netconf)
+ - [**pb.check.interfaces.yml**](pb.check.interfaces.yml) playbook checks the status of the interfaces on Junos devices
+ - [**pb.check.lldp.yml**](pb.check.lldp.yml) playbook check the physical topology 
+ - [**pb.check.bgp.yml**](pb.check.bgp.yml) playbook check the BGP states 
+ - [**pb.check.vlans.yml**](pb.check.vlans.yml) playbook check from devices operationnal state if desirated vlans are presents
+ - [**pb.print.facts.yml**](pb.print.facts.yml) playbook collects the facts on junos devices and print them on Ansible
+
+##### Other Ansible Playbooks
+- [**pb.generate.variables.structure.yml**](pb.generate.variables.structure.yml) playbook was used at the beginning of the project to create some of the directories and files used to define yaml variables. 
+- [**pb.generate.jsnapy.inventory.yml**](pb.generate.jsnapy.inventory.yml) playbook creates the JSNAPy inventory file [**devices.yml**](devices.yml) based on the Ansible inventory file [**hosts**](hosts)
+
+
+### cli directory 
+The directory [**cli**](cli) has the output of the Junos show commands from the playbook [**pb.collect.cli.output.yml**](pb.collect.cli.output.yml)
+
+### command directory 
+The directory [**command**](command) has the output of the Junos show commands from the playbook [**pb.collect.commands.output.yml**](pb.collect.commands.output.yml) 
+
+### facts directory
+The directory [**facts**](facts) has the Junos facts collected by the playbook [**pb.collect.facts.yml**](pb.collect.facts.yml) 
+
+### rollback directory
+The directory [**rollback**](rollback) has the Junos configuration diffs from rollbacks done with ansible playbook [**pb.rollback.yml**](pb.rollback.yml) 
+
+### backup directory
+The directory [**backup**](backup) has the junos configuration files automatically backed up by the playbooks: 
+  - [**pb.configure.lines.yml**](pb.configure.lines.yml) 
+  - [**pb.configure.golden.yml**](pb.configure.golden.yml)
+  - [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml)
+
+### configuration directory
+The directory [**configuration**](configuration) has the junos configuration files backed up when we ran the playbook [**pb.collect.configuration.yml**](pb.collect.configuration.yml) 
+
+### golden directory
+The directory [**golden_configuration**](golden_configuration) has the junos configuration files we need to push on the junos devices before to start the demo. 
+- The playbook [**pb.collect.golden.configuration.yml**](pb.collect.golden.configuration.yml) collects the running configuration on the junos devices and updates the directory [**ebgp_underlay_evpn_vxlan_overlay**](/golden_configuration/ebgp_underlay_evpn_vxlan_overlay/) with these files.
+- The playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) overwrites the running configuration on the junos devices with the files in the directory [**ebgp_underlay_evpn_vxlan_overlay**](/golden_configuration/ebgp_underlay_evpn_vxlan_overlay/)
+
+### fragments directory
+The directory [**fragments**](fragments) is used by the playbook [**pb.generate.jsnapy.inventory.yml**](pb.generate.jsnapy.inventory.yml) to create the JSNAPy inventory file [**devices.yml**](devices.yml) based on the Ansible inventory file [**hosts**](hosts).  
+The directory [**fragments**](fragments)  doesnt contains the JSNAPy inventory file [**devices.yml**](devices.yml) itself.
+
+### python directory
+The directory [**python**](python) has the python scripts
+- The file [**inventory.py**](python/inventory.py) creates a python list of devices ip address based on the ansible inventory file [**hosts**](hosts)
+- The file [**credentials.py**](python/credentials.py) get the devices username and password from the ansible variables file  [**credentials.yml**](/group_vars/JUNOS/credentials.yml)
+- The file [**locate.mac.address.py**](python/locate.mac.address.py) indicates where is locate a given mac address in the network.
+
+### jsnapy directory
+The directory [**jsnapy**](jsnapy) has the jsnapy content:
+- The directory [**jsnapy**](jsnapy) has the JSNAPy configuration files. They are named **cfg_file_*.yml**.
+    - [**cfg_file_check_topology_EX.yml**](jsnapy/cfg_file_check_topology_EX.yml) jsnapy file checks if the topology changed between 2 snapshots
+    - [**cfg_file_check_topology_QFX.yml**](jsnapy/cfg_file_check_topology_QFX.ym) jsnapy file checks if the topology changed between 2 snapshots 
+    - [**cfg_file_snapcheck_alarms.yml**](jsnapy/cfg_file_snapcheck_alarms.yml) jsnapy file checks if they are active alarms
+    - [**cfg_file_snapcheck_bgp.yml**](jsnapy/cfg_file_snapcheck_bgp.yml) jsnapy file checks some BGP details
+    - [**cfg_file_snapcheck_interfaces.yml**](jsnapy/cfg_file_snapcheck_interfaces.yml) jsnapy file checks if there are interfaces errors  
+- The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy
+- The directory [**testfiles**](jsnapy/testfiles) has the JSNAPy inventory file [**devices.yml**](jsnapy/testfiles/devices.yml). It is created with the playbook [**pb.generate.jsnapy.inventory.yml**](pb.generate.jsnapy.inventory.yml), based on the Ansible inventory file [**hosts**](hosts) and on Ansible variables file for devices credentials  [**credentials.yml**](/group_vars/JUNOS/credentials.yml)
+- The directory [**testfiles**](jsnapy/testfiles) has also the testfiles used by jsnapy. They are named **test_file_*.yml**. 
+    - [**test_file_check_topology_EX.yml**](jsnapy/testfiles/test_file_check_topology_EX.yml)
+    - [**test_file_check_topology_QFX.yml**](jsnapy/testfiles/test_file_check_topology_QFX.yml)
+    - [**test_file_snapcheck_alarms.yml**](jsnapy/testfiles/test_file_snapcheck_alarms.yml)
+    - [**test_file_snapcheck_bgp.yml**](jsnapy/testfiles/test_file_snapcheck_bgp.yml)
+    - [**test_file_snapcheck_interfaces.yml**](jsnapy/testfiles/test_file_snapcheck_interfaces.yml)
+    
+
 
 # Looking for help 
 
