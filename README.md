@@ -83,12 +83,13 @@ python ./python/locate.mac.address.py 38:4f:49:f2:5f:fc
 # How to collect data from the network 
 
 ### How to pass show commands on junos devices and collect the commands output
-Edit the [**cli**](cli.yml) file to indicate the list of junos show commands you want to use
+Edit the [**cli.yml**](cli.yml) file to indicate the list of junos show commands you want to use
 ```
 vi cli.yml
 ```
 
-Run this command to execute the [**pb.collect.cli.output.yml**](pb.collect.cli.output.yml) playbook. It runs the junos show commands from the [**cli**](cli.yml) file and save the output on the Ansible server in the [**cli**](cli) directory. 
+Run this command to execute the [**pb.collect.cli.output.yml**](pb.collect.cli.output.yml) playbook.  
+It runs the junos show commands from the [**cli.yml**](cli.yml) file and save the output on the Ansible server in the [**cli**](cli) directory. 
 ```
 ansible-playbook pb.collect.cli.output.yml
 ```
@@ -104,7 +105,8 @@ Edit the [**pb.collect.commands.output.yml**](pb.collect.commands.output.yml) fi
 vi pb.collect.commands.output.yml
 ```
 
-Run this command to execute the [**pb.collect.commands.output.yml**](pb.collect.commands.output.yml) playbook. It runs the junos show commands and save the output on the Ansible server in the [**command**](command) directory. 
+Run this command to execute the [**pb.collect.commands.output.yml**](pb.collect.commands.output.yml) playbook.  
+It runs the junos show commands and save the output on the Ansible server in the [**command**](command) directory. 
 ```
 ansible-playbook pb.collect.commands.output.yml
 ```
@@ -136,10 +138,6 @@ The playbook [**pb.collect.configuration.yml**](pb.collect.configuration.yml) co
 Run this command to collect the junos configuration files for a device/group.  
 ```
 ansible-playbook pb.collect.configuration.yml --limit DC1
-```
-The configuration files are available in the directory [**configuration**](configuration)
-```
-ls configuration/
 ```
 
 Run this command to collect the junos configuration files for the whole network
