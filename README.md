@@ -83,7 +83,7 @@ python ./python/locate.mac.address.py 38:4f:49:f2:5f:fc
 # How to collect data from the network 
 
 ### How to pass show commands on junos devices and collect the output
-Edit the show commands you want to use
+Edit this file to indicate the list of show commands you want to use
 ```
 vi cli.yml
 ```
