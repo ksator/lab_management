@@ -87,16 +87,17 @@ Edit this [**file**](cli.yml) to indicate the list of show commands you want to 
 ```
 vi cli.yml
 ```
-Run this command to execute this [**playbook**](pb.collect.cli.output.yml).  
-It runs the junos show commands from [**this file**](cli.yml) and save the output on the Ansible server in [**this directory**](cli).   
 
+Run this command to execute this [**playbook**](pb.collect.cli.output.yml). It runs the junos show commands from [**this file**](cli.yml) and save the output on the Ansible server in [**this directory**](cli). 
 ```
 ansible-playbook pb.collect.cli.output.yml
 ```
-The commands output is available in [**this directory**](cli) 
+
+The junos show commands output is available in [**this directory**](cli) 
 ```
 ls cli
 ```
+
 ### How to pass show commands on junos devices and collect the output (alternative automation content)
 Edit the show commands you want to use
 ```
