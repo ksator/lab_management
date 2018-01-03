@@ -174,18 +174,20 @@ ls golden_configuration
 
 # How to configure the network
 
-### How to overwrite the running configuration on junos devices with their golden confiiguration (i.e how to restore the initial configuration files at the beginning of each demo)
+### How to overwrite the running configuration on junos devices with their golden confiiguration
+
+The playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) overwrites the running configuration on the junos devices with the files in the directory [**golden_configuration**](golden_configuration).
+You can use it at the beginning of each demo to restore the golden configuration files on the Junos devices.   
 Run this command to do it for a device/group
 ```
 ansible-playbook pb.configure.golden.yml --limit QFX10K2-176
-```
-```
-ls backup/
 ```
 Run this command to do it for the whole network
 ```
 ansible-playbook pb.configure.golden.yml
 ```
+
+The playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) also backups the junos configuration files in the directory [**backup**](backup)
 ```
 ls backup/
 ```
