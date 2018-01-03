@@ -104,7 +104,7 @@ Edit this [**file**](pb.collect.commands.output.yml) to indicate the list of sho
 vi pb.collect.commands.output.yml
 ```
 
-Run this command to execute this [**playbook**](pb.collect.commands.output.yml). It runs junos show commands and save the output on the Ansible server in [**this directory**](command). 
+Run this command to execute this [**playbook**](pb.collect.commands.output.yml). It runs the junos show commands and save the output on the Ansible server in [**this directory**](command). 
 ```
 ansible-playbook pb.collect.commands.output.yml
 ```
