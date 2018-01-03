@@ -1,8 +1,8 @@
 # Repository documentation structure
 
 - [**What to find in this repository**](README.md#what-to-find-in-this-repository)
-- [**source of truth**](README.md#source-of-truth) 
 - [**Requirements to use this repository**](README.md#requirements-to-use-this-repository)
+- [**source of truth**](README.md#source-of-truth) 
 - [**How to locate a mac address in the network**](README.md#how-to-locate-a-mac-address-in-the-network)
 - [**How to collect data from the network**](README.md#how-to-collect-data-from-the-network) 
 - [**How to configure the network**](README.md#how-to-configure-the-network)
@@ -19,13 +19,6 @@ It is used to manage a lab.
 It is based on:    
 - Junos devices
 - Ansible, PyEZ, JSNAPy
-
-# source of truth
-
-This repository uses Ansible, PyEZ and JSNAPy.  
-Ansible is the source of truth for the inventory and the credentials, so: 
-- [**JSNAPy inventory file**](jsnapy/testfiles/devices.yml) is created automatically (using this [**playbook**](pb.generate.jsnapy.inventory.yml) and [**template**](/templates/jsnapy_inventory.j2)), based on the [**Ansible inventory file**](hosts) and based on the [**Ansible variables for devices credentials**](/group_vars/JUNOS/credentials.yml)
-- Devices list for PyEZ is created automatically based on the [**Ansible inventory file**](hosts) (using this [**python script**](/python/inventory.py)). In addition, using this [**python script**](/python/credentials.py), PyEZ is able to reuse the [**Ansible variables for devices credentials**](/group_vars/JUNOS/credentials.yml).
 
 # Requirements to use this repository
 
@@ -72,6 +65,13 @@ sudo -s
 
 You can now use the local copy of this remote repository.  
 You need to run the below commands within the root of the project tree.
+
+# source of truth
+
+This repository uses Ansible, PyEZ and JSNAPy.  
+Ansible is the source of truth for the inventory and the credentials, so: 
+- [**JSNAPy inventory file**](jsnapy/testfiles/devices.yml) is created automatically (using this [**playbook**](pb.generate.jsnapy.inventory.yml) and [**template**](/templates/jsnapy_inventory.j2)), based on the [**Ansible inventory file**](hosts) and based on the [**Ansible variables for devices credentials**](/group_vars/JUNOS/credentials.yml)
+- Devices list for PyEZ is created automatically based on the [**Ansible inventory file**](hosts) (using this [**python script**](/python/inventory.py)). In addition, using this [**python script**](/python/credentials.py), PyEZ is able to reuse the [**Ansible variables for devices credentials**](/group_vars/JUNOS/credentials.yml).
 
 
 # How to locate a mac address in the network
