@@ -83,15 +83,17 @@ python ./python/locate.mac.address.py 38:4f:49:f2:5f:fc
 # How to collect data from the network 
 
 ### How to pass show commands on junos devices and collect the output
-Edit this file to indicate the list of show commands you want to use
+Edit this [**file**](cli.yml) to indicate the list of show commands you want to use
 ```
 vi cli.yml
 ```
-Run this command
+Run this command to execute this [**playbook**](pb.collect.cli.output.yml).  
+It runs the junos show commands from [**this file**](cli.yml) and save the output on the Ansible server in [**this directory **](cli).   
+
 ```
 ansible-playbook pb.collect.cli.output.yml
 ```
-The commands output is available in the cli directory
+The commands output is available in [**this directory **](cli) 
 ```
 ls cli
 ```
