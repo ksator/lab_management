@@ -75,7 +75,7 @@ You need to run the below commands within the root of the project tree.
 
 
 # How to locate a mac address in the network
-Execute this python script
+Execute this [**python script**](python/locate.mac.address.py) to locate a mac address in the network
 ```
 python ./python/locate.mac.address.py 38:4f:49:f2:5f:fc
 ```
