@@ -83,28 +83,28 @@ python ./python/locate.mac.address.py 38:4f:49:f2:5f:fc
 # How to collect data from the network 
 
 ### How to pass show commands on junos devices and collect the commands output
-Edit this [**file**](cli.yml) to indicate the list of show commands you want to use
+Edit the [**cli file**](cli.yml) to indicate the list of junos show commands you want to use
 ```
 vi cli.yml
 ```
 
-Run this command to execute this [**playbook**](pb.collect.cli.output.yml). It runs the junos show commands from [**this file**](cli.yml) and save the output on the Ansible server in [**this directory**](cli). 
+Run this command to execute the [**pb.collect.cli.output.yml playbook**](pb.collect.cli.output.yml). It runs the junos show commands from the [**cli file**](cli.yml) and save the output on the Ansible server in the [**cli directory**](cli). 
 ```
 ansible-playbook pb.collect.cli.output.yml
 ```
 
-The junos show commands output is available in the [**this directory**](cli) 
+The junos show commands output is available in the [**cli directory**](cli) 
 ```
 ls cli
 ```
 
 ### How to pass show commands on junos devices and collect the output (alternative automation content)
-Edit this [**file**](pb.collect.commands.output.yml) to indicate the list of show commands you want to use
+Edit the [**pb.collect.commands.output.yml file**](pb.collect.commands.output.yml) to indicate the list of junos show commands you want to use
 ```
 vi pb.collect.commands.output.yml
 ```
 
-Run this command to execute this [**playbook**](pb.collect.commands.output.yml). It runs the junos show commands and save the output on the Ansible server in [**command directory**](command). 
+Run this command to execute the [**pb.collect.commands.output.yml playbook**](pb.collect.commands.output.yml). It runs the junos show commands and save the output on the Ansible server in the [**command directory**](command). 
 ```
 ansible-playbook pb.collect.commands.output.yml
 ```
@@ -115,15 +115,20 @@ ls command
 ```
 
 ### How to collect the junos configuration file from junos devices 
+
 Run this command to collect the junos configuration file for a device/group.  
-This playbook collects the Junos configuration in set, xml, json and text formats.  
+The playbook [**pb.collect.configuration.yml**](pb.collect.configuration.yml) collects the Junos configuration in set, xml, json and text formats, and save the configuration files in the [**directory configuration**](configuration)
 ```
 ansible-playbook pb.collect.configuration.yml --limit DC1
+```
+```
 ls configuration/
 ```
 Run this command to collect the junos configuration file for the whole network
 ```
 ansible-playbook pb.collect.configuration.yml
+```
+```
 ls configuration/
 ```
 
