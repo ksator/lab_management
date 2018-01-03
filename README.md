@@ -176,7 +176,7 @@ ls golden_configuration
 
 ### How to overwrite the running configuration on junos devices with their golden confiiguration
 
-The playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) overwrites the running configuration on the junos devices with the files in the directory [**golden_configuration**](golden_configuration).
+The playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) overwrites the running configuration on the junos devices with the files in the directory [**golden_configuration**](golden_configuration).  
 You can use it at the beginning of each demo to restore the golden configuration files on the Junos devices.   
 Run this command to do it for a device/group
 ```
@@ -187,17 +187,21 @@ Run this command to do it for the whole network
 ansible-playbook pb.configure.golden.yml
 ```
 
-The playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) also backups the junos configuration files in the directory [**backup**](backup)
+The playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) backups in the directory [**backup**](backup) the current running configuration from the remote devices before to applying the golden configuration. 
 ```
 ls backup/
 ```
 
 ### How to configure devices with set/delete commands
-How to edit the set/delete commands you want to use
+
+The playbook [**pb.configure.lines.yml**](pb.configure.lines.yml) configures the junos devices with set/delete commands. 
+
+Edit the playbook [**pb.configure.lines.yml**](pb.configure.lines.yml) to indicate the list of set and delete commands you want to use:
 ```
 vi pb.configure.lines.yml
 ```
-How to execute this playbook in dry run mode (i.e without commiting the junos configuration)
+
+In order to execute the playbook [**pb.configure.lines.yml**](pb.configure.lines.yml) in dry run mode (i.e without commiting the junos configuration)
 ```
 ansible-playbook pb.configure.lines.yml --check
 ```
@@ -209,6 +213,12 @@ How to execute this playbook for one device/group
 ```
 ansible-playbook pb.configure.lines.yml --limit DC2
 ```
+
+The playbook [**pb.configure.lines.yml**](pb.configure.lines.yml) backups in the directory [**backup**](backup) the current running configuration from the remote devices before to applying the configuration change. 
+```
+ls backup/
+```
+
 ```
 ls backup/
 ```
