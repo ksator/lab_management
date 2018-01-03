@@ -25,7 +25,7 @@ It is based on:
 This repository uses Ansible, PyEZ and JSNAPy.  
 Ansible is the source of truth for the inventory and the credentials, so: 
 - JSNAPy inventory file [**devices.yml**](jsnapy/testfiles/devices.yml) is created automatically (using this [**playbook**](pb.generate.jsnapy.inventory.yml)), based on the Ansible inventory file [**hosts**](hosts) and on Ansible variables file for devices credentials  [**credentials.yml**](/group_vars/JUNOS/credentials.yml)
-- Devices list for PyEZ is created automatically based on the Ansible inventory file [**hosts**](hosts), using this [**script**](/python/inventory.py). Using this [**script**](/python/credentials.py), PyEZ uses the Ansible variables file for devices credentials [**credentials.yml**](/group_vars/JUNOS/credentials.yml).
+- Devices list for PyEZ is created automatically based on the Ansible inventory file [**hosts**](hosts) (using this [**script**](/python/inventory.py)). In addition, using this [**script**](/python/credentials.py), PyEZ uses the Ansible variables file for devices credentials [**credentials.yml**](/group_vars/JUNOS/credentials.yml).
 
 # Requirements to use this repository
 
