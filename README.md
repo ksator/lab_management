@@ -160,15 +160,12 @@ Run this command to do it for a device/group
 ```
 ansible-playbook pb.collect.golden.yml --limit QFX5110
 ```
-The golden configuration files are available in the directory [**golden_configuration**](golden_configuration)
-```
-ls golden_configuration
-```
 
 Run this command to do it for the whole network
 ```
 ansible-playbook pb.collect.golden.yml 
 ```
+
 The golden configuration files are available in the directory [**golden_configuration**](golden_configuration)
 ```
 ls golden_configuration
