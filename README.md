@@ -400,7 +400,7 @@ JSNAPy is supported in three modes
 ### How to validate there is no active alarm on the devices
 The JSNAPy configuration file [**cfg_file_snapcheck_alarms.yml**](jsnapy/cfg_file_snapcheck_alarms.yml) is used to validate there is no active alarm.  
 It uses the JSNAPy test file [**test_file_snapcheck_alarms.yml**](jsnapy/testfiles/test_file_snapcheck_alarms.yml)  
-Run this command to do validate there is no active alarm on the devices:
+Run this command to validate there is no active alarm on the devices:
 ```
 jsnapy --snapcheck -f jsnapy/cfg_file_snapcheck_alarms.yml --folder jsnapy
 ```
@@ -410,7 +410,7 @@ The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnap
 ls jsnapy/snapshots
 ```
 ### How to validate there is no interfaces error
-The JSNAPy configuration file [**cfg_file_snapcheck_interfaces.yml**](jsnapy/cfg_file_snapcheck_alarms.yml) is used to validate there is no interfaces error.  
+The JSNAPy configuration file [**cfg_file_snapcheck_interfaces.yml**](cfg_file_snapcheck_interfaces.yml) is used to validate there is no interfaces error.  
 It uses the JSNAPy test file [**test_file_snapcheck_interfaces.yml**](jsnapy/testfiles/test_file_snapcheck_interfaces.yml)  
 Run this command to do validate there is no interfaces error in the devices:
 ```
@@ -423,7 +423,9 @@ if you want to read the snapshots, run this command:
 ls jsnapy/snapshots
 ```
 ### How to validate some BGP details
-run this command to do it
+The JSNAPy configuration file [**cfg_file_snapcheck_bgp.yml**](jsnapy/cfg_file_snapcheck_bgp.yml) jsnapy file is used to validate some some BGP details  
+It uses the JSNAPy test file [**test_file_snapcheck_bgp.yml**](jsnapy/testfiles/test_file_snapcheck_bgp.yml)  
+Run this command to validate some BGP details
 ```
 jsnapy --snapcheck -f jsnapy/cfg_file_snapcheck_bgp.yml --folder jsnapy
 ```
@@ -433,32 +435,43 @@ if you want to read the snapshots, run this command:
 ls jsnapy/snapshots
 ```
 
-### Check if the topology changed
-take a first snapshot. it will be the source of Truth 
+### How to check if the topology changed
+
+Note: As xml output of "show lldp neighbors" is different on QFX and EX, it requires an different parsing. So we are using different JSNAPy files for EX and QFX.  
+The JSNAPy configuration file [**cfg_file_check_topology_EX.yml**](jsnapy/cfg_file_check_topology_EX.yml) is used to check if the topology changed. It uses the JSNAPy test file [**test_file_check_topology_EX.yml**](jsnapy/testfiles/test_file_check_topology_EX.yml)  
+The JSNAPy configuration file [**cfg_file_check_topology_QFX.yml**](jsnapy/cfg_file_check_topology_EX.yml) is used to check if the topology changed. It uses the JSNAPy test file [**test_file_check_topology_QFX.yml**](jsnapy/testfiles/test_file_check_topology_EX.yml)  
+  
+Take a first snapshot. It will be the source of Truth 
 ```
 jsnapy --snap pre -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy
+jsnapy --snap pre -f jsnapy/cfg_file_check_topology_EX.yml --folder jsnapy
+
 ```
-The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy.  
+The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy. if you want to read the snapshots, run this command: 
 ```
 ls jsnapy/snapshots/
 ```
-later on, if you want to check if the topology changed, take a new snapshot:
+
+
+Later on, if you want to check if the topology changed, take a new snapshot:
 ```
 jsnapy --snap post -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy
+jsnapy --snap post -f jsnapy/cfg_file_check_topology_EX.yml --folder jsnapy
 ```
-The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy.  
+The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy. if you want to read the snapshots, run this command:   
 ```
 ls jsnapy/snapshots/
 ```
-and compare the snapshots:
+Compare the snapshots:
 ```
 jsnapy --check pre post -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy
+jsnapy --check pre post -f jsnapy/cfg_file_check_topology_EX.yml --folder jsnapy
+
 ```
 you can also limit this action to one device, and use the verbose mode:  
 ```
 jsnapy --check pre post -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy -v -t  172.25.90.174
 ```
-Note: as xml output of "show lldp neighbors" is different on QFX and EX, it requires an different parsing. So for EX, use the file cfg_file_check_topology_EX.yml
 
 # Repository structure 
 
