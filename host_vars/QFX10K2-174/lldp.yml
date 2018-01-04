@@ -1,0 +1,14 @@
+---
+lldp:
+   - local_interface: et-0/0/30
+     lldp_neighbor: QFX5110-173
+   - local_interface: et-0/0/24
+     lldp_neighbor: QFX5110-172
+   - local_interface: et-0/0/1
+     lldp_neighbor: QFX5110-169
+   - local_interface: et-0/0/2
+     lldp_neighbor: QFX5110-170
+   - local_interface: et-0/0/13
+     lldp_neighbor: QFX5110-177
+   - local_interface: et-0/0/12
+     lldp_neighbor: QFX5110-176
