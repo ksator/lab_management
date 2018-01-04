@@ -300,37 +300,37 @@ ls rollback/
 
 # How to audit the network with Ansible
 
-### How to check if some services are reachable on Junos devices
+### How to validate if some services are reachable on Junos devices
 
-The playbook [**pb.check.ports.availability.yml**](pb.check.ports.availability.yml) checks if Ansible can connect on some ports on Junos devices (ssh, telnet, ftp, netconf)
+The playbook [**pb.check.ports.availability.yml**](pb.check.ports.availability.yml) checks if Ansible can connect on some ports on Junos devices (ssh, telnet, ftp, netconf)  
 Run this command to execute this playbook for the whole network:
 ```
 ansible-playbook pb.check.ports.availability.yml
 ```
 
-### How to check the status of interfaces on Junos devices
-The playbook [**pb.check.interfaces.yml**](pb.check.interfaces.yml) checks from devices operationnal state if the status (admin status and op status) of the interfaces is up. It does it for the interfaces described in YAML in [**host_vars**](host_vars)).  
+### How to validate the status of interfaces on Junos devices
+The playbook [**pb.check.interfaces.yml**](pb.check.interfaces.yml) checks from devices operationnal state if the status (admin status and op status) of the interfaces is up. It does it for the interfaces described in YAML in [**host_vars**](host_vars).  
 Run this command to execute this playbook for the whole network:
 ```
 ansible-playbook pb.check.interfaces.yml
 ```
 
-### How to check the physical topology 
+### How to validate the physical topology 
 The playbook [**pb.check.lldp.yml**](pb.check.lldp.yml) compare the desired LLDP neighbors (described in YAML in [**host_vars**](host_vars)) against the actual LLDP neighbors  
 Run this command to execute this playbook for the whole network:
 ```
 ansible-playbook pb.check.lldp.yml
 ```
 
-### How to check the BGP states 
-The playbook [**pb.check.bgp.yml**](pb.check.bgp.yml) checks from the devices operationnal state if the sessions state of the BGP neighbors described in YAML in [**host_vars**](host_vars)) is Established.  
+### How to validate the BGP sessions state 
+The playbook [**pb.check.bgp.yml**](pb.check.bgp.yml) checks from the devices operationnal state if the sessions state of the BGP neighbors described in YAML in [**host_vars**](host_vars) is Established.  
 Run this command to execute this playbook for the whole network:
 ```
 ansible-playbook pb.check.bgp.yml
 ```
 
-### How to check from devices operationnal state if desirated vlans are presents
-The playbook [**pb.check.vlans.yml**](pb.check.vlans.yml) checks from devices operationnal state if the desirated vlans described in YAML in [**host_vars**](host_vars)) are presents  
+### How to validate if desirated vlans are presents
+The playbook [**pb.check.vlans.yml**](pb.check.vlans.yml) checks from devices operationnal state if the desirated vlans described in YAML in [**host_vars**](host_vars) are presents  
 Run this command to execute this playbook for the whole network:
 ```
 ansible-playbook pb.check.vlans.yml
@@ -358,20 +358,29 @@ ansible-playbook pb.check.all.yml
 ```
 
 ### How to check which devices are not running their golden configuration
-Run this command to do it for a device/group
-```
-ansible-playbook pb.configure.golden.yml --check --limit QFX10K2-176
-```
-Run this command to do it for the whole network 
+
+In order to know which junos devices would have a configuration change if you load the golden configuration files, execute the playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) in dry run mode.  
+This wont load the golden configuration.  
 ```
 ansible-playbook pb.configure.golden.yml --check
 ```
-### How to get the diff between theconfiguration running on devices and their golden configuration
-Run this command to do it for a device/group
+
+Run this command to do it for one device/group.  
+This wont load the golden configuration.  
+```
+ansible-playbook pb.configure.golden.yml --check --limit QFX10K2-176
+```
+
+### How to get the diff between the configuration running on devices and their golden configuration
+
+In order to know if a junos devices would have a configuration change if you load its golden configuration file, and also to know the diff between its running configuration and its golden configuration, run this command.  
+This wont change the junos configuration.  
 ```
 ansible-playbook pb.configure.golden.yml --check --diff --limit QFX10K2-176
 ```
-Run this command to do it for the whole network 
+
+Run this command to do it for the whole network.  
+This wont load the golden configuration.  
 ```
 ansible-playbook pb.configure.golden.yml --check --diff 
 ```
