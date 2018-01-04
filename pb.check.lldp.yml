@@ -18,5 +18,5 @@
       interval: 3
      with_items:
      - "{{ lldp }}"
-     when: lldp is defined
+     when: lldp.lldp_neighbor is defined
 

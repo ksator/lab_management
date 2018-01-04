@@ -1,0 +1,5 @@
+---
+lldp:
+   - local_interface: xe-0/0/0 
+   - local_interface: xe-0/0/1
+
