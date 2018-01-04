@@ -1,0 +1,8 @@
+---
+lldp:
+   - local_interface: et-0/0/48
+     lldp_neighbor: QFX10K2-174
+   - local_interface: xe-0/0/0
+     lldp_neighbor: EX4550-190
+   - local_interface: xe-0/0/1
+     lldp_neighbor: HDN-ESXi-90165
