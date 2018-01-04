@@ -9,6 +9,6 @@ lldp:
    - local_interface: et-0/0/2
      lldp_neighbor: QFX5110-170
    - local_interface: et-0/0/13
-     lldp_neighbor: QFX5110-177
+     lldp_neighbor: QFX10K2-177
    - local_interface: et-0/0/12
-     lldp_neighbor: QFX5110-176
+     lldp_neighbor: QFX10K2-176

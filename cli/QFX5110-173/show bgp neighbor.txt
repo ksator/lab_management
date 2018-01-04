@@ -38,9 +38,9 @@ Peer: 10.0.1.14+50153 AS 65100 Local: 10.0.1.15+179 AS 65200
     Accepted prefixes:            5
     Suppressed due to damping:    0
     Advertised prefixes:          1
-  Last traffic (seconds): Received 6129818 Sent 4467640 Checked 6129818
-  Input messages:  Total 162180	Updates 6	Refreshes 0	Octets 3081614
-  Output messages: Total 163780	Updates 1	Refreshes 0	Octets 3111849
+  Last traffic (seconds): Received 6699589 Sent 5037411 Checked 6699589
+  Input messages:  Total 182851	Updates 6	Refreshes 0	Octets 3474363
+  Output messages: Total 184658	Updates 1	Refreshes 0	Octets 3508531
   Output Queue[1]: 0            (inet.0, inet-unicast)
 
 Peer: 10.0.1.18+51052 AS 65100 Local: 10.0.1.19+179 AS 65200
@@ -82,9 +82,9 @@ Peer: 10.0.1.18+51052 AS 65100 Local: 10.0.1.19+179 AS 65200
     Accepted prefixes:            5
     Suppressed due to damping:    0
     Advertised prefixes:          1
-  Last traffic (seconds): Received 6129818 Sent 4467640 Checked 6129818
-  Input messages:  Total 162180	Updates 6	Refreshes 0	Octets 3081614
-  Output messages: Total 163779	Updates 1	Refreshes 0	Octets 3111830
+  Last traffic (seconds): Received 6699589 Sent 5037411 Checked 6699589
+  Input messages:  Total 182852	Updates 6	Refreshes 0	Octets 3474382
+  Output messages: Total 184658	Updates 1	Refreshes 0	Octets 3508531
   Output Queue[1]: 0            (inet.0, inet-unicast)
 
 Peer: 10.0.2.5+179 AS 65101    Local: 10.0.2.4+56960 AS 65200
@@ -126,9 +126,9 @@ Peer: 10.0.2.5+179 AS 65101    Local: 10.0.2.4+56960 AS 65200
     Accepted prefixes:            20
     Suppressed due to damping:    0
     Advertised prefixes:          1
-  Last traffic (seconds): Received 6129818 Sent 4403309 Checked 6129818
-  Input messages:  Total 157819	Updates 2	Refreshes 0	Octets 2998649
-  Output messages: Total 161419	Updates 1	Refreshes 0	Octets 3066990
+  Last traffic (seconds): Received 6699589 Sent 4973080 Checked 6699589
+  Input messages:  Total 178242	Updates 2	Refreshes 0	Octets 3386686
+  Output messages: Total 182299	Updates 1	Refreshes 0	Octets 3463710
   Output Queue[1]: 0            (inet.0, inet-unicast)
 
 Peer: 10.0.2.7+179 AS 65101    Local: 10.0.2.6+61282 AS 65200
@@ -168,7 +168,7 @@ Peer: 10.0.2.7+179 AS 65101    Local: 10.0.2.6+61282 AS 65200
     Accepted prefixes:            20
     Suppressed due to damping:    0
     Advertised prefixes:          1
-  Last traffic (seconds): Received 6129818 Sent 6121708 Checked 6129818
-  Input messages:  Total 220251	Updates 141	Refreshes 0	Octets 4188927
-  Output messages: Total 224548	Updates 1	Refreshes 0	Octets 4266441
+  Last traffic (seconds): Received 6699589 Sent 6691479 Checked 6699589
+  Input messages:  Total 240671	Updates 141	Refreshes 0	Octets 4576907
+  Output messages: Total 245427	Updates 1	Refreshes 0	Octets 4663142
   Output Queue[1]: 0            (inet.0, inet-unicast)

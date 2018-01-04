@@ -37,9 +37,9 @@ Peer: 10.0.2.0+54501 AS 65200  Local: 10.0.2.1+179 AS 65101
     Accepted prefixes:            1
     Suppressed due to damping:    0
     Advertised prefixes:          20
-  Last traffic (seconds): Received 4403409 Sent 4403301 Checked 4403409
-  Input messages:  Total 161581	Updates 2	Refreshes 0	Octets 3070112
-  Output messages: Total 157820	Updates 1	Refreshes 0	Octets 2998668
+  Last traffic (seconds): Received 4973161 Sent 4973053 Checked 4973161
+  Input messages:  Total 182479	Updates 2	Refreshes 0	Octets 3467174
+  Output messages: Total 178241	Updates 1	Refreshes 0	Octets 3386667
   Output Queue[3]: 0            (INTERNET.inet.0, inet-unicast)
 
 Peer: 10.0.2.4+56960 AS 65200  Local: 10.0.2.5+179 AS 65101
@@ -80,9 +80,9 @@ Peer: 10.0.2.4+56960 AS 65200  Local: 10.0.2.5+179 AS 65101
     Accepted prefixes:            1
     Suppressed due to damping:    0
     Advertised prefixes:          20
-  Last traffic (seconds): Received 4403409 Sent 4403301 Checked 4403409
-  Input messages:  Total 161422	Updates 2	Refreshes 0	Octets 3067091
-  Output messages: Total 157820	Updates 1	Refreshes 0	Octets 2998668
+  Last traffic (seconds): Received 4973161 Sent 4973053 Checked 4973161
+  Input messages:  Total 182300	Updates 2	Refreshes 0	Octets 3463773
+  Output messages: Total 178241	Updates 1	Refreshes 0	Octets 3386667
   Output Queue[3]: 0            (INTERNET.inet.0, inet-unicast)
 
 Peer: 10.0.2.9+179 AS 200      Local: 10.0.2.8+63627 AS 301  
@@ -125,9 +125,9 @@ Peer: 10.0.2.9+179 AS 200      Local: 10.0.2.8+63627 AS 301
     Accepted prefixes:            14
     Suppressed due to damping:    0
     Advertised prefixes:          27
-  Last traffic (seconds): Received 4403409 Sent 1442831 Checked 4403409
-  Input messages:  Total 161283	Updates 23	Refreshes 0	Octets 3065177
-  Output messages: Total 157693	Updates 33	Refreshes 0	Octets 2997375
+  Last traffic (seconds): Received 4973161 Sent 2012583 Checked 4973161
+  Input messages:  Total 182168	Updates 23	Refreshes 0	Octets 3461992
+  Output messages: Total 178116	Updates 33	Refreshes 0	Octets 3385412
   Output Queue[2]: 0            (inet.0, inet-unicast)
 
 Peer: 10.0.2.11+179 AS 201     Local: 10.0.2.10+56547 AS 301  
@@ -170,9 +170,9 @@ Peer: 10.0.2.11+179 AS 201     Local: 10.0.2.10+56547 AS 301
     Accepted prefixes:            8
     Suppressed due to damping:    0
     Advertised prefixes:          27
-  Last traffic (seconds): Received 4403409 Sent 1442831 Checked 4403409
-  Input messages:  Total 161223	Updates 5	Refreshes 0	Octets 3063383
-  Output messages: Total 157638	Updates 15	Refreshes 0	Octets 2995730
+  Last traffic (seconds): Received 4973161 Sent 2012583 Checked 4973161
+  Input messages:  Total 182107	Updates 5	Refreshes 0	Octets 3460179
+  Output messages: Total 178060	Updates 15	Refreshes 0	Octets 3383748
   Output Queue[2]: 0            (inet.0, inet-unicast)
 
 Peer: 10.0.2.13+51842 AS 202   Local: 10.0.2.12+179 AS 301  
@@ -213,9 +213,9 @@ Peer: 10.0.2.13+51842 AS 202   Local: 10.0.2.12+179 AS 301
     Accepted prefixes:            13
     Suppressed due to damping:    0
     Advertised prefixes:          26
-  Last traffic (seconds): Received 4403409 Sent 1442831 Checked 4403409
-  Input messages:  Total 160659	Updates 91	Refreshes 0	Octets 3055721
-  Output messages: Total 157918	Updates 100	Refreshes 0	Octets 3004053
+  Last traffic (seconds): Received 4973161 Sent 2012583 Checked 4973161
+  Input messages:  Total 181437	Updates 91	Refreshes 0	Octets 3450503
+  Output messages: Total 178341	Updates 100	Refreshes 0	Octets 3392090
   Output Queue[2]: 0            (inet.0, inet-unicast)
 
 Peer: 10.0.2.15+55814 AS 203   Local: 10.0.2.14+179 AS 301  
@@ -256,9 +256,9 @@ Peer: 10.0.2.15+55814 AS 203   Local: 10.0.2.14+179 AS 301
     Accepted prefixes:            13
     Suppressed due to damping:    0
     Advertised prefixes:          26
-  Last traffic (seconds): Received 4403409 Sent 1442831 Checked 4403409
-  Input messages:  Total 160652	Updates 85	Refreshes 0	Octets 3055353
-  Output messages: Total 157915	Updates 97	Refreshes 0	Octets 3003946
+  Last traffic (seconds): Received 4973161 Sent 2012583 Checked 4973161
+  Input messages:  Total 181429	Updates 85	Refreshes 0	Octets 3450116
+  Output messages: Total 178337	Updates 97	Refreshes 0	Octets 3391964
   Output Queue[2]: 0            (inet.0, inet-unicast)
 
 Peer: 10.0.2.17+63940 AS 204   Local: 10.0.2.16+179 AS 301  
@@ -299,9 +299,9 @@ Peer: 10.0.2.17+63940 AS 204   Local: 10.0.2.16+179 AS 301
     Accepted prefixes:            17
     Suppressed due to damping:    0
     Advertised prefixes:          21
-  Last traffic (seconds): Received 4403409 Sent 1442831 Checked 4403409
-  Input messages:  Total 161470	Updates 49	Refreshes 0	Octets 3069438
-  Output messages: Total 157921	Updates 103	Refreshes 0	Octets 3004234
+  Last traffic (seconds): Received 4973161 Sent 2012583 Checked 4973161
+  Input messages:  Total 182357	Updates 49	Refreshes 0	Octets 3466291
+  Output messages: Total 178343	Updates 103	Refreshes 0	Octets 3392252
   Output Queue[2]: 0            (inet.0, inet-unicast)
 
 Peer: 10.254.254.0+63252 AS 2201 Local: 10.254.254.1+179 AS 301  
@@ -341,9 +341,9 @@ Peer: 10.254.254.0+63252 AS 2201 Local: 10.254.254.1+179 AS 301
     Accepted prefixes:            9
     Suppressed due to damping:    0
     Advertised prefixes:          17
-  Last traffic (seconds): Received 4403409 Sent 4397875 Checked 4403409
-  Input messages:  Total 159960	Updates 119	Refreshes 0	Octets 3043771
-  Output messages: Total 157893	Updates 75	Refreshes 0	Octets 3002916
+  Last traffic (seconds): Received 4973161 Sent 4967627 Checked 4973161
+  Input messages:  Total 180631	Updates 119	Refreshes 0	Octets 3436520
+  Output messages: Total 178315	Updates 75	Refreshes 0	Octets 3390934
   Output Queue[2]: 0            (inet.0, inet-unicast)
 
 Peer: 10.254.254.4+60612 AS 2202 Local: 10.254.254.5+179 AS 301  
@@ -383,9 +383,9 @@ Peer: 10.254.254.4+60612 AS 2202 Local: 10.254.254.5+179 AS 301
     Accepted prefixes:            9
     Suppressed due to damping:    0
     Advertised prefixes:          16
-  Last traffic (seconds): Received 4403409 Sent 4397875 Checked 4403409
-  Input messages:  Total 159968	Updates 127	Refreshes 0	Octets 3044185
-  Output messages: Total 157901	Updates 82	Refreshes 0	Octets 3003471
+  Last traffic (seconds): Received 4973161 Sent 4967627 Checked 4973161
+  Input messages:  Total 180639	Updates 127	Refreshes 0	Octets 3436934
+  Output messages: Total 178322	Updates 82	Refreshes 0	Octets 3391470
   Output Queue[2]: 0            (inet.0, inet-unicast)
 
 Peer: 191.168.100.1+179 AS 65100 Local: 191.168.101.3+52509 AS 65101
@@ -442,9 +442,9 @@ Peer: 191.168.100.1+179 AS 65100 Local: 191.168.101.3+52509 AS 65101
     Received prefixes:            0
     Accepted prefixes:            0
     Suppressed due to damping:    0
-  Last traffic (seconds): Received 4403409 Sent 699456 Checked 4403409
-  Input messages:  Total 162341	Updates 2501	Refreshes 0	Octets 3630486
-  Output messages: Total 3738471	Updates 3581239	Refreshes 0	Octets 483600526
+  Last traffic (seconds): Received 4973161 Sent 1269208 Checked 4973161
+  Input messages:  Total 183012	Updates 2501	Refreshes 0	Octets 4023235
+  Output messages: Total 3758893	Updates 3581239	Refreshes 0	Octets 483988544
   Output Queue[1]: 0            (bgp.evpn.0, evpn)
 
 Peer: 191.168.100.2+179 AS 65100 Local: 191.168.101.3+61312 AS 65101
@@ -501,9 +501,9 @@ Peer: 191.168.100.2+179 AS 65100 Local: 191.168.101.3+61312 AS 65101
     Received prefixes:            0
     Accepted prefixes:            0
     Suppressed due to damping:    0
-  Last traffic (seconds): Received 4403409 Sent 699456 Checked 4403409
-  Input messages:  Total 171464	Updates 11624	Refreshes 0	Octets 4294626
-  Output messages: Total 3739012	Updates 3581232	Refreshes 0	Octets 483599528
+  Last traffic (seconds): Received 4973161 Sent 1269208 Checked 4973161
+  Input messages:  Total 193509	Updates 12998	Refreshes 0	Octets 4809661
+  Output messages: Total 3759434	Updates 3581232	Refreshes 0	Octets 483987546
   Output Queue[1]: 0            (bgp.evpn.0, evpn)
 
 Peer: 191.168.101.5+64236 AS 65101 Local: 191.168.101.3+179 AS 65101
@@ -561,9 +561,9 @@ Peer: 191.168.101.5+64236 AS 65101 Local: 191.168.101.3+179 AS 65101
     Received prefixes:            3
     Accepted prefixes:            3
     Suppressed due to damping:    0
-  Last traffic (seconds): Received 4403409 Sent 309 Checked 4403409
-  Input messages:  Total 3083042	Updates 2921784	Refreshes 0	Octets 408547866
-  Output messages: Total 2396903	Updates 2239357	Refreshes 0	Octets 296259765
+  Last traffic (seconds): Received 4973161 Sent 21 Checked 4973161
+  Input messages:  Total 3105116	Updates 2922974	Refreshes 0	Octets 409063067
+  Output messages: Total 2418699	Updates 2240731	Refreshes 0	Octets 296774878
   Output Queue[1]: 0            (bgp.evpn.0, evpn)
 
 Peer: 191.168.101.6+63317 AS 65101 Local: 191.168.101.3+179 AS 65101
@@ -621,9 +621,9 @@ Peer: 191.168.101.6+63317 AS 65101 Local: 191.168.101.3+179 AS 65101
     Received prefixes:            3
     Accepted prefixes:            3
     Suppressed due to damping:    0
-  Last traffic (seconds): Received 4403409 Sent 309 Checked 4403409
-  Input messages:  Total 2868516	Updates 2707300	Refreshes 0	Octets 366037386
-  Output messages: Total 3065784	Updates 2908192	Refreshes 0	Octets 420775236
+  Last traffic (seconds): Received 4973161 Sent 21 Checked 4973161
+  Input messages:  Total 2890607	Updates 2708506	Refreshes 0	Octets 366554198
+  Output messages: Total 3087580	Updates 2909566	Refreshes 0	Octets 421290349
   Output Queue[1]: 0            (bgp.evpn.0, evpn)
 
 Peer: 191.168.101.7+60108 AS 65101 Local: 191.168.101.3+179 AS 65101
@@ -680,9 +680,9 @@ Peer: 191.168.101.7+60108 AS 65101 Local: 191.168.101.3+179 AS 65101
     Received prefixes:            31
     Accepted prefixes:            31
     Suppressed due to damping:    0
-  Last traffic (seconds): Received 4403409 Sent 309 Checked 4403409
-  Input messages:  Total 161431	Updates 7	Refreshes 4	Octets 3078996
-  Output messages: Total 3761915	Updates 3604150	Refreshes 0	Octets 517104548
+  Last traffic (seconds): Received 4973161 Sent 21 Checked 4973161
+  Input messages:  Total 182319	Updates 7	Refreshes 4	Octets 3475868
+  Output messages: Total 3783712	Updates 3605524	Refreshes 0	Octets 517619680
   Output Queue[1]: 0            (bgp.evpn.0, evpn)
 
 Peer: 191.168.102.1+179 AS 65101 Local: 191.168.101.3+52455 AS 65101
@@ -739,9 +739,9 @@ Peer: 191.168.102.1+179 AS 65101 Local: 191.168.101.3+52455 AS 65101
     Received prefixes:            3
     Accepted prefixes:            3
     Suppressed due to damping:    0
-  Last traffic (seconds): Received 4403409 Sent 309 Checked 4403409
-  Input messages:  Total 2958702	Updates 2798138	Refreshes 0	Octets 386664432
-  Output messages: Total 2987173	Updates 2829413	Refreshes 0	Octets 412758596
+  Last traffic (seconds): Received 4973161 Sent 21 Checked 4973161
+  Input messages:  Total 2980660	Updates 2799318	Refreshes 0	Octets 387176624
+  Output messages: Total 3008969	Updates 2830787	Refreshes 0	Octets 413273709
   Output Queue[1]: 0            (bgp.evpn.0, evpn)
 
 Peer: 191.168.102.2+179 AS 65101 Local: 191.168.101.3+62995 AS 65101
@@ -798,7 +798,7 @@ Peer: 191.168.102.2+179 AS 65101 Local: 191.168.101.3+62995 AS 65101
     Received prefixes:            3
     Accepted prefixes:            3
     Suppressed due to damping:    0
-  Last traffic (seconds): Received 4403409 Sent 309 Checked 4403409
-  Input messages:  Total 2973839	Updates 2813274	Refreshes 0	Octets 395033079
-  Output messages: Total 2972774	Updates 2815020	Refreshes 0	Octets 411927488
+  Last traffic (seconds): Received 4973161 Sent 21 Checked 4973161
+  Input messages:  Total 2995783	Updates 2814440	Refreshes 0	Octets 395543878
+  Output messages: Total 2994570	Updates 2816394	Refreshes 0	Octets 412442601
   Output Queue[1]: 0            (bgp.evpn.0, evpn)
