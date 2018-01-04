@@ -1,0 +1,20 @@
+---
+lldp:
+   - local_interface: et-0/0/6
+     lldp_neighbor: QFX5110-173
+   - local_interface: et-0/0/5
+     lldp_neighbor: QFX5110-172
+   - local_interface: et-0/0/2
+     lldp_neighbor: QFX10K2-180
+   - local_interface: et-0/0/0
+     lldp_neighbor: QFX10K2-178
+   - local_interface: et-0/0/13
+     lldp_neighbor: QFX10K2-175
+   - local_interface: et-0/0/3
+     lldp_neighbor: QFX10K2-181
+   - local_interface: et-0/0/12
+     lldp_neighbor: QFX10K2-174
+   - local_interface: et-0/0/4
+     lldp_neighbor: QFX10K2-182
+   - local_interface: et-0/0/1
+     lldp_neighbor: QFX10K2-179
