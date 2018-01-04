@@ -2,11 +2,11 @@
 
 - [**What to find in this repository**](README.md#what-to-find-in-this-repository)
 - [**Requirements to use this repository**](README.md#requirements-to-use-this-repository)
-- [**source of truth**](README.md#source-of-truth) 
-- [**How to locate a mac address in the network**](README.md#how-to-locate-a-mac-address-in-the-network)
-- [**How to collect data from the network**](README.md#how-to-collect-data-from-the-network) 
-- [**How to configure the network**](README.md#how-to-configure-the-network)
-- [**How to audit the network with Ansible**](README.md#how-to-audit-the-network-with-ansible)
+- [**Source of truth**](README.md#source-of-truth) 
+- [**How to locate a mac address in the network using Python**](README.md#how-to-locate-a-mac-address-in-the-network-using-python)
+- [**How to collect data from the network using Ansible**](README.md#how-to-collect-data-from-the-network-using-ansible) 
+- [**How to configure the network using Ansible**](README.md#how-to-configure-the-network-using-ansible)
+- [**How to audit the network using Ansible**](README.md#how-to-audit-the-network--using-ansible)
 - [**How to audit the network using JSNAPy**](README.md#how-to-audit-the-network-using-jsnapy)
 - [**Repository structure**](README.md#repository-structure)
 - [**Looking for help**](README.md#looking-for-help)
@@ -66,7 +66,7 @@ sudo -s
 You can now use the local copy of this remote repository.  
 You need to run the below commands within the root of the project tree.
 
-# source of truth
+# Source of truth
 
 This repository uses Ansible, PyEZ and JSNAPy.  
 Ansible is the source of truth for the inventory and the credentials, so: 
@@ -74,13 +74,13 @@ Ansible is the source of truth for the inventory and the credentials, so:
 - Devices list for PyEZ is created automatically based on the [**Ansible inventory file**](hosts) (using this [**python script**](/python/inventory.py)). In addition, using this [**python script**](/python/credentials.py), PyEZ is able to reuse the [**Ansible variables for devices credentials**](/group_vars/JUNOS/credentials.yml).
 
 
-# How to locate a mac address in the network
+# How to locate a mac address in the network using Python
 Execute this [**python script**](python/locate.mac.address.py) to locate a mac address in the network
 ```
 python ./python/locate.mac.address.py 38:4f:49:f2:5f:fc
 ```
 
-# How to collect data from the network 
+# How to collect data from the network using Ansible
 
 ### How to pass show commands on junos devices and collect the commands output
 Edit the [**cli.yml**](cli.yml) file to indicate the list of junos show commands you want to use
@@ -116,7 +116,7 @@ The commands output is available in the [**command**](command) directory.
 ls command
 ```
 
-### How to collect the facts from junos devices
+### How to collect the facts from junos devices 
 
 The playbook [**pb.collect.facts.yml**](pb.collect.facts.yml) collects the facts on junos devices and save them on Ansible in the directory [**facts**](facts)
 
@@ -172,7 +172,7 @@ ls golden_configuration
 ```
 
 
-# How to configure the network
+# How to configure the network using Ansible
 
 ### How to overwrite the running configuration on junos devices with their golden confiiguration
 
@@ -298,7 +298,7 @@ ls rollback/
 ```
 
 
-# How to audit the network with Ansible
+# How to audit the network using Ansible
 
 ### How to validate if some services are reachable on Junos devices
 
