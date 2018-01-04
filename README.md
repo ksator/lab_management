@@ -6,7 +6,7 @@
 - [**How to locate a mac address in the network using Python**](README.md#how-to-locate-a-mac-address-in-the-network-using-python)
 - [**How to collect data from the network using Ansible**](README.md#how-to-collect-data-from-the-network-using-ansible) 
 - [**How to configure the network using Ansible**](README.md#how-to-configure-the-network-using-ansible)
-- [**How to audit the network using Ansible**](README.md#how-to-audit-the-network--using-ansible)
+- [**How to audit the network using Ansible**](README.md#how-to-audit-the-network-using-ansible)
 - [**How to audit the network using JSNAPy**](README.md#how-to-audit-the-network-using-jsnapy)
 - [**Repository structure**](README.md#repository-structure)
 - [**Looking for help**](README.md#looking-for-help)
