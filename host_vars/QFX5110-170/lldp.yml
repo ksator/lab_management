@@ -1,0 +1,6 @@
+---
+lldp:
+   - local_interface: et-0/0/49
+     lldp_neighbor: QFX10K2-175
+   - local_interface: et-0/0/48
+     lldp_neighbor: QFX10K2-174
