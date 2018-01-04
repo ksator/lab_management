@@ -202,13 +202,13 @@ vi pb.configure.lines.yml
 ```
 
 In order to know which junos devices would have a configuration change if you execute the playbook [**pb.configure.lines.yml**](pb.configure.lines.yml), execute it in dry run mode.  
-This wont commit the junos configuration.  
+This wont change the junos configuration.  
 ```
 ansible-playbook pb.configure.lines.yml --check
 ```
 
 In order to know if a junos device would have a configuration change if you execute the playbook [**pb.configure.lines.yml**](pb.configure.lines.yml), and also to know the diff between the desired state described in the playbook [**pb.configure.lines.yml**](pb.configure.lines.yml) and the device actual state, run this command.  
-This wont commit the junos configuration.  
+This wont change the junos configuration.  
 ```
 ansible-playbook pb.configure.lines.yml --check --diff --limit QFX10K2-176
 ```
@@ -231,52 +231,68 @@ ls backup/
 ```
 
 ### How to configure devices with telemetry
-How to read the telemetry template
+
+The directory [**templates**](templates) has the jinja templates.  
+
+The template [**telemetry.j2**](/templates/telemetry.j2) is used by the playbook [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml) to generated the junos configuration for streaming telemetry.  
 ```
 more templates/telemetry.j2
 ```
-How to render the telemetry template locally (i.e without connecting to junos devices)
+
+Run this command to render the telemetry template locally.  
+This will generate the junos telemetry configuration files, without actually configuring the junos devices.  
+The directory [**render**](render) has the files generated from the jinja templates and variables.  
 ```
 ansible-playbook pb.configure.telemetry.yml --tag render
+```
+```
 ls render/telemetry/
 ```
-How to execute this playbook in dry run mode (i.e without commiting the junos configuration)
+
+In order to know which junos devices would have a configuration change if you execute the playbook [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml), execute it in dry run mode.  
+This wont change the junos configuration.  
 ```
 ansible-playbook pb.configure.telemetry.yml --check
 ```
-How to execute this playbook in dry run mode and also print the diff between the desired state and the actual state 
-```
+
+In order to know if a junos device would have a configuration change if you execute the playbook [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml), and also to know the diff between the desired state and the device actual state, run this command.  
+This wont change the junos configuration.  
+ ```
 ansible-playbook pb.configure.telemetry.yml --check --diff --limit QFX10K2-176
 ```
-How to execute this playbook for one device/group
+
+Run this command to execute the playbook [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml) for one device/group.  
+This will configure telemetry on the device/group
 ```
 ansible-playbook pb.configure.telemetry.yml --limit QFX10K2-176
 ```
-```
-ls backup/
-```
-How to execute this playbook
+
+Run this command to execute the playbook [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml).  
+This will configure the whole network with the list of set/delete commands. 
 ```
 ansible-playbook pb.configure.telemetry.yml
 ```
+
+The playbook [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml) backups in the directory [**backup**](backup) the current running configuration from the remote devices before to applying the configuration change. 
 ```
 ls backup/
 ```
 
-
 ### How to rollback the running configuration to a previous state
+
+The playbook [**pb.rollback.yml**](pb.rollback.yml) playbook performs a configuration rollback on junos devices.
 
 Run this command to rollback 1 the whole network 
 ```
 ansible-playbook pb.rollback.yml --extra-vars rbid=1
 ```
-```
-ls rollback/
-```
+
 Run this command to rollback 3 the group DC2 
 ```
 ansible-playbook pb.rollback.yml --extra-vars rbid=3 --limit DC2
 ```
+
+The directory [**rollback**](rollback) has the Junos configuration diffs from rollbacks done with ansible playbook [**pb.rollback.yml**](pb.rollback.yml) 
 ```
 ls rollback/
 ```
