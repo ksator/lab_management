@@ -443,7 +443,7 @@ Note: As xml output of "show lldp neighbors" is different on QFX and EX, it requ
 
 The JSNAPy configuration file [**cfg_file_check_topology_EX.yml**](jsnapy/cfg_file_check_topology_EX.yml) is used to check if the topology changed. It uses the JSNAPy test file [**test_file_check_topology_EX.yml**](jsnapy/testfiles/test_file_check_topology_EX.yml)  
 
-The JSNAPy configuration file [**cfg_file_check_topology_QFX.yml**](jsnapy/cfg_file_check_topology_EX.yml) is used to check if the topology changed. It uses the JSNAPy test file [**test_file_check_topology_QFX.yml**](jsnapy/testfiles/test_file_check_topology_QFX.yml)  
+The JSNAPy configuration file [**cfg_file_check_topology_QFX.yml**](jsnapy/cfg_file_check_topology_QFX.yml) is used to check if the topology changed. It uses the JSNAPy test file [**test_file_check_topology_QFX.yml**](jsnapy/testfiles/test_file_check_topology_QFX.yml)  
   
 Take a first snapshot. It will be the source of Truth 
 ```
