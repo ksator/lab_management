@@ -392,20 +392,32 @@ There are 2 JSNAPy workflows:
 - take snapshots and compare them against pre defined criteria
 - take pre snapshots before any modification and then take post snapshots after modification and then compare them based on test cases
 
-### How to validate there is no active alarms on the devices
-run this command to do it
+JSNAPy is supported in three modes
+- a command line tool
+- a Python module 
+- An Ansible module hosted on the Ansible [**Galaxy**](https://galaxy.ansible.com/Juniper/junos/)
+
+### How to validate there is no active alarm on the devices
+The JSNAPy configuration file [**cfg_file_snapcheck_alarms.yml**](jsnapy/cfg_file_snapcheck_alarms.yml) is used to validate there is no active alarm.  
+It uses the JSNAPy test file [**test_file_snapcheck_alarms.yml**](jsnapy/testfiles/test_file_snapcheck_alarms.yml)  
+Run this command to do validate there is no active alarm on the devices:
 ```
 jsnapy --snapcheck -f jsnapy/cfg_file_snapcheck_alarms.yml --folder jsnapy
 ```
-if you want to read the snapshots, run this command:
+
+The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy. If you want to read the snapshots, run this command:
 ```
 ls jsnapy/snapshots
 ```
-### How to see if there are interfaces errors
-run this command to do it
+### How to validate there is no interfaces error
+The JSNAPy configuration file [**cfg_file_snapcheck_interfaces.yml**](jsnapy/cfg_file_snapcheck_alarms.yml) is used to validate there is no interfaces error.  
+It uses the JSNAPy test file [**test_file_snapcheck_interfaces.yml**](jsnapy/testfiles/test_file_snapcheck_interfaces.yml)  
+Run this command to do validate there is no interfaces error in the devices:
 ```
 jsnapy --snapcheck -f jsnapy/cfg_file_snapcheck_interfaces.yml --folder jsnapy
 ```
+
+The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy.  
 if you want to read the snapshots, run this command:
 ```
 ls jsnapy/snapshots
@@ -415,6 +427,7 @@ run this command to do it
 ```
 jsnapy --snapcheck -f jsnapy/cfg_file_snapcheck_bgp.yml --folder jsnapy
 ```
+The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy.  
 if you want to read the snapshots, run this command:
 ```
 ls jsnapy/snapshots
@@ -424,11 +437,17 @@ ls jsnapy/snapshots
 take a first snapshot. it will be the source of Truth 
 ```
 jsnapy --snap pre -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy
+```
+The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy.  
+```
 ls jsnapy/snapshots/
 ```
 later on, if you want to check if the topology changed, take a new snapshot:
 ```
 jsnapy --snap post -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy
+```
+The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy.  
+```
 ls jsnapy/snapshots/
 ```
 and compare the snapshots:
