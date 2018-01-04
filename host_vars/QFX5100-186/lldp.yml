@@ -1,0 +1,22 @@
+---
+lldp:
+   - local_interface: xe-0/0/0
+     lldp_neighbor: QFX5100-192
+   - local_interface: xe-1/0/0
+     lldp_neighbor: QFX5100-192
+   - local_interface: xe-2/0/0
+     lldp_neighbor: QFX5100-192
+   - local_interface: et-1/0/48
+     lldp_neighbor: QFX10K2-180
+   - local_interface: et-0/0/48
+     lldp_neighbor: QFX10K2-180
+   - local_interface: et-2/0/48
+     lldp_neighbor: QFX10K2-180
+   - local_interface: et-1/0/49
+     lldp_neighbor: QFX10K2-181
+   - local_interface: et-0/0/49
+     lldp_neighbor: QFX10K2-181
+   - local_interface: et-2/0/49
+     lldp_neighbor: QFX10K2-181
+   - local_interface: xe-1/0/1
+     lldp_neighbor: HDN-ESXi-90168
