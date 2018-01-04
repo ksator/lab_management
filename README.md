@@ -268,7 +268,7 @@ ansible-playbook pb.configure.telemetry.yml --limit QFX10K2-176
 ```
 
 Run this command to execute the playbook [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml).  
-This will configure the whole network with the list of set/delete commands. 
+This will configure telemetry on the whole network.
 ```
 ansible-playbook pb.configure.telemetry.yml
 ```
@@ -292,7 +292,7 @@ Run this command to rollback 3 the group DC2
 ansible-playbook pb.rollback.yml --extra-vars rbid=3 --limit DC2
 ```
 
-The directory [**rollback**](rollback) has the Junos configuration diffs from rollbacks done with ansible playbook [**pb.rollback.yml**](pb.rollback.yml) 
+The directory [**rollback**](rollback) has the Junos configuration diffs from rollbacks done with the ansible playbook [**pb.rollback.yml**](pb.rollback.yml) 
 ```
 ls rollback/
 ```
@@ -300,37 +300,59 @@ ls rollback/
 
 # How to audit the network with Ansible
 
-### How to check if some services (netconf, ssh, ftp, telnet ports) are reachable on Junos devices
+### How to check if some services are reachable on Junos devices
+
+The playbook [**pb.check.ports.availability.yml**](pb.check.ports.availability.yml) checks if Ansible can connect on some ports on Junos devices (ssh, telnet, ftp, netconf)
+Run this command to execute this playbook for the whole network:
 ```
 ansible-playbook pb.check.ports.availability.yml
 ```
 
 ### How to check the status of interfaces on Junos devices
+The playbook [**pb.check.interfaces.yml**](pb.check.interfaces.yml) checks from devices operationnal state if the status (admin status and op status) of the interfaces is up. It does it for the interfaces described in YAML in [**host_vars**](host_vars)).  
+Run this command to execute this playbook for the whole network:
 ```
 ansible-playbook pb.check.interfaces.yml
 ```
 
 ### How to check the physical topology 
+The playbook [**pb.check.lldp.yml**](pb.check.lldp.yml) compare the desired LLDP neighbors (described in YAML in [**host_vars**](host_vars)) against the actual LLDP neighbors  
+Run this command to execute this playbook for the whole network:
 ```
 ansible-playbook pb.check.lldp.yml
 ```
 
 ### How to check the BGP states 
+The playbook [**pb.check.bgp.yml**](pb.check.bgp.yml) checks from the devices operationnal state if the sessions state of the BGP neighbors described in YAML in [**host_vars**](host_vars)) is Established.  
+Run this command to execute this playbook for the whole network:
 ```
 ansible-playbook pb.check.bgp.yml
 ```
 
 ### How to check from devices operationnal state if desirated vlans are presents
+The playbook [**pb.check.vlans.yml**](pb.check.vlans.yml) checks from devices operationnal state if the desirated vlans described in YAML in [**host_vars**](host_vars)) are presents  
+Run this command to execute this playbook for the whole network:
 ```
 ansible-playbook pb.check.vlans.yml
 ```
 
 ### How to collects the facts on junos devices and print them on Ansible
+The playbook [**pb.print.facts.yml**](pb.print.facts.yml) collects the facts on junos devices and print them on Ansible.  
+Run this command to execute this playbook for the whole network:
 ```
 ansible-playbook pb.print.facts.yml
 ```
 
 ### How to run all the above tests in one single command
+The playbook [**pb.check.all.yml**](pb.check.all) includes these playbooks: 
+ - [**pb.check.ports.availability.yml**](pb.check.ports.availability.yml)
+ - [**pb.check.interfaces.yml**](pb.check.interfaces.yml)
+ - [**pb.check.lldp.yml**](pb.check.lldp.yml)
+ - [**pb.check.bgp.yml**](pb.check.bgp.yml)
+ - [**pb.check.vlans.yml**](pb.check.vlans.yml)
+ - [**pb.print.facts.yml**](pb.print.facts.yml)  
+ 
+Run this command to execute this playbook for the whole network:
 ```
 ansible-playbook pb.check.all.yml
 ```
@@ -450,12 +472,12 @@ All playbooks are named **pb.*.yml**
 - [**pb.collect.facts.yml**](pb.collect.facts.yml) playbook collects the facts on junos devices and save them on Ansible in the directory [**facts**](facts)
 
 ##### Ansible Playbooks to audit the network
-- [**pb.check.all.yml**](pb.check.all) playbook include these playbooks:
+- [**pb.check.all.yml**](pb.check.all) playbook includes these playbooks:
  - [**pb.check.ports.availability.yml**](pb.check.ports.availability.yml) playbook checks if Ansible can connect on some ports on Junos devices (ssh, telnet, ftp, netconf)
  - [**pb.check.interfaces.yml**](pb.check.interfaces.yml) playbook checks the status of the interfaces on Junos devices
- - [**pb.check.lldp.yml**](pb.check.lldp.yml) playbook check the physical topology 
- - [**pb.check.bgp.yml**](pb.check.bgp.yml) playbook check the BGP states 
- - [**pb.check.vlans.yml**](pb.check.vlans.yml) playbook check from devices operationnal state if desirated vlans are presents
+ - [**pb.check.lldp.yml**](pb.check.lldp.yml) playbook checks the physical topology 
+ - [**pb.check.bgp.yml**](pb.check.bgp.yml) playbook checks the BGP states 
+ - [**pb.check.vlans.yml**](pb.check.vlans.yml) playbook checks from devices operationnal state if desirated vlans are presents
  - [**pb.print.facts.yml**](pb.print.facts.yml) playbook collects the facts on junos devices and print them on Ansible
 
 ##### Other Ansible Playbooks
