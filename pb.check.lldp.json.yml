@@ -13,7 +13,7 @@
       commands:
        - show lldp neighbors interface "{{ item.local_interface }}"
       waitfor:
-       - "result[0]['lldp-neighbors-information'][0]['lldp-neighbor-information'][0]['lldp-remote-system-name'][0]['data'] contains {{ item.lldp_neighbor }}"
+       - "result[0]['lldp-neighbors-information'][0]['lldp-neighbor-information'][0]['lldp-remote-system-name'][0]['data'] eq {{ item.lldp_neighbor }}"
       retries: 3
       interval: 3
      with_items:
