@@ -522,14 +522,16 @@ All playbooks are named **pb.*.yml**
 - [**pb.collect.facts.yml**](pb.collect.facts.yml) playbook collects the facts on junos devices and save them on Ansible in the directory [**facts**](facts)
 
 ##### Ansible Playbooks to audit the network
-- [**pb.check.lldp.json.yml**](pb.check.lldp.json.yml) playbook checks the LLDP topology.
-- [**pb.check.all.yml**](pb.check.all) playbook includes these playbooks:
- - [**pb.check.ports.availability.yml**](pb.check.ports.availability.yml) playbook checks if Ansible can connect on some ports on Junos devices (ssh, telnet, ftp, netconf)
- - [**pb.check.interfaces.yml**](pb.check.interfaces.yml) playbook checks the status of the interfaces on Junos devices
- - [**pb.check.lldp.yml**](pb.check.lldp.yml) playbook checks the LLDP topology 
- - [**pb.check.bgp.yml**](pb.check.bgp.yml) playbook checks the BGP states 
- - [**pb.check.vlans.yml**](pb.check.vlans.yml) playbook checks from devices operationnal state if desirated vlans are presents
- - [**pb.print.facts.yml**](pb.print.facts.yml) playbook collects the facts on junos devices and print them on Ansible
+
+- [**pb.check.lldp.json.yml**](pb.check.lldp.json.yml) playbook checks the LLDP topology.  
+
+- [**pb.check.all.yml**](pb.check.all) playbook includes these playbooks:  
+  - [**pb.check.ports.availability.yml**](pb.check.ports.availability.yml) playbook checks if Ansible can connect on some ports on Junos devices (ssh, telnet, ftp, netconf)
+  - [**pb.check.interfaces.yml**](pb.check.interfaces.yml) playbook checks the status of the interfaces on Junos devices
+  - [**pb.check.lldp.yml**](pb.check.lldp.yml) playbook checks the LLDP topology 
+  - [**pb.check.bgp.yml**](pb.check.bgp.yml) playbook checks the BGP states 
+  - [**pb.check.vlans.yml**](pb.check.vlans.yml) playbook checks from devices operationnal state if desirated vlans are presents
+  - [**pb.print.facts.yml**](pb.print.facts.yml) playbook collects the facts on junos devices and print them on Ansible
 
 ##### Other Ansible Playbooks
 - [**pb.generate.variables.structure.yml**](pb.generate.variables.structure.yml) playbook was used at the beginning of the project to create some of the directories and files used to define yaml variables. 
