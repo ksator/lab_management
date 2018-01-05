@@ -333,8 +333,8 @@ Run this command to execute this playbook for the whole network:
 ansible-playbook pb.check.bgp.yml
 ```
 
-### How to validate if desirated vlans are presents
-The playbook [**pb.check.vlans.yml**](pb.check.vlans.yml) checks from devices operationnal state if the desirated vlans described in YAML in [**host_vars**](host_vars) are presents  
+### How to validate if desired vlans are presents
+The playbook [**pb.check.vlans.yml**](pb.check.vlans.yml) checks from devices operationnal state if the desired vlans described in YAML in [**host_vars**](host_vars) are presents  
 Run this command to execute this playbook for the whole network:
 ```
 ansible-playbook pb.check.vlans.yml
@@ -530,7 +530,7 @@ All playbooks are named **pb.*.yml**
   - [**pb.check.interfaces.yml**](pb.check.interfaces.yml) playbook checks the status of the interfaces on Junos devices
   - [**pb.check.lldp.yml**](pb.check.lldp.yml) playbook checks the LLDP topology 
   - [**pb.check.bgp.yml**](pb.check.bgp.yml) playbook checks the BGP states 
-  - [**pb.check.vlans.yml**](pb.check.vlans.yml) playbook checks from devices operationnal state if desirated vlans are presents
+  - [**pb.check.vlans.yml**](pb.check.vlans.yml) playbook checks from devices operationnal state if desired vlans are presents
   - [**pb.print.facts.yml**](pb.print.facts.yml) playbook collects the facts on junos devices and print them on Ansible
 
 ##### Other Ansible Playbooks
