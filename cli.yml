@@ -7,3 +7,4 @@ cli:
     - "show interfaces terse"
     - "show vlans"
     - "show configuration"
+    - "show configuration | display set"
