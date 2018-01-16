@@ -618,6 +618,7 @@ Most of our customers are using 'configure exclusive' with automation tools/proc
 A "configure exclusive" workflow ensures there will never be conflicting changes committed into the network.  
 
 The drawback is that the configuration task may "fail" because the configuration is currently locked. This is not specific to network automation.  
+
 The same arise when configuration changes are manuals.  
 In general, an automated procedure is going to have the configuration locked for a much shorter time than an equivalent configuration change from a human, and having the configuration locked for shorter periods will decrease the likelihood of a "conflict".  
 
@@ -625,7 +626,7 @@ If there are also humans involved in making configuration changes then there sho
 
 That said, conflicts may still occur, and they must have a process for dealing with them. There must be a process which defines how to handle this situation (Do you retry automatically or manually? If automatically, how frequently do you retry? How many times do you retry? What happens if it still fails after max retries?)  
 
-Here's [**how to retry manually and automatically for the devices that failed using Ansible**](https://github.com/ksator/EVPN_DCI_automation/wiki/how-to-retry-a-playbook-for-the-devices-that-failed)  
+Here's [**how to retry ansible playbooks manually and automatically for the devices that failed **](https://github.com/ksator/EVPN_DCI_automation/wiki/how-to-retry-a-playbook-for-the-devices-that-failed)  
 Here's the doc about [**Error handling with ansible**](http://docs.ansible.com/ansible/latest/playbooks_error_handling.html)   
 
 PyEZ also have exception handling support:  
