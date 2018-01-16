@@ -640,15 +640,16 @@ PyEZ also have exception handling support:
 In that case, the configuration is not locked. So, no configuration lock error can happen.      
 
 However, using edit private, if the same section of the configuration is changed "simultaneously" (i.e 2 different 'edit private' happens before the first commit), then, depending on the configuration changes, a configuration conflict might happen. In that case, the second commit will fail.  
-A human using junos cli can use the command "update" if, based on his judgment, he decides to commit the second change, but this will discard the previous commit.  
 This is not specific to network automation. The same arise when configuration changes are manuals.  
+
+A human using junos cli can use the command "update" if, based on his judgment, he decides to commit the second change, but this will discard the previous commit.  
 
 Automation executes tasks (opens a private configuration database, loads changes to their private configuration database, commit changes) quicker than humans.  
 That makes difficult for some other human/process to edit the configuration in between. 
 However, it is certainly still possible.  
 Therefore, we need to ensure a configuration conflict does not occur.  
 
-"configure private"  is a valid workflow if a given section of the configuration has only one "single source of authority".  
+"configure private" is a valid workflow if a given section of the configuration has only one "single source of authority".  
 
 For example, you might have thing1 maintaining BGP neighbor configuration and policy, thing2 maintaining OSPF, and humans manually configuring interfaces. In this situation, thing1 would be the "single source of authority" for BGP, thing2 would be the "single source of authority" for OSPF, and the humans would be the single source of authority for interfaces configuration. thing1 and thing2 and humans can configure the network simultaneously as they 'owns' different sections of the configuration.  
 For each section of the device configuration (think of this as a list of one or more "edit" hierarchies in Junos), we recommend that only a single "thing" should "control" that section of the hierarchy.  
