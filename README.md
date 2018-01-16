@@ -660,13 +660,13 @@ With a workflow that ensures a "single source of authority" for each section of 
 
 Two processes/people can safely configure a network device at the same time using "configure private" as long as they are not both trying to change the same section of the configuration.  
 
-Even if we SHOULD have a "single source of authority" for each section of the configuration with a ‘edit private’ workflow, a robust automation tool which uses the "configure private" workflow really should retry and/or fail in a predictable way in the event of conflict.  
+Even if we should have a "single source of authority" for each section of the configuration with a ‘edit private’ workflow, a robust automation tool which uses the "configure private" workflow really should retry and/or fail in a predictable way in the event of conflict.  
 
 However, if the same "single source of authority" do changes "simultaneously" (i.e 2 different 'edit private' happens before the first commit) on the same section of the configuration, then, depending on the configuration changes, a conflict might happen, and in that case, the second commit will fail. Whatever if it is ansible or python or cli.  
-If it is ansible juniper_junos_config module, the second task would fail and the config changes from that task would be discarded.  
+If it is ansible juniper_junos_config module, the second commit would fail and the config changes from that task would be discarded.  
 If it is cli, the second commit will fail and the human using junos cli can use the command "update" if he decides based on his judgment to commit the second change, but this will discard the previous commit.  
 
-Also, if two processes/people DO change the same section of the configuration at roughly the same time, then you get an unpredictable final configuration depending on which commit happened first.  
+Also, if two processes/people do change the same section of the configuration at roughly the same time, then you get an unpredictable final configuration depending on which commit happened first.  
 
 If the process does not ensure a "single source of authority" for each section of their configuration, I would recommend against this workflow.  
 
