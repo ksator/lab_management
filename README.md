@@ -626,7 +626,7 @@ If there are also humans involved in making configuration changes then there sho
 
 That said, conflicts may still occur, and they must have a process for dealing with them. There must be a process which defines how to handle this situation (Do you retry automatically or manually? If automatically, how frequently do you retry? How many times do you retry? What happens if it still fails after max retries?)  
 
-Here's [**how to retry ansible playbooks manually and automatically for the devices that failed **](https://github.com/ksator/EVPN_DCI_automation/wiki/how-to-retry-a-playbook-for-the-devices-that-failed)  
+Here's [**how to retry ansible playbooks manually and automatically for the devices that failed**](https://github.com/ksator/EVPN_DCI_automation/wiki/how-to-retry-a-playbook-for-the-devices-that-failed)  
 Here's the doc about [**Error handling with ansible**](http://docs.ansible.com/ansible/latest/playbooks_error_handling.html)   
 
 PyEZ also have exception handling support:  
