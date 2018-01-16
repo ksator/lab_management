@@ -599,21 +599,16 @@ Junos supports various ‘edit’ options. Should we use 'edit exclusive' or 'ed
 
 ### Various 'edit' options available with: 
  
-##### CLI  
-CLI supports 'configure exclusive' and 'configure private' and 'configure'. We recommend to never use the shared configuration database (configure) as there is a risk of committing incorrect configuration changes when two users are editing the configuration at the same time.  
+Junos CLI supports 'configure exclusive' and 'configure private' and 'configure'. We recommend to never use the shared configuration database (configure) as there is a risk of committing incorrect configuration changes when two users are editing the configuration at the same time.  
  
-##### Pyez
 PyEZ (junos-eznc python library) supports 'configure exclusive' and 'configure private'  
 
-##### SaltStack
-SaltStack uses currently only 'configure exclusive'  
+SaltStack modules for Junos use currently only 'configure exclusive'  
 
-##### Junos space 
 Junos space uses currently only 'configure exclusive'  
 
-##### Ansible
-
 Ansible core modules for Junos use currently only 'configure exclusive'.    
+
 Ansible galaxy module [**juniper_junos_config**](http://junos-ansible-modules.readthedocs.io/en/2.0.1/juniper_junos_config.html) supports both 'configure exclusive' and 'configure private'.    
  
 ### "configure exclusive" workflow with automation
