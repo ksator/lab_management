@@ -597,7 +597,7 @@ The directory [**jsnapy**](jsnapy) has the jsnapy content:
 ### Introduction  
 Junos supports various ‘edit’ options. Should we use 'edit exclusive' or 'edit private' with Network automation? There is no "one size fits all" solution to this question. However, here are the recommendations.  
 
-### Various 'edit' options available with: 
+### Various 'edit' options available 
  
 Junos CLI supports 'configure exclusive' and 'configure private' and 'configure'. We recommend to never use the shared configuration database (configure) as there is a risk of committing incorrect configuration changes when two users are editing the configuration at the same time.  
  
