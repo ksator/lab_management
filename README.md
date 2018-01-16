@@ -52,14 +52,14 @@ ansible-galaxy list
 
 ```
 sudo -s
-git clone http://172.25.90.133/root/PoC-80.git
-ls PoC-80/
+git clone https://github.com/ksator/lab_management.git
+ls lab_management/
 ```
 
 ### Move to the local copy of the remote repo
 
 ```
-cd PoC-80/
+cd lab_management/
 sudo -s
 ```
 
