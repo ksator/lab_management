@@ -32,7 +32,7 @@ Run these commands on Ubuntu 16.04 to install these tools:
 sudo -s
 apt-get update
 apt-get install -y python-dev libxml2-dev python-pip libxslt1-dev build-essential libssl-dev libffi-dev git
-pip install junos-eznc jxmlease wget jsnapy ansible==2.4.2.0 requests ipaddress cryptography==1.2.1 
+pip install junos-eznc jxmlease wget jsnapy ansible==2.4.2.0 requests ipaddress cryptography 
 ansible-galaxy install Juniper.junos,1.4.3
 ```
 Check the Ansible version:
