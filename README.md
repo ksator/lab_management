@@ -23,6 +23,21 @@ It is based on:
 
 # Requirements to use this repository
 
+### Get locally the content of the remote repository
+
+```
+sudo -s
+git clone xxxx
+ls xxxx/
+```
+
+### Move to the local copy of the remote repo
+
+```
+cd xxxx
+sudo -s
+```
+
 ### Install PyEZ, Ansible, JSNAPy
 
 This repository has been tested using Ansible 2.4.2.0  
@@ -47,21 +62,6 @@ This repository has been tested using the version 1.4.3 of the Juniper.junos rol
 Use this command to see the name and version of each role installed:
 ```
 ansible-galaxy list
-```
-
-### Get locally the content of the remote repository
-
-```
-sudo -s
-git clone https://github.com/ksator/lab_management.git
-ls lab_management/
-```
-
-### Move to the local copy of the remote repo
-
-```
-cd lab_management/
-sudo -s
 ```
 
 You can now use the local copy of this remote repository.  
