@@ -23,7 +23,7 @@ It is based on:
 
 # Requirements to use this repository
 
-### Get locally the content of the remote repository
+### Get the content of the remote repository locally
 
 ```
 sudo -s
@@ -90,7 +90,7 @@ vi cli.yml
 ```
 
 Run this command to execute the [**pb.collect.cli.output.yml**](pb.collect.cli.output.yml) playbook.  
-It runs the junos show commands from the [**cli.yml**](cli.yml) file and save the output on the Ansible server in the [**cli**](cli) directory. 
+It runs the junos show commands from the [**cli.yml**](cli.yml) file and saves the output on the Ansible server in the [**cli**](cli) directory. 
 ```
 ansible-playbook pb.collect.cli.output.yml
 ```
@@ -107,7 +107,7 @@ vi pb.collect.commands.output.yml
 ```
 
 Run this command to execute the [**pb.collect.commands.output.yml**](pb.collect.commands.output.yml) playbook.  
-It runs the junos show commands and save the output on the Ansible server in the [**command**](command) directory. 
+It runs the junos show commands and saves the output on the Ansible server in the [**command**](command) directory. 
 ```
 ansible-playbook pb.collect.commands.output.yml
 ```
@@ -119,7 +119,7 @@ ls command
 
 ### How to collect the facts from junos devices 
 
-The playbook [**pb.collect.facts.yml**](pb.collect.facts.yml) collects the facts on junos devices and save them on Ansible in the directory [**facts**](facts)
+The playbook [**pb.collect.facts.yml**](pb.collect.facts.yml) collects the facts on junos devices and saves them on Ansible in the directory [**facts**](facts)
 
 Run this command to collect the facts from the junos devices
 ```
@@ -134,7 +134,7 @@ ls facts/
 
 ### How to collect the junos configuration file from junos devices 
 
-The playbook [**pb.collect.configuration.yml**](pb.collect.configuration.yml) collects the Junos configuration in set, xml, json and text formats, and save the configuration files in the [**directory configuration**](configuration)  
+The playbook [**pb.collect.configuration.yml**](pb.collect.configuration.yml) collects the Junos configuration in set, xml, json and text formats, and saves the configuration files in the [**directory configuration**](configuration)  
 
 Run this command to collect the junos configuration files for a device/group.  
 ```
@@ -175,7 +175,7 @@ ls golden_configuration
 
 # How to configure the network using Ansible
 
-### How to overwrite the running configuration on junos devices with their golden confiiguration
+### How to overwrite the running configuration on junos devices with their golden configuration
 
 The playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) overwrites the running configuration on the junos devices with the files in the directory [**golden_configuration**](golden_configuration).  
 You can use it at the beginning of each demo to restore the golden configuration files on the Junos devices.   
@@ -188,8 +188,8 @@ Run this command to do it for the whole network
 ansible-playbook pb.configure.golden.yml
 ```
 
-The playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) backups in the directory [**backup**](backup) the current running configuration from the remote devices before to applying the golden configuration. 
-```
+The playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) backs-up the current running configuration from the remote devices in the directory [**backup**](backup) before applying the golden configuration. 
+```	
 ls backup/
 ```
 
@@ -203,13 +203,13 @@ vi pb.configure.lines.yml
 ```
 
 In order to know which junos devices would have a configuration change if you execute the playbook [**pb.configure.lines.yml**](pb.configure.lines.yml), execute it in dry run mode.  
-This wont change the junos configuration.  
+This won’t change the junos configuration.  
 ```
 ansible-playbook pb.configure.lines.yml --check
 ```
 
-In order to know if a junos device would have a configuration change if you execute the playbook [**pb.configure.lines.yml**](pb.configure.lines.yml), and also to know the diff between the desired state described in the playbook [**pb.configure.lines.yml**](pb.configure.lines.yml) and the device actual state, run this command.  
-This wont change the junos configuration.  
+In order to know if a junos device will have a configuration change if you execute the playbook [**pb.configure.lines.yml**](pb.configure.lines.yml), and also to know the difference between the desired state described in the playbook [**pb.configure.lines.yml**](pb.configure.lines.yml) and the device actual state, run this command.  
+This won’t change the junos configuration.  
 ```
 ansible-playbook pb.configure.lines.yml --check --diff --limit QFX10K2-176
 ```
@@ -226,7 +226,7 @@ This will configure the whole network with the list of set/delete commands.
 ansible-playbook pb.configure.lines.yml
 ```
 
-The playbook [**pb.configure.lines.yml**](pb.configure.lines.yml) backups in the directory [**backup**](backup) the current running configuration from the remote devices before to applying the configuration change. 
+The playbook [**pb.configure.lines.yml**](pb.configure.lines.yml) backs-up the current running configuration from the remote devices in the directory [**backup**](backup) before applying the configuration change. 
 ```
 ls backup/
 ```
@@ -235,7 +235,7 @@ ls backup/
 
 The directory [**templates**](templates) has the jinja templates.  
 
-The template [**telemetry.j2**](/templates/telemetry.j2) is used by the playbook [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml) to generated the junos configuration for streaming telemetry.  
+The template [**telemetry.j2**](/templates/telemetry.j2) is used by the playbook [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml) to generate the junos configuration for streaming telemetry.  
 ```
 more templates/telemetry.j2
 ```
@@ -250,14 +250,14 @@ ansible-playbook pb.configure.telemetry.yml --tag render
 ls render/telemetry/
 ```
 
-In order to know which junos devices would have a configuration change if you execute the playbook [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml), execute it in dry run mode.  
-This wont change the junos configuration.  
+In order to know which junos devices will have a configuration change if you execute the playbook [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml), execute it in dry run mode.  
+This won’t change the junos configuration.  
 ```
 ansible-playbook pb.configure.telemetry.yml --check
 ```
 
-In order to know if a junos device would have a configuration change if you execute the playbook [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml), and also to know the diff between the desired state and the device actual state, run this command.  
-This wont change the junos configuration.  
+In order to know if a junos device will have a configuration change if you execute the playbook [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml), and also to know the difference between the desired state and the device actual state, run this command.  
+This won’t change the junos configuration.  
  ```
 ansible-playbook pb.configure.telemetry.yml --check --diff --limit QFX10K2-176
 ```
@@ -274,7 +274,7 @@ This will configure telemetry on the whole network.
 ansible-playbook pb.configure.telemetry.yml
 ```
 
-The playbook [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml) backups in the directory [**backup**](backup) the current running configuration from the remote devices before to applying the configuration change. 
+The playbook [**pb.configure.telemetry.yml**](pb.configure.telemetry.yml) backs-up the current running configuration from the remote devices in the directory [**backup**](backup) before applying the configuration change. 
 ```
 ls backup/
 ```
@@ -293,7 +293,7 @@ Run this command to rollback 3 the group DC2
 ansible-playbook pb.rollback.yml --extra-vars rbid=3 --limit DC2
 ```
 
-The directory [**rollback**](rollback) has the Junos configuration diffs from rollbacks done with the ansible playbook [**pb.rollback.yml**](pb.rollback.yml) 
+The directory [**rollback**](rollback) has the Junos configuration differences from rollbacks done with the ansible playbook [**pb.rollback.yml**](pb.rollback.yml) 
 ```
 ls rollback/
 ```
@@ -310,19 +310,19 @@ ansible-playbook pb.check.ports.availability.yml
 ```
 
 ### How to validate the status of interfaces on Junos devices
-The playbook [**pb.check.interfaces.yml**](pb.check.interfaces.yml) checks from devices operationnal state if the status (admin status and op status) of the interfaces is up. It does it for the interfaces described in YAML in [**host_vars**](host_vars).  
+The playbook [**pb.check.interfaces.yml**](pb.check.interfaces.yml) checks from device operational state if the status (admin status and op status) of the interfaces is up. It does it for the interfaces described in YAML in [**host_vars**](host_vars).  
 Run this command to execute this playbook for the whole network:
 ```
 ansible-playbook pb.check.interfaces.yml
 ```
 
 ### How to validate the physical topology 
-The playbook [**pb.check.lldp.yml**](pb.check.lldp.yml) compare the desired LLDP neighbors (described in YAML in [**host_vars**](host_vars)) against the actual LLDP neighbors  
+The playbook [**pb.check.lldp.yml**](pb.check.lldp.yml) compares the desired LLDP neighbors (described in YAML in [**host_vars**](host_vars)) against the actual LLDP neighbors  
 Run this command to execute this playbook for the whole network:
 ```
 ansible-playbook pb.check.lldp.yml
 ```
-The playbook [**pb.check.lldp.json.yml**](pb.check.lldp.json.yml) does the same thing but uses a json represention of the LLDP neigbors instead of xml. 
+The playbook [**pb.check.lldp.json.yml**](pb.check.lldp.json.yml) does the same thing but uses a json represention of the LLDP neighbors instead of xml. 
 ```
 ansible-playbook pb.check.lldp.json.yml
 ```
@@ -334,15 +334,15 @@ Run this command to execute this playbook for the whole network:
 ansible-playbook pb.check.bgp.yml
 ```
 
-### How to validate if desired vlans are presents
-The playbook [**pb.check.vlans.yml**](pb.check.vlans.yml) checks from devices operationnal state if the desired vlans described in YAML in [**host_vars**](host_vars) are presents  
+### How to validate if desired vlans are present
+The playbook [**pb.check.vlans.yml**](pb.check.vlans.yml) checks from devices operational state if the desired vlans described in YAML in [**host_vars**](host_vars) are present  
 Run this command to execute this playbook for the whole network:
 ```
 ansible-playbook pb.check.vlans.yml
 ```
 
-### How to collects the facts on junos devices and print them on Ansible
-The playbook [**pb.print.facts.yml**](pb.print.facts.yml) collects the facts on junos devices and print them on Ansible.  
+### How to collect the facts on junos devices and print them on Ansible
+The playbook [**pb.print.facts.yml**](pb.print.facts.yml) collects the facts on junos devices and prints them on Ansible.  
 Run this command to execute this playbook for the whole network:
 ```
 ansible-playbook pb.print.facts.yml
@@ -364,28 +364,28 @@ ansible-playbook pb.check.all.yml
 
 ### How to check which devices are not running their golden configuration
 
-In order to know which junos devices would have a configuration change if you load the golden configuration files, execute the playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) in dry run mode.  
-This wont load the golden configuration.  
+In order to know which junos devices will have a configuration change if you load the golden configuration files, execute the playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) in dry run mode.  
+This won’t load the golden configuration.  
 ```
 ansible-playbook pb.configure.golden.yml --check
 ```
 
 Run this command to do it for one device/group.  
-This wont load the golden configuration.  
+This won’t load the golden configuration.  
 ```
 ansible-playbook pb.configure.golden.yml --check --limit QFX10K2-176
 ```
 
-### How to get the diff between the configuration running on devices and their golden configuration
+### How to get the difference between the configuration running on devices and their golden configuration
 
-In order to know if a junos devices would have a configuration change if you load its golden configuration file, and also to know the diff between its running configuration and its golden configuration, run this command.  
-This wont change the junos configuration.  
+In order to know if a junos device will have a configuration change if you load its golden configuration file, and also to know the difference between its running configuration and its golden configuration, run this command.  
+This won’t change the junos configuration.  
 ```
 ansible-playbook pb.configure.golden.yml --check --diff --limit QFX10K2-176
 ```
 
 Run this command to do it for the whole network.  
-This wont load the golden configuration.  
+This won’t load the golden configuration.  
 ```
 ansible-playbook pb.configure.golden.yml --check --diff 
 ```
@@ -429,7 +429,7 @@ The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnap
 ls jsnapy/snapshots
 ```
 ### How to validate some BGP details
-The JSNAPy configuration file [**cfg_file_snapcheck_bgp.yml**](jsnapy/cfg_file_snapcheck_bgp.yml) jsnapy file is used to validate some some BGP details  
+The JSNAPy configuration file [**cfg_file_snapcheck_bgp.yml**](jsnapy/cfg_file_snapcheck_bgp.yml) jsnapy file is used to validate some BGP details  
 It uses the JSNAPy test file [**test_file_snapcheck_bgp.yml**](jsnapy/testfiles/test_file_snapcheck_bgp.yml)  
 Run this command to validate some BGP details.  
 JSNAPy will take snapshots and compare them against criteria described in the JSNAPy test file [**test_file_snapcheck_bgp.yml**](jsnapy/testfiles/test_file_snapcheck_bgp.yml) 
@@ -444,7 +444,7 @@ ls jsnapy/snapshots
 
 ### How to check if the topology changed
 
-Note: As xml output of "show lldp neighbors" is different on QFX and EX, it requires an different parsing. So we are using different JSNAPy files for EX and QFX.  
+Note: As xml output of "show lldp neighbors" is different on QFX and EX, it requires a different parsing. So we are using different JSNAPy files for EX and QFX.  
 
 The JSNAPy configuration file [**cfg_file_check_topology_EX.yml**](jsnapy/cfg_file_check_topology_EX.yml) is used to check if the topology changed. It uses the JSNAPy test file [**test_file_check_topology_EX.yml**](jsnapy/testfiles/test_file_check_topology_EX.yml)  
 
@@ -456,7 +456,7 @@ jsnapy --snap pre -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy
 jsnapy --snap pre -f jsnapy/cfg_file_check_topology_EX.yml --folder jsnapy
 
 ```
-The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy. if you want to read the snapshots, run this command: 
+The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy. If you want to read the snapshots, run this command: 
 ```
 ls jsnapy/snapshots/
 ```
@@ -467,7 +467,7 @@ Later on, if you want to check if the topology changed, take a new snapshot:
 jsnapy --snap post -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy
 jsnapy --snap post -f jsnapy/cfg_file_check_topology_EX.yml --folder jsnapy
 ```
-The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy. if you want to read the snapshots, run this command:   
+The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy. If you want to read the snapshots, run this command:   
 ```
 ls jsnapy/snapshots/
 ```
@@ -478,7 +478,7 @@ jsnapy --check pre post -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnap
 jsnapy --check pre post -f jsnapy/cfg_file_check_topology_EX.yml --folder jsnapy
 
 ```
-you can also limit this action to one device, and use the verbose mode:  
+You can also limit this action to one device, and use the verbose mode:  
 ```
 jsnapy --check pre post -f jsnapy/cfg_file_check_topology_QFX.yml --folder jsnapy -v -t  172.25.90.174
 ```
@@ -493,11 +493,11 @@ The ansible configuration file is [**ansible.cfg**](ansible.cfg) at the root of 
 
 ### host_vars directory 
 The variables are yml files under [**group_vars**](group_vars) and [**host_vars**](host_vars) directories.  
-host specific variables under the directory [**host_vars**](host_vars).   
+Host specific variables under the directory [**host_vars**](host_vars).   
 
 ### group_vars directory 
 The variables are yml files under [**group_vars**](group_vars) and [**host_vars**](host_vars) directories.  
-group related variables are yml files under the directory [**group_vars**](group_vars)
+Group related variables are yml files under the directory [**group_vars**](group_vars)
 
 ### templates directory
 The directory [**templates**](templates) has the jinja templates
@@ -516,11 +516,11 @@ All playbooks are named **pb.*.yml**
 - [**pb.rollback.yml**](pb.rollback.yml) playbook performs a rollback on junos devices.
 
 ##### Ansible Playbooks to collect data from the network
-- [**pb.collect.configuration.yml**](pb.collect.configuration.yml) playbook performs a configuration backup of the network and save the configuration files in the directory [**configuration**](configuration)
+- [**pb.collect.configuration.yml**](pb.collect.configuration.yml) playbook performs a configuration backup of the network and saves the configuration files in the directory [**configuration**](configuration)
 - [**pb.collect.golden.yml**](pb.collect.golden.yml) playbook collects the running configuration on the junos devices and updates the directory [**golden_configuration**](golden_configuration) with these files.
-- [**pb.collect.commands.output.yml**](pb.collect.commands.output.yml) playbook runs junos show commands and save the output on Ansible 
-- [**pb.collect.cli.output.yml**](pb.collect.cli.output.yml) playbook runs junos show commands and save the output on Ansible. This playbook use the show commands in the file [**cli.yml**](cli.yml)
-- [**pb.collect.facts.yml**](pb.collect.facts.yml) playbook collects the facts on junos devices and save them on Ansible in the directory [**facts**](facts)
+- [**pb.collect.commands.output.yml**](pb.collect.commands.output.yml) playbook runs junos show commands and saves the output on Ansible 
+- [**pb.collect.cli.output.yml**](pb.collect.cli.output.yml) playbook runs junos show commands and saves the output on Ansible. This playbook uses the show commands in the file [**cli.yml**](cli.yml)
+- [**pb.collect.facts.yml**](pb.collect.facts.yml) playbook collects the facts on junos devices and saves them on Ansible in the directory [**facts**](facts)
 
 ##### Ansible Playbooks to audit the network
 
@@ -531,8 +531,8 @@ All playbooks are named **pb.*.yml**
   - [**pb.check.interfaces.yml**](pb.check.interfaces.yml) playbook checks the status of the interfaces on Junos devices
   - [**pb.check.lldp.yml**](pb.check.lldp.yml) playbook checks the LLDP topology 
   - [**pb.check.bgp.yml**](pb.check.bgp.yml) playbook checks the BGP states 
-  - [**pb.check.vlans.yml**](pb.check.vlans.yml) playbook checks from devices operationnal state if desired vlans are presents
-  - [**pb.print.facts.yml**](pb.print.facts.yml) playbook collects the facts on junos devices and print them on Ansible
+  - [**pb.check.vlans.yml**](pb.check.vlans.yml) playbook checks if desired vlans are present from devices operational state
+  - [**pb.print.facts.yml**](pb.print.facts.yml) playbook collects the facts on junos devices and prints them on Ansible
 
 ##### Other Ansible Playbooks
 - [**pb.generate.variables.structure.yml**](pb.generate.variables.structure.yml) playbook was used at the beginning of the project to create some of the directories and files used to define yaml variables. 
@@ -549,7 +549,7 @@ The directory [**command**](command) has the output of the Junos show commands f
 The directory [**facts**](facts) has the Junos facts collected by the playbook [**pb.collect.facts.yml**](pb.collect.facts.yml) 
 
 ### rollback directory
-The directory [**rollback**](rollback) has the Junos configuration diffs from rollbacks done with ansible playbook [**pb.rollback.yml**](pb.rollback.yml) 
+The directory [**rollback**](rollback) has the Junos configuration differences from rollbacks done with ansible playbook [**pb.rollback.yml**](pb.rollback.yml) 
 
 ### backup directory
 The directory [**backup**](backup) has the junos configuration files automatically backed up by the playbooks: 
@@ -561,19 +561,19 @@ The directory [**backup**](backup) has the junos configuration files automatical
 The directory [**configuration**](configuration) has the junos configuration files backed up when we ran the playbook [**pb.collect.configuration.yml**](pb.collect.configuration.yml) 
 
 ### golden directory
-The directory [**golden_configuration**](golden_configuration) has the junos configuration files we need to push on the junos devices before to start the demo. 
+The directory [**golden_configuration**](golden_configuration) has the junos configuration files we need to push on the junos devices before starting the demo. 
 - The playbook [**pb.collect.golden.configuration.yml**](pb.collect.golden.configuration.yml) collects the running configuration on the junos devices and updates the directory [**ebgp_underlay_evpn_vxlan_overlay**](/golden_configuration/ebgp_underlay_evpn_vxlan_overlay/) with these files.
 - The playbook [**pb.configure.golden.yml**](pb.configure.golden.yml) overwrites the running configuration on the junos devices with the files in the directory [**ebgp_underlay_evpn_vxlan_overlay**](/golden_configuration/ebgp_underlay_evpn_vxlan_overlay/)
 
 ### fragments directory
 The directory [**fragments**](fragments) is used by the playbook [**pb.generate.jsnapy.inventory.yml**](pb.generate.jsnapy.inventory.yml) to create the JSNAPy inventory file [**devices.yml**](devices.yml) based on the Ansible inventory file [**hosts**](hosts).  
-The directory [**fragments**](fragments)  doesnt contains the JSNAPy inventory file [**devices.yml**](devices.yml) itself.
+The directory [**fragments**](fragments) doesn’t contain the JSNAPy inventory file [**devices.yml**](devices.yml) itself.
 
 ### python directory
 The directory [**python**](python) has the python scripts
 - The file [**inventory.py**](python/inventory.py) creates a python list of devices ip address based on the ansible inventory file [**hosts**](hosts)
-- The file [**credentials.py**](python/credentials.py) get the devices username and password from the ansible variables file  [**credentials.yml**](/group_vars/JUNOS/credentials.yml)
-- The file [**locate.mac.address.py**](python/locate.mac.address.py) indicates where is locate a given mac address in the network.
+- The file [**credentials.py**](python/credentials.py) gets the devices username and password from the ansible variables file  [**credentials.yml**](/group_vars/JUNOS/credentials.yml)
+- The file [**locate.mac.address.py**](python/locate.mac.address.py) indicates where a given mac address in the network is located.
 
 ### jsnapy directory
 The directory [**jsnapy**](jsnapy) has the jsnapy content:
@@ -585,7 +585,7 @@ The directory [**jsnapy**](jsnapy) has the jsnapy content:
     - [**cfg_file_snapcheck_interfaces.yml**](jsnapy/cfg_file_snapcheck_interfaces.yml) jsnapy file checks if there are interfaces errors  
 - The directory [**snapshots**](jsnapy/snapshots) has the snapshots taken by jsnapy
 - The directory [**testfiles**](jsnapy/testfiles) has the JSNAPy inventory file [**devices.yml**](jsnapy/testfiles/devices.yml). It is created with the playbook [**pb.generate.jsnapy.inventory.yml**](pb.generate.jsnapy.inventory.yml), based on the Ansible inventory file [**hosts**](hosts) and on Ansible variables file for devices credentials  [**credentials.yml**](/group_vars/JUNOS/credentials.yml)
-- The directory [**testfiles**](jsnapy/testfiles) has also the testfiles used by jsnapy. They are named **test_file_*.yml**. 
+- The directory [**testfiles**](jsnapy/testfiles) also has the test files used by jsnapy. They are named **test_file_*.yml**. 
     - [**test_file_check_topology_EX.yml**](jsnapy/testfiles/test_file_check_topology_EX.yml)
     - [**test_file_check_topology_QFX.yml**](jsnapy/testfiles/test_file_check_topology_QFX.yml)
     - [**test_file_snapcheck_alarms.yml**](jsnapy/testfiles/test_file_snapcheck_alarms.yml)
@@ -603,9 +603,9 @@ Junos CLI supports 'configure exclusive' and 'configure private' and 'configure'
  
 PyEZ (junos-eznc python library) supports 'configure exclusive' and 'configure private'  
 
-SaltStack modules for Junos use currently only 'configure exclusive'  
+SaltStack modules for Junos currently only uses 'configure exclusive'  
 
-Junos space uses currently only 'configure exclusive'  
+Junos space currently only uses 'configure exclusive'  
 
 Ansible core modules for Junos use currently only 'configure exclusive'.    
 
@@ -619,50 +619,50 @@ A "configure exclusive" workflow ensures there will never be conflicting changes
 
 The drawback is that the configuration task may "fail" because the configuration is currently locked. This is not specific to network automation.  
 
-The same arise when configuration changes are manuals.  
+The same arises when configuration changes are manual.  
 In general, an automated procedure is going to have the configuration locked for a much shorter time than an equivalent configuration change from a human, and having the configuration locked for shorter periods will decrease the likelihood of a "conflict".  
 
 If there are also humans involved in making configuration changes then there should be a process/procedure to ensure that “humans” use “configure private” and avoid blocking any automation that takes place as a result of using “configure exclusive” from an automation tools perspective.  
 
-That said, conflicts may still occur, and they must have a process for dealing with them. There must be a process which defines how to handle this situation (Do you retry automatically or manually? If automatically, how frequently do you retry? How many times do you retry? What happens if it still fails after max retries?)  
+That said, conflicts may still occur, and they must have a process for dealing with them. There must be a process which defines how to handle this situation (Do you retry automatically or manually? If automatically, how frequently do you retry? How many times do you retry? What happens if it still fails after max retries?) 
 
 Here's [**how to retry ansible playbooks manually and automatically for the devices that failed**](https://github.com/ksator/EVPN_DCI_automation/wiki/how-to-retry-a-playbook-for-the-devices-that-failed)  
 Here's the doc about [**Error handling with ansible**](http://docs.ansible.com/ansible/latest/playbooks_error_handling.html)   
 
-PyEZ also have exception handling support:  
+PyEZ also has exception handling support:  
 [**Here's the doc**](https://www.juniper.net/documentation/en_US/junos-pyez/topics/example/junos-pyez-program-configuration-data-loading-from-file.html)  
 [**Here's examples**](https://github.com/ksator/python-training-for-network-engineers/tree/master/exceptions)    
 
 ### "configure private" workflow with automation
 
-"configure private" workflow can be used as well with automation.   
+"configure private" workflow can be used with automation as well.   
 
 In that case, the configuration is not locked. So, no configuration lock error can happen.      
 
 However, using edit private, if the same section of the configuration is changed "simultaneously" (i.e 2 different 'edit private' happens before the first commit), then, depending on the configuration changes, a configuration conflict might happen. In that case, the second commit will fail.  
-This is not specific to network automation. The same arise when configuration changes are manuals.  
+This is not specific to network automation. The same arises when configuration changes are manual.  
 
 A human using junos cli can use the command "update" if, based on his judgment, he decides to commit the second change, but this will discard the previous commit.  
 
 Automation executes tasks (opens a private configuration database, loads changes to their private configuration database, commit changes) quicker than humans.  
-That makes difficult for some other human/process to edit the configuration in between. 
+That makes it difficult for some other human/process to edit the configuration in between. 
 However, it is certainly still possible.  
 Therefore, we need to ensure a configuration conflict does not occur.  
 
-"configure private" is a valid workflow if a given section of the configuration has only one "single source of authority".  
+"configure private" is a valid workflow if a given section of the configuration only has one "single source of authority".  
 
-For example, you might have thing1 maintaining BGP neighbor configuration and policy, thing2 maintaining OSPF, and humans manually configuring interfaces. In this situation, thing1 would be the "single source of authority" for BGP, thing2 would be the "single source of authority" for OSPF, and the humans would be the single source of authority for interfaces configuration. thing1 and thing2 and humans can configure the network simultaneously as they 'owns' different sections of the configuration.  
+For example, you might have thing1 maintaining BGP neighbor configuration and policy, thing2 maintaining OSPF, and humans manually configuring interfaces. In this situation, thing1 would be the "single source of authority" for BGP, thing2 would be the "single source of authority" for OSPF, and the humans would be the single source of authority for interfaces configuration. thing1 and thing2 and humans can configure the network simultaneously as they 'own' different sections of the configuration.  
 For each section of the device configuration (think of this as a list of one or more "edit" hierarchies in Junos), we recommend that only a single "thing" should "control" that section of the hierarchy.  
-Let's use another example: VLANs on a network comprised of EX switches. In that case, the tool would touch both the [edit vlans] and [edit interfaces] hierarchies. I am simply suggesting that this tool "owns" those two configuration hierarchies and that no other tool (or humans) should be modifying those configuration hierarchies.  
+Let's use another example: VLANs on a network comprised of EX switches. In this case, the tool would touch both the [edit vlans] and [edit interfaces] hierarchies. I am simply suggesting that this tool "owns" those two configuration hierarchies and that no other tool (or humans) should be modifying those configuration hierarchies.  
 In this particular example, we might choose to further refine the portions of the configuration controlled by the tool: this tool controls VLANS in the range 1000-3000, but another tool (or humans) control VLANS outside that range. We might also define that interfaces ge-0/0/0 to ge-0/0/23 are controlled by this tool while interfaces outside that range are controlled by another tool.  
 The idea is very simple. "Don't have two things changing the same config"  
 With a workflow that ensures a "single source of authority" for each section of their configuration, then a "configure private" workflow is the preferred workflow.  
 
 Two processes/people can safely configure a network device at the same time using "configure private" as long as they are not both trying to change the same section of the configuration.  
 
-Even if we should have a "single source of authority" for each section of the configuration with a ‘edit private’ workflow, a robust automation tool which uses the "configure private" workflow really should retry and/or fail in a predictable way in the event of conflict.  
+Even if we should have a "single source of authority" for each section of the configuration with an ‘edit private’ workflow, a robust automation tool which uses the "configure private" workflow really should retry and/or fail in a predictable way in the event of conflict.  
 
-However, if the same "single source of authority" do changes "simultaneously" (i.e 2 different 'edit private' happens before the first commit) on the same section of the configuration, then, depending on the configuration changes, a conflict might happen, and in that case, the second commit will fail. Whatever if it is ansible or python or cli.  
+However, if the same "single source of authority" do changes "simultaneously" (i.e 2 different 'edit private' happens before the first commit) on the same section of the configuration, then, depending on the configuration changes, a conflict might happen, and in that case, the second commit will fail. Whether it is ansible or python or cli.  
 If it is ansible juniper_junos_config module, the second commit would fail and the config changes from that task would be discarded.  
 If it is cli, the second commit will fail and the human using junos cli can use the command "update" if he decides based on his judgment to commit the second change, but this will discard the previous commit.  
 
@@ -676,7 +676,7 @@ With a workflow that ensures a "single source of authority" for each section of 
 
 Without a workflow that ensures a "single source of authority" for each section of their configuration, the "configure exclusive" workflow is preferred.   
 
-In both scenario, the automation should handle the conflicts.   
+In both scenarios, the automation should handle the conflicts.   
 
 Into this repository I am using "configure exclusive" as it is for a lab management so there is not a "single source of authority" for each section of the configuration
 
