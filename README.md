@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ksator/lab_management.svg?branch=master)](https://travis-ci.org/ksator/lab_management)
+
 # Repository documentation structure
 
 - [**What to find in this repository**](README.md#what-to-find-in-this-repository)
@@ -8,7 +10,8 @@
 - [**How to configure the network using Ansible**](README.md#how-to-configure-the-network-using-ansible)
 - [**How to audit the network using Ansible**](README.md#how-to-audit-the-network-using-ansible)
 - [**How to audit the network using JSNAPy**](README.md#how-to-audit-the-network-using-jsnapy)
-- [**Repository structure**](README.md#repository-structure)
+- [**Repository structure**](README.md#repository-structure)  
+- [**Continuous integration with Travis CI**](README.md#continuous-integration-with-travis-ci)  
 - [**Looking for help**](README.md#looking-for-help)
 
 
@@ -603,9 +606,7 @@ We are using two types of playbooks in this repository:
 - Some playbooks interact with Junos
   - ansible-playbook has a built-in option to check only the playbook's syntax (using the flag ```--syntax-check```). This is how Travis is testing them. If there is any syntax error, Travis will fail the build and output the errors in the log.  
     
-Here's the last build status 
-
-
+Here's the last build status [![Build Status](https://travis-ci.org/ksator/lab_management.svg?branch=master)](https://travis-ci.org/ksator/lab_management)
 
 # Looking for help 
 
