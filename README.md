@@ -596,7 +596,7 @@ The directory [**jsnapy**](jsnapy) has the jsnapy content:
     
 # Continuous integration with Travis CI
 
-There is a github webhook with [**Travis CI**](https://travis-ci.org/ksator/lab-management)  
+There is a github webhook with [**Travis CI**](https://travis-ci.org/ksator/lab_management)  
 The playbooks in  this repository are tested automatically by Travis CI.  
 The files [**.travis.yml**](.travis.yml) and [**requirements.txt**](requirements.txt) at the root of this repository are used for this.  
 
