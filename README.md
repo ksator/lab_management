@@ -591,6 +591,22 @@ The directory [**jsnapy**](jsnapy) has the jsnapy content:
     - [**test_file_snapcheck_bgp.yml**](jsnapy/testfiles/test_file_snapcheck_bgp.yml)
     - [**test_file_snapcheck_interfaces.yml**](jsnapy/testfiles/test_file_snapcheck_interfaces.yml)
     
+# Continuous integration with Travis CI
+
+There is a github webhook with [**Travis CI**](https://travis-ci.org/ksator/lab-management)  
+The playbooks in  this repository are tested automatically by Travis CI.  
+The files [**.travis.yml**](.travis.yml) and [**requirements.txt**](requirements.txt) at the root of this repository are used for this.  
+
+We are using two types of playbooks in this repository:  
+- Some playbooks do not interact with Junos:   
+   - Travis CI is executing them.  
+- Some playbooks interact with Junos
+  - ansible-playbook has a built-in option to check only the playbook's syntax (using the flag ```--syntax-check```). This is how Travis is testing them. If there is any syntax error, Travis will fail the build and output the errors in the log.  
+    
+Here's the last build status 
+
+
+
 # Looking for help 
 
 ### Looking for help with Junos automation:
