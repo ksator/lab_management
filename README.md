@@ -14,7 +14,6 @@
 - [**Continuous integration with Travis CI**](README.md#continuous-integration-with-travis-ci)  
 - [**Looking for help**](README.md#looking-for-help)
 
-
 # What to find in this repository
 
 Junos automation content for data center network fabric.  
@@ -29,14 +28,14 @@ It is based on:
 
 ```
 sudo -s
-git clone xxxx
-ls xxxx/
+git clone https://github.com/ksator/lab_management
+ls lab_management
 ```
 
 ### Move to the local copy of the remote repo
 
 ```
-cd xxxx
+cd lab_management
 sudo -s
 ```
 
